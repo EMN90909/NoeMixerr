@@ -1,0 +1,38 @@
+name: Import LMMS upstream
+on:
+  push:
+    paths:
+      - '.github/workflows/import-lmms.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out NoeMixerr
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Replace NoeMixerr source with official LMMS tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Noethric Import Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch --no-tags --depth=1 https://github.com/LMMS/lmms.git master
+          SOURCE_SHA="$(git rev-parse FETCH_HEAD)"
+          echo "Importing LMMS commit: $SOURCE_SHA"
+          git read-tree --reset -u FETCH_HEAD
+          # Retain LMMS's original LICENSE.txt, copyright notices and .gitmodules.
+          # Do not activate the upstream repository's CI workflows in this fork.
+          if [ -d .github/workflows ]; then
+            git rm -rq --ignore-unmatch .github/workflows
+          fi
+          git add -A
+          git commit -m "Replace prototype with LMMS upstream ($SOURCE_SHA)"
+          git push origin HEAD:main
