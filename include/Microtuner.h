@@ -14,7 +14,7 @@
 namespace noemixerr
 {
 
-class NoeMixerr_EXPORT Microtuner : public Model, public JournallingObject
+class NOEMIXERR_EXPORT Microtuner : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:

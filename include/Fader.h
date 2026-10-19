@@ -45,7 +45,7 @@ namespace noemixerr::gui
 class SimpleTextFloat;
 
 
-class NoeMixerr_EXPORT Fader : public QWidget, public FloatModelView
+class NOEMIXERR_EXPORT Fader : public QWidget, public FloatModelView
 {
 	Q_OBJECT
 public:

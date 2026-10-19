@@ -25,7 +25,7 @@ class NotePlayHandle;
 using NotePlayHandleList = QList<NotePlayHandle*>;
 using ConstNotePlayHandleList = QList<const NotePlayHandle*>;
 
-class NoeMixerr_EXPORT NotePlayHandle : public PlayHandle, public Note
+class NOEMIXERR_EXPORT NotePlayHandle : public PlayHandle, public Note
 {
 public:
 	void * m_pluginData;

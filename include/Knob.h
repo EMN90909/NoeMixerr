@@ -25,7 +25,7 @@ enum class KnobType
 
 void convertPixmapToGrayScale(QPixmap &pixMap);
 
-class NoeMixerr_EXPORT Knob : public FloatModelEditorBase
+class NOEMIXERR_EXPORT Knob : public FloatModelEditorBase
 {
 	Q_OBJECT
 	Q_ENUMS( KnobType )
@@ -230,7 +230,7 @@ private:
  *   the same effect as its corresponding positive value, but with inverted phase.
  *   See Flanger's feedback knob for an example.
  */
-class NoeMixerr_EXPORT VolumeKnob : public Knob
+class NOEMIXERR_EXPORT VolumeKnob : public Knob
 {
 	Q_OBJECT
 

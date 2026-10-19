@@ -17,7 +17,7 @@ class QTimer;
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT SimpleTextFloat : public QWidget
+class NOEMIXERR_EXPORT SimpleTextFloat : public QWidget
 {
 	Q_OBJECT
 public:

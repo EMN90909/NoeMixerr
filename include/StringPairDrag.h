@@ -20,7 +20,7 @@ namespace noemixerr::gui
 {
 
 
-class NoeMixerr_EXPORT StringPairDrag : public QDrag
+class NOEMIXERR_EXPORT StringPairDrag : public QDrag
 {
 public:
 	StringPairDrag( const QString & _key, const QString & _value,

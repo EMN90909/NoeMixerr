@@ -117,7 +117,7 @@ public:
 };
 
 
-class NoeMixerr_EXPORT Mixer : public Model, public JournallingObject
+class NOEMIXERR_EXPORT Mixer : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:

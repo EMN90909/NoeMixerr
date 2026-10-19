@@ -17,7 +17,7 @@
 namespace noemixerr
 {
 
-class NoeMixerr_EXPORT ComboBoxModel : public IntModel
+class NOEMIXERR_EXPORT ComboBoxModel : public IntModel
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE

@@ -35,7 +35,7 @@ namespace noemixerr::gui {
    the visualization however (i.e., we are not reading from original sample data when drawing), this provides a
    significant performance boost that wouldn't be possible otherwise.
  */
-class NoeMixerr_EXPORT SampleThumbnail
+class NOEMIXERR_EXPORT SampleThumbnail
 {
 public:
 	struct VisualizeParameters

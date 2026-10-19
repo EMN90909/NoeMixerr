@@ -21,7 +21,7 @@ class SampleFrame;
 
 /** \brief A basic NoeMixerr ring buffer for single-thread use. For thread and realtime safe alternative see LocklessRingBuffer.
 */
-class NoeMixerr_EXPORT RingBuffer : public QObject
+class NOEMIXERR_EXPORT RingBuffer : public QObject
 {
 	Q_OBJECT
 public:

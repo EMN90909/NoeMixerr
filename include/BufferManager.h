@@ -16,7 +16,7 @@ namespace noemixerr
 
 class SampleFrame;
 
-class NoeMixerr_EXPORT BufferManager
+class NOEMIXERR_EXPORT BufferManager
 {
 public:
 	static void init( f_cnt_t fpp );

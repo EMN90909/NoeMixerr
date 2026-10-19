@@ -15,7 +15,7 @@ namespace noemixerr::gui
 /**
  * @brief A pixmap that can be dragged from one location to another to control a FloatModel
  */
-class NoeMixerr_EXPORT Draggable : public FloatModelEditorBase
+class NOEMIXERR_EXPORT Draggable : public FloatModelEditorBase
 {
 	Q_OBJECT
 

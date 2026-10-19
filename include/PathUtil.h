@@ -24,43 +24,43 @@ namespace noemixerr::PathUtil
 	//! Optionally, if a pointer to boolean is given the method will
 	//! use it to indicate whether the prefix could be resolved properly
 	//! or not.
-	QString NoeMixerr_EXPORT baseLocation(const Base base, bool* error = nullptr);
+	QString NOEMIXERR_EXPORT baseLocation(const Base base, bool* error = nullptr);
 	//! Return the directory associated with a given base as a QDir.
 	//! Optional pointer to boolean to indicate if the prefix could
 	//! be resolved properly.
-	QDir NoeMixerr_EXPORT baseQDir (const Base base, bool* error = nullptr);
+	QDir NOEMIXERR_EXPORT baseQDir (const Base base, bool* error = nullptr);
 	//! Return the prefix used to denote this base in path strings
-	QString NoeMixerr_EXPORT basePrefix(const Base base);
+	QString NOEMIXERR_EXPORT basePrefix(const Base base);
 	//! Check the prefix of a path and return the base it corresponds to
 	//! Defaults to Base::Absolute
-	Base NoeMixerr_EXPORT baseLookup(const QString& input);
+	Base NOEMIXERR_EXPORT baseLookup(const QString& input);
 
 	//! Remove the prefix from a path, iff there is one
-	QString NoeMixerr_EXPORT stripPrefix(const QString& input);
+	QString NOEMIXERR_EXPORT stripPrefix(const QString& input);
 	//! Get the filename for a path, handling prefixed paths correctly
-	QString NoeMixerr_EXPORT cleanName(const QString& input);
+	QString NOEMIXERR_EXPORT cleanName(const QString& input);
 
 	//! Upgrade prefix-less relative paths to the new format
-	QString NoeMixerr_EXPORT oldRelativeUpgrade(const QString& input);
+	QString NOEMIXERR_EXPORT oldRelativeUpgrade(const QString& input);
 
 	//! Make this path absolute. If a pointer to boolean is given
 	//! it will indicate whether the path was converted successfully
-	QString NoeMixerr_EXPORT toAbsolute(const QString& input, bool* error = nullptr);
+	QString NOEMIXERR_EXPORT toAbsolute(const QString& input, bool* error = nullptr);
 	//! Make this path relative to a given base, return an absolute path if that fails
-	QString NoeMixerr_EXPORT relativeOrAbsolute(const QString& input, const Base base);
+	QString NOEMIXERR_EXPORT relativeOrAbsolute(const QString& input, const Base base);
 	//! Make this path relative to any base, choosing the shortest if there are
 	//! multiple options. allowLocal defines whether local paths should be considered.
 	//! Defaults to an absolute path if all bases fail.
-	QString NoeMixerr_EXPORT toShortestRelative(const QString& input, bool allowLocal = false);
+	QString NOEMIXERR_EXPORT toShortestRelative(const QString& input, bool allowLocal = false);
 
 	//! Converts a UTF-8 encoded string to std::filesystem::path
-	NoeMixerr_EXPORT auto stringToPath(std::string_view path) -> std::filesystem::path;
+	NOEMIXERR_EXPORT auto stringToPath(std::string_view path) -> std::filesystem::path;
 
 	//! Converts QString to std::filesystem::path
-	NoeMixerr_EXPORT auto stringToPath(const QString& path) -> std::filesystem::path;
+	NOEMIXERR_EXPORT auto stringToPath(const QString& path) -> std::filesystem::path;
 
 	//! Converts std::filesystem::path to a UTF-8 encoded std::string
-	NoeMixerr_EXPORT auto pathToString(const std::filesystem::path& path) -> std::string;
+	NOEMIXERR_EXPORT auto pathToString(const std::filesystem::path& path) -> std::string;
 } // namespace noemixerr::PathUtil
 
 #endif // NoeMixerr_PATHUTIL_H

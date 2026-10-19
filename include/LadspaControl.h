@@ -28,7 +28,7 @@ class LadspaMatrixControlDialog;
 } // namespace gui
 
 
-class NoeMixerr_EXPORT LadspaControl : public Model, public JournallingObject
+class NOEMIXERR_EXPORT LadspaControl : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:

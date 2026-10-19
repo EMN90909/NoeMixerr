@@ -49,7 +49,7 @@ private:
 } ;
 
 
-class NoeMixerr_EXPORT RemotePlugin : public QObject, public RemotePluginBase
+class NOEMIXERR_EXPORT RemotePlugin : public QObject, public RemotePluginBase
 {
 	Q_OBJECT
 public:

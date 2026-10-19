@@ -39,8 +39,8 @@ enum class FFTWindow
  *
  *	@return -1 on error, 0 on success
  */
-float NoeMixerr_EXPORT maximum(const float *abs_spectrum, unsigned int spec_size);
-float NoeMixerr_EXPORT maximum(const std::vector<float> &abs_spectrum);
+float NOEMIXERR_EXPORT maximum(const float *abs_spectrum, unsigned int spec_size);
+float NOEMIXERR_EXPORT maximum(const std::vector<float> &abs_spectrum);
 
 
 /** Normalize the abs_spectrum array of absolute values to a 0..1 range
@@ -48,8 +48,8 @@ float NoeMixerr_EXPORT maximum(const std::vector<float> &abs_spectrum);
  *
  *	@return -1 on error
  */
-int NoeMixerr_EXPORT normalize(const float *abs_spectrum, float *norm_spectrum, unsigned int bin_count, unsigned int block_size);
-int NoeMixerr_EXPORT normalize(const std::vector<float> &abs_spectrum, std::vector<float> &norm_spectrum, unsigned int block_size);
+int NOEMIXERR_EXPORT normalize(const float *abs_spectrum, float *norm_spectrum, unsigned int bin_count, unsigned int block_size);
+int NOEMIXERR_EXPORT normalize(const std::vector<float> &abs_spectrum, std::vector<float> &norm_spectrum, unsigned int block_size);
 
 
 /**	Check if the spectrum contains any non-zero value.
@@ -57,7 +57,7 @@ int NoeMixerr_EXPORT normalize(const std::vector<float> &abs_spectrum, std::vect
  *	@return 1 if spectrum contains any non-zero value
  *	@return 0 otherwise
  */
-int NoeMixerr_EXPORT notEmpty(const std::vector<float> &spectrum);
+int NOEMIXERR_EXPORT notEmpty(const std::vector<float> &spectrum);
 
 
 /**	Precompute a window function for later real-time use.
@@ -65,7 +65,7 @@ int NoeMixerr_EXPORT notEmpty(const std::vector<float> &spectrum);
  *
  *	@return -1 on error
  */
-int NoeMixerr_EXPORT precomputeWindow(float *window, unsigned int length, FFTWindow type, bool normalized = true);
+int NOEMIXERR_EXPORT precomputeWindow(float *window, unsigned int length, FFTWindow type, bool normalized = true);
 
 
 /**	Compute absolute values of complex_buffer, save to absspec_buffer.
@@ -74,7 +74,7 @@ int NoeMixerr_EXPORT precomputeWindow(float *window, unsigned int length, FFTWin
  *
  *	@return 0 on success, else -1
  */
-int NoeMixerr_EXPORT absspec(const fftwf_complex *complex_buffer, float *absspec_buffer,
+int NOEMIXERR_EXPORT absspec(const fftwf_complex *complex_buffer, float *absspec_buffer,
 						unsigned int compl_length);
 
 
@@ -84,7 +84,7 @@ int NoeMixerr_EXPORT absspec(const fftwf_complex *complex_buffer, float *absspec
  *
  *	@return 0 on success, else -1
  */
-int NoeMixerr_EXPORT compressbands(const float * _absspec_buffer, float * _compressedband,
+int NOEMIXERR_EXPORT compressbands(const float * _absspec_buffer, float * _compressedband,
 			int _num_old, int _num_new, int _bottom, int _top);
 
 

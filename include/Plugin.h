@@ -50,7 +50,7 @@ class PluginView;
 	are a bit like values to the sub plugins' keys (in terms of a key-value-
 	map).
 */
-class NoeMixerr_EXPORT Plugin : public Model, public JournallingObject
+class NOEMIXERR_EXPORT Plugin : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -97,7 +97,7 @@ public:
 			returning some values (or modifying objects of other
 			classes).
 		 */
-		class NoeMixerr_EXPORT SubPluginFeatures
+		class NOEMIXERR_EXPORT SubPluginFeatures
 		{
 		public:
 			/**

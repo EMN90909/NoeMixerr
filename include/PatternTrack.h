@@ -25,7 +25,7 @@ class PatternTrackView;
 
 
 /*! Track type used in the Song (Editor) to reference a pattern in the PatternStore */
-class NoeMixerr_EXPORT PatternTrack : public Track
+class NOEMIXERR_EXPORT PatternTrack : public Track
 {
 	Q_OBJECT
 public:

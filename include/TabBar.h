@@ -21,7 +21,7 @@ namespace noemixerr::gui
 class TabButton;
 
 
-class NoeMixerr_EXPORT TabBar : public QWidget
+class NOEMIXERR_EXPORT TabBar : public QWidget
 {
 	Q_OBJECT
 public:

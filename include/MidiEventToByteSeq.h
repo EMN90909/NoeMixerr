@@ -25,7 +25,7 @@ namespace noemixerr
 //! size.
 //! @param bufsize Available size of the target buffer.
 //! @return Used size of the target buffer, or 0 if the MidiEvent could not be converted.
-std::size_t NoeMixerr_EXPORT writeToByteSeq(const class MidiEvent& ev, uint8_t* data, std::size_t bufsize);
+std::size_t NOEMIXERR_EXPORT writeToByteSeq(const class MidiEvent& ev, uint8_t* data, std::size_t bufsize);
 
 } // namespace noemixerr
 

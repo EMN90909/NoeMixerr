@@ -19,7 +19,7 @@ namespace gui
 {
 
 
-class NoeMixerr_EXPORT ToolPluginView : public PluginView
+class NOEMIXERR_EXPORT ToolPluginView : public PluginView
 {
 public:
 	ToolPluginView( ToolPlugin * _toolPlugin );

@@ -20,7 +20,7 @@ class LadspaControl;
 namespace gui
 {
 
-class NoeMixerr_EXPORT LadspaControlView : public QWidget, public ModelView
+class NOEMIXERR_EXPORT LadspaControlView : public QWidget, public ModelView
 {
 	Q_OBJECT
 public:

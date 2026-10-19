@@ -28,7 +28,7 @@ class ControllerDialog;
 
 using ControllerVector = std::vector<Controller*>;
 
-class NoeMixerr_EXPORT Controller : public Model, public JournallingObject
+class NOEMIXERR_EXPORT Controller : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:

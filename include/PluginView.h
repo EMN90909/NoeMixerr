@@ -14,7 +14,7 @@
 
 namespace noemixerr::gui {
 
-class NoeMixerr_EXPORT PluginView : public QWidget, public ModelView
+class NOEMIXERR_EXPORT PluginView : public QWidget, public ModelView
 {
 public:
 	PluginView(Plugin* _plugin, QWidget* _parent)

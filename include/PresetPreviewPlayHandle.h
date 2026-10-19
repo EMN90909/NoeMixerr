@@ -17,7 +17,7 @@ class DataFile;
 class InstrumentTrack;
 class PreviewTrackContainer;
 
-class NoeMixerr_EXPORT PresetPreviewPlayHandle : public PlayHandle
+class NOEMIXERR_EXPORT PresetPreviewPlayHandle : public PlayHandle
 {
 public:
 	PresetPreviewPlayHandle( const QString& presetFile, bool loadByPlugin = false, DataFile *dataFile = 0 );

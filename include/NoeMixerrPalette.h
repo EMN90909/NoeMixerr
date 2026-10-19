@@ -14,7 +14,7 @@ namespace noemixerr::gui
 {
 
 
-class NoeMixerr_EXPORT NoeMixerrPalette : public QWidget
+class NOEMIXERR_EXPORT NoeMixerrPalette : public QWidget
 {
 	Q_OBJECT
 	Q_PROPERTY( QColor background READ background WRITE setBackground )

@@ -127,11 +127,11 @@ ENDIF()
 
 # CMake doesn't define target_EXPORTS for OBJECT libraries.
 # See the documentation of DEFINE_SYMBOL for details.
-# Also add NoeMixerr_STATIC_DEFINE for targets linking against it.
+# Also add NOEMIXERR_STATIC_DEFINE for targets linking against it.
 TARGET_COMPILE_DEFINITIONS(noemixerrobjs
 	PRIVATE -Dnoemixerrobjs_EXPORTS
 )
-target_static_definitions(noemixerrobjs NoeMixerr_STATIC_DEFINE)
+target_static_definitions(noemixerrobjs NOEMIXERR_STATIC_DEFINE)
 
 # Set Visual Studio startup project to noemixerr
 # https://stackoverflow.com/a/37994396/8166701

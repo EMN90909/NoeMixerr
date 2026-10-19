@@ -28,7 +28,7 @@ class TrackView;
 } // namespace gui
 
 
-class NoeMixerr_EXPORT Clip : public Model, public JournallingObject
+class NOEMIXERR_EXPORT Clip : public Model, public JournallingObject
 {
 	Q_OBJECT
 	mapPropertyFromModel(bool,isMuted,setMuted,m_mutedModel);

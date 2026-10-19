@@ -53,7 +53,7 @@ class SampleFrame;
 	* this class can not override virtuals of Instrument or EffectControls, so
 	  it will offer functions that must be called by virtuals in its child class
 */
-class NoeMixerr_EXPORT Lv2ControlBase : public LinkedModelGroups
+class NOEMIXERR_EXPORT Lv2ControlBase : public LinkedModelGroups
 {
 public:
 	static Plugin::Type check(const LilvPlugin* m_plugin,

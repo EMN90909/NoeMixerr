@@ -34,7 +34,7 @@ const QString TRACK_ICON_PATH = "track_icons/";
 const QString LOCALE_PATH = "locale/";
 const QString PORTABLE_MODE_FILE = "/portable_mode.txt";
 
-class NoeMixerr_EXPORT ConfigManager : public QObject
+class NOEMIXERR_EXPORT ConfigManager : public QObject
 {
 	Q_OBJECT
 

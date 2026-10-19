@@ -15,7 +15,7 @@
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT BarModelEditor : public FloatModelEditorBase
+class NOEMIXERR_EXPORT BarModelEditor : public FloatModelEditorBase
 {
 	Q_OBJECT
 

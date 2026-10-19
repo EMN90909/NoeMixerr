@@ -23,7 +23,7 @@ class QLibrary;  // IWYU pragma: keep
 namespace noemixerr
 {
 
-class NoeMixerr_EXPORT PluginFactory
+class NOEMIXERR_EXPORT PluginFactory
 {
 public:
 	struct PluginInfo
@@ -91,7 +91,7 @@ private:
 };
 
 //Short-hand function
-NoeMixerr_EXPORT PluginFactory* getPluginFactory();
+NOEMIXERR_EXPORT PluginFactory* getPluginFactory();
 
 
 } // namespace noemixerr

@@ -21,7 +21,7 @@ namespace noemixerr
 class SerializingObjectHook;
 
 
-class NoeMixerr_EXPORT SerializingObject
+class NOEMIXERR_EXPORT SerializingObject
 {
 public:
 	SerializingObject();

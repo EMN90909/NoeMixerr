@@ -31,7 +31,7 @@ class Track;
 class SampleFrame;
 
 
-class NoeMixerr_EXPORT Instrument : public Plugin
+class NOEMIXERR_EXPORT Instrument : public Plugin
 {
 public:
 	enum class Flag

@@ -17,7 +17,7 @@ namespace noemixerr
 {
 
 
-class NoeMixerr_EXPORT ProjectRenderer : public QThread
+class NOEMIXERR_EXPORT ProjectRenderer : public QThread
 {
 	Q_OBJECT
 public:

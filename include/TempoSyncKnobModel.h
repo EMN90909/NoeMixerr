@@ -23,7 +23,7 @@ class TempoSyncKnob;
 } // namespace gui
 
 
-class NoeMixerr_EXPORT TempoSyncKnobModel : public FloatModel
+class NOEMIXERR_EXPORT TempoSyncKnobModel : public FloatModel
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE

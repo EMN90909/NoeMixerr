@@ -38,7 +38,7 @@ class SampleClip;
 class Track;
 
 
-class NoeMixerr_EXPORT SamplePlayHandle : public PlayHandle
+class NOEMIXERR_EXPORT SamplePlayHandle : public PlayHandle
 {
 public:
 	SamplePlayHandle(Sample* sample, bool ownAudioBusHandle = true);

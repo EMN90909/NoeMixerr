@@ -20,7 +20,7 @@ namespace noemixerr::gui
 
 class MeterDialog;
 
-class NoeMixerr_EXPORT TempoSyncBarModelEditor : public BarModelEditor
+class NOEMIXERR_EXPORT TempoSyncBarModelEditor : public BarModelEditor
 {
 	Q_OBJECT
 public:

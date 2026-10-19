@@ -35,8 +35,8 @@
 
 
 #ifdef BUILD_REMOTE_PLUGIN_CLIENT
-#undef NoeMixerr_EXPORT
-#define NoeMixerr_EXPORT
+#undef NOEMIXERR_EXPORT
+#define NOEMIXERR_EXPORT
 
 #ifndef SYNC_WITH_SHM_FIFO
 #include <sys/socket.h>
@@ -328,7 +328,7 @@ enum RemoteMessageIDs
 
 
 
-class NoeMixerr_EXPORT RemotePluginBase
+class NOEMIXERR_EXPORT RemotePluginBase
 {
 public:
 	struct message

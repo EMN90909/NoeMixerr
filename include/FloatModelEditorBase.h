@@ -20,7 +20,7 @@ namespace noemixerr::gui
 
 class SimpleTextFloat;
 
-class NoeMixerr_EXPORT FloatModelEditorBase : public QWidget, public FloatModelView
+class NOEMIXERR_EXPORT FloatModelEditorBase : public QWidget, public FloatModelView
 {
 	Q_OBJECT
 

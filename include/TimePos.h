@@ -29,7 +29,7 @@ class MeterModel;
 
 	Example: 6/8 means 6 beats in a bar with each beat having a duration of one 8th-note.
 */
-class NoeMixerr_EXPORT TimeSig
+class NOEMIXERR_EXPORT TimeSig
 {
 public:
 	TimeSig( int num, int denom );
@@ -45,7 +45,7 @@ private:
 /**
 	Represents a position in time or length of a note or event, in ticks, beats, and bars
 */
-class NoeMixerr_EXPORT TimePos
+class NOEMIXERR_EXPORT TimePos
 {
 public:
 	TimePos( const bar_t bar, const tick_t ticks );

@@ -16,7 +16,7 @@ namespace noemixerr
 {
 
 
-class NoeMixerr_EXPORT ValueBuffer : public std::vector<float>
+class NOEMIXERR_EXPORT ValueBuffer : public std::vector<float>
 {
 public:
 	ValueBuffer() = default;

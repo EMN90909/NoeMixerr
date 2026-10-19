@@ -30,7 +30,7 @@ class GuiApplication;
 }
 
 
-class NoeMixerr_EXPORT Engine : public QObject
+class NOEMIXERR_EXPORT Engine : public QObject
 {
 	Q_OBJECT
 public:

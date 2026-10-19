@@ -26,7 +26,7 @@ namespace noemixerr::gui
 //! 
 //! Because of a bug in the QMdiSubWindow class to save the right position and size of a subwindow in a project and
 //! because of the inability for customizing the title bar appearance, noemixerr implements its own subwindow class.
-class NoeMixerr_EXPORT SubWindow : public QMdiSubWindow
+class NOEMIXERR_EXPORT SubWindow : public QMdiSubWindow
 {
 	Q_OBJECT
 	Q_PROPERTY( QBrush activeColor READ activeColor WRITE setActiveColor )

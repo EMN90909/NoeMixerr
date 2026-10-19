@@ -58,7 +58,7 @@ namespace noemixerr
  * - When this class is used in an audio processor or audio plugin, its channels could be referred to
  *       as "processor channels" or "plugin channels".
  */
-class NoeMixerr_EXPORT AudioBuffer
+class NOEMIXERR_EXPORT AudioBuffer
 {
 public:
 	using ChannelFlags = std::bitset<MaxChannelsPerAudioBuffer>;

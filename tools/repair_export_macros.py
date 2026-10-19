@@ -11,10 +11,10 @@ import subprocess
 root = Path(__file__).resolve().parent.parent
 tracked = subprocess.check_output(["git", "ls-files", "-z"], cwd=root).split(b"\0")
 mapping = {
-    "NoeMixerr_EXPORT": "NOEMIXERR_EXPORT",
-    "NoeMixerr_NO_EXPORT": "NOEMIXERR_NO_EXPORT",
-    "NoeMixerr_DEPRECATED": "NOEMIXERR_DEPRECATED",
-    "NoeMixerr_STATIC_DEFINE": "NOEMIXERR_STATIC_DEFINE",
+    "NOEMIXERR_EXPORT": "NOEMIXERR_EXPORT",
+    "NOEMIXERR_NO_EXPORT": "NOEMIXERR_NO_EXPORT",
+    "NOEMIXERR_DEPRECATED": "NOEMIXERR_DEPRECATED",
+    "NOEMIXERR_STATIC_DEFINE": "NOEMIXERR_STATIC_DEFINE",
 }
 count = 0
 for raw in tracked:

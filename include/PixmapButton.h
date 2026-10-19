@@ -15,7 +15,7 @@ namespace noemixerr::gui
 {
 
 
-class NoeMixerr_EXPORT PixmapButton : public AutomatableButton
+class NOEMIXERR_EXPORT PixmapButton : public AutomatableButton
 {
 	Q_OBJECT
 public:

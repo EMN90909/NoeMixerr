@@ -67,7 +67,7 @@ QDataStream& operator>> ( QDataStream &in, WaveMipMap &waveMipMap );
 
 
 
-class NoeMixerr_EXPORT BandLimitedWave
+class NOEMIXERR_EXPORT BandLimitedWave
 {
 public:
 	enum class Waveform

@@ -16,7 +16,7 @@ namespace noemixerr
 class Instrument;
 class InstrumentTrack;
 
-class NoeMixerr_EXPORT InstrumentPlayHandle : public PlayHandle
+class NOEMIXERR_EXPORT InstrumentPlayHandle : public PlayHandle
 {
 public:
 	InstrumentPlayHandle(Instrument * instrument, InstrumentTrack* instrumentTrack);

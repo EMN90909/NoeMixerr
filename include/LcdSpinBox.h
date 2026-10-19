@@ -13,7 +13,7 @@
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT LcdSpinBox : public LcdWidget, public IntModelView
+class NOEMIXERR_EXPORT LcdSpinBox : public LcdWidget, public IntModelView
 {
 	Q_OBJECT
 public:

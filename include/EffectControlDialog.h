@@ -19,7 +19,7 @@ class EffectControls;
 namespace gui
 {
 
-class NoeMixerr_EXPORT EffectControlDialog : public QWidget, public ModelView
+class NOEMIXERR_EXPORT EffectControlDialog : public QWidget, public ModelView
 {
 public:
 	EffectControlDialog(EffectControls* controls);

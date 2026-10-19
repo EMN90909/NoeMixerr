@@ -17,7 +17,7 @@ namespace noemixerr::gui
 ///
 /// \brief A context menu with a caption
 ///
-class NoeMixerr_EXPORT CaptionMenu : public QMenu
+class NOEMIXERR_EXPORT CaptionMenu : public QMenu
 {
 	Q_OBJECT
 public:

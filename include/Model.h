@@ -15,7 +15,7 @@
 namespace noemixerr
 {
 
-class NoeMixerr_EXPORT Model : public QObject
+class NOEMIXERR_EXPORT Model : public QObject
 {
 	Q_OBJECT
 public:

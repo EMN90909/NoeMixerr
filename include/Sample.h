@@ -15,7 +15,7 @@
 #include "noemixerr_export.h"
 
 namespace noemixerr {
-class NoeMixerr_EXPORT Sample
+class NOEMIXERR_EXPORT Sample
 {
 public:
 	enum class Loop
@@ -25,7 +25,7 @@ public:
 		PingPong
 	};
 
-	class NoeMixerr_EXPORT PlaybackState
+	class NOEMIXERR_EXPORT PlaybackState
 	{
 	public:
 		PlaybackState(AudioResampler::Mode interpolationMode = AudioResampler::Mode::Linear, int frameIndex = 0)

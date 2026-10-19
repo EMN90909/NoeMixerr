@@ -16,7 +16,7 @@ class QMouseEvent;
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT AutomatableModelView : public ModelView
+class NOEMIXERR_EXPORT AutomatableModelView : public ModelView
 {
 public:
 	AutomatableModelView( Model* model, QWidget* _this );
@@ -92,7 +92,7 @@ protected:
 
 
 
-template <typename ModelType> class NoeMixerr_EXPORT TypedModelView : public AutomatableModelView
+template <typename ModelType> class NOEMIXERR_EXPORT TypedModelView : public AutomatableModelView
 {
 public:
 	TypedModelView( Model* model, QWidget* _this) :

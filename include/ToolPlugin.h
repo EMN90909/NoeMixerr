@@ -15,7 +15,7 @@ namespace noemixerr
 {
 
 
-class NoeMixerr_EXPORT ToolPlugin : public Plugin
+class NOEMIXERR_EXPORT ToolPlugin : public Plugin
 {
 public:
 	ToolPlugin( const Descriptor * _descriptor, Model * _parent );

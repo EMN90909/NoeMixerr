@@ -25,7 +25,7 @@ namespace gui
 {
 
 
-class NoeMixerr_EXPORT Graph : public QWidget, public ModelView
+class NOEMIXERR_EXPORT Graph : public QWidget, public ModelView
 {
 	Q_OBJECT
 public:
@@ -112,7 +112,7 @@ private:
 	Function plot graph with discrete x scale and continous y scale
 	This makes it possible to display "#x" samples
 */
-class NoeMixerr_EXPORT graphModel : public Model
+class NOEMIXERR_EXPORT graphModel : public Model
 {
 	Q_OBJECT
 public:

@@ -15,7 +15,7 @@
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT LedCheckBox : public AutomatableButton
+class NOEMIXERR_EXPORT LedCheckBox : public AutomatableButton
 {
 	Q_OBJECT
 public:

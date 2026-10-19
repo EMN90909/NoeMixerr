@@ -39,7 +39,7 @@ class MidiCCRackView;
 } // namespace gui
 
 
-class NoeMixerr_EXPORT InstrumentTrack : public Track, public MidiEventProcessor
+class NOEMIXERR_EXPORT InstrumentTrack : public Track, public MidiEventProcessor
 {
 	Q_OBJECT
 	mapPropertyFromModel(int,getVolume,setVolume,m_volumeModel);

@@ -20,7 +20,7 @@ namespace noemixerr::gui
 {
 
 
-class NoeMixerr_EXPORT MicrotunerConfig : public QWidget, public SerializingObject
+class NOEMIXERR_EXPORT MicrotunerConfig : public QWidget, public SerializingObject
 {
 	Q_OBJECT
 public:

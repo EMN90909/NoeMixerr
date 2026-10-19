@@ -45,7 +45,7 @@ const bpm_t MaxTempo = 999;
 const tick_t MaxSongLength = 9999 * DefaultTicksPerBar;
 
 
-class NoeMixerr_EXPORT Song : public TrackContainer
+class NOEMIXERR_EXPORT Song : public TrackContainer
 {
 	Q_OBJECT
 	mapPropertyFromModel( int,getTempo,setTempo,m_tempoModel );

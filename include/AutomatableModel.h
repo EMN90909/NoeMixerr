@@ -55,7 +55,7 @@ namespace noemixerr
 
 class ControllerConnection;
 
-class NoeMixerr_EXPORT AutomatableModel : public Model, public JournallingObject
+class NOEMIXERR_EXPORT AutomatableModel : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -422,7 +422,7 @@ signals:
 
 
 
-template <typename T> class NoeMixerr_EXPORT TypedAutomatableModel : public AutomatableModel
+template <typename T> class NOEMIXERR_EXPORT TypedAutomatableModel : public AutomatableModel
 {
 public:
 	using AutomatableModel::AutomatableModel;
@@ -450,7 +450,7 @@ public:
 
 // some typed AutomatableModel-definitions
 
-class NoeMixerr_EXPORT FloatModel : public TypedAutomatableModel<float>
+class NOEMIXERR_EXPORT FloatModel : public TypedAutomatableModel<float>
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE
@@ -468,7 +468,7 @@ public:
 } ;
 
 
-class NoeMixerr_EXPORT IntModel : public TypedAutomatableModel<int>
+class NOEMIXERR_EXPORT IntModel : public TypedAutomatableModel<int>
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE
@@ -484,7 +484,7 @@ public:
 } ;
 
 
-class NoeMixerr_EXPORT BoolModel : public TypedAutomatableModel<bool>
+class NOEMIXERR_EXPORT BoolModel : public TypedAutomatableModel<bool>
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE

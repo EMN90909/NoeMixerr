@@ -23,7 +23,7 @@ class MidiClipView;
 }
 
 
-class NoeMixerr_EXPORT MidiClip : public Clip
+class NOEMIXERR_EXPORT MidiClip : public Clip
 {
 	Q_OBJECT
 public:

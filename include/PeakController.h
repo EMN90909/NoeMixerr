@@ -20,7 +20,7 @@ class PeakControllerEffect;
 
 using PeakControllerEffectVector = std::vector<PeakControllerEffect*>;
 
-class NoeMixerr_EXPORT PeakController : public Controller
+class NOEMIXERR_EXPORT PeakController : public Controller
 {
 	Q_OBJECT
 public:

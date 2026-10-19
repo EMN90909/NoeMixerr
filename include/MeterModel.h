@@ -13,7 +13,7 @@ namespace noemixerr
 {
 
 
-class NoeMixerr_EXPORT MeterModel : public Model
+class NOEMIXERR_EXPORT MeterModel : public Model
 {
 	Q_OBJECT
 	mapPropertyFromModel(int,getNumerator,setNumerator,m_numeratorModel);

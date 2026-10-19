@@ -17,7 +17,7 @@ namespace noemixerr::gui
 {
 
 
-class NoeMixerr_EXPORT LcdFloatSpinBox : public QWidget, public FloatModelView
+class NOEMIXERR_EXPORT LcdFloatSpinBox : public QWidget, public FloatModelView
 {
 	Q_OBJECT
 public:

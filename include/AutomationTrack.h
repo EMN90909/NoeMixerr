@@ -13,7 +13,7 @@
 namespace noemixerr
 {
 
-class NoeMixerr_EXPORT AutomationTrack : public Track
+class NOEMIXERR_EXPORT AutomationTrack : public Track
 {
 	Q_OBJECT
 public:

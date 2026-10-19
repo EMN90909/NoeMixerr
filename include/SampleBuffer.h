@@ -17,7 +17,7 @@
 #include "noemixerr_export.h"
 
 namespace noemixerr {
-class NoeMixerr_EXPORT SampleBuffer
+class NOEMIXERR_EXPORT SampleBuffer
 {
 public:
 	using value_type = SampleFrame;

@@ -26,7 +26,7 @@ class EffectRackView;
 } // namespace gui
 
 
-class NoeMixerr_EXPORT EffectChain : public Model, public SerializingObject
+class NOEMIXERR_EXPORT EffectChain : public Model, public SerializingObject
 {
 	Q_OBJECT
 public:

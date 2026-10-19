@@ -45,7 +45,7 @@ char const *const FILENAME_FILTER = "[\\0000-\x1f\"*/:<>?\\\\|\x7f]";
 
 
 //! Base-class for all tracks
-class NoeMixerr_EXPORT Track : public Model, public JournallingObject
+class NOEMIXERR_EXPORT Track : public Model, public JournallingObject
 {
 	Q_OBJECT
 	mapPropertyFromModel(bool,isMuted,setMuted,m_mutedModel);

@@ -18,7 +18,7 @@ class InstrumentTrackWindow;
 
 
 //! Instrument view with variable size
-class NoeMixerr_EXPORT InstrumentView : public PluginView
+class NOEMIXERR_EXPORT InstrumentView : public PluginView
 {
 public:
 	InstrumentView( Instrument * _instrument, QWidget * _parent );
@@ -44,7 +44,7 @@ public:
 
 
 //! Instrument view with fixed NoeMixerr-default size
-class NoeMixerr_EXPORT InstrumentViewFixedSize : public InstrumentView
+class NOEMIXERR_EXPORT InstrumentViewFixedSize : public InstrumentView
 {
 	QSize sizeHint() const override { return QSize(250, 250); }
 	QSize minimumSizeHint() const override { return sizeHint(); }

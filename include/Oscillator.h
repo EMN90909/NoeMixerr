@@ -26,7 +26,7 @@ namespace noemixerr
 class IntModel;
 
 
-class NoeMixerr_EXPORT Oscillator
+class NOEMIXERR_EXPORT Oscillator
 {
 public:
 	enum class WaveShape

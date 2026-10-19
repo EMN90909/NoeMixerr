@@ -28,7 +28,7 @@ class PianoRollWindow;
 class ProjectNotes;
 class SongEditorWindow;
 
-class NoeMixerr_EXPORT GuiApplication : public QObject
+class NOEMIXERR_EXPORT GuiApplication : public QObject
 {
 	Q_OBJECT;
 public:
@@ -90,7 +90,7 @@ private:
 };
 
 // Short-hand function
-NoeMixerr_EXPORT GuiApplication* getGUI();
+NOEMIXERR_EXPORT GuiApplication* getGUI();
 
 } // namespace noemixerr::gui
 

@@ -4,8 +4,8 @@
 // See LICENSE.txt and doc/AUTHORS for original authors and license.
 
 
-#ifndef NoeMixerr_EXPORT_FILTER_H
-#define NoeMixerr_EXPORT_FILTER_H
+#ifndef NOEMIXERR_EXPORT_FILTER_H
+#define NOEMIXERR_EXPORT_FILTER_H
 
 #include <filesystem>
 
@@ -17,7 +17,7 @@ namespace noemixerr
 {
 
 
-class NoeMixerr_EXPORT ExportFilter : public Plugin
+class NOEMIXERR_EXPORT ExportFilter : public Plugin
 {
 public:
 	ExportFilter( const Descriptor * _descriptor ) : Plugin( _descriptor, nullptr ) {}
@@ -57,4 +57,4 @@ private:
 
 } // namespace noemixerr
 
-#endif // NoeMixerr_EXPORT_FILTER_H
+#endif // NOEMIXERR_EXPORT_FILTER_H

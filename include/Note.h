@@ -78,7 +78,7 @@ const float MaxDetuning = 5 * 12.0f;
 
 
 
-class NoeMixerr_EXPORT Note : public SerializingObject
+class NOEMIXERR_EXPORT Note : public SerializingObject
 {
 public:
 	Note( const TimePos & length = TimePos( 0 ),

@@ -15,7 +15,7 @@ namespace noemixerr::gui
 {
 
 
-class NoeMixerr_EXPORT FileDialog : public QFileDialog
+class NOEMIXERR_EXPORT FileDialog : public QFileDialog
 {
 	Q_OBJECT
 public:

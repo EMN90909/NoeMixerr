@@ -20,7 +20,7 @@ namespace noemixerr::gui
 {
 
 
-class NoeMixerr_EXPORT ProjectNotes : public QMainWindow, public SerializingObject
+class NOEMIXERR_EXPORT ProjectNotes : public QMainWindow, public SerializingObject
 {
 	Q_OBJECT
 public:

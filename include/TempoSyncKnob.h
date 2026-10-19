@@ -19,7 +19,7 @@ namespace noemixerr::gui
 
 class MeterDialog;
 
-class NoeMixerr_EXPORT TempoSyncKnob : public Knob
+class NOEMIXERR_EXPORT TempoSyncKnob : public Knob
 {
 	Q_OBJECT
 public:

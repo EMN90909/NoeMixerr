@@ -60,7 +60,7 @@ public:
 
 
 //! Base class for view for one Lv2 plugin
-class NoeMixerr_EXPORT Lv2ViewBase : public LinkedModelGroupsView
+class NOEMIXERR_EXPORT Lv2ViewBase : public LinkedModelGroupsView
 {
 	friend class HelpWindowEventFilter;
 protected:

@@ -20,7 +20,7 @@ namespace noemixerr
 {
 
 
-class NoeMixerr_EXPORT Lv2SubPluginFeatures : public Plugin::Descriptor::SubPluginFeatures
+class NOEMIXERR_EXPORT Lv2SubPluginFeatures : public Plugin::Descriptor::SubPluginFeatures
 {
 private:
 	static const LilvPlugin *getPlugin(const Key &k);

@@ -18,7 +18,7 @@ namespace noemixerr
 class TrackContainer;
 
 
-class NoeMixerr_EXPORT ImportFilter : public Plugin
+class NOEMIXERR_EXPORT ImportFilter : public Plugin
 {
 public:
 	ImportFilter( const QString & _file_name,

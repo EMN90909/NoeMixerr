@@ -15,7 +15,7 @@
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT LcdWidget : public QWidget
+class NOEMIXERR_EXPORT LcdWidget : public QWidget
 {
 	Q_OBJECT
 	

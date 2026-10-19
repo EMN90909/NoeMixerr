@@ -16,7 +16,7 @@
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT PeakIndicator : public QLabel
+class NOEMIXERR_EXPORT PeakIndicator : public QLabel
 {
 	Q_OBJECT
 public:

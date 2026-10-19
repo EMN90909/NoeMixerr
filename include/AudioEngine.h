@@ -44,7 +44,7 @@ constexpr float OUTPUT_SAMPLE_MULTIPLIER = 32767.0f;
 constexpr auto SUPPORTED_SAMPLERATES = std::array{44100, 48000, 88200, 96000, 176400, 192000};
 constexpr auto SUPPORTED_BITRATES = std::array{64, 128, 160, 192, 256, 320};
 
-class NoeMixerr_EXPORT AudioEngine : public QObject
+class NOEMIXERR_EXPORT AudioEngine : public QObject
 {
 	Q_OBJECT
 public:

@@ -25,7 +25,7 @@ class Track;
 class AudioBusHandle;
 class SampleFrame;
 
-class NoeMixerr_EXPORT PlayHandle : public ThreadableJob
+class NOEMIXERR_EXPORT PlayHandle : public ThreadableJob
 {
 public:
 	enum class Type

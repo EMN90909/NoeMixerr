@@ -16,7 +16,7 @@ class QLabel;
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT TextFloat : public QWidget
+class NOEMIXERR_EXPORT TextFloat : public QWidget
 {
 	Q_OBJECT
 public:

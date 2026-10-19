@@ -31,7 +31,7 @@ class EffectView;
 } // namespace gui
 
 
-class NoeMixerr_EXPORT Effect : public Plugin
+class NOEMIXERR_EXPORT Effect : public Plugin
 {
 	Q_OBJECT
 public:

@@ -14,7 +14,7 @@ namespace noemixerr
 
 //! Class responsible for sorting found plugins (by LadspaManager)
 //! into categories
-class NoeMixerr_EXPORT Ladspa2NoeMixerr : public LadspaManager
+class NOEMIXERR_EXPORT Ladspa2NoeMixerr : public LadspaManager
 {
 public:
 	

@@ -15,7 +15,7 @@
 namespace noemixerr
 {
 
-class NoeMixerr_EXPORT JournallingObject : public SerializingObject
+class NOEMIXERR_EXPORT JournallingObject : public SerializingObject
 {
 public:
 	JournallingObject();

@@ -25,7 +25,7 @@ class EnvelopeAndLfoView;
 
 }
 
-class NoeMixerr_EXPORT EnvelopeAndLfoParameters : public Model, public JournallingObject
+class NOEMIXERR_EXPORT EnvelopeAndLfoParameters : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:

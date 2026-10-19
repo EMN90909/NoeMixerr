@@ -43,7 +43,7 @@ namespace gui
  * - PatternTracks are used in the Song Editor. Each one reference a "pattern" in the PatternStore.
  * - PatternClips are stored inside PatternTracks. They are just empty placeholders.
  */
-class NoeMixerr_EXPORT PatternStore : public TrackContainer
+class NOEMIXERR_EXPORT PatternStore : public TrackContainer
 {
 	Q_OBJECT
 	mapPropertyFromModel(int, currentPattern, setCurrentPattern, m_patternComboBoxModel);

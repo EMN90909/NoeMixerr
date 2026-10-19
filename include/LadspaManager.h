@@ -61,7 +61,7 @@ struct LadspaManagerDescription
 	uint16_t outputChannels;
 };
 
-class NoeMixerr_EXPORT LadspaManager
+class NOEMIXERR_EXPORT LadspaManager
 {
 public:
 

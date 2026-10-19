@@ -28,7 +28,7 @@ class ControllerConnectionDialog;
 
 using ControllerConnectionVector = std::vector<ControllerConnection*>;
 
-class NoeMixerr_EXPORT ControllerConnection : public QObject, public JournallingObject
+class NOEMIXERR_EXPORT ControllerConnection : public QObject, public JournallingObject
 {
 	Q_OBJECT
 public:

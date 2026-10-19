@@ -22,7 +22,7 @@ namespace noemixerr
 class ProjectVersion;
 
 
-class NoeMixerr_EXPORT DataFile : public QDomDocument
+class NOEMIXERR_EXPORT DataFile : public QDomDocument
 {
 
 	using UpgradeMethod = void(DataFile::*)();

@@ -29,7 +29,7 @@ class AutomationEditor;
 
 
 
-class NoeMixerr_EXPORT AutomationClip : public Clip
+class NOEMIXERR_EXPORT AutomationClip : public Clip
 {
 	Q_OBJECT
 public:

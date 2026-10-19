@@ -28,7 +28,7 @@ namespace noemixerr::Clipboard
 	bool hasFormat( MimeType mT );
 
 	// Helper methods for String data
-	void NoeMixerr_EXPORT copyString(const QString& str, MimeType mT);
+	void NOEMIXERR_EXPORT copyString(const QString& str, MimeType mT);
 	QString getString( MimeType mT );
 
 	// Helper methods for String Pair data

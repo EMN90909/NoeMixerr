@@ -19,7 +19,7 @@ namespace noemixerr {
  *
  * This class provides support for zero-order hold, linear, and several levels of sinc-based resampling.
  */
-class NoeMixerr_EXPORT AudioResampler
+class NOEMIXERR_EXPORT AudioResampler
 {
 public:
 	/**
@@ -97,7 +97,7 @@ public:
 	auto mode() const -> Mode { return m_mode; }
 
 private:
-	struct NoeMixerr_EXPORT StateDeleter { void operator()(void* state); };
+	struct NOEMIXERR_EXPORT StateDeleter { void operator()(void* state); };
 	std::unique_ptr<void, StateDeleter> m_state;
 	Mode m_mode;
 	ch_cnt_t m_channels = 0;

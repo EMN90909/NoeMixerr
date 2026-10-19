@@ -27,7 +27,7 @@ namespace noemixerr
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT MixerView
+class NOEMIXERR_EXPORT MixerView
 	: public QWidget
 	, public ModelView
 	, public SerializingObjectHook

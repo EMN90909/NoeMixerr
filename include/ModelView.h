@@ -13,7 +13,7 @@
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT ModelView
+class NOEMIXERR_EXPORT ModelView
 {
 public:
 	ModelView( Model* model, QWidget* widget );

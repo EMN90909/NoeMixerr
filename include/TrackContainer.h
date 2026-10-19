@@ -26,7 +26,7 @@ class TrackContainerView;
 }
 
 
-class NoeMixerr_EXPORT TrackContainer : public Model, public JournallingObject
+class NOEMIXERR_EXPORT TrackContainer : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:

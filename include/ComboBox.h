@@ -16,7 +16,7 @@
 namespace noemixerr::gui
 {
 
-class NoeMixerr_EXPORT ComboBox : public QWidget, public IntModelView
+class NOEMIXERR_EXPORT ComboBox : public QWidget, public IntModelView
 {
 	Q_OBJECT
 public:

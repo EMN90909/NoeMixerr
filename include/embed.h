@@ -28,14 +28,14 @@ namespace embed {
 //! @param width A specific pixmap width. When this and @p height are provided, the pixmap is cached.
 //! @param height A specific pixmap height. When this and @p width are provided, the pixmap is cached.
 //! @param xpm Must be XPM data if the source should be raw XPM data instead of a file
-auto NoeMixerr_EXPORT getIconPixmap(
+auto NOEMIXERR_EXPORT getIconPixmap(
 	std::string_view name,
 	int width = -1,
 	int height = -1,
 	const char* const* xpm = nullptr
 ) -> QPixmap;
 
-auto NoeMixerr_EXPORT getText(std::string_view name) -> QString;
+auto NOEMIXERR_EXPORT getText(std::string_view name) -> QString;
 
 //! @brief Temporary shim for QPixmap::deviceIndependentSize.
 //! @param pixmap The pixmap to get the size of.

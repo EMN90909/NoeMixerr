@@ -17,7 +17,7 @@ namespace noemixerr::gui
 class AutomatableButtonGroup;
 
 
-class NoeMixerr_EXPORT AutomatableButton : public QPushButton, public BoolModelView
+class NOEMIXERR_EXPORT AutomatableButton : public QPushButton, public BoolModelView
 {
 	Q_OBJECT
 public:
@@ -62,7 +62,7 @@ private:
 
 
 
-class NoeMixerr_EXPORT AutomatableButtonGroup : public QWidget, public IntModelView
+class NOEMIXERR_EXPORT AutomatableButtonGroup : public QWidget, public IntModelView
 {
 	Q_OBJECT
 public:
