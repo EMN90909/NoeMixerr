@@ -34,7 +34,7 @@ AboutDialog::AboutDialog(QWidget* parent) :
 					Qt::TextSelectableByMouse );
 
 	copyrightLabel->setText( copyrightLabel->text().
-					arg( LMMS_PROJECT_COPYRIGHT ) );
+					arg( NOEMIXERR_PROJECT_COPYRIGHT ) );
 
 	authorLabel->setPlainText( embed::getText( "AUTHORS" ) );
 
