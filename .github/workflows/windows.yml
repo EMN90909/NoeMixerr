@@ -25,7 +25,7 @@ jobs:
             toolchain:p cmake:p ninja:p qt5-base:p qt5-svg:p qt5-tools:p
             libsndfile:p fftw:p libsamplerate:p
       - name: Configure
-        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON -DWANT_SWH=OFF
       - name: Compile
         run: cmake --build build --parallel 2
       - name: Unit tests
