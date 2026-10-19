@@ -86,6 +86,7 @@ def interactive_test(binary, root, enabled):
 
         edit("create_pattern", track_index=1, name="Break", position=192)
         edit("add_note", pattern_index=2, key=72, position=0, length=24)
+        edit("rename_track", track_index=1, name="NoeAI Lead v0.4")
         edit("set_track_mix", track_index=1, volume=70, pan=-20, mute=True)
         edit("add_notes", notes=[
             {"pattern_index": 2, "key": 36, "position": 48, "length": 24},
@@ -94,6 +95,7 @@ def interactive_test(binary, root, enabled):
         xmlroot = ET.parse(root/"test.mmp").getroot()
         tracks = xmlroot.findall("./song/trackcontainer/track")
         assert len(tracks) == 2
+        assert tracks[1].get("name") == "NoeAI Lead v0.4"
         assert tracks[1].get("muted") == "1"
         assert tracks[1].find("instrumenttrack").get("vol") == "70"
         assert tracks[1].find("instrumenttrack").get("pan") == "-20"
