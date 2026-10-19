@@ -1,34 +1,9 @@
-/*
- * HilbertTransform.h
- *
- * Copyright (c) 2025 Lost Robot <r94231/at/gmail/dot/com>
- *
- * This file is part of LMMS - https://lmms.io
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
- * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public
- * License along with this program (see COPYING); if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA.
- *
- * -------------------------------------------------------------------------
- * Full credit for the Hilbert IIR coefficients and general usage goes to:
- *
- *   Copyright (c) 2024 Geraint Luff / Signalsmith Audio Ltd.
- *   Released under the 0BSD (Zero-Clause BSD) License.
- *
- *   https://github.com/Signalsmith-Audio/hilbert-iir/blob/main/hilbert.h
- * -------------------------------------------------------------------------
- */
+// SPDX-License-Identifier: GPL-2.0-or-later
+// NoeMixerr: modified LMMS-derived source; original copyrights retained.
+// Copyright (c) 2025 Lost Robot <r94231/at/gmail/dot/com>
+// Copyright (c) 2024 Geraint Luff / Signalsmith Audio Ltd.
+// See LICENSE.txt and doc/AUTHORS for original authors and license.
+
 
 #ifndef NoeMixerr_HILBERT_TRANSFORM_H
 #define NoeMixerr_HILBERT_TRANSFORM_H

@@ -1,32 +1,12 @@
-/*
- * GigPlayer.cpp - a GIG player using libgig (based on Sf2 player plugin)
- *
- * Copyright (c) 2008 Paul Giblock <drfaygo/at/gmail/dot/com>
- * Copyright (c) 2009-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
- *
- * A few lines of code taken from LinuxSampler (also GPLv2) where noted:
- * Copyright (C) 2003,2004 by Benno Senoner and Christian Schoenebeck
- * Copyright (C) 2005-2008 Christian Schoenebeck
- * Copyright (C) 2009-2010 Christian Schoenebeck and Grigor Iliev
- *
- * This file is part of LMMS - https://lmms.io
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
- * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public
- * License along with this program (see COPYING); if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA.
- *
- */
+// SPDX-License-Identifier: GPL-2.0-or-later
+// NoeMixerr: modified LMMS-derived source; original copyrights retained.
+// Copyright (c) 2008 Paul Giblock <drfaygo/at/gmail/dot/com>
+// Copyright (c) 2009-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
+// Copyright (C) 2003,2004 by Benno Senoner and Christian Schoenebeck
+// Copyright (C) 2005-2008 Christian Schoenebeck
+// Copyright (C) 2009-2010 Christian Schoenebeck and Grigor Iliev
+// See LICENSE.txt and doc/AUTHORS for original authors and license.
+
 
 #include "GigPlayer.h"
 

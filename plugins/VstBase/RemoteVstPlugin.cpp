@@ -1,34 +1,12 @@
-/*
- * RemoteVstPlugin.cpp - NoeMixerr VST Support Layer (RemotePlugin client)
- *
- * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
- *
- * This file is part of LMMS - https://lmms.io
- *
- * Code partly taken from (X)FST:
- * 		Copyright (c) 2004 Paul Davis
- * 		Copyright (c) 2004 Torben Hohn
- *	 	Copyright (c) 2002 Kjetil S. Matheussen
- *
- * X11 code partly taken from https://github.com/ekenberg/vstminihost:
- *      Copyright (c) 2012 Johan Ekenberg
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
- * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public
- * License along with this program (see COPYING); if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA.
- *
- */
+// SPDX-License-Identifier: GPL-2.0-or-later
+// NoeMixerr: modified LMMS-derived source; original copyrights retained.
+// Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
+// Copyright (c) 2004 Paul Davis
+// Copyright (c) 2004 Torben Hohn
+// Copyright (c) 2002 Kjetil S. Matheussen
+// Copyright (c) 2012 Johan Ekenberg
+// See LICENSE.txt and doc/AUTHORS for original authors and license.
+
 
  #include <cmath>
 
