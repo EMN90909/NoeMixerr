@@ -337,7 +337,7 @@ QJsonObject dispatch(const QJsonObject& request) {
         return QJsonObject{
             {"protocolVersion","2025-03-26"},
             {"capabilities",QJsonObject{{"tools",QJsonObject{}}}},
-            {"serverInfo",QJsonObject{{"name","noemixerr-mcp"},{"version","0.1.0-dev"}}}
+            {"serverInfo",QJsonObject{{"name","noemixerr-mcp"},{"version","0.4.0"}}}
         };
     }
     if (method == "ping") return QJsonObject{};
@@ -360,7 +360,7 @@ QJsonObject dispatch(const QJsonObject& request) {
 int main(int argc, char** argv) {
     QCoreApplication app(argc, argv);
     if (app.arguments().contains("--version")) {
-        std::puts("NoeMixerr MCP 0.1.0-dev");
+        std::puts("NoeMixerr MCP 0.4.0");
         return 0;
     }
     QFileInfo dir(qEnvironmentVariable("NOEMIXERR_WORKSPACE", QDir::currentPath()));
