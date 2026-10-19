@@ -99,7 +99,7 @@ for source in root.rglob("*"):
         text = source.read_text(encoding="utf-8")
     except (UnicodeDecodeError, OSError):
         continue
-    head = _re.match(r"\\A(/\\*.*?\\*/)", text, _re.S)
+    head = _re.match(r"\A(/\*.*?\*/)", text, _re.S)
     if not head:
         continue
     original = head.group(1)
@@ -110,16 +110,16 @@ for source in root.rglob("*"):
     # Preserve verbatim ownership and relevant title/description lines.
     lines = []
     for line in original.splitlines():
-        clean = line.strip(" /*\\t")
+        clean = line.strip(" /*\t")
         if clean.startswith("Copyright ") or clean.startswith("Copyright("):
             lines.append("// " + clean)
     if not lines:
         continue
     # retain original holders even if multiple copyright lines were present.
-    header = "// SPDX-License-Identifier: GPL-2.0-or-later\\n"
-    header += "// NoeMixerr: modified LMMS-derived source; original copyrights retained.\\n"
-    header += "\\n".join(lines) + "\\n"
-    header += "// See LICENSE.txt and doc/AUTHORS for original authors and license.\\n"
+    header = "// SPDX-License-Identifier: GPL-2.0-or-later\n"
+    header += "// NoeMixerr: modified LMMS-derived source; original copyrights retained.\n"
+    header += "\n".join(lines) + "\n"
+    header += "// See LICENSE.txt and doc/AUTHORS for original authors and license.\n"
     changed_body = header + text[head.end():]
     if changed_body != text:
         source.write_text(changed_body, encoding="utf-8")
