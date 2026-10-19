@@ -31,7 +31,8 @@ jobs:
           # Retain LMMS's original LICENSE.txt, copyright notices and .gitmodules.
           # Do not activate the upstream repository's CI workflows in this fork.
           if [ -d .github/workflows ]; then
-            git rm -rq --ignore-unmatch .github/workflows
+            git rm -rfq --cached --ignore-unmatch .github/workflows
+            rm -rf .github/workflows
           fi
           git add -A
           git commit -m "Replace prototype with LMMS upstream ($SOURCE_SHA)"
