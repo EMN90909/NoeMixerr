@@ -1,0 +1,32 @@
+name: Windows build and tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mingw:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            git make
+          pacboy: >-
+            toolchain:p cmake:p ninja:p qt5-base:p qt5-svg:p qt5-tools:p
+            libsndfile:p fftw:p libsamplerate:p
+      - name: Configure
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+      - name: Compile
+        run: cmake --build build --parallel 2
+      - name: Unit tests
+        run: ctest --test-dir build --output-on-failure
