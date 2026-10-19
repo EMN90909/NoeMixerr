@@ -12,7 +12,7 @@ NoeMixerr is a C++/Qt LMMS-derived DAW. Its large-scale identifier rebranding ha
 ```sh
 git clone --recurse-submodules https://github.com/EMN90909/NoeMixerr.git
 cd NoeMixerr
-cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON -DWANT_SWH=OFF
 cmake --build build --parallel 2
 ctest --test-dir build --output-on-failure
 ```
@@ -25,7 +25,7 @@ sudo apt-get install -y git cmake ninja-build build-essential pkg-config \
   qtbase5-dev qtbase5-private-dev qttools5-dev qttools5-dev-tools libqt5svg5-dev \
   libsndfile1-dev libfftw3-dev libsamplerate0-dev \
   libasound2-dev libpulse-dev libjack-jackd2-dev \
-  libfltk1.3-dev libvorbis-dev libogg-dev libmpg123-dev liblist-moreutils-perl
+  libfltk1.3-dev libvorbis-dev libogg-dev libmpg123-dev liblist-moreutils-perl libxml-parser-perl
 ```
 
 Then run the shared commands. See the [Linux CI workflow](.github/workflows/linux.yml).
@@ -39,7 +39,7 @@ Use the MSYS2 UCRT64 shell, not Windows PowerShell, for the native MinGW toolcha
 ```sh
 brew install cmake ninja qt@5 libsndfile fftw libsamplerate pkg-config
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release \
-  -DBUILD_TESTING=ON -DCMAKE_PREFIX_PATH="$(brew --prefix qt@5)"
+  -DBUILD_TESTING=ON -DWANT_SWH=OFF -DCMAKE_PREFIX_PATH="$(brew --prefix qt@5)"
 cmake --build build --parallel 2
 ctest --test-dir build --output-on-failure
 ```
@@ -64,3 +64,5 @@ These are **verification criteria**, not claims of tests already passed. Open is
 ## Licensing
 
 All redistributed derivatives retain the original LMMS copyright and GPL-2.0-or-later source obligations. See `LICENSE.txt`, `doc/AUTHORS` and `doc/CONTRIBUTORS`.
+
+CI disables the optional SWH LADSPA plugin suite to establish a portable baseline; enable it separately by installing the Perl XML parser and List::MoreUtils packages and configuring with `-DWANT_SWH=ON`. This does not remove existing SWH support.
