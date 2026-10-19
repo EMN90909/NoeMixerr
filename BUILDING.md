@@ -22,7 +22,7 @@ ctest --test-dir build --output-on-failure
 ```sh
 sudo apt-get update
 sudo apt-get install -y git cmake ninja-build build-essential pkg-config \
-  qtbase5-dev qttools5-dev qttools5-dev-tools libqt5svg5-dev \
+  qtbase5-dev qtbase5-private-dev qttools5-dev qttools5-dev-tools libqt5svg5-dev \
   libsndfile1-dev libfftw3-dev libsamplerate0-dev \
   libasound2-dev libpulse-dev libjack-jackd2-dev \
   libfltk1.3-dev libvorbis-dev libogg-dev libmpg123-dev liblist-moreutils-perl
