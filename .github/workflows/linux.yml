@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: noemixerr-linux-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   linux:
     runs-on: ubuntu-24.04
