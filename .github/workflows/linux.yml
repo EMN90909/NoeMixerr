@@ -15,7 +15,7 @@ jobs:
       - name: Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake ninja-build build-essential pkg-config qtbase5-dev libqt5x11extras5-dev libxcb-util-dev libxcb-keysyms1-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-render-util0-dev libxcb-xkb-dev libx11-xcb-dev qttools5-dev qttools5-dev-tools libqt5svg5-dev libsndfile1-dev libfftw3-dev libsamplerate0-dev libasound2-dev libpulse-dev libjack-jackd2-dev libfltk1.3-dev libvorbis-dev libogg-dev libmpg123-dev
+          sudo apt-get install -y cmake ninja-build build-essential pkg-config qtbase5-dev libqt5x11extras5-dev libxcb-util-dev libxcb-keysyms1-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-render-util0-dev libxcb-xkb-dev libx11-xcb-dev qttools5-dev qttools5-dev-tools libqt5svg5-dev libsndfile1-dev libfftw3-dev libsamplerate0-dev libasound2-dev libpulse-dev libjack-jackd2-dev libfltk1.3-dev libvorbis-dev libogg-dev libmpg123-dev liblist-moreutils-perl
       - name: Configure
         run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
       - name: Compile
