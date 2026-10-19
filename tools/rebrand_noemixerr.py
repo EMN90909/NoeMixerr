@@ -85,3 +85,43 @@ remaining = subprocess.run(
 )
 print("Provenance / remaining NoeMixerr text mentions in index:",
       len(remaining.stdout.splitlines()))
+
+# Compress inherited verbose GPL boilerplate while keeping original copyright.
+# Only headers containing the recognizable LMMS GPL notice are eligible.
+import re as _re
+shortened = 0
+for source in root.rglob("*"):
+    if not source.is_file() or ".git" in source.parts:
+        continue
+    if source.suffix.lower() not in {".h", ".hpp", ".cpp", ".c", ".cc", ".cxx"}:
+        continue
+    try:
+        text = source.read_text(encoding="utf-8")
+    except (UnicodeDecodeError, OSError):
+        continue
+    head = _re.match(r"\\A(/\\*.*?\\*/)", text, _re.S)
+    if not head:
+        continue
+    original = head.group(1)
+    if "This program is free software" not in original or "GNU General Public" not in original:
+        continue
+    if "Copyright" not in original:
+        continue
+    # Preserve verbatim ownership and relevant title/description lines.
+    lines = []
+    for line in original.splitlines():
+        clean = line.strip(" /*\\t")
+        if clean.startswith("Copyright ") or clean.startswith("Copyright("):
+            lines.append("// " + clean)
+    if not lines:
+        continue
+    # retain original holders even if multiple copyright lines were present.
+    header = "// SPDX-License-Identifier: GPL-2.0-or-later\\n"
+    header += "// NoeMixerr: modified LMMS-derived source; original copyrights retained.\\n"
+    header += "\\n".join(lines) + "\\n"
+    header += "// See LICENSE.txt and doc/AUTHORS for original authors and license.\\n"
+    changed_body = header + text[head.end():]
+    if changed_body != text:
+        source.write_text(changed_body, encoding="utf-8")
+        shortened += 1
+print(f"Condensed {shortened} inherited GPL banners, preserving copyright holders")
