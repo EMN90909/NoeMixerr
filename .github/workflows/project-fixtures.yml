@@ -1,0 +1,22 @@
+name: Legacy LMMS project fixture audit
+on:
+  push:
+    paths:
+      - 'tools/legacy_project_audit.py'
+      - 'data/projects/**'
+      - 'tests/emptyproject.mmp'
+  pull_request:
+    paths:
+      - 'tools/legacy_project_audit.py'
+      - 'data/projects/**'
+      - 'tests/emptyproject.mmp'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  project-fixtures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit inherited compressed and plain project fixtures
+        run: python3 tools/legacy_project_audit.py
