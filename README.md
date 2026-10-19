@@ -1,59 +1,43 @@
 <div align="center">
-	<h1>
-	<img src="https://raw.githubusercontent.com/NoeMixerr/artwork/master/Icon%20%26%20Mimetypes/noemixerr-64x64.svg" alt="NoeMixerr Logo"><br>NoeMixerr
-	</h1>
-	<p>Cross-platform music production software</p>
-	<p>
-		<a href="https://lmms.io/">Website</a>
-		⦁︎
-		<a href="https://github.com/LMMS/lmms/releases">Releases</a>
-		⦁︎
-		<a href="https://lmms.io/documentation">User manual</a>
-		⦁︎
-		<a href="https://lmms.io/showcase/">Showcase</a>
-		⦁︎
-		<a href="https://lmms.io/lsp/">Sharing platform</a>
-		⦁︎
-		<a href="https://github.com/LMMS/lmms/wiki">Developer wiki</a>
-		⦁︎
-		<a href="https://noemixerr.github.io/noemixerr">Internal documentation</a>
-	</p>
-	<p>
-		<a href="https://github.com/LMMS/lmms/actions/workflows/build.yml"><img src="https://github.com/LMMS/lmms/actions/workflows/build.yml/badge.svg" alt="Build status"></a>
-		<a href="https://lmms.io/download"><img src="https://img.shields.io/github/release/LMMS/lmms.svg?maxAge=3600" 	alt="Latest stable release"></a>
-		<a href="https://github.com/LMMS/lmms/releases"><img src="https://img.shields.io/github/downloads/LMMS/lmms/total.svg?maxAge=3600" alt="Overall downloads on Github"></a>
-		<a href="https://discord.gg/3sc5su7"><img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Join the chat at Discord"></a>
-		<a href="https://www.transifex.com/noemixerr/noemixerr/"><img src="https://img.shields.io/badge/localise-on_transifex-green.svg"></a>
-	</p>
+
+<img src="assets/noemixerr-logo.svg" alt="NoeMixerr logo" width="96">
+
+# NoeMixerr
+
+**Native C++ digital audio workstation, maintained by Noethric.**
+
+[Source & issues](https://github.com/EMN90909/NoeMixerr) · [Releases](https://github.com/EMN90909/NoeMixerr/releases) · [Builds](https://github.com/EMN90909/NoeMixerr/actions) · [Contribute](https://github.com/EMN90909/NoeMixerr/issues/new)
+
+![Linux CI](https://github.com/EMN90909/NoeMixerr/actions/workflows/linux.yml/badge.svg)
+![Windows CI](https://github.com/EMN90909/NoeMixerr/actions/workflows/windows.yml/badge.svg)
+![macOS CI](https://github.com/EMN90909/NoeMixerr/actions/workflows/macos.yml/badge.svg)
+
 </div>
 
-What is NoeMixerr?
---------------
+## Overview
 
-NoeMixerr is an open-source cross-platform digital audio workstation designed for music production. It includes an advanced Piano Roll, Beat Sequencer, Song Editor, and Mixer for composing, arranging, and mixing music. It comes with 15+ synthesizer plugins by default, along with VST2 and SoundFont2 support.
+NoeMixerr is a rebranded and modified derivative of **LMMS**, with the inherited C++ audio engine, song editor, pattern editor, piano roll, mixer, instruments and automation system. Some features depend on platform-specific dependencies. NoeMixerr is **not** currently a verified production release; the mechanical rename requires compatibility testing.
 
-Features
----------
+**Versioning:** NoeMixerr starts at **0.1.0-dev**. Pre-1.0 versions do not promise stable APIs or file formats. The inherited LMMS version and copyright history remain credited separately, not passed off as a new Noethric implementation.
 
-* Song-Editor for arranging melodies, samples, patterns, and automation
-* Pattern-Editor for creating beats and patterns
-* An easy-to-use Piano-Roll for editing patterns and melodies
-* A Mixer with unlimited mixer channels and arbitrary number of effects
-* Many powerful instrument and effect-plugins out of the box
-* Full user-defined track-based automation and computer-controlled automation sources
-* Compatible with many standards such as SoundFont2, VST2 (instruments and effects), LADSPA, LV2, GUS Patches, and full MIDI support
-* MIDI file importing and exporting
+## Build and test
 
-Building
----------
+See [BUILDING.md](BUILDING.md) for Linux, Windows and macOS prerequisites, CMake commands, known blockers and verification steps. CI builds are in [GitHub Actions](https://github.com/EMN90909/NoeMixerr/actions).
 
-See [Compiling LMMS](https://github.com/LMMS/lmms/wiki/Compiling)
+## Existing functionality
 
-Join NoeMixerr-development
-----------------------
+- Piano roll, pattern editing and multitrack song arrangement
+- Synths, effects, SoundFont and audio file workflows
+- Mixer channels, automation and MIDI import/export
+- LMMS-compatible project workflows where verified
 
-If you are interested in NoeMixerr, its programming, artwork, testing, writing demo songs, (and improving this README...) or something like that, you're welcome to participate in the development of NoeMixerr!
+**Work in progress:** recording, modern plugin hosting, AI/MCP, game-audio integration and advanced rendering features are future work. Rebranding alone does not implement them.
 
-Information about what you can do and how can be found in the [wiki](https://github.com/LMMS/lmms/wiki).
+## Reporting problems
 
-Before coding a new big feature, please _always_ [file an issue](https://github.com/LMMS/lmms/issues/new) for your idea and suggestions about your feature and about the intended implementation on GitHub, or ask in one of the tech channels on Discord and wait for replies! Maybe there are different ideas, improvements, or hints, or maybe your feature is not welcome/needed at the moment.
+Please [open a NoeMixerr issue](https://github.com/EMN90909/NoeMixerr/issues/new), specifying your OS, NoeMixerr version, logs and a minimal reproduction without API keys or personal data.
+
+## Original project and licensing
+
+NoeMixerr is derived from [LMMS](https://github.com/LMMS/lmms). Original LMMS authors and contributors retain attribution and copyright. See [doc/AUTHORS](doc/AUTHORS), [doc/CONTRIBUTORS](doc/CONTRIBUTORS), source notices, and [LICENSE.txt](LICENSE.txt) for GPL-2.0-or-later terms and applicable third-party notices. Noethric maintains its modifications. Do not remove historical credits.
+
