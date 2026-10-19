@@ -23,7 +23,7 @@ target_include_directories(ringbuffer PUBLIC
 # Create a dummy ringbuffer_export.h, since ringbuffer is not compiled as a library
 file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/ringbuffer_export.h.in" [[
 	#include "${CMAKE_BINARY_DIR}/src/noemixerr_export.h"
-	#define RINGBUFFER_EXPORT NoeMixerr_EXPORT
+	#define RINGBUFFER_EXPORT NOEMIXERR_EXPORT
 ]])
 configure_file("${CMAKE_CURRENT_BINARY_DIR}/ringbuffer_export.h.in" ringbuffer_export.h)
 target_compile_definitions(ringbuffer PRIVATE noemixerrobjs_EXPORTS)
