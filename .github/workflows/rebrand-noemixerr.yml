@@ -1,0 +1,35 @@
+name: Rebrand LMMS to NoeMixerr
+on:
+  push:
+    paths:
+      - 'tools/rebrand_noemixerr.py'
+      - '.github/workflows/rebrand-noemixerr.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Replace first-party names and file paths
+        run: python3 tools/rebrand_noemixerr.py
+      - name: Verify path rename
+        run: |
+          if find . -not -path './.git/*' -iname '*lmms*' | grep -q .; then
+            echo "Unrenamed LMMS paths:"
+            find . -not -path './.git/*' -iname '*lmms*'
+            exit 1
+          fi
+          git status --short | tail -n 25
+      - name: Commit rebrand
+        run: |
+          git config user.name "Noethric Import Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "refactor: rebrand LMMS file paths and symbols to NoeMixerr"
+            git push origin HEAD:main
+          fi
