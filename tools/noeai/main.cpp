@@ -122,6 +122,17 @@ void validEdit(const QJsonObject& a) {
             err("Invalid MIDI note; key 0..127, position >= 0, length > 0");
         }
         (void) nonnegativeIndex(a, "pattern_index", 4096);
+    } else if (op == "add_notes") {
+        const QJsonValue v = a.value("notes");
+        if (!v.isArray() || v.toArray().isEmpty() || v.toArray().size() > 256) {
+            err("Batch must contain between 1 and 256 MIDI notes");
+        }
+        for (const auto& candidate : v.toArray()) {
+            if (!candidate.isObject()) err("Invalid MIDI note object");
+            QJsonObject single = candidate.toObject();
+            single.insert("operation", "add_note");
+            validEdit(single);
+        }
     } else if (op == "create_instrument_track" || op == "create_pattern") {
         (void) nonnegativeIndex(a, "track_index", 127);
         const QString name = a.value("name").toString();
@@ -186,6 +197,12 @@ void editProject(QDomDocument& doc, const QString& op, const QJsonObject& a) {
         note.setAttribute("vol", 100);
         note.setAttribute("pan", 0);
         pattern.appendChild(note);
+    } else if (op == "add_notes") {
+        for (const auto& candidate : a.value("notes").toArray()) {
+            QJsonObject single = candidate.toObject();
+            single.insert("operation", "add_note");
+            editProject(doc, "add_note", single);
+        }
     } else if (op == "create_instrument_track") {
         QDomElement templateTrack = findTrack(doc, nonnegativeIndex(a, "track_index", 127));
         if (templateTrack.attribute("type") != "0" || templateTrack.firstChildElement("instrumenttrack").isNull()) {
@@ -293,11 +310,17 @@ QJsonObject toolList() {
           "annotations":{"readOnlyHint":true}},
         {"name":"propose_edit","description":"Preview a tempo, note, instrument track, pattern or track-mix edit without writing any file",
           "inputSchema":{"type":"object","properties":{
-            "path":{"type":"string"},"operation":{"type":"string","enum":["set_tempo","add_note","create_instrument_track","create_pattern","set_track_mix"]},
+            "path":{"type":"string"},"operation":{"type":"string","enum":["set_tempo","add_note","add_notes","create_instrument_track","create_pattern","set_track_mix"]},
             "bpm":{"type":"number"},"key":{"type":"integer"},"position":{"type":"integer"},
             "length":{"type":"integer"},"pattern_index":{"type":"integer"},
             "track_index":{"type":"integer"},"name":{"type":"string"},
-            "volume":{"type":"number"},"pan":{"type":"number"},"mute":{"type":"boolean"}},
+            "volume":{"type":"number"},"pan":{"type":"number"},"mute":{"type":"boolean"},
+            "notes":{"type":"array","minItems":1,"maxItems":256,"items":{"type":"object","properties":{
+              "key":{"type":"integer","minimum":0,"maximum":127},
+              "position":{"type":"integer","minimum":0},
+              "length":{"type":"integer","minimum":1},
+              "pattern_index":{"type":"integer","minimum":0}},
+              "required":["key","position","length"]}}},
             "required":["path","operation"]},
           "annotations":{"readOnlyHint":true}},
         {"name":"apply_edit","description":"Save previously previewed edit atomically, with backup, after independent host approval. Disabled by default.",
