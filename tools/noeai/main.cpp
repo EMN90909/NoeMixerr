@@ -88,20 +88,26 @@ QDomDocument parseProject(const QByteArray& bytes) {
     }
     return doc;
 }
-QJsonObject inspect(const QJsonObject& args) {
-    const QString path = checkedPath(args);
-    const QDomDocument doc = parseProject(readBounded(path));
-    const QDomElement root = doc.documentElement();
-    const QDomElement head = root.firstChildElement("head");
-    if (head.isNull()) err("Missing song head");
-    return QJsonObject{
-        {"path", QFileInfo(path).fileName()},
-        {"root", root.tagName()},
-        {"bpm", head.attribute("bpm").toDouble()},
-        {"track_elements", doc.elementsByTagName("track").count()},
-        {"notes", doc.elementsByTagName("note").count()},
-        {"editable_patterns", doc.elementsByTagName("pattern").count()}
-    };
+
+QDomElement findTrack(QDomDocument& doc, int index) {
+    QDomElement song = doc.documentElement().firstChildElement("song");
+    if (song.isNull()) err("Project has no song");
+    QDomElement container = song.firstChildElement("trackcontainer");
+    if (container.isNull()) err("Song has no arrangement track container");
+    QDomElement track = container.firstChildElement("track");
+    for (int i = 0; i < index && !track.isNull(); ++i) {
+        track = track.nextSiblingElement("track");
+    }
+    if (track.isNull()) err("Track index out of range");
+    return track;
+}
+int nonnegativeIndex(const QJsonObject& a, const char* name, int maximum) {
+    const QJsonValue v = a.value(QLatin1String(name));
+    const double d = v.isUndefined() ? 0.0 : v.toDouble(-1.0);
+    if ((!v.isUndefined() && !v.isDouble()) || d < 0 || d > maximum || d != double(int(d))) {
+        err(QString("Invalid %1").arg(QLatin1String(name)));
+    }
+    return int(d);
 }
 void validEdit(const QJsonObject& a) {
     const QString op = a.value("operation").toString();
@@ -110,21 +116,128 @@ void validEdit(const QJsonObject& a) {
         if (!bpm.isDouble() || bpm.toDouble() < 20 || bpm.toDouble() > 400) err("BPM must be 20..400");
     } else if (op == "add_note") {
         const auto key = a.value("key"), pos = a.value("position"), length = a.value("length");
-        if (!key.isDouble() || key.toInt() < 0 || key.toInt() > 127
-            || !pos.isDouble() || pos.toInt() < 0 || pos.toInt() > 10000000
-            || !length.isDouble() || length.toInt() < 1 || length.toInt() > 1000000) {
+        if (!key.isDouble() || key.toDouble() != double(key.toInt()) || key.toInt() < 0 || key.toInt() > 127
+            || !pos.isDouble() || pos.toDouble() != double(pos.toInt()) || pos.toInt() < 0 || pos.toInt() > 10000000
+            || !length.isDouble() || length.toDouble() != double(length.toInt()) || length.toInt() < 1 || length.toInt() > 1000000) {
             err("Invalid MIDI note; key 0..127, position >= 0, length > 0");
         }
+        (void) nonnegativeIndex(a, "pattern_index", 4096);
+    } else if (op == "create_instrument_track" || op == "create_pattern") {
+        (void) nonnegativeIndex(a, "track_index", 127);
+        const QString name = a.value("name").toString();
+        if (name.isEmpty() || name.size() > 80) err("Track/pattern name must be 1..80 characters");
+        if (op == "create_pattern") (void) nonnegativeIndex(a, "position", 10000000);
+    } else if (op == "set_track_mix") {
+        (void) nonnegativeIndex(a, "track_index", 127);
+        if (!a.value("volume").isDouble() || a.value("volume").toDouble() < 0 || a.value("volume").toDouble() > 200
+            || !a.value("pan").isDouble() || a.value("pan").toDouble() < -100 || a.value("pan").toDouble() > 100
+            || !a.value("mute").isBool()) err("Mix values must be volume 0..200, pan -100..100, mute true/false");
+    } else err("Unsupported edit operation");
+}
+QJsonObject inspect(const QJsonObject& args) {
+    const QString path = checkedPath(args);
+    QDomDocument doc = parseProject(readBounded(path));
+    const QDomElement root = doc.documentElement();
+    const QDomElement head = root.firstChildElement("head");
+    if (head.isNull()) err("Missing song head");
+    QJsonArray tracks;
+    QDomElement song = root.firstChildElement("song");
+    QDomElement container = song.firstChildElement("trackcontainer");
+    QDomElement track = container.firstChildElement("track");
+    for (int index = 0; !track.isNull() && index < 128; ++index) {
+        const QDomElement it = track.firstChildElement("instrumenttrack");
+        tracks.append(QJsonObject{
+            {"index", index},
+            {"name", track.attribute("name")},
+            {"type", track.attribute("type")},
+            {"instrument", it.firstChildElement("instrument").attribute("name")},
+            {"patterns", track.elementsByTagName("pattern").count()},
+            {"notes", track.elementsByTagName("note").count()},
+            {"muted", track.attribute("muted", "0") == "1"},
+            {"volume", it.attribute("vol", "100").toDouble()},
+            {"pan", it.attribute("pan", "0").toDouble()}
+        });
+        track = track.nextSiblingElement("track");
+    }
+    return QJsonObject{
+        {"path", QFileInfo(path).fileName()},
+        {"root", root.tagName()},
+        {"bpm", head.attribute("bpm").toDouble()},
+        {"track_elements", doc.elementsByTagName("track").count()},
+        {"tracks", tracks},
+        {"notes", doc.elementsByTagName("note").count()},
+        {"editable_patterns", doc.elementsByTagName("pattern").count()}
+    };
+}
+void editProject(QDomDocument& doc, const QString& op, const QJsonObject& a) {
+    validEdit(a);
+    if (op == "set_tempo") {
+        QDomElement head = doc.documentElement().firstChildElement("head");
+        if (head.isNull()) err("Missing song head");
+        head.setAttribute("bpm", a.value("bpm").toDouble());
+    } else if (op == "add_note") {
+        const int i = nonnegativeIndex(a, "pattern_index", 4096);
+        QDomElement pattern = doc.documentElement().elementsByTagName("pattern").item(i).toElement();
+        if (pattern.isNull()) err("Pattern index out of range");
+        QDomElement note = doc.createElement("note");
+        note.setAttribute("key", a.value("key").toInt());
+        note.setAttribute("pos", a.value("position").toInt());
+        note.setAttribute("len", a.value("length").toInt());
+        note.setAttribute("vol", 100);
+        note.setAttribute("pan", 0);
+        pattern.appendChild(note);
+    } else if (op == "create_instrument_track") {
+        QDomElement templateTrack = findTrack(doc, nonnegativeIndex(a, "track_index", 127));
+        if (templateTrack.attribute("type") != "0" || templateTrack.firstChildElement("instrumenttrack").isNull()) {
+            err("Template must be a top-level instrument track");
+        }
+        QDomElement parent = templateTrack.parentNode().toElement();
+        if (parent.elementsByTagName("track").count() >= 128) err("Track limit reached");
+        QDomElement track = templateTrack.cloneNode(true).toElement();
+        track.setAttribute("name", a.value("name").toString());
+        track.setAttribute("muted", 0);
+        track.setAttribute("solo", 0);
+        while (!track.firstChildElement("pattern").isNull()) {
+            track.removeChild(track.firstChildElement("pattern"));
+        }
+        QDomElement pattern = doc.createElement("pattern");
+        pattern.setAttribute("type", 1);
+        pattern.setAttribute("muted", 0);
+        pattern.setAttribute("steps", 16);
+        pattern.setAttribute("pos", 0);
+        pattern.setAttribute("len", 192);
+        pattern.setAttribute("name", a.value("name").toString());
+        track.appendChild(pattern);
+        parent.appendChild(track);
+    } else if (op == "create_pattern") {
+        QDomElement track = findTrack(doc, nonnegativeIndex(a, "track_index", 127));
+        if (track.attribute("type") != "0" || track.firstChildElement("instrumenttrack").isNull()) {
+            err("Patterns can be created on instrument tracks only");
+        }
+        QDomElement pattern = doc.createElement("pattern");
+        pattern.setAttribute("type", 1);
+        pattern.setAttribute("muted", 0);
+        pattern.setAttribute("steps", 16);
+        pattern.setAttribute("pos", nonnegativeIndex(a, "position", 10000000));
+        pattern.setAttribute("len", 192);
+        pattern.setAttribute("name", a.value("name").toString());
+        track.appendChild(pattern);
+    } else if (op == "set_track_mix") {
+        QDomElement track = findTrack(doc, nonnegativeIndex(a, "track_index", 127));
+        QDomElement instrument = track.firstChildElement("instrumenttrack");
+        if (instrument.isNull()) err("Only instrument tracks support this mix edit");
+        instrument.setAttribute("vol", a.value("volume").toDouble());
+        instrument.setAttribute("pan", a.value("pan").toDouble());
+        track.setAttribute("muted", a.value("mute").toBool() ? 1 : 0);
     } else err("Unsupported edit operation");
 }
 QJsonObject propose(const QJsonObject& a) {
     validEdit(a);
     const QString path = checkedPath(a);
     const QByteArray bytes = readBounded(path);
-    const auto doc = parseProject(bytes);
-    if (a.value("operation").toString() == "add_note" && doc.elementsByTagName("pattern").count() == 0) {
-        err("No pattern in project; create a pattern in the DAW first");
-    }
+    auto doc = parseProject(bytes);
+    // Validate the exact target *before* creating a plan.
+    editProject(doc, a.value("operation").toString(), a);
     if (pending.size() >= 64) pending.clear();
     const QString plan = QUuid::createUuid().toString(QUuid::WithoutBraces);
     pending.insert(plan, Pending{
@@ -135,6 +248,7 @@ QJsonObject propose(const QJsonObject& a) {
         {"plan_id", plan},
         {"operation", a.value("operation").toString()},
         {"target", QFileInfo(path).fileName()},
+        {"parameters", a},
         {"preview_only", true},
         {"writes_enabled", writesEnabled},
         {"message", "No project was modified. Review the change in your MCP host before applying."}
@@ -146,7 +260,6 @@ QJsonObject apply(const QJsonObject& a) {
     const QString plan = a.value("plan_id").toString();
     if (!pending.contains(plan)) err("Unknown or expired plan identifier");
     const Pending p = pending.take(plan);
-    // Revalidate scope and content at the moment of writing.
     const QString path = checkedPath(QJsonObject{{"path", p.canonicalPath}});
     if (path != p.canonicalPath) err("Project path changed");
     const QByteArray oldData = readBounded(path);
@@ -154,20 +267,7 @@ QJsonObject apply(const QJsonObject& a) {
         err("The project changed since preview; propose again");
     }
     QDomDocument doc = parseProject(oldData);
-    if (p.operation == "set_tempo") {
-        auto head = doc.documentElement().firstChildElement("head");
-        if (head.isNull()) err("Missing song head");
-        head.setAttribute("bpm", p.args.value("bpm").toDouble());
-    } else if (p.operation == "add_note") {
-        QDomElement pattern = doc.documentElement().elementsByTagName("pattern").item(0).toElement();
-        if (pattern.isNull()) err("Pattern missing");
-        QDomElement note = doc.createElement("note");
-        note.setAttribute("key", p.args.value("key").toInt());
-        note.setAttribute("pos", p.args.value("position").toInt());
-        note.setAttribute("len", p.args.value("length").toInt());
-        note.setAttribute("vol", 100);
-        pattern.appendChild(note);
-    } else err("Invalid pending operation");
+    editProject(doc, p.operation, p.args);
     const QString backup = path + ".noemixerr-" +
         QDateTime::currentDateTimeUtc().toString("yyyyMMddTHHmmsszzz") +
         "-" + QUuid::createUuid().toString(QUuid::WithoutBraces) + ".bak";
@@ -188,16 +288,19 @@ QJsonObject apply(const QJsonObject& a) {
 QJsonObject toolList() {
     return objectLiteral(R"json({
       "tools":[
-        {"name":"inspect_project","description":"Read BPM, tracks and notes from a local LMMS/NoeMixerr .mmp project without changing it",
+        {"name":"inspect_project","description":"Inspect tempo and top-level tracks, instrument names, patterns and notes in a local LMMS/NoeMixerr .mmp project",
           "inputSchema":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]},
           "annotations":{"readOnlyHint":true}},
-        {"name":"propose_edit","description":"Preview a reversible tempo or piano-roll note edit; no files changed",
+        {"name":"propose_edit","description":"Preview a tempo, note, instrument track, pattern or track-mix edit without writing any file",
           "inputSchema":{"type":"object","properties":{
-            "path":{"type":"string"},"operation":{"type":"string","enum":["set_tempo","add_note"]},
-            "bpm":{"type":"number"},"key":{"type":"integer"},"position":{"type":"integer"},"length":{"type":"integer"}},
+            "path":{"type":"string"},"operation":{"type":"string","enum":["set_tempo","add_note","create_instrument_track","create_pattern","set_track_mix"]},
+            "bpm":{"type":"number"},"key":{"type":"integer"},"position":{"type":"integer"},
+            "length":{"type":"integer"},"pattern_index":{"type":"integer"},
+            "track_index":{"type":"integer"},"name":{"type":"string"},
+            "volume":{"type":"number"},"pan":{"type":"number"},"mute":{"type":"boolean"}},
             "required":["path","operation"]},
           "annotations":{"readOnlyHint":true}},
-        {"name":"apply_edit","description":"Write a previously proposed edit with a recovery backup; disabled unless enabled by user. Approval must be enforced by MCP host.",
+        {"name":"apply_edit","description":"Save previously previewed edit atomically, with backup, after independent host approval. Disabled by default.",
           "inputSchema":{"type":"object","properties":{
             "plan_id":{"type":"string"},"confirm":{"type":"boolean"}},
             "required":["plan_id","confirm"]},
