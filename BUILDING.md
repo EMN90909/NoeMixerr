@@ -25,7 +25,7 @@ sudo apt-get install -y git cmake ninja-build build-essential pkg-config \
   qtbase5-dev qttools5-dev qttools5-dev-tools libqt5svg5-dev \
   libsndfile1-dev libfftw3-dev libsamplerate0-dev \
   libasound2-dev libpulse-dev libjack-jackd2-dev \
-  libfltk1.3-dev libvorbis-dev libogg-dev libmpg123-dev
+  libfltk1.3-dev libvorbis-dev libogg-dev libmpg123-dev liblist-moreutils-perl
 ```
 
 Then run the shared commands. See the [Linux CI workflow](.github/workflows/linux.yml).
