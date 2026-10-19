@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: noemixerr-macos-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   mac:
     runs-on: macos-latest
