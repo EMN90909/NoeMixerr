@@ -19,8 +19,8 @@ NOEMIXERR_WORKSPACE=/absolute/path/to/projects ./build-mcp/noemixerr-mcp
 ```
 
 Tools:
-- `inspect_project`: inspect tempo, notes and tracks in a legacy LMMS/NoeMixerr `.mmp` file.
-- `propose_edit`: preview a `set_tempo` or `add_note` operation; writes nothing.
+- `inspect_project`: inspect tempo, notes, instrument configuration and top-level tracks in a legacy LMMS/NoeMixerr `.mmp` file.
+- `propose_edit`: preview `set_tempo`, `add_note`, `add_notes` (up to 256 notes), `create_instrument_track`, `create_pattern` or `set_track_mix`; writes nothing. Track duplication uses the configured instrument from an existing top-level instrument track as a template.
 - `apply_edit`: commit a previously proposed operation, with atomic saves and a backup; **disabled by default**.
 
 To allow writes set `NOEMIXERR_ALLOW_WRITES=1` **and** configure the MCP host to
@@ -30,6 +30,8 @@ itself proof of human approval, and the server cannot enforce external host UX.
 Project files must already exist within `NOEMIXERR_WORKSPACE`. The server accepts
 only the paths you explicitly pass via a tool call, never arbitrary code or
 shell commands. It does not read `.mmpz` in this preview.
+
+Keep the DAW closed while editing the same project externally, so unsaved in-editor data does not conflict with file edits. Project changes on disk between preview and application invalidate the proposal. An edit produces a new recovery backup.
 
 This is a deliberately limited MCP starting point, not an AI music-generation
 service or a claim of full LMMS editor integration. GPL attribution and license

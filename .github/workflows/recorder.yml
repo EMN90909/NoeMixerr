@@ -1,0 +1,41 @@
+name: Native audio recording C++ tests
+on:
+  push:
+    paths:
+      - 'tools/recorder/**'
+      - '.github/workflows/recorder.yml'
+  pull_request:
+    paths:
+      - 'tools/recorder/**'
+      - '.github/workflows/recorder.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: recorder-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  recorder:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            platform: linux
+          - os: macos-latest
+            platform: mac
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: PortAudio development packages (Linux)
+        if: matrix.platform == 'linux'
+        run: sudo apt-get update && sudo apt-get install -y portaudio19-dev pkg-config cmake ninja-build
+      - name: PortAudio development packages (macOS)
+        if: matrix.platform == 'mac'
+        run: brew install portaudio pkg-config cmake ninja
+      - name: CMake configure
+        run: cmake -S tools/recorder -B build-recorder -G Ninja -DCMAKE_BUILD_TYPE=Release
+      - name: Compile
+        run: cmake --build build-recorder --parallel 2
+      - name: Synthetic stereo WAV test (no input device)
+        run: python3 tools/recorder/test_recorder.py build-recorder/noemixerr-recorder

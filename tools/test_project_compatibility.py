@@ -31,6 +31,8 @@ def main():
     if len(sys.argv) != 2:
         raise SystemExit("Usage: python tools/test_project_compatibility.py <NoeMixerr executable>")
     executable = Path(sys.argv[1]).resolve()
+    if not executable.is_file() and (executable.parent / (executable.name + ".exe")).is_file():
+        executable = executable.with_name(executable.name + ".exe")
     assert executable.is_file(), executable
     base_bpm, base_notes, base_tracks, _ = details(LEGACY)
 
