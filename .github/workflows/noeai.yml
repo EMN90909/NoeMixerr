@@ -1,0 +1,43 @@
+name: NoeAI MCP C++ build and safety tests
+on:
+  push:
+    paths:
+      - 'tools/noeai/**'
+      - '.github/workflows/noeai.yml'
+  pull_request:
+    paths:
+      - 'tools/noeai/**'
+      - '.github/workflows/noeai.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: noeai-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            qt: linux
+          - os: macos-latest
+            qt: mac
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Qt XML
+        if: matrix.qt == 'linux'
+        run: sudo apt-get update && sudo apt-get install -y qtbase5-dev cmake ninja-build python3
+      - name: Install Qt XML on macOS
+        if: matrix.qt == 'mac'
+        run: brew install qt@5 cmake ninja
+      - name: Configure
+        run: cmake -S tools/noeai -B build-noeai -G Ninja -DCMAKE_PREFIX_PATH="${{ matrix.qt == 'mac' && '/opt/homebrew/opt/qt@5' || '' }}"
+      - name: Build
+        run: cmake --build build-noeai --parallel 2
+      - name: Core test
+        run: ctest --test-dir build-noeai --output-on-failure
+      - name: MCP security and project edit integration
+        run: python3 tools/noeai/test_mcp.py build-noeai/noemixerr-mcp
