@@ -130,7 +130,7 @@ void printVersion( char *executableName )
 		"version 2 of the License, or (at your option) any later version.\n\n"
 		"Try \"%s --help\" for more information.\n\n", NoeMixerr_VERSION,
 		NoeMixerr_BUILDCONF_PLATFORM, NoeMixerr_BUILDCONF_MACHINE, QT_VERSION_STR, NoeMixerr_BUILDCONF_COMPILER_VERSION, NoeMixerr_BUILD_OPTIONS,
-		LMMS_PROJECT_COPYRIGHT, executableName);
+		NOEMIXERR_PROJECT_COPYRIGHT, executableName);
 }
 
 
@@ -188,7 +188,7 @@ void printHelp()
 		"          Range: 44100 (default) to 192000\n"
 		"          Possible values: 1, 2, 4, 8\n"
 		"          Default: 2\n\n",
-		LMMS_VERSION, LMMS_PROJECT_COPYRIGHT );
+		NoeMixerr_VERSION, NOEMIXERR_PROJECT_COPYRIGHT );
 }
 
 
