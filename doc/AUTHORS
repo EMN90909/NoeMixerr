@@ -1,3 +1,16 @@
+NoeMixerr project
+
+NoeMixerr is a modified and rebranded derivative of LMMS.
+The original LMMS authors and contributors retain credit and copyright
+for their contributions. The following original author list is preserved.
+
+Noethric
+  NoeMixerr rebranding, repository integration and subsequent modifications
+  https://github.com/EMN90909/NoeMixerr
+
+Original LMMS authors and credits
+=================================
+
 Tobias Junghans
   <tobydox/at/veyon/dot/io>
   Development Manager
@@ -89,3 +102,7 @@ Oskar Wallgren
 Michael Gregorius
   <michael/dot/gregorius/dot/git/at/arcor/dot/de>
   Development
+
+For additional historical credits, consult doc/CONTRIBUTORS and the source
+code copyright notices. Noethric does not claim authorship of the original
+LMMS code.
