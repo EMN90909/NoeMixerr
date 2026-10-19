@@ -31,7 +31,11 @@ See [BUILDING.md](BUILDING.md) for Linux, Windows and macOS prerequisites, CMake
 - Mixer channels, automation and MIDI import/export
 - LMMS-compatible project workflows where verified
 
-**Work in progress:** recording, modern plugin hosting, AI/MCP, game-audio integration and advanced rendering features are future work. Rebranding alone does not implement them.
+**Development modules:** [NoeAI local C++ MCP server](tools/noeai/README.md) supports read-only project inspection and previewed tempo, MIDI note, instrument-track, pattern and mixer edits, including up to 256 notes per transaction. Changes are atomically saved with backups when explicitly enabled; external MCP hosts must provide human approval. The [optional native audio recorder](tools/recorder/README.md) captures microphone/interface input through PortAudio into WAV files using a preallocated callback ring and separate disk writer. It is currently a standalone utility; imported takes are handled through the DAW.
+
+**Work in progress:** integrated recording/monitoring/overdubbing, production-grade CLAP/VST3 hosting, in-editor AI agent UI, game-audio bridge, advanced buses, track freeze and other professional workflows are not yet complete. Rebranding alone does not implement them.
+
+**Compatibility and audio testing:** CI exercises C++ unit tests, legacy LMMS project upgrading/reopening, and headless WAV rendering. The optional MCP and recording backends each have independent Linux and macOS CI. Build artifacts are development outputs, not signed or self-contained installers.
 
 ## Reporting problems
 
