@@ -890,7 +890,7 @@ void MainWindow::help()
 				  tr( "Currently there's no help "
 						  "available in NoeMixerr.\n"
 						  "Please visit "
-						  "http://noemixerr.sf.net/wiki "
+						  "https://github.com/EMN90909/NoeMixerr "
 						  "for documentation on NoeMixerr." ),
 				  QMessageBox::Ok );
 }
@@ -1368,7 +1368,7 @@ void MainWindow::showTool( QAction * _idx )
 void MainWindow::browseHelp()
 {
 	// file:// alternative for offline help
-	QString url = "https://lmms.io/documentation/";
+	QString url = "https://github.com/EMN90909/NoeMixerr/blob/main/README.md";
 	QDesktopServices::openUrl( url );
 	// TODO: Handle error
 }
