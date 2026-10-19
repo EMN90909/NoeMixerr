@@ -107,7 +107,7 @@ namespace
 
 
 DataFile::DataFile( Type type ) :
-	QDomDocument( "noemixerr-project" ),
+	QDomDocument( "lmms-project" ),
 	m_fileName(""),
 	m_content(),
 	m_head(),
@@ -115,7 +115,7 @@ DataFile::DataFile( Type type ) :
 	m_fileVersion( UPGRADE_METHODS.size() )
 {
 	appendChild( createProcessingInstruction("xml", "version=\"1.0\""));
-	QDomElement root = createElement( "noemixerr-project" );
+	QDomElement root = createElement( "lmms-project" );
 	root.setAttribute( "version", m_fileVersion );
 	root.setAttribute( "type", typeName( type ) );
 	root.setAttribute( "creator", "NoeMixerr" );
@@ -1121,7 +1121,7 @@ void DataFile::upgrade_1_1_91()
 	for( int i = 0; !list.item( i ).isNull(); ++i )
 	{
 		QDomElement el = list.item( i ).toElement();
-		if( el.attribute( "name" ) == "plugin" && el.attribute( "value" ) == "vocoder-noemixerr" ) {
+		if( el.attribute( "name" ) == "plugin" && (el.attribute( "value" ) == "vocoder-lmms" || el.attribute( "value" ) == "vocoder-noemixerr") ) {
 			el.setAttribute( "value", "vocoder" );
 		}
 	}
@@ -1618,8 +1618,9 @@ void DataFile::upgrade_1_3_0()
 void DataFile::upgrade_noHiddenAutomationTracks()
 {
 	// convert global automation tracks to non-hidden
-	QDomElement song = firstChildElement("noemixerr-project")
-		.firstChildElement("song");
+	// The on-disk root is kept compatible with both original LMMS projects
+	// and NoeMixerr projects created during the earlier rename.
+	QDomElement song = documentElement().firstChildElement("song");
 	QDomElement trackContainer = song.firstChildElement("trackcontainer");
 	QDomElement globalAutomationTrack = song.firstChildElement("track");
 	if (!globalAutomationTrack.isNull()
