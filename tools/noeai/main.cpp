@@ -138,6 +138,10 @@ void validEdit(const QJsonObject& a) {
         const QString name = a.value("name").toString();
         if (name.isEmpty() || name.size() > 80) err("Track/pattern name must be 1..80 characters");
         if (op == "create_pattern") (void) nonnegativeIndex(a, "position", 10000000);
+    } else if (op == "rename_track") {
+        (void) nonnegativeIndex(a, "track_index", 127);
+        const QString name = a.value("name").toString();
+        if (name.isEmpty() || name.size() > 80) err("Track name must be 1..80 characters");
     } else if (op == "set_track_mix") {
         (void) nonnegativeIndex(a, "track_index", 127);
         if (!a.value("volume").isDouble() || a.value("volume").toDouble() < 0 || a.value("volume").toDouble() > 200
@@ -239,6 +243,9 @@ void editProject(QDomDocument& doc, const QString& op, const QJsonObject& a) {
         pattern.setAttribute("len", 192);
         pattern.setAttribute("name", a.value("name").toString());
         track.appendChild(pattern);
+    } else if (op == "rename_track") {
+        QDomElement track = findTrack(doc, nonnegativeIndex(a, "track_index", 127));
+        track.setAttribute("name", a.value("name").toString());
     } else if (op == "set_track_mix") {
         QDomElement track = findTrack(doc, nonnegativeIndex(a, "track_index", 127));
         QDomElement instrument = track.firstChildElement("instrumenttrack");
@@ -310,7 +317,7 @@ QJsonObject toolList() {
           "annotations":{"readOnlyHint":true}},
         {"name":"propose_edit","description":"Preview a tempo, note, instrument track, pattern or track-mix edit without writing any file",
           "inputSchema":{"type":"object","properties":{
-            "path":{"type":"string"},"operation":{"type":"string","enum":["set_tempo","add_note","add_notes","create_instrument_track","create_pattern","set_track_mix"]},
+            "path":{"type":"string"},"operation":{"type":"string","enum":["set_tempo","add_note","add_notes","create_instrument_track","create_pattern","rename_track","set_track_mix"]},
             "bpm":{"type":"number"},"key":{"type":"integer"},"position":{"type":"integer"},
             "length":{"type":"integer"},"pattern_index":{"type":"integer"},
             "track_index":{"type":"integer"},"name":{"type":"string"},
