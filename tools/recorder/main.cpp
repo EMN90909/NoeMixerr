@@ -245,7 +245,7 @@ void record(const fs::path& path, unsigned seconds, int rate, int channels) {
     std::cout<<"Recorded "<<output.frames()<<" frames to "<<path<<"\n";
 }
 void usage() {
-    std::cout<<"NoeMixerr capture (PortAudio, 0.1.0-dev)\n"
+    std::cout<<"NoeMixerr capture (PortAudio, 0.4.0)\n"
       <<"  noemixerr-recorder --devices\n"
       <<"  noemixerr-recorder --self-test <file.wav>\n"
       <<"  noemixerr-recorder --output <file.wav> [--seconds 10] [--rate 48000] [--channels 2]\n";
