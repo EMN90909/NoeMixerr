@@ -87,6 +87,10 @@ def interactive_test(binary, root, enabled):
         edit("create_pattern", track_index=1, name="Break", position=192)
         edit("add_note", pattern_index=2, key=72, position=0, length=24)
         edit("set_track_mix", track_index=1, volume=70, pan=-20, mute=True)
+        edit("add_notes", notes=[
+            {"pattern_index": 2, "key": 36, "position": 48, "length": 24},
+            {"pattern_index": 2, "key": 38, "position": 96, "length": 24}
+        ])
         xmlroot = ET.parse(root/"test.mmp").getroot()
         tracks = xmlroot.findall("./song/trackcontainer/track")
         assert len(tracks) == 2
@@ -94,7 +98,7 @@ def interactive_test(binary, root, enabled):
         assert tracks[1].find("instrumenttrack").get("vol") == "70"
         assert tracks[1].find("instrumenttrack").get("pan") == "-20"
         assert len(tracks[1].findall("pattern")) == 2
-        assert tracks[1].findall("pattern")[1].find("note").get("key") == "72"
+        assert [n.get("key") for n in tracks[1].findall("pattern")[1].findall("note")] == ["72", "36", "38"]
 
         invalid = ask("tools/call", {"name": "propose_edit", "arguments": {
             "path": "test.mmp", "operation": "set_track_mix",
