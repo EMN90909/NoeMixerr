@@ -55,7 +55,7 @@ STRING(TOUPPER          "${CMAKE_PROJECT_NAME}" PROJECT_NAME_UCASE)
 SET(PROJECT_YEAR 2026)
 
 SET(PROJECT_AUTHOR      "LMMS Developers")
-SET(PROJECT_URL         "https://lmms.io")
+SET(PROJECT_URL         "https://github.com/EMN90909/NoeMixerr")
 SET(PROJECT_EMAIL       "noemixerr-devel@lists.sourceforge.net")
 SET(PROJECT_DESCRIPTION "${PROJECT_NAME_UCASE} - Free music production software")
 SET(PROJECT_COPYRIGHT   "2008-${PROJECT_YEAR} ${PROJECT_AUTHOR}")
