@@ -26,7 +26,7 @@
 #include "CaptionMenu.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -41,4 +41,4 @@ CaptionMenu::CaptionMenu( const QString & _title, QWidget * _parent ) :
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

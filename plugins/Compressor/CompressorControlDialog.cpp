@@ -39,7 +39,7 @@
 #include "MainWindow.h"
 #include "PixmapButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -840,4 +840,4 @@ void CompressorControlDialog::resetCompressorView()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

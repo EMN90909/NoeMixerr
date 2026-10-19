@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_FONT_HELPER_H
-#define LMMS_GUI_FONT_HELPER_H
+#ifndef NoeMixerr_GUI_FONT_HELPER_H
+#define NoeMixerr_GUI_FONT_HELPER_H
 
 #include <QApplication>
 #include <QFont>
@@ -32,7 +32,7 @@ constexpr int DEFAULT_FONT_SIZE = 12;
 constexpr int SMALL_FONT_SIZE = 10;
 constexpr int LARGE_FONT_SIZE = 14;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 // Convenience method to set the font size in pixels
@@ -42,6 +42,6 @@ inline QFont adjustedToPixelSize(QFont font, int size)
 	return font;
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_FONT_HELPER_H
+#endif // NoeMixerr_GUI_FONT_HELPER_H

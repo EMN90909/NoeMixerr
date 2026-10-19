@@ -30,7 +30,7 @@
 #include <QWidget>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class BoolModel;
@@ -105,6 +105,6 @@ private slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // EQPARAMETERWIDGET_H

@@ -36,10 +36,10 @@
 #include "ConfigManager.h"
 #include "LadspaManager.h"
 #include "PluginFactory.h"
-#include "lmms_constants.h"
+#include "noemixerr_constants.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -48,14 +48,14 @@ LadspaManager::LadspaManager()
 	// Make sure plugin search paths are set up
 	PluginFactory::setupSearchPaths();
 
-	QList<QRegularExpression> excludePatterns = PluginFactory::getExcludePatterns("LMMS_EXCLUDE_LADSPA");
+	QList<QRegularExpression> excludePatterns = PluginFactory::getExcludePatterns("NoeMixerr_EXCLUDE_LADSPA");
 
 	QStringList ladspaDirectories = QString( getenv( "LADSPA_PATH" ) ).
 								split( LADSPA_PATH_SEPERATOR );
 	ladspaDirectories += ConfigManager::inst()->ladspaDir().split( ',' );
 
 	ladspaDirectories.push_back( "plugins:ladspa" );
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 	ladspaDirectories.push_back( qApp->applicationDirPath() + '/' + LIB_DIR + "ladspa" );
 	ladspaDirectories.push_back( "/usr/lib/ladspa" );
 	ladspaDirectories.push_back( "/usr/lib64/ladspa" );
@@ -81,7 +81,7 @@ LadspaManager::LadspaManager()
 			}
 
 			if (exclude || !f.isFile() || f.fileName().right(3).toLower() !=
-#if defined(LMMS_BUILD_WIN32) || defined(LMMS_BUILD_CYGWIN)
+#if defined(NoeMixerr_BUILD_WIN32) || defined(NoeMixerr_BUILD_CYGWIN)
 													"dll"
 #else
 				 									".so"
@@ -530,7 +530,7 @@ bool LadspaManager::isEnum( const ladspa_key_t & _plugin, uint32_t _port )
 	{
 		LADSPA_PortRangeHintDescriptor hintDescriptor =
 			desc->PortRangeHints[_port].HintDescriptor;
-		// This is an LMMS extension to ladspa
+		// This is an NoeMixerr extension to ladspa
 		return LADSPA_IS_HINT_INTEGER(hintDescriptor) && LADSPA_IS_HINT_TOGGLED(hintDescriptor);
 	}
 
@@ -704,4 +704,4 @@ bool LadspaManager::cleanup( const ladspa_key_t & _plugin,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

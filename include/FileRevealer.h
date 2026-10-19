@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_GUI_FILE_REVEALER_H
-#define LMMS_GUI_FILE_REVEALER_H
+#ifndef NoeMixerr_GUI_FILE_REVEALER_H
+#define NoeMixerr_GUI_FILE_REVEALER_H
 
 #include <QFileInfo>
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
 /**
  * @class FileRevealer
@@ -83,6 +83,6 @@ protected:
 	static bool supportsArg(const QString& command, const QString& arg);
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_FILE_REVEALER_H
+#endif // NoeMixerr_GUI_FILE_REVEALER_H

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GRANULAR_PITCH_SHIFTER_CONTROLS_H
-#define LMMS_GRANULAR_PITCH_SHIFTER_CONTROLS_H
+#ifndef NoeMixerr_GRANULAR_PITCH_SHIFTER_CONTROLS_H
+#define NoeMixerr_GRANULAR_PITCH_SHIFTER_CONTROLS_H
 
 #include "EffectControlDialog.h"
 
 #include <QTextEdit>
 
-namespace lmms
+namespace noemixerr
 {
 
 class GranularPitchShifterControls;
@@ -64,6 +64,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GRANULAR_PITCH_SHIFTER_CONTROLS_H
+#endif // NoeMixerr_GRANULAR_PITCH_SHIFTER_CONTROLS_H

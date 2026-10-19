@@ -27,7 +27,7 @@
 #include "Engine.h"
 #include "SamplePlayHandle.h"
 
-namespace lmms {
+namespace noemixerr {
 void Metronome::processTick(int currentTick, int ticksPerBar, int beatsPerBar, size_t bufferOffset)
 {
 	const auto ticksPerBeat = ticksPerBar / beatsPerBar;
@@ -38,4 +38,4 @@ void Metronome::processTick(int currentTick, int ticksPerBar, int beatsPerBar, s
 	handle->setOffset(bufferOffset);
 	Engine::audioEngine()->addPlayHandle(handle);
 }
-} // namespace lmms
+} // namespace noemixerr

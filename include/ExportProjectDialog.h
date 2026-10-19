@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_EXPORT_PROJECT_DIALOG_H
-#define LMMS_GUI_EXPORT_PROJECT_DIALOG_H
+#ifndef NoeMixerr_GUI_EXPORT_PROJECT_DIALOG_H
+#define NoeMixerr_GUI_EXPORT_PROJECT_DIALOG_H
 
 #include <QDialog>
 
@@ -39,7 +39,7 @@ class QSpinBox;
 class QFormLayout;
 class QGroupBox;
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
 class ExportProjectDialog : public QDialog
 {
@@ -93,6 +93,6 @@ private:
 	std::unique_ptr<RenderManager> m_renderManager;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_EXPORT_PROJECT_DIALOG_H
+#endif // NoeMixerr_GUI_EXPORT_PROJECT_DIALOG_H

@@ -24,8 +24,8 @@
  *
  */
 
-#ifndef LMMS_AUTOMATION_CLIP_H
-#define LMMS_AUTOMATION_CLIP_H
+#ifndef NoeMixerr_AUTOMATION_CLIP_H
+#define NoeMixerr_AUTOMATION_CLIP_H
 
 #include <QMap>
 #include <QPointer>
@@ -34,7 +34,7 @@
 #include "Clip.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class AutomationTrack;
@@ -48,7 +48,7 @@ class AutomationEditor;
 
 
 
-class LMMS_EXPORT AutomationClip : public Clip
+class NoeMixerr_EXPORT AutomationClip : public Clip
 {
 	Q_OBJECT
 public:
@@ -239,7 +239,7 @@ public:
 
 public slots:
 	void clear();
-	void objectDestroyed( lmms::jo_id_t );
+	void objectDestroyed( noemixerr::jo_id_t );
 	void flipY( int min, int max );
 	void flipY();
 	void flipX(int start = -1, int end = -1);
@@ -335,6 +335,6 @@ inline int POS(AutomationClip::TimemapIterator it)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUTOMATION_CLIP_H
+#endif // NoeMixerr_AUTOMATION_CLIP_H

@@ -39,7 +39,7 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -48,7 +48,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT kicker_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"Kicker",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 				"Versatile drum synthesizer" ),
@@ -362,7 +362,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * m, void * )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model * m, void * )
 {
 	return new KickerInstrument( static_cast<InstrumentTrack *>( m ) );
 }
@@ -371,4 +371,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * m, void * )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

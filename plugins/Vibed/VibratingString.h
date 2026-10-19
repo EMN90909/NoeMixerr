@@ -22,16 +22,16 @@
  *
  */
 
-#ifndef LMMS_VIBRATING_STRING_H
-#define LMMS_VIBRATING_STRING_H
+#ifndef NoeMixerr_VIBRATING_STRING_H
+#define NoeMixerr_VIBRATING_STRING_H
 
 #include <memory>
 #include <cstdlib>
 
-#include "LmmsTypes.h"
-#include "lmms_math.h"
+#include "NoeMixerrTypes.h"
+#include "noemixerr_math.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -238,6 +238,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_VIBRATING_STRING_H
+#endif // NoeMixerr_VIBRATING_STRING_H

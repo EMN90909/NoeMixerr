@@ -33,7 +33,7 @@
 #include "Engine.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -112,4 +112,4 @@ void CPULoadWidget::updateCpuLoad()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

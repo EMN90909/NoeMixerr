@@ -31,7 +31,7 @@
 #include "StringPairDrag.h"
 #include "Oscillator.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -740,4 +740,4 @@ void graphModel::drawSampleAt(int x, float val)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

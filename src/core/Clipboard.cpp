@@ -29,7 +29,7 @@
 #include "Clipboard.h"
 
 
-namespace lmms::Clipboard
+namespace noemixerr::Clipboard
 {
 
 	const QMimeData * getMimeData()
@@ -93,4 +93,4 @@ namespace lmms::Clipboard
 	}
 
 
-} // namespace lmms::Clipboard
+} // namespace noemixerr::Clipboard

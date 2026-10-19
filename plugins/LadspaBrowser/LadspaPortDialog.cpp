@@ -31,15 +31,15 @@
 #include "AudioEngine.h"
 #include "embed.h"
 #include "Engine.h"
-#include "Ladspa2LMMS.h"
+#include "Ladspa2NoeMixerr.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
 LadspaPortDialog::LadspaPortDialog( const ladspa_key_t & _key )
 {
-	Ladspa2LMMS * manager = Engine::getLADSPAManager();
+	Ladspa2NoeMixerr * manager = Engine::getLADSPAManager();
 
 	setWindowIcon( embed::getIconPixmap( "ports" ) );
 	setWindowTitle( tr( "Ports" ) );
@@ -168,4 +168,4 @@ LadspaPortDialog::LadspaPortDialog( const ladspa_key_t & _key )
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

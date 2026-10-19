@@ -23,18 +23,18 @@
  */
 
 
-#ifndef LMMS_GUI_PEAKINDICATOR_H
-#define LMMS_GUI_PEAKINDICATOR_H
+#ifndef NoeMixerr_GUI_PEAKINDICATOR_H
+#define NoeMixerr_GUI_PEAKINDICATOR_H
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 #include <QLabel>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT PeakIndicator : public QLabel
+class NoeMixerr_EXPORT PeakIndicator : public QLabel
 {
 	Q_OBJECT
 public:
@@ -55,6 +55,6 @@ private:
 	float m_peak;
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_PEAKINDICATOR_H
+#endif // NoeMixerr_GUI_PEAKINDICATOR_H

@@ -24,16 +24,16 @@
 
 #pragma once
 
-#ifndef LMMS_GUI_BAR_MODEL_EDITOR_H
-#define LMMS_GUI_BAR_MODEL_EDITOR_H
+#ifndef NoeMixerr_GUI_BAR_MODEL_EDITOR_H
+#define NoeMixerr_GUI_BAR_MODEL_EDITOR_H
 
 #include "FloatModelEditorBase.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT BarModelEditor : public FloatModelEditorBase
+class NoeMixerr_EXPORT BarModelEditor : public FloatModelEditorBase
 {
 	Q_OBJECT
 
@@ -71,6 +71,6 @@ private:
 	QColor m_textColor;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_BAR_MODEL_EDITOR_H
+#endif // NoeMixerr_GUI_BAR_MODEL_EDITOR_H

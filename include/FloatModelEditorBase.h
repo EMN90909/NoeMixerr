@@ -24,8 +24,8 @@
  *
  */
 
-#ifndef LMMS_GUI_FLOAT_MODEL_EDITOR_BASE_H
-#define LMMS_GUI_FLOAT_MODEL_EDITOR_BASE_H
+#ifndef NoeMixerr_GUI_FLOAT_MODEL_EDITOR_BASE_H
+#define NoeMixerr_GUI_FLOAT_MODEL_EDITOR_BASE_H
 
 #include <QPoint>
 #include <QWidget>
@@ -33,12 +33,12 @@
 
 #include "AutomatableModelView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class SimpleTextFloat;
 
-class LMMS_EXPORT FloatModelEditorBase : public QWidget, public FloatModelView
+class NoeMixerr_EXPORT FloatModelEditorBase : public QWidget, public FloatModelView
 {
 	Q_OBJECT
 
@@ -227,6 +227,6 @@ private:
 	static SimpleTextFloat* s_textFloat;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_FLOAT_MODEL_EDITOR_BASE_H
+#endif // NoeMixerr_GUI_FLOAT_MODEL_EDITOR_BASE_H

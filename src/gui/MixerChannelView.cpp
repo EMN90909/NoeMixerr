@@ -46,14 +46,14 @@
 #include "GuiApplication.h"
 #include "Knob.h"
 #include "LcdWidget.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "Mixer.h"
 #include "MixerView.h"
 #include "PeakIndicator.h"
 #include "SendButtonIndicator.h"
 #include "Song.h"
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 MixerChannelView::MixerChannelView(QWidget* parent, MixerView* mixerView, int channelIndex)
 	: QWidget(parent)
 	, m_mixerView(mixerView)
@@ -406,4 +406,4 @@ void MixerChannelView::reset()
 	m_peakIndicator->resetPeakToMinusInf();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

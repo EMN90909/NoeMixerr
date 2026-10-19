@@ -22,10 +22,10 @@
  *
  */
 
-#ifndef LMMS_NOCOPYNOMOVE_H
-#define LMMS_NOCOPYNOMOVE_H
+#ifndef NoeMixerr_NOCOPYNOMOVE_H
+#define NoeMixerr_NOCOPYNOMOVE_H
 
-namespace lmms
+namespace noemixerr
 {
 
 /**
@@ -41,7 +41,7 @@ protected:
 	NoCopyNoMove& operator=(NoCopyNoMove&& other) = delete;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_NOCOPYNOMOVE_H
+#endif // NoeMixerr_NOCOPYNOMOVE_H
 

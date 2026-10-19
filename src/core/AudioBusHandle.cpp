@@ -34,7 +34,7 @@
 #include "Engine.h"
 #include "MixHelpers.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioBusHandle::AudioBusHandle(const QString& name, bool hasEffectChain,
@@ -267,4 +267,4 @@ void AudioBusHandle::removePlayHandle(PlayHandle* handle)
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr

@@ -26,7 +26,7 @@
 #include "TextFloat.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 StepRecorderWidget::StepRecorderWidget(
@@ -172,4 +172,4 @@ void StepRecorderWidget::updateBoundaries()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

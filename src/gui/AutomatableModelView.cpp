@@ -39,7 +39,7 @@
 #include "AutomationEditor.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 static float floatFromClipboard(bool* ok=nullptr);
@@ -276,4 +276,4 @@ static float floatFromClipboard(bool* ok)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

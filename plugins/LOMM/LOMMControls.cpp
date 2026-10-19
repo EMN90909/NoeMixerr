@@ -28,7 +28,7 @@
 
 #include <QMessageBox>
 
-namespace lmms
+namespace noemixerr
 {
 
 LOMMControls::LOMMControls(LOMMEffect* effect) :
@@ -99,7 +99,7 @@ void LOMMControls::resetAllParameters()
 	int choice = QMessageBox::question(m_view, "Clear Plugin Settings", "Are you sure you want to clear all parameters?\n(This wipes LOMM to a clean slate, not the default preset.)", QMessageBox::Yes | QMessageBox::No);
 	if (choice != QMessageBox::Yes) { return; }
 	
-	// give the user a chance to beg LMMS for forgiveness
+	// give the user a chance to beg NoeMixerr for forgiveness
 	addJournalCheckPoint();
 	
 	// This plugin's normal default values are fairly close to what they'd want in most applications.
@@ -271,6 +271,6 @@ void LOMMControls::saveSettings(QDomDocument& doc, QDomElement& parent)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 

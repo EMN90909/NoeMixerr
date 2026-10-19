@@ -1,5 +1,5 @@
 /*
- * GroupBox.cpp - groupbox for LMMS
+ * GroupBox.cpp - groupbox for NoeMixerr
  *
  * Copyright (c) 2005-2009 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -30,7 +30,7 @@
 #include "embed.h"
 #include "FontHelper.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -116,4 +116,4 @@ void GroupBox::paintEvent( QPaintEvent * pe )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

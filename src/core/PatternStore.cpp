@@ -30,7 +30,7 @@
 #include "PatternTrack.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -233,4 +233,4 @@ AutomatedValueMap PatternStore::automatedValuesAt(TimePos time, int clipNum) con
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GUI_MIDI_SETUP_WIDGET_H
-#define LMMS_GUI_MIDI_SETUP_WIDGET_H
+#ifndef NoeMixerr_GUI_MIDI_SETUP_WIDGET_H
+#define NoeMixerr_GUI_MIDI_SETUP_WIDGET_H
 
 #include <QGroupBox>
 
 class QLineEdit;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -57,6 +57,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_MIDI_SETUP_WIDGET_H
+#endif // NoeMixerr_GUI_MIDI_SETUP_WIDGET_H

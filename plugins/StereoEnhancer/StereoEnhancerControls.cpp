@@ -27,7 +27,7 @@
 #include "StereoEnhancerControls.h"
 #include "StereoEnhancer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -66,4 +66,4 @@ void StereoEnhancerControls::saveSettings( QDomDocument & _doc,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -31,7 +31,7 @@
 #include <random>
 #include <numbers>
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "NotePlayHandle.h"
 #include "SampleFrame.h"
 
@@ -40,7 +40,7 @@
 
 #define WARN_EXPRTK qWarning("ExprTk exception")
 
-namespace lmms
+namespace noemixerr
 {
 
 using symbol_table_t = exprtk::symbol_table<float>;
@@ -830,4 +830,4 @@ void ExprSynth::renderOutput(f_cnt_t frames, SampleFrame* buf)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

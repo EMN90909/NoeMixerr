@@ -28,7 +28,7 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -37,14 +37,14 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT stereomatrix_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"Stereo Matrix",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 				"Plugin for freely manipulating stereo output" ),
 	"Paul Giblock <drfaygo/at/gmail.com>",
 	0x0100,
 	Plugin::Type::Effect,
-	new PixmapLoader("lmms-plugin-logo"),
+	new PixmapLoader("noemixerr-plugin-logo"),
 	nullptr,
 	nullptr,
 } ;
@@ -96,7 +96,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * _parent, void * _data )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model * _parent, void * _data )
 {
 	return( new StereoMatrixEffect( _parent,
 		static_cast<const Plugin::Descriptor::SubPluginFeatures::Key *>(
@@ -106,4 +106,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * _parent, void * _data )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

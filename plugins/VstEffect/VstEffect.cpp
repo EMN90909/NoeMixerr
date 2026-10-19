@@ -34,7 +34,7 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -43,10 +43,10 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT vsteffect_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"VST",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
-				"plugin for using arbitrary VST effects inside LMMS." ),
+				"plugin for using arbitrary VST effects inside NoeMixerr." ),
 	"Tobias Doerffel <tobydox/at/users.sf.net>",
 	0x0200,
 	Plugin::Type::Effect,
@@ -139,7 +139,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * _parent, void * _data )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model * _parent, void * _data )
 {
 	return new VstEffect( _parent,
 		static_cast<const Plugin::Descriptor::SubPluginFeatures::Key *>(
@@ -149,4 +149,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * _parent, void * _data )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

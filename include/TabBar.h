@@ -22,24 +22,24 @@
  *
  */
 
-#ifndef LMMS_GUI_TAB_BAR_H
-#define LMMS_GUI_TAB_BAR_H
+#ifndef NoeMixerr_GUI_TAB_BAR_H
+#define NoeMixerr_GUI_TAB_BAR_H
 
 #include <QBoxLayout>
 #include <QMap>
 #include <QWidget>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
 class TabButton;
 
 
-class LMMS_EXPORT TabBar : public QWidget
+class NoeMixerr_EXPORT TabBar : public QWidget
 {
 	Q_OBJECT
 public:
@@ -93,6 +93,6 @@ signals:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TAB_BAR_H
+#endif // NoeMixerr_GUI_TAB_BAR_H

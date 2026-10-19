@@ -28,7 +28,7 @@
 #include "LeftRightNav.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -78,4 +78,4 @@ void LeftRightNav::setShortcuts(const QKeySequence &leftShortcut, const QKeySequ
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

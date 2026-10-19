@@ -30,13 +30,13 @@
 
 
 
-namespace lmms
+namespace noemixerr
 {
 class SaControls;
 class SaProcessor;
 }
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class EffectControlDialog;
@@ -97,6 +97,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif // SAWATERFALLVIEW_H

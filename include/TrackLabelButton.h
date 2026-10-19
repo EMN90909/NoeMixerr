@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GUI_TRACK_LABEL_BUTTON_H
-#define LMMS_GUI_TRACK_LABEL_BUTTON_H
+#ifndef NoeMixerr_GUI_TRACK_LABEL_BUTTON_H
+#define NoeMixerr_GUI_TRACK_LABEL_BUTTON_H
 
 #include <string>
 
 #include <QToolButton>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class TrackView;
@@ -73,6 +73,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TRACK_LABEL_BUTTON_H
+#endif // NoeMixerr_GUI_TRACK_LABEL_BUTTON_H

@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_GUI_SLICERT_VIEW_H
-#define LMMS_GUI_SLICERT_VIEW_H
+#ifndef NoeMixerr_GUI_SLICERT_VIEW_H
+#define NoeMixerr_GUI_SLICERT_VIEW_H
 
 
 #include "InstrumentView.h"
 
 class QPushButton;
 
-namespace lmms {
+namespace noemixerr {
 
 class SlicerT;
 
@@ -106,5 +106,5 @@ private:
 	int m_y2;
 };
 } // namespace gui
-} // namespace lmms
-#endif // LMMS_GUI_SLICERT_VIEW_H
+} // namespace noemixerr
+#endif // NoeMixerr_GUI_SLICERT_VIEW_H

@@ -1,5 +1,5 @@
 /*
- * MixerView.h - effect-mixer-view for LMMS
+ * MixerView.h - effect-mixer-view for NoeMixerr
  *
  * Copyright (c) 2008-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_MIXER_VIEW_H
-#define LMMS_GUI_MIXER_VIEW_H
+#ifndef NoeMixerr_GUI_MIXER_VIEW_H
+#define NoeMixerr_GUI_MIXER_VIEW_H
 
 #include <QWidget>
 
@@ -37,15 +37,15 @@ class QHBoxLayout;
 class QStackedLayout;
 class QScrollArea;
 
-namespace lmms
+namespace noemixerr
 {
 	class Mixer;
 }
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT MixerView
+class NoeMixerr_EXPORT MixerView
 	: public QWidget
 	, public ModelView
 	, public SerializingObjectHook
@@ -129,6 +129,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_MIXER_VIEW_H
+#endif // NoeMixerr_GUI_MIXER_VIEW_H

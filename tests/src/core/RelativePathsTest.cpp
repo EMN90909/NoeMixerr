@@ -34,7 +34,7 @@ class RelativePathsTest : public QObject
 private slots:
 	void PathUtilComparisonTests()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		QFileInfo fi(ConfigManager::inst()->factorySamplesDir() + "/drums/kick01.ogg");
 		QVERIFY(fi.exists());
@@ -68,7 +68,7 @@ private slots:
 	//! Test UTF-8 encoded std::string --> std::filesystem:path conversion
 	void StringToPathTest()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		const auto qPath = ConfigManager::inst()->factorySamplesDir() + QString::fromUtf16(u"/fake/音楽.wav");
 		const std::filesystem::path expected = qPath.toStdU16String();
@@ -83,7 +83,7 @@ private slots:
 	//! Test QString --> std::filesystem:path conversion
 	void QStringToPathTest()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		const auto qPath = ConfigManager::inst()->factorySamplesDir() + QString::fromUtf16(u"/fake/音楽.wav");
 		const std::filesystem::path expected = qPath.toStdU16String();
@@ -98,7 +98,7 @@ private slots:
 	//! Test std::filesystem:path --> UTF-8 encoded std::string conversion
 	void PathToStringTest()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		const auto expected = ConfigManager::inst()->factorySamplesDir() + QString::fromUtf16(u"/fake/音楽.wav");
 		const std::filesystem::path filePath = expected.toStdU16String();

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_LOCKLESS_LIST_H
-#define LMMS_LOCKLESS_LIST_H
+#ifndef NoeMixerr_LOCKLESS_LIST_H
+#define NoeMixerr_LOCKLESS_LIST_H
 
 #include "LocklessAllocator.h"
 
 #include <atomic>
 
-namespace lmms
+namespace noemixerr
 {
 
 template<typename T>
@@ -95,6 +95,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LOCKLESS_LIST_H
+#endif // NoeMixerr_LOCKLESS_LIST_H

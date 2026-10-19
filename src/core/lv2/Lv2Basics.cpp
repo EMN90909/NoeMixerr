@@ -24,9 +24,9 @@
 
 #include "Lv2Basics.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
-namespace lmms
+namespace noemixerr
 {
 
 QString qStringFromPluginNode(const LilvPlugin* plug,
@@ -48,7 +48,7 @@ std::string stdStringFromPortName(const LilvPlugin* plug, const LilvPort* port)
 			lilv_node_as_string(AutoLilvNode(lilv_port_get_name(plug, port)).get()));
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 

@@ -32,7 +32,7 @@
 #include "GuiApplication.h"
 #include "MainWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -47,4 +47,4 @@ ToolPluginView::ToolPluginView( ToolPlugin * _toolPlugin ) :
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

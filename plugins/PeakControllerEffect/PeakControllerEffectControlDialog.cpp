@@ -35,7 +35,7 @@
 #include "LedCheckBox.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 PeakControllerEffectControlDialog::PeakControllerEffectControlDialog(
@@ -101,4 +101,4 @@ PeakControllerEffectControlDialog::PeakControllerEffectControlDialog(
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

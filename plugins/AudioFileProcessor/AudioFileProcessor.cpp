@@ -29,13 +29,13 @@
 #include "PathUtil.h"
 #include "Song.h"
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "plugin_export.h"
 
 #include <QDomElement>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 extern "C"
@@ -43,7 +43,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT audiofileprocessor_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"AudioFileProcessor",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 				"Simple sampler with various settings for "
@@ -54,7 +54,7 @@ Plugin::Descriptor PLUGIN_EXPORT audiofileprocessor_plugin_descriptor =
 	Plugin::Type::Instrument,
 	new PluginPixmapLoader( "logo" ),
 	"wav,ogg,ds,spx,au,voc,aif,aiff,flac,raw"
-#ifdef LMMS_HAVE_SNDFILE_MP3
+#ifdef NoeMixerr_HAVE_SNDFILE_MP3
 	",mp3"
 #endif
 	,
@@ -433,7 +433,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main(Model * model, void *)
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main(Model * model, void *)
 {
 	return new AudioFileProcessor(static_cast<InstrumentTrack *>(model));
 }
@@ -442,4 +442,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main(Model * model, void *)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

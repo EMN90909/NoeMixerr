@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_PROJECT_NOTES_H
-#define LMMS_GUI_PROJECT_NOTES_H
+#ifndef NoeMixerr_GUI_PROJECT_NOTES_H
+#define NoeMixerr_GUI_PROJECT_NOTES_H
 
 #include <QMainWindow>
 
@@ -34,11 +34,11 @@ class QComboBox;
 class QTextCharFormat;
 class QTextEdit;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LMMS_EXPORT ProjectNotes : public QMainWindow, public SerializingObject
+class NoeMixerr_EXPORT ProjectNotes : public QMainWindow, public SerializingObject
 {
 	Q_OBJECT
 public:
@@ -90,6 +90,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_PROJECT_NOTES_H
+#endif // NoeMixerr_GUI_PROJECT_NOTES_H

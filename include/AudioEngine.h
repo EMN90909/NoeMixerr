@@ -1,5 +1,5 @@
 /*
- * AudioEngine.h - device-independent audio engine for LMMS
+ * AudioEngine.h - device-independent audio engine for NoeMixerr
  *
  * Copyright (c) 2004-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_AUDIO_ENGINE_H
-#define LMMS_AUDIO_ENGINE_H
+#ifndef NoeMixerr_AUDIO_ENGINE_H
+#define NoeMixerr_AUDIO_ENGINE_H
 
 #include <mutex>
 
@@ -35,14 +35,14 @@
 
 #include "AudioBufferView.h"
 #include "AudioDevice.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "SampleFrame.h"
 #include "LocklessList.h"
 #include "AudioEngineProfiler.h"
 #include "PlayHandle.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiClient;
@@ -62,7 +62,7 @@ constexpr float OUTPUT_SAMPLE_MULTIPLIER = 32767.0f;
 constexpr auto SUPPORTED_SAMPLERATES = std::array{44100, 48000, 88200, 96000, 176400, 192000};
 constexpr auto SUPPORTED_BITRATES = std::array{64, 128, 160, 192, 256, 320};
 
-class LMMS_EXPORT AudioEngine : public QObject
+class NoeMixerr_EXPORT AudioEngine : public QObject
 {
 	Q_OBJECT
 public:
@@ -310,7 +310,7 @@ public:
 signals:
 	void qualitySettingsChanged();
 	void sampleRateChanged();
-	void nextAudioBuffer(const lmms::SampleFrame* buffer);
+	void nextAudioBuffer(const noemixerr::SampleFrame* buffer);
 
 
 private:
@@ -420,6 +420,6 @@ private:
 	friend class ProjectRenderer;
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_ENGINE_H
+#endif // NoeMixerr_AUDIO_ENGINE_H

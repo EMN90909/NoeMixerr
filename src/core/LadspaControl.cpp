@@ -30,7 +30,7 @@
 #include "LadspaControl.h"
 #include "LadspaBase.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -373,4 +373,4 @@ void LadspaControl::setLink( bool _state )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

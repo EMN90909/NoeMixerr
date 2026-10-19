@@ -44,8 +44,8 @@
  *
  */
 
-#ifndef LMMS_GUI_FADER_H
-#define LMMS_GUI_FADER_H
+#ifndef NoeMixerr_GUI_FADER_H
+#define NoeMixerr_GUI_FADER_H
 
 #include <QElapsedTimer>
 #include <QPixmap>
@@ -54,16 +54,16 @@
 
 #include "AutomatableModelView.h"
 #include "embed.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class SimpleTextFloat;
 
 
-class LMMS_EXPORT Fader : public QWidget, public FloatModelView
+class NoeMixerr_EXPORT Fader : public QWidget, public FloatModelView
 {
 	Q_OBJECT
 public:
@@ -195,6 +195,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_FADER_H
+#endif // NoeMixerr_GUI_FADER_H

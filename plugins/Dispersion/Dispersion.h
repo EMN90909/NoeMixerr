@@ -23,14 +23,14 @@
  */
 
 
-#ifndef LMMS_DISPERSION_H
-#define LMMS_DISPERSION_H
+#ifndef NoeMixerr_DISPERSION_H
+#define NoeMixerr_DISPERSION_H
 
 #include "DispersionControls.h"
 #include "Effect.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr inline int MAX_DISPERSION_FILTERS = 999;
@@ -73,6 +73,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DISPERSION_H
+#endif // NoeMixerr_DISPERSION_H

@@ -32,7 +32,7 @@
 
 
 
-namespace lmms
+namespace noemixerr
 {
 
 /*
@@ -178,4 +178,4 @@ void LinkedModelGroups::loadSettings(const QDomElement& that)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

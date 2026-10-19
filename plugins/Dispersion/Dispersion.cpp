@@ -29,7 +29,7 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 extern "C"
@@ -37,13 +37,13 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT dispersion_plugin_descriptor =
 {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"Dispersion",
 	QT_TRANSLATE_NOOP("PluginBrowser", "An all-pass filter allowing for extremely high orders."),
 	"Lost Robot <r94231/at/gmail/dot/com>",
 	0x0100,
 	Plugin::Type::Effect,
-	new PixmapLoader("lmms-plugin-logo"),
+	new PixmapLoader("noemixerr-plugin-logo"),
 	nullptr,
 	nullptr
 };
@@ -146,11 +146,11 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main(Model* parent, void* data)
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main(Model* parent, void* data)
 {
 	return new DispersionEffect(parent, static_cast<const Plugin::Descriptor::SubPluginFeatures::Key *>(data));
 }
 
 }
 
-} // namespace lmms
+} // namespace noemixerr

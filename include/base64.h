@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_BASE64_H
-#define LMMS_BASE64_H
+#ifndef NoeMixerr_BASE64_H
+#define NoeMixerr_BASE64_H
 
 #include <QByteArray>
 #include <QMetaType>
 #include <QString>
 #include <QVariant>
 
-namespace lmms::base64
+namespace noemixerr::base64
 {
 
 	inline void encode( const char * _data, const int _size,
@@ -53,6 +53,6 @@ namespace lmms::base64
 	QVariant decode(const QString& b64,
 		QMetaType::Type forceType = QMetaType::UnknownType);
 
-} // namespace lmms::base64
+} // namespace noemixerr::base64
 
-#endif // LMMS_BASE64_H
+#endif // NoeMixerr_BASE64_H

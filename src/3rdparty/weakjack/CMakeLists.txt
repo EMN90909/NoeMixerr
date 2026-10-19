@@ -1,5 +1,5 @@
 # Use weak jack library linking
-if(LMMS_HAVE_WEAKJACK)
+if(NoeMixerr_HAVE_WEAKJACK)
 	add_library(weakjack STATIC
 		weakjack/weak_libjack.c
 	)

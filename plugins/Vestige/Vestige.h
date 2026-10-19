@@ -39,7 +39,7 @@ class QMdiSubWindow;
 class QPushButton;
 class QScrollArea;
 
-namespace lmms
+namespace noemixerr
 {
 
 class FloatModel;
@@ -75,7 +75,7 @@ public:
 	virtual gui::PluginView* instantiateView( QWidget * _parent );
 
 protected slots:
-	void setParameter( lmms::Model * action );
+	void setParameter( noemixerr::Model * action );
 	void handleConfigChange( QString cls, QString attr, QString value );
 	void reloadPlugin();
 
@@ -113,7 +113,7 @@ public:
 protected slots:
 	void syncPlugin();
 	void displayAutomatedOnly();
-	void setParameter( lmms::Model * action );
+	void setParameter( noemixerr::Model * action );
 	void closeWindow();
 
 protected:
@@ -185,6 +185,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

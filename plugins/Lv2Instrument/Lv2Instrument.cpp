@@ -40,7 +40,7 @@
 #include "plugin_export.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -49,10 +49,10 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT lv2instrument_plugin_descriptor =
 {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"LV2",
 	QT_TRANSLATE_NOOP("PluginBrowser",
-		"plugin for using arbitrary LV2 instruments inside LMMS."),
+		"plugin for using arbitrary LV2 instruments inside NoeMixerr."),
 	"Johannes Lorenz <jlsf2013$$$users.sourceforge.net, $$$=@>",
 	0x0100,
 	Plugin::Type::Instrument,
@@ -187,14 +187,14 @@ void Lv2Instrument::playNote(NotePlayHandle *nph, SampleFrame*)
 
 void Lv2Instrument::play(SampleFrame* buf)
 {
-	copyModelsFromLmms();
+	copyModelsFromNoeMixerr();
 
 	f_cnt_t fpp = Engine::audioEngine()->framesPerPeriod();
 
 	run(fpp);
 
-	copyModelsToLmms();
-	copyBuffersToLmms(buf, fpp);
+	copyModelsToNoeMixerr();
+	copyBuffersToNoeMixerr(buf, fpp);
 }
 
 
@@ -210,7 +210,7 @@ gui::PluginView* Lv2Instrument::instantiateView(QWidget *parent)
 
 void Lv2Instrument::updatePitchRange()
 {
-	qDebug() << "Lmms: Cannot update pitch range for lv2 plugin:"
+	qDebug() << "NoeMixerr: Cannot update pitch range for lv2 plugin:"
 				"not implemented yet";
 }
 
@@ -316,7 +316,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin *lmms_plugin_main(Model *_parent, void *_data)
+PLUGIN_EXPORT Plugin *noemixerr_plugin_main(Model *_parent, void *_data)
 {
 	using KeyType = Plugin::Descriptor::SubPluginFeatures::Key;
 	try {
@@ -330,4 +330,4 @@ PLUGIN_EXPORT Plugin *lmms_plugin_main(Model *_parent, void *_data)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

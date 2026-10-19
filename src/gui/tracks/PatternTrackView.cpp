@@ -32,7 +32,7 @@
 #include "PatternTrack.h"
 #include "TrackLabelButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 PatternTrackView::PatternTrackView(PatternTrack* pt, TrackContainerView* tcv) :
@@ -79,4 +79,4 @@ void PatternTrackView::clickedTrackLabel()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

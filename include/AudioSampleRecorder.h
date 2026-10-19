@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_AUDIO_SAMPLE_RECORDER_H
-#define LMMS_AUDIO_SAMPLE_RECORDER_H
+#ifndef NoeMixerr_AUDIO_SAMPLE_RECORDER_H
+#define NoeMixerr_AUDIO_SAMPLE_RECORDER_H
 
 #include <QList>
 #include <QPair>
@@ -32,7 +32,7 @@
 
 #include "AudioDevice.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleBuffer;
@@ -55,6 +55,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_SAMPLE_RECORDER_H
+#endif // NoeMixerr_AUDIO_SAMPLE_RECORDER_H

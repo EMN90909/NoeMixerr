@@ -27,7 +27,7 @@
 #include "AutomationClip.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 MeterModel::MeterModel( Model * _parent ) :
@@ -72,4 +72,4 @@ void MeterModel::loadSettings( const QDomElement & _this,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

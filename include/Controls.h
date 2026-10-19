@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_CONTROLS_H
-#define LMMS_GUI_CONTROLS_H
+#ifndef NoeMixerr_GUI_CONTROLS_H
+#define NoeMixerr_GUI_CONTROLS_H
 
 // headers only required for covariance
 #include "AutomatableModel.h"
@@ -34,7 +34,7 @@ class QString;
 class QWidget;
 class QLabel;
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -140,6 +140,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_CONTROLS_H
+#endif // NoeMixerr_GUI_CONTROLS_H

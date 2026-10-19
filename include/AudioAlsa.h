@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_AUDIO_ALSA_H
-#define LMMS_AUDIO_ALSA_H
+#ifndef NoeMixerr_AUDIO_ALSA_H
+#define NoeMixerr_AUDIO_ALSA_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 
 // older ALSA-versions might require this
 #define ALSA_PCM_NEW_HW_PARAMS_API
@@ -37,7 +37,7 @@
 
 #include "AudioDevice.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioAlsa : public QThread, public AudioDevice
@@ -109,8 +109,8 @@ private:
 	snd_pcm_sw_params_t * m_swParams;
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA
 
-#endif // LMMS_AUDIO_ALSA_H
+#endif // NoeMixerr_AUDIO_ALSA_H

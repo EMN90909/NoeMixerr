@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_LV2_MANAGER_H
-#define LMMS_LV2_MANAGER_H
+#ifndef NoeMixerr_LV2_MANAGER_H
+#define NoeMixerr_LV2_MANAGER_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <map>
 #include <set>
@@ -40,7 +40,7 @@
 #include "Plugin.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 /*
@@ -172,8 +172,8 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_MANAGER_H
+#endif // NoeMixerr_LV2_MANAGER_H

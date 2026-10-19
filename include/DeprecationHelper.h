@@ -24,8 +24,8 @@
  *
  */
 
-#ifndef LMMS_DEPRECATIONHELPER_H
-#define LMMS_DEPRECATIONHELPER_H
+#ifndef NoeMixerr_DEPRECATIONHELPER_H
+#define NoeMixerr_DEPRECATIONHELPER_H
 
 #include <type_traits>
 
@@ -35,7 +35,7 @@
 #include <QVariant>
 #include <QWheelEvent>
 
-namespace lmms
+namespace noemixerr
 {
 
 //! @brief Backwards-compatible adapter for `QDropEvent`'s new
@@ -185,6 +185,6 @@ inline bool setContent(QDomDocument& doc, QIODevice* dev, bool namespaceProcessi
 #endif
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DEPRECATIONHELPER_H
+#endif // NoeMixerr_DEPRECATIONHELPER_H

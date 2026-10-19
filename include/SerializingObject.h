@@ -22,24 +22,24 @@
  *
  */
 
-#ifndef LMMS_SERIALIZING_OBJECT_H
-#define LMMS_SERIALIZING_OBJECT_H
+#ifndef NoeMixerr_SERIALIZING_OBJECT_H
+#define NoeMixerr_SERIALIZING_OBJECT_H
 
 #include <QString>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 
 class QDomDocument;
 class QDomElement;
 
-namespace lmms
+namespace noemixerr
 {
 
 class SerializingObjectHook;
 
 
-class LMMS_EXPORT SerializingObject
+class NoeMixerr_EXPORT SerializingObject
 {
 public:
 	SerializingObject();
@@ -99,6 +99,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SERIALIZING_OBJECT_H
+#endif // NoeMixerr_SERIALIZING_OBJECT_H

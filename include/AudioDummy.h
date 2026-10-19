@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_AUDIO_DUMMY_H
-#define LMMS_AUDIO_DUMMY_H
+#ifndef NoeMixerr_AUDIO_DUMMY_H
+#define NoeMixerr_AUDIO_DUMMY_H
 
 #include "AudioDevice.h"
 #include "AudioDeviceSetupWidget.h"
 #include "AudioEngine.h"
 #include "MicroTimer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioDummy : public QThread, public AudioDevice
@@ -106,6 +106,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_DUMMY_H
+#endif // NoeMixerr_AUDIO_DUMMY_H

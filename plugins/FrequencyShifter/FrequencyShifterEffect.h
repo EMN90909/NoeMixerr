@@ -21,22 +21,22 @@
  * Boston, MA 02110-1301 USA.
  */
 
-#ifndef LMMS_FREQUENCY_SHIFTER_EFFECT_H
-#define LMMS_FREQUENCY_SHIFTER_EFFECT_H
+#ifndef NoeMixerr_FREQUENCY_SHIFTER_EFFECT_H
+#define NoeMixerr_FREQUENCY_SHIFTER_EFFECT_H
 
 #include "Effect.h"
 #include "FrequencyShifterControls.h"
 
 #include "HilbertTransform.h"
 #include "interpolation.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 #include <array>
 #include <cmath>
 #include <numbers>
 #include <vector>
 
-namespace lmms
+namespace noemixerr
 {
 
 class FrequencyShifterEffect : public Effect
@@ -109,7 +109,7 @@ private:
 	FrequencyShifterControls m_controls;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_FREQUENCY_SHIFTER_EFFECT_H
+#endif // NoeMixerr_FREQUENCY_SHIFTER_EFFECT_H
 

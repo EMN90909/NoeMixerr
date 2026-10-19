@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_GUI_RENAME_DIALOG_H
-#define LMMS_GUI_RENAME_DIALOG_H
+#ifndef NoeMixerr_GUI_RENAME_DIALOG_H
+#define NoeMixerr_GUI_RENAME_DIALOG_H
 
 #include <QDialog>
 
 class QLineEdit;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class RenameDialog : public QDialog
@@ -58,6 +58,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_RENAME_DIALOG_H
+#endif // NoeMixerr_GUI_RENAME_DIALOG_H

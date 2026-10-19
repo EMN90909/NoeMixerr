@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_SAMPLE_RECORD_HANDLE_H
-#define LMMS_SAMPLE_RECORD_HANDLE_H
+#ifndef NoeMixerr_SAMPLE_RECORD_HANDLE_H
+#define NoeMixerr_SAMPLE_RECORD_HANDLE_H
 
 #include <QList>
 #include <QPair>
@@ -32,7 +32,7 @@
 #include "PlayHandle.h"
 #include "TimePos.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -73,6 +73,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SAMPLE_RECORD_HANDLE_H
+#endif // NoeMixerr_SAMPLE_RECORD_HANDLE_H

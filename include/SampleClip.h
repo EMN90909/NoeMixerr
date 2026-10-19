@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_SAMPLE_CLIP_H
-#define LMMS_SAMPLE_CLIP_H
+#ifndef NoeMixerr_SAMPLE_CLIP_H
+#define NoeMixerr_SAMPLE_CLIP_H
 
 #include <memory>
 #include "Clip.h"
 #include "Sample.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleBuffer;
@@ -112,6 +112,6 @@ signals:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SAMPLE_CLIP_H
+#endif // NoeMixerr_SAMPLE_CLIP_H

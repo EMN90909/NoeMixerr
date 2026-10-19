@@ -23,13 +23,13 @@
  *
  */
 
-#ifndef LMMS_RMS_HELPER_H
-#define LMMS_RMS_HELPER_H
+#ifndef NoeMixerr_RMS_HELPER_H
+#define NoeMixerr_RMS_HELPER_H
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -96,6 +96,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_RMS_HELPER_H
+#endif // NoeMixerr_RMS_HELPER_H

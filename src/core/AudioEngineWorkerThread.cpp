@@ -33,7 +33,7 @@
 #include "ThreadableJob.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioEngineWorkerThread::JobQueue AudioEngineWorkerThread::globalJobQueue;
@@ -170,4 +170,4 @@ void AudioEngineWorkerThread::run()
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr

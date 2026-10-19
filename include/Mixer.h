@@ -1,5 +1,5 @@
 /*
- * Mixer.h - effect-mixer for LMMS
+ * Mixer.h - effect-mixer for NoeMixerr
  *
  * Copyright (c) 2008-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_MIXER_H
-#define LMMS_MIXER_H
+#ifndef NoeMixerr_MIXER_H
+#define NoeMixerr_MIXER_H
 
 #include "AudioBuffer.h"
 #include "EffectChain.h"
@@ -35,7 +35,7 @@
 #include <optional>
 #include <QColor>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -135,7 +135,7 @@ public:
 };
 
 
-class LMMS_EXPORT Mixer : public Model, public JournallingObject
+class NoeMixerr_EXPORT Mixer : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -225,6 +225,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIXER_H
+#endif // NoeMixerr_MIXER_H

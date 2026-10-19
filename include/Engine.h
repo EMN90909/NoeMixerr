@@ -1,5 +1,5 @@
 /*
- * Engine.h - engine-system of LMMS
+ * Engine.h - engine-system of NoeMixerr
  *
  * Copyright (c) 2006-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_ENGINE_H
-#define LMMS_ENGINE_H
+#ifndef NoeMixerr_ENGINE_H
+#define NoeMixerr_ENGINE_H
 
 #include <QString>
 #include <QObject>
 
-#include "lmmsconfig.h"
-#include "lmms_export.h"
-#include "LmmsTypes.h"
+#include "noemixerrconfig.h"
+#include "noemixerr_export.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioEngine;
@@ -40,7 +40,7 @@ class Mixer;
 class PatternStore;
 class ProjectJournal;
 class Song;
-class Ladspa2LMMS;
+class Ladspa2NoeMixerr;
 
 namespace gui
 {
@@ -48,7 +48,7 @@ class GuiApplication;
 }
 
 
-class LMMS_EXPORT Engine : public QObject
+class NoeMixerr_EXPORT Engine : public QObject
 {
 	Q_OBJECT
 public:
@@ -81,14 +81,14 @@ public:
 		return s_projectJournal;
 	}
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 	static class Lv2Manager * getLv2Manager()
 	{
 		return s_lv2Manager;
 	}
 #endif
 
-	static Ladspa2LMMS * getLADSPAManager()
+	static Ladspa2NoeMixerr * getLADSPAManager()
 	{
 		return s_ladspaManager;
 	}
@@ -138,10 +138,10 @@ private:
 	static PatternStore * s_patternStore;
 	static ProjectJournal * s_projectJournal;
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 	static class Lv2Manager* s_lv2Manager;
 #endif
-	static Ladspa2LMMS* s_ladspaManager;
+	static Ladspa2NoeMixerr* s_ladspaManager;
 	static void* s_dndPluginKey;
 
 	// even though most methods are static, an instance is needed for Qt slots/signals
@@ -151,6 +151,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_ENGINE_H
+#endif // NoeMixerr_ENGINE_H

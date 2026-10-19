@@ -44,7 +44,7 @@
 #include "ClipView.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 //! @brief Alternate between a darker and a lighter background color every 4 bars
@@ -277,8 +277,8 @@ bool TrackContentWidget::canPasteSelection( TimePos clipPos, const QDropEvent* d
 {
 	const QMimeData * mimeData = de->mimeData();
 
-	// If the source of the DropEvent is the current instance of LMMS we don't allow pasting in the same bar
-	// if it's another instance of LMMS we allow it
+	// If the source of the DropEvent is the current instance of NoeMixerr we don't allow pasting in the same bar
+	// if it's another instance of NoeMixerr we allow it
 	return de->source()
 		? canPasteSelection( clipPos, mimeData )
 		: canPasteSelection( clipPos, mimeData, true );
@@ -625,4 +625,4 @@ void TrackContentWidget::contextMenuAction( QContextMenuEvent * cme, ContextMenu
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

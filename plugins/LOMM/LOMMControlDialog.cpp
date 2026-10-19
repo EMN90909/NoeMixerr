@@ -34,7 +34,7 @@
 #include "MainWindow.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 LOMMControlDialog::LOMMControlDialog(LOMMControls* controls) :
@@ -279,4 +279,4 @@ void LOMMControlDialog::mouseReleaseEvent(QMouseEvent* event)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

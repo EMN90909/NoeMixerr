@@ -21,13 +21,13 @@
  * Boston, MA 02110-1301 USA.
  */
 
-#ifndef LMMS_FREQUENCY_SHIFTER_CONTROLS_H
-#define LMMS_FREQUENCY_SHIFTER_CONTROLS_H
+#ifndef NoeMixerr_FREQUENCY_SHIFTER_CONTROLS_H
+#define NoeMixerr_FREQUENCY_SHIFTER_CONTROLS_H
 
 #include "EffectControls.h"
 #include "FrequencyShifterControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class FrequencyShifterEffect;
@@ -81,6 +81,6 @@ public:
 	BoolModel m_resetLfo;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_FREQUENCY_SHIFTER_CONTROLS_H
+#endif // NoeMixerr_FREQUENCY_SHIFTER_CONTROLS_H

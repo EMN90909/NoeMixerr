@@ -28,7 +28,7 @@
 #include "AudioEngine.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioFileWave::AudioFileWave( OutputSettings const & outputSettings,
@@ -88,7 +88,7 @@ bool AudioFileWave::startEncoding()
 	// Prevent fold overs when encountering clipped data
 	sf_command(m_sf, SFC_SET_CLIPPING, nullptr, SF_TRUE);
 
-	sf_set_string ( m_sf, SF_STR_SOFTWARE, "LMMS" );
+	sf_set_string ( m_sf, SF_STR_SOFTWARE, "NoeMixerr" );
 
 	return true;
 }
@@ -131,4 +131,4 @@ void AudioFileWave::finishEncoding()
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr

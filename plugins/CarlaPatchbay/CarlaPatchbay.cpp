@@ -1,5 +1,5 @@
 /*
- * carlapatchbay.cpp - Carla for LMMS (Patchbay)
+ * carlapatchbay.cpp - Carla for NoeMixerr (Patchbay)
  *
  * Copyright (C) 2014-2018 Filipe Coelho <falktx@falktx.com>
  *
@@ -28,7 +28,7 @@
 #include "plugin_export.h"
 #include "InstrumentTrack.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -37,7 +37,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT carlapatchbay_plugin_descriptor =
 {
-    LMMS_STRINGIFY( PLUGIN_NAME ),
+    NoeMixerr_STRINGIFY( PLUGIN_NAME ),
     "Carla Patchbay",
     QT_TRANSLATE_NOOP( "PluginBrowser",
                        "Carla Patchbay Instrument" ),
@@ -49,7 +49,7 @@ Plugin::Descriptor PLUGIN_EXPORT carlapatchbay_plugin_descriptor =
     nullptr,
 } ;
 
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model* m, void*)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model* m, void*)
 {
     return new CarlaInstrument(static_cast<InstrumentTrack*>(m), &carlapatchbay_plugin_descriptor, true);
 }
@@ -57,4 +57,4 @@ PLUGIN_EXPORT Plugin* lmms_plugin_main(Model* m, void*)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -33,11 +33,11 @@
 #include "GuiApplication.h"
 #include "PixmapButton.h"
 #include "Draggable.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 #include <QPainterPath>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 SlewDistortionControlDialog::SlewDistortionControlDialog(SlewDistortionControls* controls) :
@@ -478,7 +478,7 @@ SlewDistortionHelpView::SlewDistortionHelpView() : QTextEdit(s_helpText)
 	setTextInteractionFlags(Qt::TextSelectableByKeyboard | Qt::TextSelectableByMouse);
 	getGUI()->mainWindow()->addWindowedWidget(this);
 	parentWidget()->setAttribute(Qt::WA_DeleteOnClose, false);
-	parentWidget()->setWindowIcon(QIcon(PixmapLoader("lmms-plugin-logo").pixmap()));
+	parentWidget()->setWindowIcon(QIcon(PixmapLoader("noemixerr-plugin-logo").pixmap()));
 	
 	// No maximize button
 	Qt::WindowFlags flags = parentWidget()->windowFlags();
@@ -487,4 +487,4 @@ SlewDistortionHelpView::SlewDistortionHelpView() : QTextEdit(s_helpText)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

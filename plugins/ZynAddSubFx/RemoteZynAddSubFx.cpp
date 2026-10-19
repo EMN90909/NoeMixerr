@@ -24,8 +24,8 @@
 
 #include "RemoteZynAddSubFx.h"
 
-#include <lmmsconfig.h>
-#ifdef LMMS_BUILD_WIN32
+#include <noemixerrconfig.h>
+#ifdef NoeMixerr_BUILD_WIN32
 #include <winsock2.h>
 #endif
 
@@ -40,7 +40,7 @@
 #include <Nio/Nio.h>
 #include <UI/MasterUI.h>
 
-using namespace lmms;
+using namespace noemixerr;
 
 class RemoteZynAddSubFx : public RemotePluginClient, public LocalZynAddSubFx
 {
@@ -120,8 +120,8 @@ public:
 				LocalZynAddSubFx::setPresetDir( _m.getString() );
 				break;
 
-			case IdZasfLmmsWorkingDirectory:
-				LocalZynAddSubFx::setLmmsWorkingDir( _m.getString() );
+			case IdZasfNoeMixerrWorkingDirectory:
+				LocalZynAddSubFx::setNoeMixerrWorkingDir( _m.getString() );
 				break;
 
 			case IdZasfSetPitchWheelBendRange:
@@ -174,7 +174,7 @@ void RemoteZynAddSubFx::guiLoop()
 		}
 		else
 		{
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 			Sleep( m_guiSleepTime );
 #else
 			usleep( m_guiSleepTime*1000 );
@@ -256,7 +256,7 @@ int main( int _argc, char * * _argv )
 		return -1;
 	}
 
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 	const auto pollParentThread = PollParentThread{};
 #endif
 

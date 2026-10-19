@@ -44,7 +44,7 @@
 #include "GuiApplication.h"
 #include "PluginFactory.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 using namespace std;
@@ -115,8 +115,8 @@ TrackContainerView::TrackContainerView( TrackContainer * _tc ) :
 
 	connect( Engine::getSong(), SIGNAL(timeSignatureChanged(int,int)),
 						this, SLOT(realignTracks()));
-	connect( m_tc, SIGNAL(trackAdded(lmms::Track*)),
-			this, SLOT(createTrackView(lmms::Track*)),
+	connect( m_tc, SIGNAL(trackAdded(noemixerr::Track*)),
+			this, SLOT(createTrackView(noemixerr::Track*)),
 			Qt::QueuedConnection );
 }
 
@@ -493,4 +493,4 @@ unsigned int TrackContainerView::totalHeightOfTracks() const
 } // namespace gui
 
 
-} // namespace lmms
+} // namespace noemixerr

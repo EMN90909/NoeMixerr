@@ -32,7 +32,7 @@
 #include "Effect.h"
 #include "DummyEffect.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -221,4 +221,4 @@ void EffectChain::clear()
 	m_enabledModel.setValue( false );
 }
 
-} // namespace lmms
+} // namespace noemixerr

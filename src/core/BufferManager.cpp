@@ -29,7 +29,7 @@
 #include "SampleFrame.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 f_cnt_t BufferManager::s_framesPerPeriod;
@@ -52,4 +52,4 @@ void BufferManager::release( SampleFrame* buf )
 	delete[] buf;
 }
 
-} // namespace lmms
+} // namespace noemixerr

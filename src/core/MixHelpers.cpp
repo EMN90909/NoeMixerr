@@ -30,7 +30,7 @@
 #include "ValueBuffer.h"
 #include "SampleFrame.h"
 
-namespace lmms::MixHelpers
+namespace noemixerr::MixHelpers
 {
 
 namespace {
@@ -229,5 +229,5 @@ void multiplyAndAddMultipliedJoined( SampleFrame* dst,
 	run<>( dst, srcLeft, srcRight, frames, MultiplyAndAddMultipliedOp(coeffDst, coeffSrc) );
 }
 
-} // namespace lmms::MixHelpers
+} // namespace noemixerr::MixHelpers
 

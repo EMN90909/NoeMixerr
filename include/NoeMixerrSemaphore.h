@@ -27,21 +27,21 @@
  * File src/zix/sem.h
  */
 
-#ifndef LMMS_SEMAPHORE_H
-#define LMMS_SEMAPHORE_H
+#ifndef NoeMixerr_SEMAPHORE_H
+#define NoeMixerr_SEMAPHORE_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 #    include <mach/mach.h>
-#elif defined(LMMS_BUILD_WIN32)
+#elif defined(NoeMixerr_BUILD_WIN32)
 #    include <windows.h>
 #else
 #    include <semaphore.h>
 #endif
 
 
-namespace lmms {
+namespace noemixerr {
 
 /**
    A counting semaphore.
@@ -78,15 +78,15 @@ public:
 	bool tryWait();
 
 private:
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 	semaphore_t m_sem;
-#elif defined(LMMS_BUILD_WIN32)
+#elif defined(NoeMixerr_BUILD_WIN32)
 	HANDLE m_sem;
 #else
 	sem_t m_sem;
 #endif
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SEMAPHORE_H
+#endif // NoeMixerr_SEMAPHORE_H

@@ -31,7 +31,7 @@
 
 #include "LadspaManager.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -45,6 +45,6 @@ public:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif

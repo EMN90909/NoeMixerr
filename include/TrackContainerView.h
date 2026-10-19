@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_TRACK_CONTAINER_VIEW_H
-#define LMMS_GUI_TRACK_CONTAINER_VIEW_H
+#ifndef NoeMixerr_GUI_TRACK_CONTAINER_VIEW_H
+#define NoeMixerr_GUI_TRACK_CONTAINER_VIEW_H
 
 #include <QVector>
 #include <QScrollArea>
@@ -38,7 +38,7 @@
 
 class QVBoxLayout;
 
-namespace lmms
+namespace noemixerr
 {
 
 class InstrumentTrack;
@@ -153,8 +153,8 @@ public:
 
 public slots:
 	void realignTracks();
-	lmms::gui::TrackView * createTrackView( lmms::Track * _t );
-	void deleteTrackView( lmms::gui::TrackView * _tv );
+	noemixerr::gui::TrackView * createTrackView( noemixerr::Track * _t );
+	void deleteTrackView( noemixerr::gui::TrackView * _tv );
 
 	void dropEvent( QDropEvent * _de ) override;
 	void dragEnterEvent( QDragEnterEvent * _dee ) override;
@@ -199,7 +199,7 @@ private:
 	RubberBand * m_rubberBand;
 
 signals:
-	void positionChanged( const lmms::TimePos & _pos );
+	void positionChanged( const noemixerr::TimePos & _pos );
 	void tracksRealigned();
 
 
@@ -208,6 +208,6 @@ signals:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_TRACK_CONTAINER_VIEW_H
+#endif // NoeMixerr_GUI_TRACK_CONTAINER_VIEW_H

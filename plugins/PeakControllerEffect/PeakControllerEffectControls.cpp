@@ -29,9 +29,9 @@
 #include "PeakControllerEffectControls.h"
 #include "PeakControllerEffect.h"
 #include "Song.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -108,4 +108,4 @@ void PeakControllerEffectControls::saveSettings( QDomDocument & _doc,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -33,11 +33,11 @@
 #include "NotePlayHandle.h"
 #include "Oscillator.h"
 #include "PixmapButton.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -46,7 +46,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT organic_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"Organic",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 				"Additive Synthesizer for organ-like sounds" ),
@@ -66,7 +66,7 @@ float * OrganicInstrument::s_harmonics = nullptr;
 *
 *	class OrganicInstrument
 *
-*	lmms - plugin
+*	noemixerr - plugin
 *
 ***********************************************************************/
 
@@ -594,7 +594,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model *m, void * )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model *m, void * )
 {
 	return( new OrganicInstrument( static_cast<InstrumentTrack *>( m ) ) );
 }
@@ -613,4 +613,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model *m, void * )
  */
 
 
-} // namespace lmms
+} // namespace noemixerr

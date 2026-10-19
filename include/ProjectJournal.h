@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_PROJECT_JOURNAL_H
-#define LMMS_PROJECT_JOURNAL_H
+#ifndef NoeMixerr_PROJECT_JOURNAL_H
+#define NoeMixerr_PROJECT_JOURNAL_H
 
 #include <QHash>
 #include <QStack>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "DataFile.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -124,6 +124,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PROJECT_JOURNAL_H
+#endif // NoeMixerr_PROJECT_JOURNAL_H

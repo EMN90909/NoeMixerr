@@ -35,7 +35,7 @@
 #include "AudioFileFlac.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -53,7 +53,7 @@ const std::array<ProjectRenderer::FileEncodeDevice, 5> ProjectRenderer::fileEnco
 	FileEncodeDevice{ ProjectRenderer::ExportFileFormat::Ogg,
 		QT_TRANSLATE_NOOP( "ProjectRenderer", "OGG (*.ogg)" ),
 					".ogg",
-#ifdef LMMS_HAVE_OGGVORBIS
+#ifdef NoeMixerr_HAVE_OGGVORBIS
 					&AudioFileOgg::getInst
 #else
 					nullptr
@@ -62,7 +62,7 @@ const std::array<ProjectRenderer::FileEncodeDevice, 5> ProjectRenderer::fileEnco
 	FileEncodeDevice{ ProjectRenderer::ExportFileFormat::MP3,
 		QT_TRANSLATE_NOOP( "ProjectRenderer", "MP3 (*.mp3)" ),
 					".mp3",
-#ifdef LMMS_HAVE_MP3LAME
+#ifdef NoeMixerr_HAVE_MP3LAME
 					&AudioFileMP3::getInst
 #else
 					nullptr
@@ -142,7 +142,7 @@ void ProjectRenderer::startProcessing()
 		Engine::audioEngine()->setAudioDevice(m_fileDev, false);
 
 		start(
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 			QThread::HighPriority
 #endif
 						);
@@ -228,4 +228,4 @@ void ProjectRenderer::updateConsoleProgress()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

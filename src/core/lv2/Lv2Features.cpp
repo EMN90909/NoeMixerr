@@ -24,7 +24,7 @@
 
 #include "Lv2Features.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <QtGlobal>
 
@@ -32,7 +32,7 @@
 #include "Lv2Manager.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -118,7 +118,7 @@ void Lv2Features::clear()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 

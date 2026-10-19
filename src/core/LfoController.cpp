@@ -33,7 +33,7 @@
 #include "PathUtil.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -266,4 +266,4 @@ gui::ControllerDialog * LfoController::createDialog( QWidget * _parent )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_GUI_TOOL_BUTTON_H
-#define LMMS_GUI_TOOL_BUTTON_H
+#ifndef NoeMixerr_GUI_TOOL_BUTTON_H
+#define NoeMixerr_GUI_TOOL_BUTTON_H
 
 #include <QToolButton>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class ToolButton : public QToolButton
@@ -46,6 +46,6 @@ public:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TOOL_BUTTON_H
+#endif // NoeMixerr_GUI_TOOL_BUTTON_H

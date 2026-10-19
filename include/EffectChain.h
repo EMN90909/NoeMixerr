@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_EFFECT_CHAIN_H
-#define LMMS_EFFECT_CHAIN_H
+#ifndef NoeMixerr_EFFECT_CHAIN_H
+#define NoeMixerr_EFFECT_CHAIN_H
 
 #include "Model.h"
 #include "SerializingObject.h"
 #include "AutomatableModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioBuffer;
@@ -44,7 +44,7 @@ class EffectRackView;
 } // namespace gui
 
 
-class LMMS_EXPORT EffectChain : public Model, public SerializingObject
+class NoeMixerr_EXPORT EffectChain : public Model, public SerializingObject
 {
 	Q_OBJECT
 public:
@@ -83,6 +83,6 @@ signals:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_EFFECT_CHAIN_H
+#endif // NoeMixerr_EFFECT_CHAIN_H

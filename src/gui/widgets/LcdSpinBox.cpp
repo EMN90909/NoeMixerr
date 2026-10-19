@@ -33,7 +33,7 @@
 #include "DeprecationHelper.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 LcdSpinBox::LcdSpinBox( int numDigits, QWidget* parent, const QString& name ) :
@@ -178,4 +178,4 @@ void LcdSpinBox::enterValue()
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -24,17 +24,17 @@
  *
  */
 
-#ifndef LMMS_TOOL_PLUGIN_H
-#define LMMS_TOOL_PLUGIN_H
+#ifndef NoeMixerr_TOOL_PLUGIN_H
+#define NoeMixerr_TOOL_PLUGIN_H
 
 #include "Plugin.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
-class LMMS_EXPORT ToolPlugin : public Plugin
+class NoeMixerr_EXPORT ToolPlugin : public Plugin
 {
 public:
 	ToolPlugin( const Descriptor * _descriptor, Model * _parent );
@@ -48,6 +48,6 @@ public:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TOOL_PLUGIN_H
+#endif // NoeMixerr_TOOL_PLUGIN_H

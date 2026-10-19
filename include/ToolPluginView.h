@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_GUI_TOOL_PLUGIN_VIEW_H
-#define LMMS_GUI_TOOL_PLUGIN_VIEW_H
+#ifndef NoeMixerr_GUI_TOOL_PLUGIN_VIEW_H
+#define NoeMixerr_GUI_TOOL_PLUGIN_VIEW_H
 
 #include "PluginView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class ToolPlugin;
@@ -37,7 +37,7 @@ namespace gui
 {
 
 
-class LMMS_EXPORT ToolPluginView : public PluginView
+class NoeMixerr_EXPORT ToolPluginView : public PluginView
 {
 public:
 	ToolPluginView( ToolPlugin * _toolPlugin );
@@ -47,6 +47,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_TOOL_PLUGIN_VIEW_H
+#endif // NoeMixerr_GUI_TOOL_PLUGIN_VIEW_H

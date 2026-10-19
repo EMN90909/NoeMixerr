@@ -27,7 +27,7 @@
 
 #include <QHeaderView>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -405,4 +405,4 @@ void PatchesDialog::progChanged( QTreeWidgetItem * curr, QTreeWidgetItem * prev 
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -32,7 +32,7 @@
 class QPushButton;
 class QLabel;
 
-namespace lmms
+namespace noemixerr
 {
 
 class VstEffectControls;
@@ -76,6 +76,6 @@ public slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

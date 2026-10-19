@@ -81,7 +81,7 @@
 #include <utility>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 constexpr const int ControlLayout::m_minWidth;
@@ -313,4 +313,4 @@ int ControlLayout::smartSpacing(QStyle::PixelMetric pm) const
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

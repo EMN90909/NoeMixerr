@@ -70,8 +70,8 @@
 **
 ****************************************************************************/
 
-#ifndef LMMS_GUI_CONTROL_LAYOUT_H
-#define LMMS_GUI_CONTROL_LAYOUT_H
+#ifndef NoeMixerr_GUI_CONTROL_LAYOUT_H
+#define NoeMixerr_GUI_CONTROL_LAYOUT_H
 
 #include <QLayout>
 #include <QMultiMap>
@@ -81,7 +81,7 @@ class QLayoutItem;
 class QLineEdit;
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 /**
@@ -139,6 +139,6 @@ private:
 	static constexpr const char* s_searchBarName = "!!searchBar!!";
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_CONTROL_LAYOUT_H
+#endif // NoeMixerr_GUI_CONTROL_LAYOUT_H

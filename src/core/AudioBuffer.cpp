@@ -28,7 +28,7 @@
 #include "MixHelpers.h"
 #include "SharedMemory.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace
@@ -359,4 +359,4 @@ auto AudioBuffer::absPeakValue(ch_cnt_t channel) const -> float
 	return std::abs(std::ranges::max(buffer(channel), {}, static_cast<float(&)(float)>(std::abs)));
 }
 
-} // namespace lmms
+} // namespace noemixerr

@@ -28,13 +28,13 @@
 #include "embed.h"
 #include "Engine.h"
 #include "InstrumentTrack.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "PresetPreviewPlayHandle.h"
 
 #include <vector>
 #include <algorithm>
 
-namespace lmms
+namespace noemixerr
 {
 
 std::array<InstrumentFunctionNoteStacking::ChordTable::Init, InstrumentFunctionNoteStacking::NUM_CHORD_TABLES>
@@ -556,4 +556,4 @@ void InstrumentFunctionArpeggio::loadSettings( const QDomElement & _this )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

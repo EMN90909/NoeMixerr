@@ -25,18 +25,18 @@
  *
  */
 
-// NOTE: The LMMS/zynaddsubfx repo contains a copy of this header.
+// NOTE: The NoeMixerr/zynaddsubfx repo contains a copy of this header.
 //       If you modify this file, consider modifying it there as well.
 
-#ifndef LMMS_LOCALEHELPER_H
-#define LMMS_LOCALEHELPER_H
+#ifndef NoeMixerr_LOCALEHELPER_H
+#define NoeMixerr_LOCALEHELPER_H
 
 #include <QLocale>
 
 #include <limits>
 #include <cmath>
 
-namespace lmms::LocaleHelper
+namespace noemixerr::LocaleHelper
 {
 
 inline double toDouble(const QString& str, bool* ok = nullptr)
@@ -67,6 +67,6 @@ inline float toFloat(const QString& str, bool* ok = nullptr)
 }
 
 
-} // namespace lmms::LocaleHelper
+} // namespace noemixerr::LocaleHelper
 
-#endif // LMMS_LOCALEHELPER_H
+#endif // NoeMixerr_LOCALEHELPER_H

@@ -24,10 +24,10 @@
 
 #include "MidiWinMM.h"
 
-#ifdef LMMS_HAVE_WINMM
+#ifdef NoeMixerr_HAVE_WINMM
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -303,6 +303,6 @@ void MidiWinMM::openDevices()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_WINMM
+#endif // NoeMixerr_HAVE_WINMM

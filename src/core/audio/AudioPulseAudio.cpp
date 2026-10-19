@@ -27,14 +27,14 @@
 
 #include "AudioPulseAudio.h"
 
-#ifdef LMMS_HAVE_PULSEAUDIO
+#ifdef NoeMixerr_HAVE_PULSEAUDIO
 
 #include "ConfigManager.h"
 #include "LcdSpinBox.h"
 #include "AudioEngine.h"
 #include "Engine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 static void stream_write_callback(pa_stream *s, size_t length, void *userdata)
@@ -126,7 +126,7 @@ static void context_state_callback(pa_context *c, void *userdata)
 		case PA_CONTEXT_READY:
 		{
 			qDebug( "Connection established.\n" );
-			_this->m_s = pa_stream_new( c, "lmms", &_this->m_sampleSpec,  nullptr);
+			_this->m_s = pa_stream_new( c, "noemixerr", &_this->m_sampleSpec,  nullptr);
 			pa_stream_set_state_callback( _this->m_s, stream_state_callback, _this );
 			pa_stream_set_write_callback( _this->m_s, stream_write_callback, _this );
 
@@ -174,7 +174,7 @@ void AudioPulseAudio::run()
 	}
 	pa_mainloop_api * mainloop_api = pa_mainloop_get_api( mainLoop );
 
-	pa_context *context = pa_context_new( mainloop_api, "lmms" );
+	pa_context *context = pa_context_new( mainloop_api, "noemixerr" );
 	if ( context == nullptr )
 	{
 		qCritical( "pa_context_new() failed." );
@@ -290,7 +290,7 @@ void AudioPulseAudio::setupWidget::saveSettings()
 				QString::number( m_channels->value<int>() ) );
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_PULSEAUDIO
+#endif // NoeMixerr_HAVE_PULSEAUDIO
 

@@ -30,7 +30,7 @@
 #include "Knob.h"
 #include "StereoMatrixControls.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -63,4 +63,4 @@ StereoMatrixControlDialog::StereoMatrixControlDialog(StereoMatrixControls* contr
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

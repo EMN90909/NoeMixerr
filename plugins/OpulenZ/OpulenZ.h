@@ -33,7 +33,7 @@
 class Copl;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -50,7 +50,7 @@ class AutomatableButtonGroup;
 #define OPL2_NO_VOICE 255
 #define OPL2_VOICES 9
 
-// The "normal" range for LMMS pitchbends
+// The "normal" range for NoeMixerr pitchbends
 #define DEFAULT_BEND_CENTS 100
 
 class OpulenzInstrument : public Instrument
@@ -213,6 +213,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

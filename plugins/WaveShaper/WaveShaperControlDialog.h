@@ -28,7 +28,7 @@
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class WaveShaperControls;
@@ -52,6 +52,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

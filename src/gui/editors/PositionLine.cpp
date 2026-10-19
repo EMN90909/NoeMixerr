@@ -27,7 +27,7 @@
 #include <QPainter>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 PositionLine::PositionLine(QWidget* parent, Song::PlayMode playMode) :
@@ -108,4 +108,4 @@ void PositionLine::zoomChange(float zoom)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -43,7 +43,7 @@
 #include "SaWaterfallView.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -358,4 +358,4 @@ QSize SaControlsDialog::sizeHint() const
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

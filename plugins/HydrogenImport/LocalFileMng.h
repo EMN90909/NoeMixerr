@@ -3,7 +3,7 @@
 
 #include <QDomDocument>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -20,7 +20,7 @@ public:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif //LFILEMNG_H
 

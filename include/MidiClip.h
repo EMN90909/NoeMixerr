@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_MIDI_CLIP_H
-#define LMMS_MIDI_CLIP_H
+#ifndef NoeMixerr_MIDI_CLIP_H
+#define NoeMixerr_MIDI_CLIP_H
 
 #include "Clip.h"
 #include "Note.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -42,7 +42,7 @@ class MidiClipView;
 }
 
 
-class LMMS_EXPORT MidiClip : public Clip
+class NoeMixerr_EXPORT MidiClip : public Clip
 {
 	Q_OBJECT
 public:
@@ -161,10 +161,10 @@ private:
 
 
 signals:
-	void destroyedMidiClip( lmms::MidiClip* );
+	void destroyedMidiClip( noemixerr::MidiClip* );
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_CLIP_H
+#endif // NoeMixerr_MIDI_CLIP_H

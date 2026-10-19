@@ -1,5 +1,5 @@
 /*
- * AudioDevice.cpp - base-class for audio-devices used by LMMS audio engine
+ * AudioDevice.cpp - base-class for audio-devices used by NoeMixerr audio engine
  *
  * Copyright (c) 2004-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -27,7 +27,7 @@
 #include "AudioDevice.h"
 #include "AudioEngine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioDevice::AudioDevice(const ch_cnt_t _channels, AudioEngine* _audioEngine)
@@ -135,4 +135,4 @@ void AudioDevice::clearS16Buffer( int_sample_t * _outbuf, const f_cnt_t _frames 
 	memset( _outbuf, 0,  _frames * channels() * BYTES_PER_INT_SAMPLE );
 }
 
-} // namespace lmms
+} // namespace noemixerr

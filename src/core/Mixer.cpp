@@ -1,5 +1,5 @@
 /*
- * Mixer.cpp - effect mixer for LMMS
+ * Mixer.cpp - effect mixer for NoeMixerr
  *
  * Copyright (c) 2008-2011 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -37,7 +37,7 @@
 #include "SampleTrack.h"
 #include "TrackContainer.h" // For TrackContainer::TrackList typedef
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -931,4 +931,4 @@ bool Mixer::isChannelInUse(int index)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

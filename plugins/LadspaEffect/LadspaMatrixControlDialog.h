@@ -28,13 +28,13 @@
 
 #include "EffectControlDialog.h"
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
 
 class QGridLayout;
 class QScrollArea;
 
-namespace lmms
+namespace noemixerr
 {
 
 class LadspaControls;
@@ -77,6 +77,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

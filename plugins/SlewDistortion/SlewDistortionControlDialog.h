@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GUI_SLEW_DISTORTION_CONTROL_DIALOG_H
-#define LMMS_GUI_SLEW_DISTORTION_CONTROL_DIALOG_H
+#ifndef NoeMixerr_GUI_SLEW_DISTORTION_CONTROL_DIALOG_H
+#define NoeMixerr_GUI_SLEW_DISTORTION_CONTROL_DIALOG_H
 
 #include "EffectControlDialog.h"
 #include <QTextEdit>
 #include <array>
 
-namespace lmms
+namespace noemixerr
 {
 
 class SlewDistortionControls;
@@ -79,6 +79,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_SLEW_DISTORTION_CONTROL_DIALOG_H
+#endif // NoeMixerr_GUI_SLEW_DISTORTION_CONTROL_DIALOG_H

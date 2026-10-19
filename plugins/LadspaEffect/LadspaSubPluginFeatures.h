@@ -31,7 +31,7 @@
 #include "LadspaManager.h"
 #include "Plugin.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -53,6 +53,6 @@ public:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

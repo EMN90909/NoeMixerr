@@ -30,7 +30,7 @@
 #include "ConfigManager.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -70,4 +70,4 @@ void MidiSetupWidget::show()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

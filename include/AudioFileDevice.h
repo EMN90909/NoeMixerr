@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_AUDIO_FILE_DEVICE_H
-#define LMMS_AUDIO_FILE_DEVICE_H
+#ifndef NoeMixerr_AUDIO_FILE_DEVICE_H
+#define NoeMixerr_AUDIO_FILE_DEVICE_H
 
 #include <QFile>
 
 #include "AudioDevice.h"
 #include "OutputSettings.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioFileDevice : public AudioDevice
@@ -76,6 +76,6 @@ private:
 using AudioFileDeviceInstantiaton
 	= AudioFileDevice* (*)(const QString&, const OutputSettings&, const ch_cnt_t, AudioEngine*, bool&);
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_FILE_DEVICE_H
+#endif // NoeMixerr_AUDIO_FILE_DEVICE_H

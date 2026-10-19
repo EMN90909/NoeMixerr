@@ -31,14 +31,14 @@
 #include <cstring>
 #include <sstream>
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 #ifdef _MSC_VER
-// not #if LMMS_BUILD_WIN32 because we have strncasecmp in mingw
+// not #if NoeMixerr_BUILD_WIN32 because we have strncasecmp in mingw
 #define strcasecmp _stricmp
 #endif // _MSC_VER
 
-namespace lmms {
+namespace noemixerr {
 
 using namespace std;
 
@@ -930,4 +930,4 @@ int DrumSynth::GetDSFileSamples(QString dsfile, int16_t*& wave, int channels, sa
 	return Length;
 }
 
-} // namespace lmms
+} // namespace noemixerr

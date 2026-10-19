@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_KEYMAP_H
-#define LMMS_KEYMAP_H
+#ifndef NoeMixerr_KEYMAP_H
+#define NoeMixerr_KEYMAP_H
 
 #include <vector>
 #include <QObject>
@@ -31,7 +31,7 @@
 
 #include "SerializingObject.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Keymap : public QObject, public SerializingObject
@@ -87,6 +87,6 @@ private:
 	float m_baseFreq;               //!< frequency of the base note (usually A4 @440 Hz)
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_KEYMAP_H
+#endif // NoeMixerr_KEYMAP_H

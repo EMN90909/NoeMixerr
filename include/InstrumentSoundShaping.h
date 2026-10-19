@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_INSTRUMENT_SOUND_SHAPING_H
-#define LMMS_INSTRUMENT_SOUND_SHAPING_H
+#ifndef NoeMixerr_INSTRUMENT_SOUND_SHAPING_H
+#define NoeMixerr_INSTRUMENT_SOUND_SHAPING_H
 
 #include "ComboBoxModel.h"
 #include "EnvelopeAndLfoParameters.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -98,6 +98,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INSTRUMENT_SOUND_SHAPING_H
+#endif // NoeMixerr_INSTRUMENT_SOUND_SHAPING_H

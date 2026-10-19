@@ -30,7 +30,7 @@
 #include "Effect.h"
 #include "DynamicsProcessorControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class RmsHelper;
@@ -72,6 +72,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

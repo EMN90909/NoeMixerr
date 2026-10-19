@@ -35,7 +35,7 @@
 #include <cmath>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -256,4 +256,4 @@ void EnvelopeGraph::toggleAmountModel()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

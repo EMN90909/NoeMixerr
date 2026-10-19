@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_TEMPO_SYNC_KNOB_MODEL_H
-#define LMMS_TEMPO_SYNC_KNOB_MODEL_H
+#ifndef NoeMixerr_TEMPO_SYNC_KNOB_MODEL_H
+#define NoeMixerr_TEMPO_SYNC_KNOB_MODEL_H
 
 #include "MeterModel.h"
 
 class QAction;
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -41,7 +41,7 @@ class TempoSyncKnob;
 } // namespace gui
 
 
-class LMMS_EXPORT TempoSyncKnobModel : public FloatModel
+class NoeMixerr_EXPORT TempoSyncKnobModel : public FloatModel
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE
@@ -86,7 +86,7 @@ public:
 	MeterModel const & getCustomMeterModel() const { return m_custom; }
 
 signals:
-	void syncModeChanged( lmms::TempoSyncKnobModel::SyncMode _new_mode );
+	void syncModeChanged( noemixerr::TempoSyncKnobModel::SyncMode _new_mode );
 	void scaleChanged( float _new_scale );
 
 
@@ -100,7 +100,7 @@ public slots:
 
 
 protected slots:
-	void calculateTempoSyncTime( lmms::bpm_t _bpm );
+	void calculateTempoSyncTime( noemixerr::bpm_t _bpm );
 	void updateCustom();
 
 
@@ -116,6 +116,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TEMPO_SYNC_KNOB_MODEL_H
+#endif // NoeMixerr_TEMPO_SYNC_KNOB_MODEL_H

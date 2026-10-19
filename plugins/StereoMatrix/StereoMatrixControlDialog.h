@@ -27,7 +27,7 @@
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class StereoMatrixControls;
@@ -48,6 +48,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

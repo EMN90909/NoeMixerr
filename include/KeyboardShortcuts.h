@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_KEYBOARDSHORTCUTS_H
-#define LMMS_KEYBOARDSHORTCUTS_H
+#ifndef NoeMixerr_KEYBOARDSHORTCUTS_H
+#define NoeMixerr_KEYBOARDSHORTCUTS_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
 #include "qnamespace.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 // Qt on macOS maps:
@@ -41,14 +41,14 @@ namespace lmms
 //
 // Our UI hints need to be adjusted to accommodate for this
 constexpr const char* UI_CTRL_KEY =
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 "⌘";
 #else
 "Ctrl";
 #endif
 
 constexpr const char* UI_ALT_KEY =
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 "Option";
 #else
 "Alt";
@@ -57,7 +57,7 @@ constexpr const char* UI_ALT_KEY =
 // UI hint for copying OR linking a UI component
 // this MUST be consistent with KBD_COPY_MODIFIER
 constexpr const char* UI_COPY_KEY =
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 UI_ALT_KEY;
 #else
 UI_CTRL_KEY;
@@ -66,12 +66,12 @@ UI_CTRL_KEY;
 // Shortcut for copying OR linking a UI component
 // this MUST be consistent with UI_COPY_KEY
 constexpr Qt::KeyboardModifier KBD_COPY_MODIFIER =
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 Qt::AltModifier;
 #else
 Qt::ControlModifier;
 #endif
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_KEYBOARDSHORTCUTS_H
+#endif // NoeMixerr_KEYBOARDSHORTCUTS_H

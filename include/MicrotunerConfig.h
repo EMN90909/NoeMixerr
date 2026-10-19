@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_MICROTUNER_CONFIG_H
-#define LMMS_GUI_MICROTUNER_CONFIG_H
+#ifndef NoeMixerr_GUI_MICROTUNER_CONFIG_H
+#define NoeMixerr_GUI_MICROTUNER_CONFIG_H
 
 #include <QWidget>
 
@@ -34,11 +34,11 @@
 class QLineEdit;
 class QPlainTextEdit;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LMMS_EXPORT MicrotunerConfig : public QWidget, public SerializingObject
+class NoeMixerr_EXPORT MicrotunerConfig : public QWidget, public SerializingObject
 {
 	Q_OBJECT
 public:
@@ -120,6 +120,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_MICROTUNER_CONFIG_H
+#endif // NoeMixerr_GUI_MICROTUNER_CONFIG_H

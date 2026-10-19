@@ -23,24 +23,24 @@
  *
  */
 
-#ifndef LMMS_SAMPLE_THUMBNAIL_H
-#define LMMS_SAMPLE_THUMBNAIL_H
+#ifndef NoeMixerr_SAMPLE_THUMBNAIL_H
+#define NoeMixerr_SAMPLE_THUMBNAIL_H
 
 #include <QDateTime>
 #include <QRect>
 #include <memory>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include "SampleBuffer.h"
 #include "SampleFrame.h"
 
 class QPainter;
 
-namespace lmms {
+namespace noemixerr {
 class Sample;
 }
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
 /**
    Allows for visualizing sample data.
@@ -53,7 +53,7 @@ namespace lmms::gui {
    the visualization however (i.e., we are not reading from original sample data when drawing), this provides a
    significant performance boost that wouldn't be possible otherwise.
  */
-class LMMS_EXPORT SampleThumbnail
+class NoeMixerr_EXPORT SampleThumbnail
 {
 public:
 	struct VisualizeParameters
@@ -142,6 +142,6 @@ private:
 	inline static std::unordered_map<SampleThumbnailEntry, std::shared_ptr<ThumbnailCache>, Hash> s_sampleThumbnailCacheMap;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_SAMPLE_THUMBNAIL_H
+#endif // NoeMixerr_SAMPLE_THUMBNAIL_H

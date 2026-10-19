@@ -22,19 +22,19 @@
  *
  */
 
-#ifndef LMMS_INSTRUMENT_PLAY_HANDLE_H
-#define LMMS_INSTRUMENT_PLAY_HANDLE_H
+#ifndef NoeMixerr_INSTRUMENT_PLAY_HANDLE_H
+#define NoeMixerr_INSTRUMENT_PLAY_HANDLE_H
 
 #include "PlayHandle.h"
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Instrument;
 class InstrumentTrack;
 
-class LMMS_EXPORT InstrumentPlayHandle : public PlayHandle
+class NoeMixerr_EXPORT InstrumentPlayHandle : public PlayHandle
 {
 public:
 	InstrumentPlayHandle(Instrument * instrument, InstrumentTrack* instrumentTrack);
@@ -54,6 +54,6 @@ private:
 	Instrument* m_instrument;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INSTRUMENT_PLAY_HANDLE_H
+#endif // NoeMixerr_INSTRUMENT_PLAY_HANDLE_H

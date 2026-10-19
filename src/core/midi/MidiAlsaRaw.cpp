@@ -26,10 +26,10 @@
 #include "ConfigManager.h"
 
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -163,6 +163,6 @@ void MidiAlsaRaw::run()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA

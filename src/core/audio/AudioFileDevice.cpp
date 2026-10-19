@@ -29,7 +29,7 @@
 #include "ExportProjectDialog.h"
 #include "GuiApplication.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioFileDevice::AudioFileDevice( OutputSettings const & outputSettings,
@@ -91,4 +91,4 @@ int AudioFileDevice::writeData( const void* data, int len )
 	return -1;
 }
 
-} // namespace lmms
+} // namespace noemixerr

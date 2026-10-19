@@ -28,7 +28,7 @@
 
 #include "LocklessRingBuffer.h"
 
-namespace lmms
+namespace noemixerr
 {
 class VecControls;
 class SampleFrame;
@@ -36,7 +36,7 @@ class SampleFrame;
 
 //#define VEC_DEBUG
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -78,7 +78,7 @@ private:
 
 	QPointF m_lastPoint = QPoint();
 
-	QColor m_colorTrace = QColor(60, 255, 130, 255);	// ~LMMS green
+	QColor m_colorTrace = QColor(60, 255, 130, 255);	// ~NoeMixerr green
 	QColor m_colorGrid = QColor(76, 80, 84, 128);		// ~60 % gray (slightly cold / blue), 50 % transparent
 	QColor m_colorLabels = QColor(76, 80, 84, 255);		// ~60 % gray (slightly cold / blue)
 
@@ -88,6 +88,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif // VECTORVIEW_H

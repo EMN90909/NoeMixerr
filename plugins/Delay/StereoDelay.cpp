@@ -26,7 +26,7 @@
 
 #include "SampleFrame.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -91,4 +91,4 @@ void StereoDelay::setSampleRate( int sampleRate )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_NOTE_PLAY_HANDLE_H
-#define LMMS_NOTE_PLAY_HANDLE_H
+#ifndef NoeMixerr_NOTE_PLAY_HANDLE_H
+#define NoeMixerr_NOTE_PLAY_HANDLE_H
 
 #include <memory>
 
@@ -35,7 +35,7 @@
 
 class QReadWriteLock;
 
-namespace lmms
+namespace noemixerr
 {
 
 class InstrumentTrack;
@@ -44,7 +44,7 @@ class NotePlayHandle;
 using NotePlayHandleList = QList<NotePlayHandle*>;
 using ConstNotePlayHandleList = QList<const NotePlayHandle*>;
 
-class LMMS_EXPORT NotePlayHandle : public PlayHandle, public Note
+class NoeMixerr_EXPORT NotePlayHandle : public PlayHandle, public Note
 {
 public:
 	void * m_pluginData;
@@ -359,6 +359,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_NOTE_PLAY_HANDLE_H
+#endif // NoeMixerr_NOTE_PLAY_HANDLE_H

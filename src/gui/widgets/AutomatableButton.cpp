@@ -32,7 +32,7 @@
 #include "KeyboardShortcuts.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 AutomatableButton::AutomatableButton( QWidget * _parent,
@@ -276,4 +276,4 @@ void AutomatableButtonGroup::updateButtons()
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

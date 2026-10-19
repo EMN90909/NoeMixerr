@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_PLUGIN_FACTORY_H
-#define LMMS_PLUGIN_FACTORY_H
+#ifndef NoeMixerr_PLUGIN_FACTORY_H
+#define NoeMixerr_PLUGIN_FACTORY_H
 
 #include <memory>
 #include <string>
@@ -33,15 +33,15 @@
 #include <QList>
 #include <QString>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include "Plugin.h"
 
 class QLibrary;  // IWYU pragma: keep
 
-namespace lmms
+namespace noemixerr
 {
 
-class LMMS_EXPORT PluginFactory
+class NoeMixerr_EXPORT PluginFactory
 {
 public:
 	struct PluginInfo
@@ -109,9 +109,9 @@ private:
 };
 
 //Short-hand function
-LMMS_EXPORT PluginFactory* getPluginFactory();
+NoeMixerr_EXPORT PluginFactory* getPluginFactory();
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PLUGIN_FACTORY_H
+#endif // NoeMixerr_PLUGIN_FACTORY_H

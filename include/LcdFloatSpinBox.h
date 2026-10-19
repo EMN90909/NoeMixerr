@@ -23,19 +23,19 @@
  *
  */
 
-#ifndef LMMS_GUI_LCD_FLOATSPINBOX_H
-#define LMMS_GUI_LCD_FLOATSPINBOX_H
+#ifndef NoeMixerr_GUI_LCD_FLOATSPINBOX_H
+#define NoeMixerr_GUI_LCD_FLOATSPINBOX_H
 
 #include <QString>
 
 #include "LcdWidget.h"
 #include "AutomatableModelView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LMMS_EXPORT LcdFloatSpinBox : public QWidget, public FloatModelView
+class NoeMixerr_EXPORT LcdFloatSpinBox : public QWidget, public FloatModelView
 {
 	Q_OBJECT
 public:
@@ -88,6 +88,6 @@ signals:
 
 using LcdFloatSpinBoxModel = FloatModel;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_LCD_FLOATSPINBOX_H
+#endif // NoeMixerr_GUI_LCD_FLOATSPINBOX_H

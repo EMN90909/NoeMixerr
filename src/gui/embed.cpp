@@ -33,7 +33,7 @@
 #include <QScreen>
 #include <QSvgRenderer>
 
-namespace lmms::embed {
+namespace noemixerr::embed {
 
 namespace {
 
@@ -141,4 +141,4 @@ auto getText(std::string_view name) -> QString
 	return QString::fromUtf8(data);
 }
 
-} // namespace lmms::embed
+} // namespace noemixerr::embed

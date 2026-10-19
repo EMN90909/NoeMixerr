@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_NOTE_H
-#define LMMS_NOTE_H
+#ifndef NoeMixerr_NOTE_H
+#define NoeMixerr_NOTE_H
 
 #include <memory>
 #include <optional>
@@ -36,7 +36,7 @@
 #include "TimePos.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -97,7 +97,7 @@ const float MaxDetuning = 5 * 12.0f;
 
 
 
-class LMMS_EXPORT Note : public SerializingObject
+class NoeMixerr_EXPORT Note : public SerializingObject
 {
 public:
 	Note( const TimePos & length = TimePos( 0 ),
@@ -296,6 +296,6 @@ struct NoteBounds
 std::optional<NoteBounds> boundsForNotes(const NoteVector& notes);
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_NOTE_H
+#endif // NoeMixerr_NOTE_H

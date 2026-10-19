@@ -25,9 +25,9 @@
 #ifndef MONODELAY_H
 #define MONODELAY_H
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -62,6 +62,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // MONODELAY_H

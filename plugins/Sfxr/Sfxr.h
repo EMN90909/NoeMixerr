@@ -1,5 +1,5 @@
 /*
- * Sfxr.h - declaration of classes of the LMMS sfxr plugin
+ * Sfxr.h - declaration of classes of the NoeMixerr sfxr plugin
  * Originally written by Tomas Pettersson. For the original license,
  * please read readme.txt in this directory
  *
@@ -34,7 +34,7 @@
 #include "Instrument.h"
 #include "InstrumentView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -313,6 +313,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

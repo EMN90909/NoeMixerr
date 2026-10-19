@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_AUDIO_FILE_FLAC_H
-#define LMMS_AUDIO_FILE_FLAC_H
+#ifndef NoeMixerr_AUDIO_FILE_FLAC_H
+#define NoeMixerr_AUDIO_FILE_FLAC_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
 #include "AudioFileDevice.h"
 #include <sndfile.h>
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioFileFlac : public AudioFileDevice
@@ -73,6 +73,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_FILE_FLAC_H
+#endif // NoeMixerr_AUDIO_FILE_FLAC_H

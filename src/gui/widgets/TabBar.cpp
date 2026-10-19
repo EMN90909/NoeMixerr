@@ -27,7 +27,7 @@
 #include "TabButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -231,4 +231,4 @@ bool TabBar::allHidden()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

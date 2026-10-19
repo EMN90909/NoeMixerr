@@ -42,7 +42,7 @@
 #include "MidiClip.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -379,4 +379,4 @@ void PatternEditorWindow::stop()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

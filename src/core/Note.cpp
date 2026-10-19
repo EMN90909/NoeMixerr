@@ -30,7 +30,7 @@
 #include "Note.h"
 #include "DetuningHelper.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -292,4 +292,4 @@ std::optional<NoteBounds> boundsForNotes(const NoteVector& notes)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

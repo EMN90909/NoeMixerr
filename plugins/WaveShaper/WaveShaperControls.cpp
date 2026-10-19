@@ -33,7 +33,7 @@
 #include "Engine.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -146,4 +146,4 @@ void WaveShaperControls::subOneClicked()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

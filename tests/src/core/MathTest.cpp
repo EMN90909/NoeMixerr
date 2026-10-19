@@ -25,7 +25,7 @@
 #include <QObject>
 #include <QtTest>
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 class MathTest : public QObject
 {
@@ -33,7 +33,7 @@ class MathTest : public QObject
 private slots:
 	void NumDigitsTest()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 		QCOMPARE(numDigitsAsInt(1.f), 1);
 		QCOMPARE(numDigitsAsInt(9.9f), 2);
 		QCOMPARE(numDigitsAsInt(10.f), 2);

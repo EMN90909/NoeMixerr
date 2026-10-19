@@ -36,7 +36,7 @@
 #include "Knob.h"
 #include "NotePlayHandle.h"
 #include "PixmapButton.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "embed.h"
 #include "plugin_export.h"
 
@@ -48,7 +48,7 @@ inline constexpr auto SIDWRITEDELAY = 9; // lda $xxxx,x 4 cycles, sta $d400,x 5 
 inline constexpr auto SIDWAVEDELAY = 4; // and $xxxx,x 4 cycles extra
 }
 
-namespace lmms
+namespace noemixerr
 {
 
 auto sidorder = std::array<unsigned char, 25>
@@ -74,7 +74,7 @@ extern "C"
 {
 Plugin::Descriptor PLUGIN_EXPORT sid_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"SID",
 	QT_TRANSLATE_NOOP( "PluginBrowser", "Emulation of the MOS6581 and MOS8580 "
 					"SID.\nThis chip was used in the Commodore 64 computer." ),
@@ -765,7 +765,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model *m, void * )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model *m, void * )
 {
 	return( new SidInstrument( static_cast<InstrumentTrack *>( m ) ) );
 }
@@ -774,4 +774,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model *m, void * )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

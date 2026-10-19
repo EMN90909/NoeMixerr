@@ -40,7 +40,7 @@
 #include "embed.h"
 #include "Engine.h"
 #include "InstrumentTrackView.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "KeyboardShortcuts.h"
 #include "Song.h"
 #include "StringPairDrag.h"
@@ -49,7 +49,7 @@
 #include "TrackGrip.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 TrackOperationsWidget::TrackOperationsWidget(TrackView* parent)
@@ -101,9 +101,9 @@ TrackOperationsWidget::TrackOperationsWidget(TrackView* parent)
 
 	layout->addWidget(operationsWidget, 0, Qt::AlignTop | Qt::AlignLeading);
 
-	connect( this, SIGNAL(trackRemovalScheduled(lmms::gui::TrackView*)),
+	connect( this, SIGNAL(trackRemovalScheduled(noemixerr::gui::TrackView*)),
 			m_trackView->trackContainerView(),
-				SLOT(deleteTrackView(lmms::gui::TrackView*)),
+				SLOT(deleteTrackView(noemixerr::gui::TrackView*)),
 							Qt::QueuedConnection );
 
 	connect( m_trackView->getTrack()->getMutedModel(), SIGNAL(dataChanged()),
@@ -310,4 +310,4 @@ void TrackOperationsWidget::recordingOff()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -28,7 +28,7 @@
 
 #include "SlewDistortion.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 SlewDistortionControls::SlewDistortionControls(SlewDistortion* effect) :
@@ -181,4 +181,4 @@ void SlewDistortionControls::saveSettings(QDomDocument& doc, QDomElement& parent
 
 
 
-} // namespace lmms
+} // namespace noemixerr

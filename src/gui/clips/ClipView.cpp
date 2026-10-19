@@ -40,7 +40,7 @@
 #include "embed.h"
 #include "GuiApplication.h"
 #include "KeyboardShortcuts.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "MidiClipView.h"
 #include "PatternClip.h"
 #include "PatternStore.h"
@@ -52,7 +52,7 @@
 #include "TrackContainerView.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -1254,4 +1254,4 @@ bool ClipView::splitClip(const TimePos pos)
 	return true;
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

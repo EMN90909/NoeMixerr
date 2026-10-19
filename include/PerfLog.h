@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_PERFLOG_H
-#define LMMS_PERFLOG_H
+#ifndef NoeMixerr_PERFLOG_H
+#define NoeMixerr_PERFLOG_H
 
 #include <ctime>
 #include <QString>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -75,6 +75,6 @@ class PerfLogTimer
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PERFLOG_H
+#endif // NoeMixerr_PERFLOG_H

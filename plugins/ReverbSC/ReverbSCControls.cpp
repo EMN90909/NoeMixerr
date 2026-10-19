@@ -28,7 +28,7 @@
 #include "ReverbSC.h"
 #include "Engine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -69,4 +69,4 @@ void ReverbSCControls::changeSampleRate()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

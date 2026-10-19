@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_PLUGIN_H
-#define LMMS_PLUGIN_H
+#ifndef NoeMixerr_PLUGIN_H
+#define NoeMixerr_PLUGIN_H
 
 #include <QStringList>
 #include <QMap>
@@ -34,7 +34,7 @@
 
 class QWidget;
 
-namespace lmms
+namespace noemixerr
 {
 
 class AutomatableModel;
@@ -68,7 +68,7 @@ class PluginView;
 	are a bit like values to the sub plugins' keys (in terms of a key-value-
 	map).
 */
-class LMMS_EXPORT Plugin : public Model, public JournallingObject
+class NoeMixerr_EXPORT Plugin : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -115,7 +115,7 @@ public:
 			returning some values (or modifying objects of other
 			classes).
 		 */
-		class LMMS_EXPORT SubPluginFeatures
+		class NoeMixerr_EXPORT SubPluginFeatures
 		{
 		public:
 			/**
@@ -315,6 +315,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PLUGIN_H
+#endif // NoeMixerr_PLUGIN_H

@@ -37,7 +37,7 @@
 #include <QToolBar>
 #include <QLabel>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -100,7 +100,7 @@ VstEffectControlDialog::VstEffectControlDialog( VstEffectControls * _ctl ) :
 							"controls" ) );
 		connect( m_managePluginButton, SIGNAL( clicked() ),  _ctl,
 						SLOT( managePlugin() ) );
-		m_managePluginButton->setToolTip(tr("Control VST plugin from LMMS host"));
+		m_managePluginButton->setToolTip(tr("Control VST plugin from NoeMixerr host"));
 
 		m_managePluginButton->setMinimumWidth( 26 );
 		m_managePluginButton->setMaximumWidth( 26 );
@@ -282,4 +282,4 @@ void VstEffectControlDialog::togglePluginUI( bool checked )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

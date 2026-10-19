@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GRANULAR_PITCH_SHIFTER_EFFECT_H
-#define LMMS_GRANULAR_PITCH_SHIFTER_EFFECT_H
+#ifndef NoeMixerr_GRANULAR_PITCH_SHIFTER_EFFECT_H
+#define NoeMixerr_GRANULAR_PITCH_SHIFTER_EFFECT_H
 
 #include <numbers>
 
@@ -32,7 +32,7 @@
 
 #include "interpolation.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr float PrefilterBandwidth = 0.96f;// 96% of nyquist
@@ -183,6 +183,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GRANULAR_PITCH_SHIFTER_EFFECT_H
+#endif // NoeMixerr_GRANULAR_PITCH_SHIFTER_EFFECT_H

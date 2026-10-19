@@ -1,5 +1,5 @@
 /*
- * LmmsTypes.h - typedefs for common types that are used in the whole app
+ * NoeMixerrTypes.h - typedefs for common types that are used in the whole app
  *
  * Copyright (c) 2004-2009 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_TYPES_H
-#define LMMS_TYPES_H
+#ifndef NoeMixerr_TYPES_H
+#define NoeMixerr_TYPES_H
 
 #include <cstdint>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 using bar_t         = std::int32_t;
@@ -49,6 +49,6 @@ using group_cnt_t   = std::uint8_t;  // channel group index/count (0-MaxGroupsPe
 
 using jo_id_t       = std::uint32_t; // (unique) ID of a journalling object
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TYPES_H
+#endif // NoeMixerr_TYPES_H

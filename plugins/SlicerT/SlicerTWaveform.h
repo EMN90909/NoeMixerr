@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_GUI_SLICERT_WAVEFORM_H
-#define LMMS_GUI_SLICERT_WAVEFORM_H
+#ifndef NoeMixerr_GUI_SLICERT_WAVEFORM_H
+#define NoeMixerr_GUI_SLICERT_WAVEFORM_H
 
 #include <QElapsedTimer>
 #include <QWidget>
 
 #include "SampleThumbnail.h"
 
-namespace lmms {
+namespace noemixerr {
 
 class SlicerT;
 
@@ -121,5 +121,5 @@ private:
 	void updateCursor();
 };
 } // namespace gui
-} // namespace lmms
-#endif // LMMS_GUI_SLICERT_WAVEFORM_H
+} // namespace noemixerr
+#endif // NoeMixerr_GUI_SLICERT_WAVEFORM_H

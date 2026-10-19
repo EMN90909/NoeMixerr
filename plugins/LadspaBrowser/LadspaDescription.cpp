@@ -31,11 +31,11 @@
 #include <QVBoxLayout>
 
 #include "Engine.h"
-#include "Ladspa2LMMS.h"
-#include "lmms_constants.h"
+#include "Ladspa2NoeMixerr.h"
+#include "noemixerr_constants.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -43,7 +43,7 @@ LadspaDescription::LadspaDescription( QWidget * _parent,
 						LadspaPluginType _type ) :
 	QWidget( _parent )
 {
-	Ladspa2LMMS * manager = Engine::getLADSPAManager();
+	Ladspa2NoeMixerr * manager = Engine::getLADSPAManager();
 
 	l_sortable_plugin_t plugins;
 	switch( _type )
@@ -120,7 +120,7 @@ void LadspaDescription::update( const ladspa_key_t & _key )
 	auto layout = new QVBoxLayout(description);
 	layout->setSizeConstraint( QLayout::SetFixedSize );
 
-	Ladspa2LMMS * manager = Engine::getLADSPAManager();
+	Ladspa2NoeMixerr * manager = Engine::getLADSPAManager();
 
 	auto name = new QLabel(description);
 	name->setText(tr("Name: ") + manager->getName(_key));
@@ -178,4 +178,4 @@ void LadspaDescription::onDoubleClicked( QListWidgetItem * _item )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

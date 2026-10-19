@@ -42,7 +42,7 @@
 #include "Track.h"
 #include "embed.h"
 
-namespace lmms {
+namespace noemixerr {
 
 namespace gui {
 
@@ -306,4 +306,4 @@ void SlicerTView::resizeEvent(QResizeEvent* re)
 }
 
 } // namespace gui
-} // namespace lmms
+} // namespace noemixerr

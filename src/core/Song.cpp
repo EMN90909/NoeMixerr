@@ -57,7 +57,7 @@
 #include "PeakController.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 tick_t TimePos::s_ticksPerBar = DefaultTicksPerBar;
@@ -112,7 +112,7 @@ Song::Song() :
 /*	connect( &m_masterPitchModel, SIGNAL(dataChanged()),
 			this, SLOT(masterPitchChanged()));*/
 
-	qRegisterMetaType<lmms::Note>( "lmms::Note" );
+	qRegisterMetaType<noemixerr::Note>( "noemixerr::Note" );
 	setType( Type::Song );
 
 	for (auto& scale : m_scales) {scale = std::make_shared<Scale>();}
@@ -1076,7 +1076,7 @@ void Song::loadProject( const QString & fileName )
 
 	getTimeline(PlayMode::Song).setLoopEnabled(false);
 
-	//Backward compatibility for LMMS <= 0.4.15
+	//Backward compatibility for NoeMixerr <= 0.4.15
 	PeakController::initGetControllerBySetting();
 
 	// Load mixer first to be able to set the correct range for mixer channels
@@ -1195,7 +1195,7 @@ void Song::loadProject( const QString & fileName )
 	{
 		if ( getGUI() != nullptr )
 		{
-			QMessageBox::warning( nullptr, tr("LMMS Error report"), errorSummary(),
+			QMessageBox::warning( nullptr, tr("NoeMixerr Error report"), errorSummary(),
 							QMessageBox::Ok );
 		}
 		else
@@ -1557,4 +1557,4 @@ void Song::setKeymap(unsigned int index, std::shared_ptr<Keymap> newMap)
 	emit keymapListChanged(index);
 	Engine::audioEngine()->doneChangeInModel();
 }
-} // namespace lmms
+} // namespace noemixerr

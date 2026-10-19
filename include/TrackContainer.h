@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_TRACK_CONTAINER_H
-#define LMMS_TRACK_CONTAINER_H
+#ifndef NoeMixerr_TRACK_CONTAINER_H
+#define NoeMixerr_TRACK_CONTAINER_H
 
 #include <QReadWriteLock>
 
 #include "Track.h"
 #include "JournallingObject.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AutomationClip;
@@ -45,7 +45,7 @@ class TrackContainerView;
 }
 
 
-class LMMS_EXPORT TrackContainer : public Model, public JournallingObject
+class NoeMixerr_EXPORT TrackContainer : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -99,7 +99,7 @@ public:
 	virtual AutomatedValueMap automatedValuesAt(TimePos time, int clipNum = -1) const;
 
 signals:
-	void trackAdded( lmms::Track * _track );
+	void trackAdded( noemixerr::Track * _track );
 	void trackRemoved();
 	void trackMoved();
 
@@ -119,6 +119,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TRACK_CONTAINER_H
+#endif // NoeMixerr_TRACK_CONTAINER_H

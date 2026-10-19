@@ -43,7 +43,7 @@
 #include "Song.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 Track::Track(Type type, TrackContainer* tc)
@@ -540,4 +540,4 @@ void Track::setName(const QString& newName)
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr

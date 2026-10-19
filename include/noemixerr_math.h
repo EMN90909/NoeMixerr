@@ -1,5 +1,5 @@
 /*
- * lmms_math.h - defines math functions
+ * noemixerr_math.h - defines math functions
  *
  * Copyright (c) 2004-2008 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  * 
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_MATH_H
-#define LMMS_MATH_H
+#ifndef NoeMixerr_MATH_H
+#define NoeMixerr_MATH_H
 
 #include <QtGlobal>
 #include <algorithm>
@@ -34,13 +34,13 @@
 #include <numbers>
 #include <concepts>
 
-#include "lmms_constants.h"
+#include "noemixerr_constants.h"
 
 #ifdef __SSE2__
 #include <emmintrin.h>
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -444,6 +444,6 @@ inline __m128 sse2Round(__m128 x)
 
 #endif // __SSE2__
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MATH_H
+#endif // NoeMixerr_MATH_H

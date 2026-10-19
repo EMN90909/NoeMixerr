@@ -27,7 +27,7 @@
 #include <cmath>
 #include <numbers>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -49,4 +49,4 @@ float Lfo::tick()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

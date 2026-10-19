@@ -34,7 +34,7 @@
 #include "TrackContainerView.h"
 #include "TrackLabelButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 AutomationTrackView::AutomationTrackView( AutomationTrack * _at, TrackContainerView* tcv ) :
@@ -85,4 +85,4 @@ void AutomationTrackView::dropEvent( QDropEvent * _de )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

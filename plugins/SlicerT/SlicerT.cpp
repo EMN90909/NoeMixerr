@@ -37,11 +37,11 @@
 #include "interpolation.h"
 #include "plugin_export.h"
 
-namespace lmms {
+namespace noemixerr {
 
 extern "C" {
 Plugin::Descriptor PLUGIN_EXPORT slicert_plugin_descriptor = {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"SlicerT",
 	QT_TRANSLATE_NOOP("PluginBrowser", "Basic Slicer"),
 	"Daniel Kauss Serna <daniel.kauss.serna@gmail.com>",
@@ -395,9 +395,9 @@ gui::PluginView* SlicerT::instantiateView(QWidget* parent)
 }
 
 extern "C" {
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model* m, void*)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model* m, void*)
 {
 	return new SlicerT(static_cast<InstrumentTrack*>(m));
 }
 } // extern
-} // namespace lmms
+} // namespace noemixerr

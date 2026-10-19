@@ -29,7 +29,7 @@
 #include "Engine.h"
 #include "AudioEngine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -75,4 +75,4 @@ bool InstrumentPlayHandle::isFromTrack(const Track* track) const
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

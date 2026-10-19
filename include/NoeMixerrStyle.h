@@ -1,5 +1,5 @@
 /*
- * LmmsStyle.h - the graphical style used by LMMS to create a consistent
+ * NoeMixerrStyle.h - the graphical style used by NoeMixerr to create a consistent
  *                interface
  *
  * Copyright (c) 2007-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -23,22 +23,22 @@
  *
  */
 
-#ifndef LMMS_GUI_LMMS_STYLE_H
-#define LMMS_GUI_LMMS_STYLE_H
+#ifndef NoeMixerr_GUI_NoeMixerr_STYLE_H
+#define NoeMixerr_GUI_NoeMixerr_STYLE_H
 
 #include <QFileSystemWatcher>
 #include <QProxyStyle>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LmmsStyle : public QProxyStyle
+class NoeMixerrStyle : public QProxyStyle
 {
 public:
-	LmmsStyle();
-	~LmmsStyle() override = default;
+	NoeMixerrStyle();
+	~NoeMixerrStyle() override = default;
 
 	QPalette standardPalette() const override;
 
@@ -65,6 +65,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_LMMS_STYLE_H
+#endif // NoeMixerr_GUI_NoeMixerr_STYLE_H

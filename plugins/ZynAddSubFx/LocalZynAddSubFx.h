@@ -32,7 +32,7 @@
 class Master;
 class NulEngine;
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiEvent;
@@ -57,7 +57,7 @@ public:
 	void loadPreset( const std::string & _filename, int _part = 0 );
 
 	void setPresetDir( const std::string & _dir );
-	void setLmmsWorkingDir( const std::string & _dir );
+	void setNoeMixerrWorkingDir( const std::string & _dir );
 
 	void setPitchWheelBendRange( int semitones );
 
@@ -83,6 +83,6 @@ protected:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

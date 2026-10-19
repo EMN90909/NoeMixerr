@@ -36,7 +36,7 @@ class QPushButton;
 class QMdiSubWindow;
 class QScrollArea;
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -77,7 +77,7 @@ protected slots:
 	void rollPreset();
 	void rolrPreset();
 	void selPreset();
-	void setParameter( lmms::Model * action );
+	void setParameter( noemixerr::Model * action );
 
 protected:
 	virtual void paintEvent( QPaintEvent * _pe );
@@ -119,7 +119,7 @@ public:
 protected slots:
 	void syncPlugin();
 	void displayAutomatedOnly();
-	void setParameter( lmms::Model * action );
+	void setParameter( noemixerr::Model * action );
 	void closeWindow();
 
 private:
@@ -143,6 +143,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

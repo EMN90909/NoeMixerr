@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_CONTROLLER_CONNECTION_DIALOG_H
-#define LMMS_GUI_CONTROLLER_CONNECTION_DIALOG_H
+#ifndef NoeMixerr_GUI_CONTROLLER_CONNECTION_DIALOG_H
+#define NoeMixerr_GUI_CONTROLLER_CONNECTION_DIALOG_H
 
 #include <QDialog>
 #include <QSortFilterProxyModel>
@@ -38,7 +38,7 @@ class QLineEdit;
 class QListView;
 class QScrollArea;
 
-namespace lmms
+namespace noemixerr
 {
 
 class AutoDetectMidiController;
@@ -108,6 +108,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_CONTROLLER_CONNECTION_DIALOG_H
+#endif // NoeMixerr_GUI_CONTROLLER_CONNECTION_DIALOG_H

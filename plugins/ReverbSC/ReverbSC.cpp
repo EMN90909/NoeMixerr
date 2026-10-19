@@ -23,10 +23,10 @@
 #include "ReverbSC.h"
 
 #include "embed.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -35,13 +35,13 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT reverbsc_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"ReverbSC",
 	QT_TRANSLATE_NOOP( "PluginBrowser", "Reverb algorithm by Sean Costello" ),
 	"Paul Batchelor",
 	0x0123,
 	Plugin::Type::Effect,
-	new PixmapLoader("lmms-plugin-logo"),
+	new PixmapLoader("noemixerr-plugin-logo"),
 	nullptr,
 	nullptr,
 } ;
@@ -141,7 +141,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model* parent, void* data )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model* parent, void* data )
 {
 	return new ReverbSCEffect(
 		parent,
@@ -152,4 +152,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model* parent, void* data )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -29,7 +29,7 @@
 #include "ControlLayout.h"
 #include "LinkedModelGroups.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -167,4 +167,4 @@ void LinkedModelGroupsView::modelChanged(LinkedModelGroups *groups)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

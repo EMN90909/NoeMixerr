@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_VOLUME_H
-#define LMMS_VOLUME_H
+#ifndef NoeMixerr_VOLUME_H
+#define NoeMixerr_VOLUME_H
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -41,6 +41,6 @@ struct StereoVolumeVector
 	float vol[2];
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_VOLUME_H
+#endif // NoeMixerr_VOLUME_H

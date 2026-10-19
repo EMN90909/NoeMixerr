@@ -31,7 +31,7 @@
 #include "PatternStore.h"
 #include "PatternTrack.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -116,4 +116,4 @@ gui::ClipView* PatternClip::createView(gui::TrackView* tv)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

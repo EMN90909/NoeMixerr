@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_TEMPO_SYNC_KNOB_H
-#define LMMS_GUI_TEMPO_SYNC_KNOB_H
+#ifndef NoeMixerr_GUI_TEMPO_SYNC_KNOB_H
+#define NoeMixerr_GUI_TEMPO_SYNC_KNOB_H
 
 #include <QPixmap>
 #include <QPointer>
@@ -32,12 +32,12 @@
 #include "Knob.h"
 #include "TempoSyncKnobModel.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class MeterDialog;
 
-class LMMS_EXPORT TempoSyncKnob : public Knob
+class NoeMixerr_EXPORT TempoSyncKnob : public Knob
 {
 	Q_OBJECT
 public:
@@ -105,6 +105,6 @@ private:
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TEMPO_SYNC_KNOB_H
+#endif // NoeMixerr_GUI_TEMPO_SYNC_KNOB_H

@@ -25,9 +25,9 @@
 
 #include "Lv2UridMap.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -100,7 +100,7 @@ const char *UridMap::unmap(LV2_URID urid)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 

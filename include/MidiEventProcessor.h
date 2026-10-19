@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_MIDI_EVENT_PROCESSOR_H
-#define LMMS_MIDI_EVENT_PROCESSOR_H
+#ifndef NoeMixerr_MIDI_EVENT_PROCESSOR_H
+#define NoeMixerr_MIDI_EVENT_PROCESSOR_H
 
 #include "MidiEvent.h"
 #include "TimePos.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 // all classes being able to process MIDI-events should inherit from this
@@ -45,6 +45,6 @@ public:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_EVENT_PROCESSOR_H
+#endif // NoeMixerr_MIDI_EVENT_PROCESSOR_H

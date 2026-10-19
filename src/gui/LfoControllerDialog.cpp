@@ -34,7 +34,7 @@
 #include "TempoSyncKnob.h"
 #include "PixmapButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -258,4 +258,4 @@ void LfoControllerDialog::modelChanged()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

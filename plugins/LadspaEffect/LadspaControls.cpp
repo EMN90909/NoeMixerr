@@ -28,7 +28,7 @@
 #include "LadspaControl.h"
 #include "LadspaEffect.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -187,4 +187,4 @@ void LadspaControls::updateLinkStatesFromGlobal()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

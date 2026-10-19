@@ -28,7 +28,7 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 extern "C"
@@ -36,13 +36,13 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT amplifier_plugin_descriptor =
 {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"Amplifier",
 	QT_TRANSLATE_NOOP("PluginBrowser", "A native amplifier plugin"),
 	"Vesa Kivimäki <contact/dot/diizy/at/nbl/dot/fi>",
 	0x0100,
 	Plugin::Type::Effect,
-	new PixmapLoader("lmms-plugin-logo"),
+	new PixmapLoader("noemixerr-plugin-logo"),
 	nullptr,
 	nullptr,
 } ;
@@ -93,11 +93,11 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model* parent, void* data)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model* parent, void* data)
 {
 	return new AmplifierEffect(parent, static_cast<const Plugin::Descriptor::SubPluginFeatures::Key*>(data));
 }
 
 }
 
-} // namespace lmms
+} // namespace noemixerr

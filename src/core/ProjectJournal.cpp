@@ -28,11 +28,11 @@
 #include "ProjectJournal.h"
 #include "Engine.h"
 #include "JournallingObject.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "Song.h"
 #include "AutomationClip.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 //! Avoid clashes between loaded IDs (have the bit cleared)
@@ -202,4 +202,4 @@ void ProjectJournal::stopAllJournalling()
 
 
 
-} // namespace lmms
+} // namespace noemixerr

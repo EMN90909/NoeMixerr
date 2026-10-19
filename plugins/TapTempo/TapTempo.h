@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_TAP_TEMPO_H
-#define LMMS_TAP_TEMPO_H
+#ifndef NoeMixerr_TAP_TEMPO_H
+#define NoeMixerr_TAP_TEMPO_H
 
 #include <array>
 #include <chrono>
@@ -31,7 +31,7 @@
 #include "TapTempoView.h"
 #include "ToolPlugin.h"
 
-namespace lmms {
+namespace noemixerr {
 
 class TapTempo : public ToolPlugin
 {
@@ -58,6 +58,6 @@ private:
 	int m_taps = 0;
 	double m_bpm = 0;
 };
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TAP_TEMPO_H
+#endif // NoeMixerr_TAP_TEMPO_H

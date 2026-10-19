@@ -1,5 +1,5 @@
 /*
- * LmmsPalette.cpp - dummy class for fetching palette qproperties from CSS
+ * NoeMixerrPalette.cpp - dummy class for fetching palette qproperties from CSS
  *                
  *
  * Copyright (c) 2007-2014 Vesa Kivimäki <contact/dot/diizy/at/nbl/dot/fi>
@@ -25,13 +25,13 @@
 
 #include <QApplication>
 #include <QStyle>
-#include "LmmsPalette.h"
+#include "NoeMixerrPalette.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-LmmsPalette::LmmsPalette( QWidget * parent, QStyle * stylearg ) : 
+NoeMixerrPalette::NoeMixerrPalette( QWidget * parent, QStyle * stylearg ) : 
 	QWidget( parent ),
 	
 /*	sane defaults in case fetching from stylesheet fails*/	
@@ -53,9 +53,9 @@ LmmsPalette::LmmsPalette( QWidget * parent, QStyle * stylearg ) :
 }
 
 #define ACCESSMET( read, write ) \
-	QColor LmmsPalette:: read () const \
+	QColor NoeMixerrPalette:: read () const \
 	{	return m_##read ; } \
-	void LmmsPalette:: write ( const QColor & c ) \
+	void NoeMixerrPalette:: write ( const QColor & c ) \
 	{	m_##read = QColor( c ); }
 	
 
@@ -71,7 +71,7 @@ LmmsPalette::LmmsPalette( QWidget * parent, QStyle * stylearg ) :
 	ACCESSMET( highlightedText, setHighlightedText )
 
 
-QPalette LmmsPalette::palette() const
+QPalette NoeMixerrPalette::palette() const
 {
 	QPalette pal = QApplication::style()->standardPalette();
 	
@@ -89,4 +89,4 @@ QPalette LmmsPalette::palette() const
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -1,5 +1,5 @@
 /*
- * MainWindow.h - declaration of class MainWindow, the main window of LMMS
+ * MainWindow.h - declaration of class MainWindow, the main window of NoeMixerr
  *
  * Copyright (c) 2004-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_MAIN_WINDOW_H
-#define LMMS_GUI_MAIN_WINDOW_H
+#ifndef NoeMixerr_GUI_MAIN_WINDOW_H
+#define NoeMixerr_GUI_MAIN_WINDOW_H
 
 #include <QBasicTimer>
 #include <QTimer>
@@ -37,7 +37,7 @@ class QAction;
 class QDomElement;
 class QGridLayout;
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -66,7 +66,7 @@ public:
 	void addSpacingToToolBar( int _size );
 
 	// wrap the widget with a window decoration and add it to the workspace
-	LMMS_EXPORT SubWindow* addWindowedWidget(QWidget *w, Qt::WindowFlags windowFlags = QFlag(0));
+	NoeMixerr_EXPORT SubWindow* addWindowedWidget(QWidget *w, Qt::WindowFlags windowFlags = QFlag(0));
 
 
 	void refocus();
@@ -100,7 +100,7 @@ public:
 					value( "ui", "saveinterval" ).toInt()
 						* 60 * 1000 )
 	{
-		if( msec < m_autoSaveShortTime ) // No 'saveinterval' in .lmmsrc.xml
+		if( msec < m_autoSaveShortTime ) // No 'saveinterval' in .noemixerrrc.xml
 		{
 			msec = DEFAULT_AUTO_SAVE_INTERVAL;
 		}
@@ -154,7 +154,7 @@ public slots:
 	bool saveProjectAsNewVersion();
 	void saveProjectAsDefaultTemplate();
 	void showSettingsDialog();
-	void aboutLMMS();
+	void aboutNoeMixerr();
 	void help();
 	void toggleAutomationEditorWin();
 	void togglePatternEditorWin(bool forceShow = false);
@@ -270,6 +270,6 @@ signals:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_MAIN_WINDOW_H
+#endif // NoeMixerr_GUI_MAIN_WINDOW_H

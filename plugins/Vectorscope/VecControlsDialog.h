@@ -27,7 +27,7 @@
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -54,6 +54,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // VECCONTROLSDIALOG_H

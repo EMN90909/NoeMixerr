@@ -1,5 +1,5 @@
 /*
- * LmmsStyle.cpp - the graphical style used by LMMS to create a consistent
+ * NoeMixerrStyle.cpp - the graphical style used by NoeMixerr to create a consistent
  *				  interface
  *
  * Copyright (c) 2007-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -34,15 +34,15 @@
 #include <QStyleOption>
 
 #include "embed.h"
-#include "LmmsStyle.h"
+#include "NoeMixerrStyle.h"
 #include "TextFloat.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-QPalette * LmmsStyle::s_palette = nullptr;
+QPalette * NoeMixerrStyle::s_palette = nullptr;
 
 QLinearGradient getGradient( const QColor & _col, const QRectF & _rect )
 {
@@ -133,7 +133,7 @@ void drawPath( QPainter *p, const QPainterPath &path,
 
 
 
-LmmsStyle::LmmsStyle() :
+NoeMixerrStyle::NoeMixerrStyle() :
 	QProxyStyle()
 {
 	QFile file( "resources:style.css" );
@@ -150,7 +150,7 @@ LmmsStyle::LmmsStyle() :
 				qApp->setStyleSheet(file.readAll());
 				TextFloat::displayMessage(
 					tr("Theme updated"),
-					tr("LMMS theme file %1 has been reloaded.").arg(file.fileName()),
+					tr("NoeMixerr theme file %1 has been reloaded.").arg(file.fileName()),
 					embed::getIconPixmap("colorize"),
 					3000
 				);
@@ -171,7 +171,7 @@ LmmsStyle::LmmsStyle() :
 
 
 
-QPalette LmmsStyle::standardPalette() const
+QPalette NoeMixerrStyle::standardPalette() const
 {
 	if( s_palette != nullptr) { return * s_palette; }
 
@@ -181,7 +181,7 @@ QPalette LmmsStyle::standardPalette() const
 }
 
 
-void LmmsStyle::drawComplexControl( ComplexControl control,
+void NoeMixerrStyle::drawComplexControl( ComplexControl control,
 					const QStyleOptionComplex * option,
 					QPainter *painter,
 						const QWidget *widget ) const
@@ -224,7 +224,7 @@ void LmmsStyle::drawComplexControl( ComplexControl control,
 
 
 
-void LmmsStyle::drawPrimitive( PrimitiveElement element,
+void NoeMixerrStyle::drawPrimitive( PrimitiveElement element,
 		const QStyleOption *option, QPainter *painter,
 		const QWidget *widget) const
 {
@@ -335,7 +335,7 @@ void LmmsStyle::drawPrimitive( PrimitiveElement element,
 }
 
 
-int LmmsStyle::pixelMetric( PixelMetric _metric, const QStyleOption * _option,
+int NoeMixerrStyle::pixelMetric( PixelMetric _metric, const QStyleOption * _option,
 						const QWidget * _widget ) const
 {
 	switch( _metric )
@@ -361,7 +361,7 @@ int LmmsStyle::pixelMetric( PixelMetric _metric, const QStyleOption * _option,
 }
 
 
-QImage LmmsStyle::colorizeXpm( const char * const * xpm, const QBrush& fill ) const
+QImage NoeMixerrStyle::colorizeXpm( const char * const * xpm, const QBrush& fill ) const
 {
 	QImage arrowXpm( xpm );
 	QImage arrow( arrowXpm.size(), QImage::Format_ARGB32 );
@@ -374,7 +374,7 @@ QImage LmmsStyle::colorizeXpm( const char * const * xpm, const QBrush& fill ) co
 }
 
 
-void LmmsStyle::hoverColors( bool sunken, bool hover, bool active, QColor& color, QColor& blend ) const
+void NoeMixerrStyle::hoverColors( bool sunken, bool hover, bool active, QColor& color, QColor& blend ) const
 {
 	if( active )
 	{
@@ -402,4 +402,4 @@ void LmmsStyle::hoverColors( bool sunken, bool hover, bool active, QColor& color
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

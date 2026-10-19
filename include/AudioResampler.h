@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_AUDIO_RESAMPLER_H
-#define LMMS_AUDIO_RESAMPLER_H
+#ifndef NoeMixerr_AUDIO_RESAMPLER_H
+#define NoeMixerr_AUDIO_RESAMPLER_H
 
 #include <memory>
 #include "AudioBufferView.h"
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms {
+namespace noemixerr {
 
 /**
  * @class AudioResampler
@@ -37,7 +37,7 @@ namespace lmms {
  *
  * This class provides support for zero-order hold, linear, and several levels of sinc-based resampling.
  */
-class LMMS_EXPORT AudioResampler
+class NoeMixerr_EXPORT AudioResampler
 {
 public:
 	/**
@@ -115,7 +115,7 @@ public:
 	auto mode() const -> Mode { return m_mode; }
 
 private:
-	struct LMMS_EXPORT StateDeleter { void operator()(void* state); };
+	struct NoeMixerr_EXPORT StateDeleter { void operator()(void* state); };
 	std::unique_ptr<void, StateDeleter> m_state;
 	Mode m_mode;
 	ch_cnt_t m_channels = 0;
@@ -123,6 +123,6 @@ private:
 	int m_error = 0;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_RESAMPLER_H
+#endif // NoeMixerr_AUDIO_RESAMPLER_H

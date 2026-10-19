@@ -29,7 +29,7 @@
 #include <QDebug>
 #endif
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 #include <windows.h>
 #endif
 
@@ -48,7 +48,7 @@
 #include <sys/un.h>
 #endif
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 
 namespace {
 
@@ -70,13 +70,13 @@ HANDLE getRemotePluginJob()
 
 } // namespace
 
-#endif // LMMS_BUILD_WIN32
+#endif // NoeMixerr_BUILD_WIN32
 
-namespace lmms
+namespace noemixerr
 {
 
 // simple helper thread monitoring our RemotePlugin - if process terminates
-// unexpectedly invalidate plugin so LMMS doesn't lock up
+// unexpectedly invalidate plugin so NoeMixerr doesn't lock up
 ProcessWatcher::ProcessWatcher( RemotePlugin * _p ) :
 	QThread(),
 	m_plugin( _p ),
@@ -90,7 +90,7 @@ void ProcessWatcher::run()
 	auto& process = m_plugin->m_process;
 	process.start(m_plugin->m_exec, m_plugin->m_args);
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 	// Add the process to our job so it is killed if we crash
 	if (process.waitForStarted(-1))
 	{
@@ -111,7 +111,7 @@ void ProcessWatcher::run()
 			CloseHandle(processHandle);
 		}
 	}
-#endif // LMMS_BUILD_WIN32
+#endif // NoeMixerr_BUILD_WIN32
 
 	exec();
 	process.moveToThread(m_plugin->thread());
@@ -234,10 +234,10 @@ bool RemotePlugin::init(const QString &pluginExecutable,
 	QString exec = QFileInfo(QDir("plugins:"), pluginExecutable).absoluteFilePath();
 
 	// We may have received a directory via a environment variable
-	if (const char* env_path = std::getenv("LMMS_PLUGIN_DIR"))
+	if (const char* env_path = std::getenv("NoeMixerr_PLUGIN_DIR"))
 			exec = QFileInfo(QDir(env_path), pluginExecutable).absoluteFilePath();
 
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 	// search current directory first
 	QString curDir = QCoreApplication::applicationDirPath() + "/" + pluginExecutable;
 	if( QFile( curDir ).exists() )
@@ -245,7 +245,7 @@ bool RemotePlugin::init(const QString &pluginExecutable,
 		exec = curDir;
 	}
 #endif
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 	if( ! exec.endsWith( ".exe", Qt::CaseInsensitive ) )
 	{
 		exec += ".exe";
@@ -582,4 +582,4 @@ bool RemotePlugin::processMessage( const message & _m )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

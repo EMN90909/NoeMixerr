@@ -33,7 +33,7 @@
 #include "Vectorscope.h"
 #include "VectorView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -77,4 +77,4 @@ QSize VecControlsDialog::sizeHint() const
 	return QSize(275, 300);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

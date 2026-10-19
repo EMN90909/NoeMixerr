@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "LadspaMatrixControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -86,11 +86,11 @@ private:
 
 
 signals:
-	void effectModelChanged( lmms::LadspaControls * );
+	void effectModelChanged( noemixerr::LadspaControls * );
 
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

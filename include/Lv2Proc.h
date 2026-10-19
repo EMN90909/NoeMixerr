@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_LV2_PROC_H
-#define LMMS_LV2_PROC_H
+#ifndef NoeMixerr_LV2_PROC_H
+#define NoeMixerr_LV2_PROC_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lilv/lilv.h>
 #include <memory>
@@ -36,7 +36,7 @@
 #include <ringbuffer/ringbuffer.h>
 
 #include "LinkedModelGroups.h"
-#include "LmmsSemaphore.h"
+#include "NoeMixerrSemaphore.h"
 #include "Lv2Basics.h"
 #include "Lv2Features.h"
 #include "Lv2Options.h"
@@ -45,7 +45,7 @@
 #include "TimePos.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class PluginIssue;
@@ -116,11 +116,11 @@ public:
 		utils for the run thread
 	*/
 
-	//! @brief Copy values from the LMMS core (connected models, MIDI events, ...) into
+	//! @brief Copy values from the NoeMixerr core (connected models, MIDI events, ...) into
 	//! the respective ports
 	void copyModelsFromCore();
 
-	//! @brief Bring values from all ports to the LMMS core
+	//! @brief Bring values from all ports to the NoeMixerr core
 	void copyModelsToCore();
 
 	//! @brief Copy buffer passed by the core into our ports
@@ -205,7 +205,7 @@ private:
 	void initMOptions(); //!< initialize m_options
 	void initPluginSpecificFeatures();
 
-	//! load a file in the plugin, but don't do anything in LMMS
+	//! load a file in the plugin, but don't do anything in NoeMixerr
 	void loadFileInternal(const QString &file);
 	//! allocate m_ports, fill all with metadata, and assign meaning of ports
 	void createPorts();
@@ -222,8 +222,8 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_PROC_H
+#endif // NoeMixerr_LV2_PROC_H

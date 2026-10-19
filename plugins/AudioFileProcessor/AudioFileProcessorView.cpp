@@ -40,7 +40,7 @@
 #include "Clipboard.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -138,10 +138,10 @@ AudioFileProcessorView::AudioFileProcessorView(Instrument* instrument,
 	m_waveView = 0;
 	newWaveView();
 
-	connect(castModel<AudioFileProcessor>(), SIGNAL(isPlaying(lmms::f_cnt_t)),
-			m_waveView, SLOT(isPlaying(lmms::f_cnt_t)));
+	connect(castModel<AudioFileProcessor>(), SIGNAL(isPlaying(noemixerr::f_cnt_t)),
+			m_waveView, SLOT(isPlaying(noemixerr::f_cnt_t)));
 
-	qRegisterMetaType<lmms::f_cnt_t>("lmms::f_cnt_t");
+	qRegisterMetaType<noemixerr::f_cnt_t>("noemixerr::f_cnt_t");
 
 	setAcceptDrops(true);
 }
@@ -281,4 +281,4 @@ void AudioFileProcessorView::modelChanged()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

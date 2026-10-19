@@ -28,7 +28,7 @@
 #include "CaptionMenu.h"
 #include "PixmapButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -90,4 +90,4 @@ void NineButtonSelector::contextMenuEvent(QContextMenuEvent*)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

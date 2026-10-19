@@ -29,10 +29,10 @@
 #include "MidiPort.h"
 
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 
 
-namespace lmms
+namespace noemixerr
 {
 
 const int EventPollTimeOut = 250;
@@ -84,7 +84,7 @@ MidiAlsaSeq::MidiAlsaSeq() :
 							snd_strerror( err ) );
 		return;
 	}
-	snd_seq_set_client_name( m_seqHandle, "LMMS" );
+	snd_seq_set_client_name( m_seqHandle, "NoeMixerr" );
 
 
 	m_queueID = snd_seq_alloc_queue( m_seqHandle );
@@ -98,8 +98,8 @@ MidiAlsaSeq::MidiAlsaSeq() :
 
 	snd_seq_start_queue( m_seqHandle, m_queueID, nullptr );
 	changeQueueTempo( Engine::getSong()->getTempo() );
-	connect( Engine::getSong(), SIGNAL(tempoChanged(lmms::bpm_t)),
-			this, SLOT(changeQueueTempo(lmms::bpm_t)), Qt::DirectConnection );
+	connect( Engine::getSong(), SIGNAL(tempoChanged(noemixerr::bpm_t)),
+			this, SLOT(changeQueueTempo(noemixerr::bpm_t)), Qt::DirectConnection );
 
 	// initial list-update
 	updatePortList();
@@ -694,6 +694,6 @@ void MidiAlsaSeq::updatePortList()
 
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA

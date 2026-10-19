@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_MIDI_ALSA_SEQ_H
-#define LMMS_MIDI_ALSA_SEQ_H
+#ifndef NoeMixerr_MIDI_ALSA_SEQ_H
+#define NoeMixerr_MIDI_ALSA_SEQ_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 #include <alsa/asoundlib.h>
 
 #include <QMap>
@@ -41,7 +41,7 @@
 
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -116,14 +116,14 @@ public:
 
 
 private slots:
-	void changeQueueTempo( lmms::bpm_t _bpm );
+	void changeQueueTempo( noemixerr::bpm_t _bpm );
 	void updatePortList();
 
 
 private:
 	void run() override;
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 	QMutex m_seqMutex;
 	snd_seq_t * m_seqHandle;
 	struct Ports
@@ -153,8 +153,8 @@ signals:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA
 
-#endif // LMMS_MIDI_ALSA_SEQ_H
+#endif // NoeMixerr_MIDI_ALSA_SEQ_H

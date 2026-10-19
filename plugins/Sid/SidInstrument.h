@@ -31,7 +31,7 @@
 #include "Instrument.h"
 #include "InstrumentView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -212,6 +212,6 @@ protected slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

@@ -34,11 +34,11 @@
 #include "SaControls.h"
 #include "SaProcessor.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
-//! Top level class; handles LMMS interface and feeds data to the data processor.
+//! Top level class; handles NoeMixerr interface and feeds data to the data processor.
 class Analyzer : public Effect
 {
 public:
@@ -55,12 +55,12 @@ private:
 	SaProcessor m_processor;
 	SaControls m_controls;
 
-	// Maximum LMMS buffer size (hard coded, the actual constant is hard to get)
+	// Maximum NoeMixerr buffer size (hard coded, the actual constant is hard to get)
 	const unsigned int m_maxBufferSize = 4096;
 
 	// QThread::create() workaround
 	// Replace DataprocLauncher by QThread and replace initializer in constructor
-	// with the following commented line when LMMS CI starts using Qt > 5.9
+	// with the following commented line when NoeMixerr CI starts using Qt > 5.9
 	//m_processorThread = QThread::create([=]{m_processor.analyze(m_inputBuffer);});
 	DataprocLauncher m_processorThread;
 
@@ -75,7 +75,7 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // ANALYZER_H
 

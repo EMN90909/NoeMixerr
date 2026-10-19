@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_GUI_TIME_DISPLAY_WIDGET_H
-#define LMMS_GUI_TIME_DISPLAY_WIDGET_H
+#ifndef NoeMixerr_GUI_TIME_DISPLAY_WIDGET_H
+#define NoeMixerr_GUI_TIME_DISPLAY_WIDGET_H
 
 #include <QWidget>
 #include <QHBoxLayout>
 
 #include "LcdWidget.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class TimeDisplayWidget : public QWidget
@@ -67,6 +67,6 @@ private:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TIME_DISPLAY_WIDGET_H
+#endif // NoeMixerr_GUI_TIME_DISPLAY_WIDGET_H

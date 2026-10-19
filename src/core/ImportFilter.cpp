@@ -33,7 +33,7 @@
 #include "ProjectJournal.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 using std::unique_ptr;
@@ -82,7 +82,7 @@ void ImportFilter::import( const QString & _file_to_import,
 						"importing file %1.\n"
 						"You should convert this file "
 						"into a format supported by "
-						"LMMS using another software."
+						"NoeMixerr using another software."
 						).arg( _file_to_import ),
 					QMessageBox::Ok,
 					QMessageBox::NoButton );
@@ -114,4 +114,4 @@ bool ImportFilter::openFile()
 
 
 
-} // namespace lmms
+} // namespace noemixerr

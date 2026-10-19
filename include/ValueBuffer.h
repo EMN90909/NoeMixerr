@@ -23,18 +23,18 @@
  *
  */
 
-#ifndef LMMS_VALUE_BUFFER_H
-#define LMMS_VALUE_BUFFER_H
+#ifndef NoeMixerr_VALUE_BUFFER_H
+#define NoeMixerr_VALUE_BUFFER_H
 
 #include <vector>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
-class LMMS_EXPORT ValueBuffer : public std::vector<float>
+class NoeMixerr_EXPORT ValueBuffer : public std::vector<float>
 {
 public:
 	ValueBuffer() = default;
@@ -53,6 +53,6 @@ public:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_VALUE_BUFFER_H
+#endif // NoeMixerr_VALUE_BUFFER_H

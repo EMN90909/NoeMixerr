@@ -29,7 +29,7 @@
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class BitcrushControls;
@@ -49,6 +49,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

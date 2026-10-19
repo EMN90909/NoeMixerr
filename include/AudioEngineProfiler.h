@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_AUDIO_ENGINE_PROFILER_H
-#define LMMS_AUDIO_ENGINE_PROFILER_H
+#ifndef NoeMixerr_AUDIO_ENGINE_PROFILER_H
+#define NoeMixerr_AUDIO_ENGINE_PROFILER_H
 
 #include <array>
 #include <atomic>
 #include <QFile>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "MicroTimer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioEngineProfiler
@@ -106,6 +106,6 @@ private:
 	std::array<std::atomic<float>, DetailCount> m_detailLoad{0};
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_ENGINE_PROFILER_H
+#endif // NoeMixerr_AUDIO_ENGINE_PROFILER_H

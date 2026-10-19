@@ -35,10 +35,10 @@
 #include "TempoSyncKnob.h"
 #include "PixmapButton.h"
 #include "Oscillator.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "BandLimitedWave.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -725,6 +725,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

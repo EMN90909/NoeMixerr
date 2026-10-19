@@ -27,18 +27,18 @@
 
 #include "RemotePluginBase.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
 enum ZasfRemoteMessageIDs
 {
 	IdZasfPresetDirectory = RemoteMessageIDs::IdUserBase,
-	IdZasfLmmsWorkingDirectory,
+	IdZasfNoeMixerrWorkingDirectory,
 	IdZasfSetPitchWheelBendRange
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

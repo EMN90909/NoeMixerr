@@ -24,7 +24,7 @@
 
 #include "Model.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 Model::Model(Model* parent, QString displayName, bool defaultConstructed) :
@@ -73,5 +73,5 @@ QString Model::fullDisplayName() const
 
 
 
-} // namespace lmms
+} // namespace noemixerr
 

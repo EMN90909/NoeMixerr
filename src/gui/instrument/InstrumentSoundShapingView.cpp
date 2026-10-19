@@ -38,7 +38,7 @@
 #include "TabWidget.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 InstrumentSoundShapingView::InstrumentSoundShapingView(QWidget* parent) :
@@ -125,4 +125,4 @@ void InstrumentSoundShapingView::modelChanged()
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

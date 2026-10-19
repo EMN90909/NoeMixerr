@@ -30,7 +30,7 @@
 #include "Effect.h"
 #include "WaveShaperControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -58,7 +58,7 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 
 #endif

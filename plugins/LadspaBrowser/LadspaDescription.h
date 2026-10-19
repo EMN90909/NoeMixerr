@@ -35,7 +35,7 @@
 class QListWidgetItem;
 class QScrollArea;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -48,7 +48,7 @@ public:
 
 
 signals:
-	void doubleClicked( const ::lmms::ladspa_key_t & );
+	void doubleClicked( const ::noemixerr::ladspa_key_t & );
 
 
 private:
@@ -67,6 +67,6 @@ private slots:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif

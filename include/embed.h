@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_EMBED_H
-#define LMMS_EMBED_H
+#ifndef NoeMixerr_EMBED_H
+#define NoeMixerr_EMBED_H
 
 #include <string>
 #include <string_view>
@@ -31,12 +31,12 @@
 #include <QPixmap>
 #include <QString>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #ifdef PLUGIN_NAME
-#include "LmmsCommonMacros.h"
+#include "NoeMixerrCommonMacros.h"
 #endif
 
-namespace lmms {
+namespace noemixerr {
 
 namespace embed {
 
@@ -46,14 +46,14 @@ namespace embed {
 //! @param width A specific pixmap width. When this and @p height are provided, the pixmap is cached.
 //! @param height A specific pixmap height. When this and @p width are provided, the pixmap is cached.
 //! @param xpm Must be XPM data if the source should be raw XPM data instead of a file
-auto LMMS_EXPORT getIconPixmap(
+auto NoeMixerr_EXPORT getIconPixmap(
 	std::string_view name,
 	int width = -1,
 	int height = -1,
 	const char* const* xpm = nullptr
 ) -> QPixmap;
 
-auto LMMS_EXPORT getText(std::string_view name) -> QString;
+auto NoeMixerr_EXPORT getText(std::string_view name) -> QString;
 
 //! @brief Temporary shim for QPixmap::deviceIndependentSize.
 //! @param pixmap The pixmap to get the size of.
@@ -101,7 +101,7 @@ public:
 	PluginPixmapLoader() = default;
 
 	explicit PluginPixmapLoader(std::string name, const char* const* xpm = nullptr) :
-		PixmapLoader{LMMS_STRINGIFY(PLUGIN_NAME) "/" + name, xpm}
+		PixmapLoader{NoeMixerr_STRINGIFY(PLUGIN_NAME) "/" + name, xpm}
 	{ }
 };
 
@@ -117,6 +117,6 @@ inline auto getIconPixmap(std::string_view name,
 
 #endif // PLUGIN_NAME
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_EMBED_H
+#endif // NoeMixerr_EMBED_H

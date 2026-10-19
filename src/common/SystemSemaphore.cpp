@@ -28,27 +28,27 @@
 #include <type_traits>
 #include <utility>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 #include "RaiiHelpers.h"
 
-#ifdef LMMS_HAVE_UNISTD_H
+#ifdef NoeMixerr_HAVE_UNISTD_H
 #	include <unistd.h>
 #endif
 
-#if (_POSIX_SEMAPHORES > 0 && !defined(__MINGW32__)) || defined(LMMS_BUILD_APPLE)
+#if (_POSIX_SEMAPHORES > 0 && !defined(__MINGW32__)) || defined(NoeMixerr_BUILD_APPLE)
 #	include <fcntl.h>
 #	include <semaphore.h>
-#elif defined(LMMS_BUILD_WIN32)
+#elif defined(NoeMixerr_BUILD_WIN32)
 #	include <windows.h>
 #else
 #	error "No system semaphore implementation available"
 #endif
 
-namespace lmms {
+namespace noemixerr {
 
 namespace detail {
 
-#if (_POSIX_SEMAPHORES > 0 && !defined(__MINGW32__)) || defined(LMMS_BUILD_APPLE)
+#if (_POSIX_SEMAPHORES > 0 && !defined(__MINGW32__)) || defined(NoeMixerr_BUILD_APPLE)
 
 namespace {
 
@@ -117,7 +117,7 @@ private:
 	UniqueSemaphore m_ownedSemaphore;
 };
 
-#elif defined(LMMS_BUILD_WIN32)
+#elif defined(NoeMixerr_BUILD_WIN32)
 
 namespace {
 
@@ -178,4 +178,4 @@ auto SystemSemaphore::operator=(SystemSemaphore&& other) noexcept -> SystemSemap
 auto SystemSemaphore::acquire() noexcept -> bool { return m_impl->acquire(); }
 auto SystemSemaphore::release() noexcept -> bool { return m_impl->release(); }
 
-} // namespace lmms
+} // namespace noemixerr

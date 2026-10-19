@@ -46,7 +46,7 @@
 #include "ClipView.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 TrackView::TrackView(Track* track, TrackContainerView* tcv)
@@ -81,8 +81,8 @@ TrackView::TrackView(Track* track, TrackContainerView* tcv)
 
 	connect( m_track, SIGNAL(destroyedTrack()), this, SLOT(close()));
 	connect( m_track,
-		SIGNAL(clipAdded(lmms::Clip*)),
-			this, SLOT(createClipView(lmms::Clip*)),
+		SIGNAL(clipAdded(noemixerr::Clip*)),
+			this, SLOT(createClipView(noemixerr::Clip*)),
 			Qt::QueuedConnection );
 
 	connect( &m_track->m_mutedModel, SIGNAL(dataChanged()),
@@ -386,4 +386,4 @@ void TrackView::resizeToHeight(int h)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

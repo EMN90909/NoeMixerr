@@ -34,7 +34,7 @@
 #include "EqCurve.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -235,4 +235,4 @@ EqBand::EqBand() :
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

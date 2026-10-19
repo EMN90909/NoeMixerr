@@ -27,7 +27,7 @@
 #include "Dispersion.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 DispersionControls::DispersionControls(DispersionEffect* effect) :
@@ -67,6 +67,6 @@ void DispersionControls::saveSettings(QDomDocument& doc, QDomElement& parent)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 

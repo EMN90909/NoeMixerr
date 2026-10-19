@@ -37,7 +37,7 @@
 #include <QVBoxLayout>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -110,4 +110,4 @@ CrossoverEQControlDialog::CrossoverEQControlDialog(CrossoverEQControls *controls
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

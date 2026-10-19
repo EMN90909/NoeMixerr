@@ -31,14 +31,14 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms {
+namespace noemixerr {
 
 extern "C" {
 Plugin::Descriptor PLUGIN_EXPORT taptempo_plugin_descriptor
-	= {LMMS_STRINGIFY(PLUGIN_NAME), "Tap Tempo", QT_TRANSLATE_NOOP("PluginBrowser", "Tap to the beat"),
+	= {NoeMixerr_STRINGIFY(PLUGIN_NAME), "Tap Tempo", QT_TRANSLATE_NOOP("PluginBrowser", "Tap to the beat"),
 		"saker <sakertooth@gmail.com>", 0x0100, Plugin::Type::Tool, new PluginPixmapLoader("logo"), nullptr, nullptr};
 
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model*, void*)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model*, void*)
 {
 	return new TapTempo;
 }
@@ -126,4 +126,4 @@ double TapTempo::bpm() const
 	return m_bpm;
 }
 
-} // namespace lmms
+} // namespace noemixerr

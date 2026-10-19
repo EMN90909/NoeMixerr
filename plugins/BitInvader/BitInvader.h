@@ -32,7 +32,7 @@
 #include "InstrumentView.h"
 #include "Graph.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -162,6 +162,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

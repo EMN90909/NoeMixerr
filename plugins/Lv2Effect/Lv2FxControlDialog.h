@@ -28,7 +28,7 @@
 #include "EffectControlDialog.h"
 #include "Lv2ViewBase.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Lv2FxControls;
@@ -52,6 +52,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

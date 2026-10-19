@@ -23,16 +23,16 @@
  *
  */
 
-#ifndef LMMS_PANNING_H
-#define LMMS_PANNING_H
+#ifndef NoeMixerr_PANNING_H
+#define NoeMixerr_PANNING_H
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "Midi.h"
 #include "volume.h"
 
 #include <cmath>
 
-namespace lmms
+namespace noemixerr
 {
 
 inline constexpr panning_t PanningRight = 100;
@@ -59,6 +59,6 @@ inline int panningToMidi( panning_t _p )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PANNING_H
+#endif // NoeMixerr_PANNING_H

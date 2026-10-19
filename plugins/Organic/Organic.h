@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_ORGANIC_H
-#define LMMS_ORGANIC_H
+#ifndef NoeMixerr_ORGANIC_H
+#define NoeMixerr_ORGANIC_H
 
 #include <QString>
 
@@ -32,7 +32,7 @@
 #include "AutomatableModel.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -229,6 +229,6 @@ protected slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_ORGANIC_H
+#endif // NoeMixerr_ORGANIC_H

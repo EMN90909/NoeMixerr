@@ -26,7 +26,7 @@
 #include "GranularPitchShifterControls.h"
 #include "GranularPitchShifterEffect.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 GranularPitchShifterControls::GranularPitchShifterControls(GranularPitchShifterEffect* effect) :
@@ -145,4 +145,4 @@ void GranularPitchShifterControls::saveSettings(QDomDocument& doc, QDomElement& 
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

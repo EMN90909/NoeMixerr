@@ -24,7 +24,7 @@
 
 #include "AudioDeviceSetupWidget.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 AudioDeviceSetupWidget::AudioDeviceSetupWidget(const QString & caption, QWidget * parent) :
@@ -38,4 +38,4 @@ void AudioDeviceSetupWidget::show()
 	QWidget::show();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -23,13 +23,13 @@
  *
  */
 
-#ifndef LMMS_ENDIAN_HANDLING_H
-#define LMMS_ENDIAN_HANDLING_H
+#ifndef NoeMixerr_ENDIAN_HANDLING_H
+#define NoeMixerr_ENDIAN_HANDLING_H
 
 #include <bit>
 #include <type_traits>
 
-namespace lmms {
+namespace noemixerr {
 
 constexpr bool isLittleEndian() noexcept
 {
@@ -74,6 +74,6 @@ constexpr Int byteswapIfBE(Int i) noexcept { return byteswapIf<std::endian::big>
 template<typename Int>
 constexpr Int byteswapIfLE(Int i) noexcept { return byteswapIf<std::endian::little>(i); }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_ENDIAN_HANDLING_H
+#endif // NoeMixerr_ENDIAN_HANDLING_H

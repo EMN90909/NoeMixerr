@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_AUDIO_FILE_WAVE_H
-#define LMMS_AUDIO_FILE_WAVE_H
+#ifndef NoeMixerr_AUDIO_FILE_WAVE_H
+#define NoeMixerr_AUDIO_FILE_WAVE_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 #include "AudioFileDevice.h"
 
 #include <sndfile.h>
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioFileWave : public AudioFileDevice
@@ -67,6 +67,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_FILE_WAVE_H
+#endif // NoeMixerr_AUDIO_FILE_WAVE_H

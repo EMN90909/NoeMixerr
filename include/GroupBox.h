@@ -1,5 +1,5 @@
 /*
- * GroupBox.h - LMMS-groupbox
+ * GroupBox.h - NoeMixerr-groupbox
  *
  * Copyright (c) 2005-2008 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_GROUP_BOX_H
-#define LMMS_GUI_GROUP_BOX_H
+#ifndef NoeMixerr_GUI_GROUP_BOX_H
+#define NoeMixerr_GUI_GROUP_BOX_H
 
 #include <QWidget>
 
@@ -33,7 +33,7 @@
 
 class QPixmap;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class GroupBox : public QWidget, public BoolModelView
@@ -86,6 +86,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_GROUP_BOX_H
+#endif // NoeMixerr_GUI_GROUP_BOX_H

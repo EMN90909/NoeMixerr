@@ -1,5 +1,5 @@
 /*
- * SideBar.cpp - side-bar in LMMS' MainWindow
+ * SideBar.cpp - side-bar in NoeMixerr' MainWindow
  *
  * Copyright (c) 2004-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -29,7 +29,7 @@
 #include "SideBar.h"
 #include "SideBarWidget.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -160,4 +160,4 @@ void SideBar::toggleButton( QAbstractButton * button )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

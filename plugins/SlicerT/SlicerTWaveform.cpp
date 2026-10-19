@@ -35,7 +35,7 @@
 #include "SlicerTView.h"
 #include "embed.h"
 
-namespace lmms {
+namespace noemixerr {
 
 namespace gui {
 
@@ -503,4 +503,4 @@ void SlicerTWaveform::paintEvent(QPaintEvent* pe)
 	p.drawPixmap(0, m_seekerHeight + s_middleMargin + s_seekerVerMargin, m_sliceEditor);
 }
 } // namespace gui
-} // namespace lmms
+} // namespace noemixerr

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_SAMPLE_TRACK_H
-#define LMMS_SAMPLE_TRACK_H
+#ifndef NoeMixerr_SAMPLE_TRACK_H
+#define NoeMixerr_SAMPLE_TRACK_H
 
 #include "AudioBusHandle.h"
 #include "Track.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -106,6 +106,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SAMPLE_TRACK_H
+#endif // NoeMixerr_SAMPLE_TRACK_H

@@ -23,13 +23,13 @@
  *
  */
 
-#ifndef LMMS_AMPLIFIER_H
-#define LMMS_AMPLIFIER_H
+#ifndef NoeMixerr_AMPLIFIER_H
+#define NoeMixerr_AMPLIFIER_H
 
 #include "Effect.h"
 #include "AmplifierControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AmplifierEffect : public Effect
@@ -51,6 +51,6 @@ private:
 	friend class AmplifierControls;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AMPLIFIER_H
+#endif // NoeMixerr_AMPLIFIER_H

@@ -37,7 +37,7 @@
 
 class QPushButton;
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -170,6 +170,6 @@ private slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

@@ -27,7 +27,7 @@
 #include "AmplifierControls.h"
 #include "Amplifier.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 AmplifierControls::AmplifierControls(AmplifierEffect* effect) :
@@ -59,4 +59,4 @@ void AmplifierControls::saveSettings(QDomDocument& doc, QDomElement& parent)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

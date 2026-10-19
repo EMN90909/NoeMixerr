@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_TIMELINE_WIDGET_H
-#define LMMS_GUI_TIMELINE_WIDGET_H
+#ifndef NoeMixerr_GUI_TIMELINE_WIDGET_H
+#define NoeMixerr_GUI_TIMELINE_WIDGET_H
 
 #include <array>
 
@@ -36,13 +36,13 @@
 
 class QToolBar;
 
-namespace lmms {
+namespace noemixerr {
 
 class Timeline;
 
-} // namespace lmms
+} // namespace noemixerr
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class TextFloat;
@@ -243,6 +243,6 @@ private:
 	Action m_action = Action::NoAction;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TIMELINE_WIDGET_H
+#endif // NoeMixerr_GUI_TIMELINE_WIDGET_H

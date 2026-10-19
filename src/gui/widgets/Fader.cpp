@@ -51,7 +51,7 @@
 #include <QPainter>
 #include <QPainterPath>  // IWYU pragma: keep
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "CaptionMenu.h"
 #include "ConfigManager.h"
 #include "DeprecationHelper.h"
@@ -65,7 +65,7 @@ namespace
 	constexpr auto c_faderMinDb = -120.f;
 }
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 SimpleTextFloat* Fader::s_textFloat = nullptr;
@@ -750,4 +750,4 @@ void Fader::paintFaderTicks(QPainter& painter)
 	painter.restore();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

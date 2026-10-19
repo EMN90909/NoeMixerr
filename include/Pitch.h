@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_PITCH_H
-#define LMMS_PITCH_H
+#ifndef NoeMixerr_PITCH_H
+#define NoeMixerr_PITCH_H
 
 #include <cstdint>
 
-namespace lmms
+namespace noemixerr
 {
 
 using pitch_t = int16_t;
@@ -38,6 +38,6 @@ constexpr pitch_t MaxPitchDefault = CentsPerSemitone;
 constexpr pitch_t DefaultPitch = 0;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PITCH_H
+#endif // NoeMixerr_PITCH_H

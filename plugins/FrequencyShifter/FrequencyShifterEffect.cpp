@@ -30,24 +30,24 @@
 #include <cmath>
 #include <numbers>
 
-namespace lmms
+namespace noemixerr
 {
 
 extern "C"
 {
 Plugin::Descriptor PLUGIN_EXPORT frequencyshifter_plugin_descriptor =
 {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"Frequency Shifter",
 	QT_TRANSLATE_NOOP("PluginBrowser", "A frequency shifter (not a pitch shifter) and barberpole phaser plugin"),
 	"Lost Robot <r94231/at/gmail/dot/com>",
 	0x0100,
 	Plugin::Type::Effect,
-	new PixmapLoader("lmms-plugin-logo"),
+	new PixmapLoader("noemixerr-plugin-logo"),
 	nullptr,
 	nullptr,
 };
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model* parent, void* data)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model* parent, void* data)
 {
 	return new FrequencyShifterEffect(parent, static_cast<const Plugin::Descriptor::SubPluginFeatures::Key*>(data));
 }
@@ -274,5 +274,5 @@ void FrequencyShifterEffect::updateSampleRate()
 	m_ringBuf.resize(m_ringBufSize);
 }
 
-} // namespace lmms
+} // namespace noemixerr
 

@@ -29,7 +29,7 @@
 #include <array>
 #include <iterator>
 
-using lmms::ArrayVector;
+using noemixerr::ArrayVector;
 
 struct ShouldNotConstruct
 {

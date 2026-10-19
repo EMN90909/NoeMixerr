@@ -37,7 +37,7 @@
 #include "Song.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 int AutomationClip::s_quantization = 1;
@@ -104,8 +104,8 @@ bool AutomationClip::addObject( AutomatableModel * _obj, bool _search_dup )
 
 	m_objects.push_back(_obj);
 
-	connect( _obj, SIGNAL(destroyed(lmms::jo_id_t)),
-			this, SLOT(objectDestroyed(lmms::jo_id_t)),
+	connect( _obj, SIGNAL(destroyed(noemixerr::jo_id_t)),
+			this, SLOT(objectDestroyed(noemixerr::jo_id_t)),
 						Qt::DirectConnection );
 
 	emit dataChanged();
@@ -1183,4 +1183,4 @@ std::vector<Track*> AutomationClip::combineAllTracks()
 	return combinedTrackList;
 }
 
-} // namespace lmms
+} // namespace noemixerr

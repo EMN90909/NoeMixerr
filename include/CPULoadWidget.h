@@ -23,18 +23,18 @@
  *
  */
 
-#ifndef LMMS_GUI_CPU_LOAD_WIDGET_H
-#define LMMS_GUI_CPU_LOAD_WIDGET_H
+#ifndef NoeMixerr_GUI_CPU_LOAD_WIDGET_H
+#define NoeMixerr_GUI_CPU_LOAD_WIDGET_H
 
 #include <algorithm>
 #include <QTimer>
 #include <QPixmap>
 #include <QWidget>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -73,6 +73,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_CPU_LOAD_WIDGET_H
+#endif // NoeMixerr_GUI_CPU_LOAD_WIDGET_H

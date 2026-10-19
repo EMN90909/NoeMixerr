@@ -30,7 +30,7 @@
 #include "DualFilterControlDialog.h"
 #include "ComboBoxModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -88,6 +88,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

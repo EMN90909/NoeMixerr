@@ -21,13 +21,13 @@
  * Boston, MA 02110-1301 USA.
  */
 
-#ifndef LMMS_SYSTEM_SEMAPHORE_H
-#define LMMS_SYSTEM_SEMAPHORE_H
+#ifndef NoeMixerr_SYSTEM_SEMAPHORE_H
+#define NoeMixerr_SYSTEM_SEMAPHORE_H
 
 #include <memory>
 #include <string>
 
-namespace lmms {
+namespace noemixerr {
 
 namespace detail {
 
@@ -56,6 +56,6 @@ private:
 	std::unique_ptr<detail::SystemSemaphoreImpl> m_impl;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SYSTEM_SEMAPHORE_H
+#endif // NoeMixerr_SYSTEM_SEMAPHORE_H

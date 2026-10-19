@@ -26,7 +26,7 @@
 
 #include "Rubberband.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -85,4 +85,4 @@ QVector<selectableObject *> RubberBand::selectableObjects() const
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

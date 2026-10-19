@@ -29,9 +29,9 @@
 
 #include "DummyInstrument.h"
 #include "InstrumentTrack.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -215,4 +215,4 @@ QString Instrument::fullDisplayName() const
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

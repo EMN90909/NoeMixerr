@@ -3,7 +3,7 @@
 #include <QPainter>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 BarModelEditor::BarModelEditor(QString text, FloatModel * floatModel, QWidget * parent) :
@@ -113,4 +113,4 @@ void BarModelEditor::paintEvent(QPaintEvent *event)
 	painter.drawText(textRect, elidedText);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_GUI_AMPLIFIER_CONTROL_DIALOG_H
-#define LMMS_GUI_AMPLIFIER_CONTROL_DIALOG_H
+#ifndef NoeMixerr_GUI_AMPLIFIER_CONTROL_DIALOG_H
+#define NoeMixerr_GUI_AMPLIFIER_CONTROL_DIALOG_H
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AmplifierControls;
@@ -46,6 +46,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_AMPLIFIER_CONTROL_DIALOG_H
+#endif // NoeMixerr_GUI_AMPLIFIER_CONTROL_DIALOG_H

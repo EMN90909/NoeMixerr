@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "StereoMatrixControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -77,6 +77,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif 

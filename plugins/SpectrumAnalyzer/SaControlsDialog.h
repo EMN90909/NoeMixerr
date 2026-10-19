@@ -27,14 +27,14 @@
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 class SaControls;
 class SaProcessor;
 }
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class SaSpectrumView;
@@ -62,6 +62,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif // SACONTROLSDIALOG_H

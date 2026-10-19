@@ -34,7 +34,7 @@
 
 #include "FontHelper.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 extern const float SECS_PER_LFO_OSCILLATION;
@@ -193,4 +193,4 @@ void LfoGraph::toggleAmountModel()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

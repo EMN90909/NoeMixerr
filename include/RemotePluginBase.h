@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_REMOTE_PLUGIN_BASE_H
-#define LMMS_REMOTE_PLUGIN_BASE_H
+#ifndef NoeMixerr_REMOTE_PLUGIN_BASE_H
+#define NoeMixerr_REMOTE_PLUGIN_BASE_H
 
 #include <atomic>  // IWYU pragma: keep
 #include <vector>
@@ -33,28 +33,28 @@
 #include <cstring>
 #include <string>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#if !(defined(LMMS_HAVE_SYS_IPC_H) && defined(LMMS_HAVE_SEMAPHORE_H))
+#if !(defined(NoeMixerr_HAVE_SYS_IPC_H) && defined(NoeMixerr_HAVE_SEMAPHORE_H))
 #define SYNC_WITH_SHM_FIFO
 
-#ifdef LMMS_HAVE_PROCESS_H
+#ifdef NoeMixerr_HAVE_PROCESS_H
 #include <process.h>
 #endif
-#else // !(LMMS_HAVE_SYS_IPC_H && LMMS_HAVE_SEMAPHORE_H)
-#ifdef LMMS_HAVE_UNISTD_H
+#else // !(NoeMixerr_HAVE_SYS_IPC_H && NoeMixerr_HAVE_SEMAPHORE_H)
+#ifdef NoeMixerr_HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#endif // !(LMMS_HAVE_SYS_IPC_H && LMMS_HAVE_SEMAPHORE_H)
+#endif // !(NoeMixerr_HAVE_SYS_IPC_H && NoeMixerr_HAVE_SEMAPHORE_H)
 
-#ifdef LMMS_HAVE_PTHREAD_H
+#ifdef NoeMixerr_HAVE_PTHREAD_H
 #include <pthread.h>
 #endif
 
 
 #ifdef BUILD_REMOTE_PLUGIN_CLIENT
-#undef LMMS_EXPORT
-#define LMMS_EXPORT
+#undef NoeMixerr_EXPORT
+#define NoeMixerr_EXPORT
 
 #ifndef SYNC_WITH_SHM_FIFO
 #include <sys/socket.h>
@@ -62,7 +62,7 @@
 #endif // SYNC_WITH_SHM_FIFO
 
 #else // BUILD_REMOTE_PLUGIN_CLIENT
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include <QString>
 
 #ifndef SYNC_WITH_SHM_FIFO
@@ -77,7 +77,7 @@
 #include "SystemSemaphore.h"
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -255,7 +255,7 @@ private:
 				_len > m_data->endPtr - m_data->startPtr )
 		{
 			unlock();
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 			usleep( 5 );
 #endif
 			lock();
@@ -291,7 +291,7 @@ private:
 				m_data->startPtr = 0;
 			}
 			unlock();
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 			usleep( 5 );
 #endif
 			lock();
@@ -346,7 +346,7 @@ enum RemoteMessageIDs
 
 
 
-class LMMS_EXPORT RemotePluginBase
+class NoeMixerr_EXPORT RemotePluginBase
 {
 public:
 	struct message
@@ -637,6 +637,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_REMOTE_PLUGIN_BASE_H
+#endif // NoeMixerr_REMOTE_PLUGIN_BASE_H

@@ -24,7 +24,7 @@
 
 #include "Lv2Manager.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <algorithm>
 #include <cstdlib>
@@ -44,7 +44,7 @@
 #include "PluginIssue.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -168,7 +168,7 @@ const std::set<std::string_view> Lv2Manager::unstablePluginsBuffersizeLessEqual3
 Lv2Manager::Lv2Manager() :
 	m_uridCache(m_uridMap)
 {
-	const char* dbgStr = getenv("LMMS_LV2_DEBUG");
+	const char* dbgStr = getenv("NoeMixerr_LV2_DEBUG");
 	m_debug = (dbgStr && *dbgStr);
 
 	m_world = lilv_world_new();
@@ -287,23 +287,23 @@ void Lv2Manager::initPlugins()
 		{
 			qDebug() <<
 				"If you don't want to see all this debug output, please set\n"
-				"  environment variable \"LMMS_LV2_DEBUG\" to empty or\n"
+				"  environment variable \"NoeMixerr_LV2_DEBUG\" to empty or\n"
 				"  do not set it.";
 		}
 		else
 		{
 			qDebug() <<
 				"For details about not loaded plugins, please set\n"
-				"  environment variable \"LMMS_LV2_DEBUG\" to nonempty.";
+				"  environment variable \"NoeMixerr_LV2_DEBUG\" to nonempty.";
 		}
 	}
 
-	// TODO: might be better in the LMMS core
+	// TODO: might be better in the NoeMixerr core
 	if(ConfigManager::enableBlockedPlugins())
 	{
 		qWarning() <<
 			"WARNING! Blocked plugins enabled! If you want to disable them,\n"
-			"  please set environment variable \"LMMS_ENABLE_BLOCKED_PLUGINS\" to empty or\n"
+			"  please set environment variable \"NoeMixerr_ENABLE_BLOCKED_PLUGINS\" to empty or\n"
 			"  do not set it.";
 	}
 	else if(blocked > 0)
@@ -311,7 +311,7 @@ void Lv2Manager::initPlugins()
 		qDebug() <<
 			"Blocked Lv2 Plugins:" << blocked << "of" << pluginCount << "\n"
 			"  If you want to enable them (dangerous!), please set\n"
-			"  environment variable \"LMMS_ENABLE_BLOCKED_PLUGINS\" to nonempty.";
+			"  environment variable \"NoeMixerr_ENABLE_BLOCKED_PLUGINS\" to nonempty.";
 	}
 }
 
@@ -368,6 +368,6 @@ bool Lv2Manager::isSubclassOf(const LilvPluginClass* clvss, const char* uriStr)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2

@@ -25,13 +25,13 @@
 
 #include "AudioAlsa.h"
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 
 #include "endian_handling.h"
 #include "AudioEngine.h"
 #include "ConfigManager.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioAlsa::AudioAlsa( bool & _success_ful, AudioEngine*  _audioEngine ) :
@@ -379,6 +379,6 @@ int AudioAlsa::setSWParams()
 	return 0;	// all ok
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA

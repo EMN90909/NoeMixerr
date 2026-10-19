@@ -34,7 +34,7 @@
 #include "PixmapButton.h"
 #include "LedCheckBox.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -116,4 +116,4 @@ WaveShaperControlDialog::WaveShaperControlDialog(
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

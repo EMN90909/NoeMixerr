@@ -34,7 +34,7 @@
 #include "MainWindow.h"
 #include "PixmapButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 static inline void setupKnobGeometry(Knob* k, int w, int h)
@@ -255,5 +255,5 @@ FrequencyShifterHelpView::FrequencyShifterHelpView() :
 	parentWidget()->setWindowFlags(flags);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 

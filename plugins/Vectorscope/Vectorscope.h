@@ -28,11 +28,11 @@
 #include "LocklessRingBuffer.h"
 #include "VecControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
-//! Top level class; handles LMMS interface and accumulates data for processing.
+//! Top level class; handles NoeMixerr interface and accumulates data for processing.
 class Vectorscope : public Effect
 {
 public:
@@ -47,13 +47,13 @@ public:
 private:
 	VecControls m_controls;
 
-	// Maximum LMMS buffer size (hard coded, the actual constant is hard to get)
+	// Maximum NoeMixerr buffer size (hard coded, the actual constant is hard to get)
 	const unsigned int m_maxBufferSize = 4096;
 	LocklessRingBuffer<SampleFrame> m_inputBuffer;
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // VECTORSCOPE_H
 

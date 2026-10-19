@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_GUI_FILE_SEARCH_JOB_H
-#define LMMS_GUI_FILE_SEARCH_JOB_H
+#ifndef NoeMixerr_GUI_FILE_SEARCH_JOB_H
+#define NoeMixerr_GUI_FILE_SEARCH_JOB_H
 
 #include <QDir>
 #include <QObject>
 #include <QString>
 #include <future>
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 //! The `FileSearchJob` class allows for searching for files on the filesystem.
 //! Searching occurs on a background thread, and results are emitted as a Qt slot back to the user.
 class FileSearchJob : public QObject
@@ -77,6 +77,6 @@ private:
 	std::future<void> m_task;
 	std::atomic_flag m_stop = ATOMIC_FLAG_INIT;
 };
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_FILE_SEARCH_JOB_H
+#endif // NoeMixerr_GUI_FILE_SEARCH_JOB_H

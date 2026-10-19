@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "DelayControlsDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -75,6 +75,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // DELAYCONTROLS_H

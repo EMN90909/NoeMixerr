@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_VIBED_H
-#define LMMS_VIBED_H
+#ifndef NoeMixerr_VIBED_H
+#define NoeMixerr_VIBED_H
 
 #include "Instrument.h"
 #include "InstrumentView.h"
@@ -36,7 +36,7 @@
 #include <array>
 #include <memory>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -146,6 +146,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_VIBED_H
+#endif // NoeMixerr_VIBED_H

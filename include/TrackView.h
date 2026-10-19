@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_TRACK_VIEW_H
-#define LMMS_GUI_TRACK_VIEW_H
+#ifndef NoeMixerr_GUI_TRACK_VIEW_H
+#define NoeMixerr_GUI_TRACK_VIEW_H
 
 #include <QWidget>
 
@@ -34,7 +34,7 @@
 
 class QMenu;
 
-namespace lmms
+namespace noemixerr
 {
 
 class Track;
@@ -227,7 +227,7 @@ private:
 private slots:
 	//! @brief Create a Clip View in this track View.
 	//! @param clip The Clip to create the view for.
-	void createClipView(lmms::Clip* clip);
+	void createClipView(noemixerr::Clip* clip);
 
 	void muteChanged();
 	void onTrackGripGrabbed();
@@ -237,6 +237,6 @@ private slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_TRACK_VIEW_H
+#endif // NoeMixerr_GUI_TRACK_VIEW_H

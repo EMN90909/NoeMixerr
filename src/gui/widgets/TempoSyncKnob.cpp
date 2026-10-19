@@ -38,7 +38,7 @@
 #include "SubWindow.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -331,4 +331,4 @@ void TempoSyncKnob::showCustom()
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

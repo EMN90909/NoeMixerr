@@ -22,23 +22,23 @@
  *
  */
 
-#ifndef LMMS_LV2PORTS_H
-#define LMMS_LV2PORTS_H
+#ifndef NoeMixerr_LV2PORTS_H
+#define NoeMixerr_LV2PORTS_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lilv/lilv.h>
 #include <memory>
 #include <vector>
 
 #include "Flags.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "PluginIssue.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame;
@@ -153,7 +153,7 @@ struct VisitablePort : public Base
 
 struct ControlPortBase : public VisitablePort<ControlPortBase, PortBase>
 {
-	//! LMMS models
+	//! NoeMixerr models
 	//! Always up-to-date, except during runs
 	std::unique_ptr<class AutomatableModel> m_connectedModel;
 
@@ -183,23 +183,23 @@ struct Audio : public VisitablePort<Audio, PortBase>
 {
 	Audio(std::size_t bufferSize, bool isSidechain);
 
-	//! @brief Copy buffer passed by LMMS into our ports
-	//! @param lmmsBuf The buffer to copy from
+	//! @brief Copy buffer passed by NoeMixerr into our ports
+	//! @param noemixerrBuf The buffer to copy from
 	//! @param channel channel index into each sample frame
-	//! @param frames The length of the buffer @p lmmsBuf
-	void copyBuffersFromCore(const SampleFrame* lmmsBuf, unsigned channel, f_cnt_t frames);
+	//! @param frames The length of the buffer @p noemixerrBuf
+	void copyBuffersFromCore(const SampleFrame* noemixerrBuf, unsigned channel, f_cnt_t frames);
 
-	//! @brief Add buffer passed by LMMS into our ports, and halve the result
-	//! @param lmmsBuf The buffer to average from
+	//! @brief Add buffer passed by NoeMixerr into our ports, and halve the result
+	//! @param noemixerrBuf The buffer to average from
 	//! @param channel channel index into each sample frame
-	//! @param frames The length of the buffer @p lmmsBuf
-	void averageWithBuffersFromCore(const SampleFrame* lmmsBuf, unsigned channel, f_cnt_t frames);
+	//! @param frames The length of the buffer @p noemixerrBuf
+	void averageWithBuffersFromCore(const SampleFrame* noemixerrBuf, unsigned channel, f_cnt_t frames);
 
-	//! @brief Copy our ports into buffers passed by LMMS
-	//! @param lmmsBuf The buffer to copy into
+	//! @brief Copy our ports into buffers passed by NoeMixerr
+	//! @param noemixerrBuf The buffer to copy into
 	//! @param channel channel index into each sample frame
-	//! @param frames The length of the buffer @p lmmsBuf
-	void copyBuffersToCore(SampleFrame* lmmsBuf, unsigned channel, f_cnt_t frames) const;
+	//! @param frames The length of the buffer @p noemixerrBuf
+	void copyBuffersToCore(SampleFrame* noemixerrBuf, unsigned channel, f_cnt_t frames) const;
 
 	bool isSideChain() const { return m_sidechain; }
 	bool isOptional() const { return m_optional; }
@@ -211,7 +211,7 @@ private:
 	bool m_sidechain;
 
 	// the only case when data of m_buffer may be referenced:
-	friend struct lmms::ConnectPortVisitor;
+	friend struct noemixerr::ConnectPortVisitor;
 };
 
 struct AtomSeq : public VisitablePort<AtomSeq, PortBase>
@@ -273,8 +273,8 @@ const Target* dcast(const PortBase* base)
 } // namespace Lv2Ports
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2PORTS_H
+#endif // NoeMixerr_LV2PORTS_H

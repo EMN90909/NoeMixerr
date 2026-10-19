@@ -32,7 +32,7 @@
 #include "Knob.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -71,4 +71,4 @@ BassBoosterControlDialog::BassBoosterControlDialog( BassBoosterControls* control
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

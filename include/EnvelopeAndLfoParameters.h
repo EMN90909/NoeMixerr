@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_ENVELOPE_AND_LFO_PARAMETERS_H
-#define LMMS_ENVELOPE_AND_LFO_PARAMETERS_H
+#ifndef NoeMixerr_ENVELOPE_AND_LFO_PARAMETERS_H
+#define NoeMixerr_ENVELOPE_AND_LFO_PARAMETERS_H
 
 #include <memory>
 
@@ -31,9 +31,9 @@
 #include "AutomatableModel.h"
 #include "SampleBuffer.h"
 #include "TempoSyncKnobModel.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -43,7 +43,7 @@ class EnvelopeAndLfoView;
 
 }
 
-class LMMS_EXPORT EnvelopeAndLfoParameters : public Model, public JournallingObject
+class NoeMixerr_EXPORT EnvelopeAndLfoParameters : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -212,6 +212,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_ENVELOPE_AND_LFO_PARAMETERS_H
+#endif // NoeMixerr_ENVELOPE_AND_LFO_PARAMETERS_H

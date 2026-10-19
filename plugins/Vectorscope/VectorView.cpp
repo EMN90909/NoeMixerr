@@ -35,7 +35,7 @@
 #include "MainWindow.h"
 #include "VecControls.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -278,4 +278,4 @@ void VectorView::drawZoomInfo()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

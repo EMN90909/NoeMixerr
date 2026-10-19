@@ -36,7 +36,7 @@
 
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -462,4 +462,4 @@ void PatchesDialog::diffSelectProgRow(int offset)
 	m_progListView->scrollTo(idx);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

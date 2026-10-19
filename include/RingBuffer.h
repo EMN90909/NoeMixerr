@@ -1,5 +1,5 @@
 /*
- * RingBuffer.h - an effective and flexible implementation of a ringbuffer for LMMS
+ * RingBuffer.h - an effective and flexible implementation of a ringbuffer for NoeMixerr
  *
  * Copyright (c) 2014 Vesa Kivimäki
  * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -23,23 +23,23 @@
  *
  */
 
-#ifndef LMMS_RING_BUFFER_H
-#define LMMS_RING_BUFFER_H
+#ifndef NoeMixerr_RING_BUFFER_H
+#define NoeMixerr_RING_BUFFER_H
 
 #include <cmath>
 #include <QObject>
-#include "LmmsTypes.h"
-#include "lmms_export.h"
+#include "NoeMixerrTypes.h"
+#include "noemixerr_export.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame;
 
-/** \brief A basic LMMS ring buffer for single-thread use. For thread and realtime safe alternative see LocklessRingBuffer.
+/** \brief A basic NoeMixerr ring buffer for single-thread use. For thread and realtime safe alternative see LocklessRingBuffer.
 */
-class LMMS_EXPORT RingBuffer : public QObject
+class NoeMixerr_EXPORT RingBuffer : public QObject
 {
 	Q_OBJECT
 public:
@@ -222,6 +222,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_RING_BUFFER_H
+#endif // NoeMixerr_RING_BUFFER_H

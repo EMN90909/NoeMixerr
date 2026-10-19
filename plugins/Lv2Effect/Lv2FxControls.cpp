@@ -29,7 +29,7 @@
 #include "Lv2Effect.h"
 #include "Lv2FxControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -102,4 +102,4 @@ void Lv2FxControls::changeControl() // TODO: what is that?
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

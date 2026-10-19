@@ -34,7 +34,7 @@
 #include "FontHelper.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 LcdWidget::LcdWidget(QWidget* parent, const QString& name, bool leadingZero) :
@@ -292,4 +292,4 @@ void LcdWidget::initUi(const QString& name , const QString& style)
 	updateSize();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

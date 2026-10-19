@@ -1,5 +1,5 @@
 /*
- * LmmsCommonMacros.h - defines some common macros used in the codebase
+ * NoeMixerrCommonMacros.h - defines some common macros used in the codebase
  *
  * Copyright (c) 2025 Roshan M R (Ross Maxx) <mrroshan127/at/gmail/dot/com>
  * 
@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_COMMON_MACROS_H
-#define LMMS_COMMON_MACROS_H
+#ifndef NoeMixerr_COMMON_MACROS_H
+#define NoeMixerr_COMMON_MACROS_H
 
-namespace lmms
+namespace noemixerr
 {
 
-#define LMMS_STRINGIFY(s) LMMS_STR(s) // a macro used to stringify the plugin name
-#define LMMS_STR(PN) #PN
+#define NoeMixerr_STRINGIFY(s) NoeMixerr_STR(s) // a macro used to stringify the plugin name
+#define NoeMixerr_STR(PN) #PN
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_COMMON_MACROS_H
+#endif // NoeMixerr_COMMON_MACROS_H

@@ -37,8 +37,8 @@
  *
  */
 
-#ifndef LMMS_MIDI_FILE_H
-#define LMMS_MIDI_FILE_H
+#ifndef NoeMixerr_MIDI_FILE_H
+#define NoeMixerr_MIDI_FILE_H
 
 #include <cstddef>
 #include <filesystem>
@@ -48,10 +48,10 @@
 #include <string>
 #include <vector>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "MidiPatch.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 //! MIDI file class for exporting purposes
@@ -242,6 +242,6 @@ private:
 	std::ofstream m_stream;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_FILE_H
+#endif // NoeMixerr_MIDI_FILE_H

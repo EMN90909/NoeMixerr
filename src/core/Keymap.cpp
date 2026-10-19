@@ -29,7 +29,7 @@
 #include "Note.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -145,4 +145,4 @@ void Keymap::loadSettings(const QDomElement &element)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

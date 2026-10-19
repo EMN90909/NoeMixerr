@@ -25,9 +25,9 @@
 
 #include <iostream>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_PORTAUDIO
+#ifdef NoeMixerr_HAVE_PORTAUDIO
 
 #include "AudioEngine.h"
 #include "AudioPortAudio.h"
@@ -92,7 +92,7 @@ int maxChannels(const PaDeviceInfo* info, Direction direction)
 
 } // namespace
 
-namespace lmms {
+namespace noemixerr {
 AudioPortAudio::AudioPortAudio(bool& successful, AudioEngine* engine)
 	: AudioDevice(DEFAULT_CHANNELS, engine)
 {
@@ -204,9 +204,9 @@ int AudioPortAudio::processCallback(const void*, void* output, unsigned long fra
 	device->audioEngine()->renderNextBuffer({outputBuffer, channels, frameCount});
 	return paContinue;
 }
-} // namespace lmms
+} // namespace noemixerr
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
 class AudioPortAudioSetupWidget::DeviceSelectorWidget : public QGroupBox
 {
@@ -229,7 +229,7 @@ public:
 
 	void refreshFromConfig(PaHostApiIndex backendIndex)
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		m_deviceComboBox->clear();
 
@@ -317,6 +317,6 @@ void AudioPortAudioSetupWidget::saveSettings()
 	m_inputDevice->saveToConfig();
 	m_outputDevice->saveToConfig();
 }
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_HAVE_PORTAUDIO
+#endif // NoeMixerr_HAVE_PORTAUDIO

@@ -24,7 +24,7 @@
 
 #include "Sample.h"
 
-namespace lmms {
+namespace noemixerr {
 
 Sample::Sample(const SampleFrame* data, size_t numFrames, int sampleRate)
 	: m_buffer(std::make_shared<SampleBuffer>(data, numFrames, sampleRate))
@@ -190,4 +190,4 @@ void Sample::setAllPointFrames(int startFrame, int endFrame, int loopStartFrame,
 	setLoopEndFrame(loopEndFrame);
 }
 
-} // namespace lmms
+} // namespace noemixerr

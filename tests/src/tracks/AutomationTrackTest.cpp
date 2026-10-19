@@ -43,19 +43,19 @@ class AutomationTrackTest : public QObject
 private slots:
 	void initTestCase()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 		Engine::init(true);
 	}
 
 	void cleanupTestCase()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 		Engine::destroy();
 	}
 
 	void testClipLinear()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		AutomationClip c(nullptr);
 		c.setProgressionType(AutomationClip::ProgressionType::Linear);
@@ -72,7 +72,7 @@ private slots:
 
 	void testClipDiscrete()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		AutomationClip c(nullptr);
 		c.setProgressionType(AutomationClip::ProgressionType::Discrete);
@@ -87,7 +87,7 @@ private slots:
 
 	void testClips()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		FloatModel model;
 
@@ -123,7 +123,7 @@ private slots:
 
 	void testLengthRespected()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		FloatModel model;
 
@@ -150,7 +150,7 @@ private slots:
 
 	void testInlineAutomation()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		auto song = Engine::getSong();
 
@@ -174,7 +174,7 @@ private slots:
 
 	void testPatternTrack()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		auto song = Engine::getSong();
 		auto patternStore = Engine::patternStore();
@@ -214,7 +214,7 @@ private slots:
 
 	void testGlobalAutomation()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		// Global automation should not have priority, see https://github.com/LMMS/lmms/issues/4268
 		// Tests regression caused by 75077f6200a5aee3a5821aae48a3b8466ed8714a

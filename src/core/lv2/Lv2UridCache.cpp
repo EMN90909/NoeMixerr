@@ -24,7 +24,7 @@
 
 #include "Lv2UridCache.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lv2/atom/atom.h>
 #include <lv2/buf-size/buf-size.h>
@@ -39,7 +39,7 @@
 #define LV2_BUF_SIZE__nominalBlockLength LV2_BUF_SIZE_PREFIX "nominalBlockLength"
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -72,8 +72,8 @@ Lv2UridCache::Lv2UridCache(UridMap &mapper)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
 

@@ -42,10 +42,10 @@
 #include "InstrumentTrack.h"
 
 #include "embed.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -54,7 +54,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT malletsstk_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"Mallets",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 				"Tuneful things to bang on" ),
@@ -655,7 +655,7 @@ MalletsSynth::MalletsSynth( const StkFloat _pitch,
 		Stk::setSampleRate( _sample_rate );
 		Stk::setRawwavePath( QDir( ConfigManager::inst()->stkDir() ).absolutePath()
 						.toLocal8Bit().constData() );
-#ifndef LMMS_DEBUG
+#ifndef NoeMixerr_DEBUG
 		Stk::showWarnings( false );
 #endif
 
@@ -706,7 +706,7 @@ MalletsSynth::MalletsSynth( const StkFloat _pitch,
 		Stk::setSampleRate( _sample_rate );
 		Stk::setRawwavePath( QDir( ConfigManager::inst()->stkDir() ).absolutePath()
 						.toLocal8Bit().constData() );
-#ifndef LMMS_DEBUG
+#ifndef NoeMixerr_DEBUG
 		Stk::showWarnings( false );
 #endif
 
@@ -755,7 +755,7 @@ MalletsSynth::MalletsSynth( const StkFloat _pitch,
 		Stk::setSampleRate( _sample_rate );
 		Stk::setRawwavePath( QDir( ConfigManager::inst()->stkDir() ).absolutePath()
 						.toLocal8Bit().constData() );
-#ifndef LMMS_DEBUG
+#ifndef NoeMixerr_DEBUG
 		Stk::showWarnings( false );
 #endif
 
@@ -792,7 +792,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * m, void * )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model * m, void * )
 {
 	return new MalletsInstrument( static_cast<InstrumentTrack *>( m ) );
 }
@@ -801,4 +801,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * m, void * )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

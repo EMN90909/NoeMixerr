@@ -27,7 +27,7 @@
 #include <cmath>
 #include <QDomElement>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -126,4 +126,4 @@ void Scale::loadSettings(const QDomElement &element)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

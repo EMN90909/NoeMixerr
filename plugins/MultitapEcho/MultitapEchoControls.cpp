@@ -28,10 +28,10 @@
 
 #include "MultitapEchoControls.h"
 #include "MultitapEcho.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "base64.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -178,4 +178,4 @@ void MultitapEchoControls::sampleRateChanged()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

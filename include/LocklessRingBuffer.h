@@ -1,5 +1,5 @@
 /*
- * LocklessRingBuffer.h - LMMS wrapper for a lockless ringbuffer library
+ * LocklessRingBuffer.h - NoeMixerr wrapper for a lockless ringbuffer library
  *
  * Copyright (c) 2019 Martin Pavelek <he29/dot/HS/at/gmail/dot/com>
  *
@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_LOCKLESS_RING_BUFFER_H
-#define LMMS_LOCKLESS_RING_BUFFER_H
+#ifndef NoeMixerr_LOCKLESS_RING_BUFFER_H
+#define NoeMixerr_LOCKLESS_RING_BUFFER_H
 
 #include <QMutex>
 #include <QWaitCondition>
 
 #include <ringbuffer/ringbuffer.h>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 //! A convenience layer for a realtime-safe and thread-safe multi-reader ringbuffer
@@ -88,6 +88,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LOCKLESS_RING_BUFFER_H
+#endif // NoeMixerr_LOCKLESS_RING_BUFFER_H

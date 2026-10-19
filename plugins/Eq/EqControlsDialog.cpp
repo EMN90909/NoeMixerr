@@ -38,7 +38,7 @@
 #include "EqParameterWidget.h"
 #include "EqSpectrumView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -239,4 +239,4 @@ EqBand* EqControlsDialog::setBand(int index, BoolModel* active, FloatModel* freq
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

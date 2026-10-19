@@ -26,9 +26,9 @@
 
 #include <ctime>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 #	include <wchar.h>
 #	include "IoHelper.h"
 #else
@@ -47,7 +47,7 @@
 SYNTH_T* synth = nullptr;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -150,7 +150,7 @@ void LocalZynAddSubFx::loadXML( const std::string & _filename )
 
 	m_master->applyparameters();
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 	_wunlink(toWString(_filename).get());
 #else
 	unlink( f );
@@ -200,7 +200,7 @@ void LocalZynAddSubFx::setPresetDir( const std::string & _dir )
 
 
 
-void LocalZynAddSubFx::setLmmsWorkingDir( const std::string & _dir )
+void LocalZynAddSubFx::setNoeMixerrWorkingDir( const std::string & _dir )
 {
 	if( config.workingDir != nullptr )
 	{
@@ -287,4 +287,4 @@ void LocalZynAddSubFx::processAudio( SampleFrame* _out )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

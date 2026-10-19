@@ -1,5 +1,5 @@
 /*
- * TabWidget.h - LMMS-tabwidget
+ * TabWidget.h - NoeMixerr-tabwidget
  *
  * Copyright (c) 2005-2008 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_GUI_TAB_WIDGET_H
-#define LMMS_GUI_TAB_WIDGET_H
+#ifndef NoeMixerr_GUI_TAB_WIDGET_H
+#define NoeMixerr_GUI_TAB_WIDGET_H
 
 #include <QWidget>
 #include <QMap>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 const int TEXT_TAB_HEIGHT = 14;
@@ -120,6 +120,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TAB_WIDGET_H
+#endif // NoeMixerr_GUI_TAB_WIDGET_H

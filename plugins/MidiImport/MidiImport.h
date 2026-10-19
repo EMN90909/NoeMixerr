@@ -31,7 +31,7 @@
 #include "MidiEvent.h"
 #include "ImportFilter.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -88,6 +88,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

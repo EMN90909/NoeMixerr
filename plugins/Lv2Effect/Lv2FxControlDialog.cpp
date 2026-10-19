@@ -28,7 +28,7 @@
 
 #include "Lv2FxControls.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -81,4 +81,4 @@ void Lv2FxControlDialog::hideEvent(QHideEvent *event)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_MIDI_DUMMY_H
-#define LMMS_MIDI_DUMMY_H
+#ifndef NoeMixerr_MIDI_DUMMY_H
+#define NoeMixerr_MIDI_DUMMY_H
 
 #include "MidiClient.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -63,6 +63,6 @@ protected:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_DUMMY_H
+#endif // NoeMixerr_MIDI_DUMMY_H

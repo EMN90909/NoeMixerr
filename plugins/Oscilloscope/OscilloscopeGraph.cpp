@@ -36,7 +36,7 @@
 
 #include <functional>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 OscilloscopeGraph::OscilloscopeGraph(QWidget* parent, OscilloscopeControls* controls):
@@ -173,4 +173,4 @@ void OscilloscopeGraph::mouseMoveEvent(QMouseEvent* me)
 	m_mousePos = me->x();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -37,7 +37,7 @@
 #include "GroupBox.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 EffectRackView::EffectRackView( EffectChain* model, QWidget* parent ) :
@@ -285,4 +285,4 @@ QSize EffectRackView::sizeHint() const
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

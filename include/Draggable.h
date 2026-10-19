@@ -22,18 +22,18 @@
  *
  */
  
-#ifndef LMMS_GUI_DRAGGABLE_H
-#define LMMS_GUI_DRAGGABLE_H
+#ifndef NoeMixerr_GUI_DRAGGABLE_H
+#define NoeMixerr_GUI_DRAGGABLE_H
 
 #include "FloatModelEditorBase.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 /**
  * @brief A pixmap that can be dragged from one location to another to control a FloatModel
  */
-class LMMS_EXPORT Draggable : public FloatModelEditorBase
+class NoeMixerr_EXPORT Draggable : public FloatModelEditorBase
 {
 	Q_OBJECT
 
@@ -71,6 +71,6 @@ private:
 	bool m_hasDefaultValPixmap;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_DRAGGABLE_H
+#endif // NoeMixerr_GUI_DRAGGABLE_H

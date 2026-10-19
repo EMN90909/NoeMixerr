@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_INSTRUMENT_H
-#define LMMS_INSTRUMENT_H
+#ifndef NoeMixerr_INSTRUMENT_H
+#define NoeMixerr_INSTRUMENT_H
 
 #include <QString>
 
 #include "Flags.h"
-#include "lmms_export.h"
-#include "LmmsTypes.h"
+#include "noemixerr_export.h"
+#include "NoeMixerrTypes.h"
 #include "MidiPatch.h"
 #include "Plugin.h"
 #include "TimePos.h"
@@ -39,7 +39,7 @@
 #include <optional>
 #include <string_view>
 
-namespace lmms
+namespace noemixerr
 {
 
 // forward-declarations
@@ -50,7 +50,7 @@ class Track;
 class SampleFrame;
 
 
-class LMMS_EXPORT Instrument : public Plugin
+class NoeMixerr_EXPORT Instrument : public Plugin
 {
 public:
 	enum class Flag
@@ -61,7 +61,7 @@ public:
 		IsNotBendable = 0x04,		/*! Instrument can't react to pitch bend changes */
 	};
 
-	using Flags = lmms::Flags<Flag>;
+	using Flags = noemixerr::Flags<Flag>;
 
 	Instrument(InstrumentTrack * _instrument_track,
 			const Descriptor * _descriptor,
@@ -192,9 +192,9 @@ private:
 };
 
 
-LMMS_DECLARE_OPERATORS_FOR_FLAGS(Instrument::Flag)
+NoeMixerr_DECLARE_OPERATORS_FOR_FLAGS(Instrument::Flag)
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INSTRUMENT_H
+#endif // NoeMixerr_INSTRUMENT_H

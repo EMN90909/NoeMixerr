@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_CLIP_VIEW_H
-#define LMMS_GUI_CLIP_VIEW_H
+#ifndef NoeMixerr_GUI_CLIP_VIEW_H
+#define NoeMixerr_GUI_CLIP_VIEW_H
 
 #include <optional>
 
@@ -36,7 +36,7 @@
 
 class QMenu;
 
-namespace lmms
+namespace noemixerr
 {
 
 class DataFile;
@@ -290,7 +290,7 @@ private:
 	//! @brief A pointer for the text bubble used when moving segments,
 	//! etc.
 	//!
-	//! In a number of situations, LMMS displays a floating text bubble
+	//! In a number of situations, NoeMixerr displays a floating text bubble
 	//! beside the cursor as you move or resize elements of a track
 	//! about. This pointer keeps track of it, as you only ever need
 	//! one at a time.
@@ -374,6 +374,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_CLIP_VIEW_H
+#endif // NoeMixerr_GUI_CLIP_VIEW_H

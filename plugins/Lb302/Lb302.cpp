@@ -53,7 +53,7 @@
 //#define LB_24_RES_TRICK
 
 
-namespace lmms
+namespace noemixerr
 {
 
 // Helper to get the phase increment per sample, given a note's frequency and the current sample rate
@@ -64,7 +64,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT lb302_plugin_descriptor =
 {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"LB302",
 	QT_TRANSLATE_NOOP("PluginBrowser", "Incomplete monophonic imitation TB-303"),
 	"Paul Giblock <pgib/at/users.sf.net>",
@@ -75,7 +75,7 @@ Plugin::Descriptor PLUGIN_EXPORT lb302_plugin_descriptor =
 	nullptr,
 };
 
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model* m, void*)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model* m, void*)
 {
 	return new Lb302Synth(static_cast<InstrumentTrack*>(m));
 }
@@ -776,4 +776,4 @@ void Lb302SynthView::modelChanged()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_INSTRUMENT_SOUND_SHAPING_VIEW_H
-#define LMMS_GUI_INSTRUMENT_SOUND_SHAPING_VIEW_H
+#ifndef NoeMixerr_GUI_INSTRUMENT_SOUND_SHAPING_VIEW_H
+#define NoeMixerr_GUI_INSTRUMENT_SOUND_SHAPING_VIEW_H
 
 #include <QWidget>
 
@@ -31,9 +31,9 @@
 
 class QLabel;
 
-namespace lmms { class InstrumentSoundShaping; }
+namespace noemixerr { class InstrumentSoundShaping; }
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class EnvelopeAndLfoView;
@@ -74,6 +74,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_INSTRUMENT_SOUND_SHAPING_VIEW_H
+#endif // NoeMixerr_GUI_INSTRUMENT_SOUND_SHAPING_VIEW_H

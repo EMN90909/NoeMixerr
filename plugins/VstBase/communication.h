@@ -27,7 +27,7 @@
 #ifndef _COMMUNICATION_H
 #define _COMMUNICATION_H
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -91,6 +91,6 @@ enum VstRemoteMessageIDs
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

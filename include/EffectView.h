@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_EFFECT_VIEW_H
-#define LMMS_GUI_EFFECT_VIEW_H
+#ifndef NoeMixerr_GUI_EFFECT_VIEW_H
+#define NoeMixerr_GUI_EFFECT_VIEW_H
 
 #include "AutomatableModel.h"
 #include "PluginView.h"
@@ -36,7 +36,7 @@ class QLabel;
 class QPushButton;
 class QMdiSubWindow;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class EffectControlDialog;
@@ -100,6 +100,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_EFFECT_VIEW_H
+#endif // NoeMixerr_GUI_EFFECT_VIEW_H

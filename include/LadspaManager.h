@@ -24,8 +24,8 @@
  *
  */
 
-#ifndef LMMS_LADSPA_MANAGER_H
-#define LMMS_LADSPA_MANAGER_H
+#ifndef NoeMixerr_LADSPA_MANAGER_H
+#define NoeMixerr_LADSPA_MANAGER_H
 
 #include <ladspa.h>
 
@@ -35,11 +35,11 @@
 #include <QStringList>
 
 
-#include "lmms_export.h"
-#include "LmmsTypes.h"
+#include "noemixerr_export.h"
+#include "NoeMixerrTypes.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 const float NOHINT = -99342.2243f;
@@ -81,7 +81,7 @@ struct LadspaManagerDescription
 	uint16_t outputChannels;
 };
 
-class LMMS_EXPORT LadspaManager
+class NoeMixerr_EXPORT LadspaManager
 {
 public:
 
@@ -347,6 +347,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LADSPA_MANAGER_H
+#endif // NoeMixerr_LADSPA_MANAGER_H

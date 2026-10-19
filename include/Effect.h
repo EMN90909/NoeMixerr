@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_EFFECT_H
-#define LMMS_EFFECT_H
+#ifndef NoeMixerr_EFFECT_H
+#define NoeMixerr_EFFECT_H
 
 #include <span>
 
@@ -34,7 +34,7 @@
 #include "Plugin.h"
 #include "TempoSyncKnobModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioBuffer;
@@ -49,7 +49,7 @@ class EffectView;
 } // namespace gui
 
 
-class LMMS_EXPORT Effect : public Plugin
+class NoeMixerr_EXPORT Effect : public Plugin
 {
 	Q_OBJECT
 public:
@@ -219,6 +219,6 @@ private:
 using EffectKey = Effect::Descriptor::SubPluginFeatures::Key;
 using EffectKeyList = Effect::Descriptor::SubPluginFeatures::KeyList;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_EFFECT_H
+#endif // NoeMixerr_EFFECT_H

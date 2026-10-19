@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_SAMPLE_H
-#define LMMS_SAMPLE_H
+#ifndef NoeMixerr_SAMPLE_H
+#define NoeMixerr_SAMPLE_H
 
 #include <memory>
 
 #include "AudioResampler.h"
 #include "Note.h"
 #include "SampleBuffer.h"
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms {
-class LMMS_EXPORT Sample
+namespace noemixerr {
+class NoeMixerr_EXPORT Sample
 {
 public:
 	enum class Loop
@@ -43,7 +43,7 @@ public:
 		PingPong
 	};
 
-	class LMMS_EXPORT PlaybackState
+	class NoeMixerr_EXPORT PlaybackState
 	{
 	public:
 		PlaybackState(AudioResampler::Mode interpolationMode = AudioResampler::Mode::Linear, int frameIndex = 0)
@@ -117,5 +117,5 @@ private:
 	std::atomic<float> m_frequency = DefaultBaseFreq;
 	std::atomic<bool> m_reversed = false;
 };
-} // namespace lmms
+} // namespace noemixerr
 #endif

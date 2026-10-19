@@ -24,15 +24,15 @@
  *
  */
 
-#ifndef LMMS_GUI_VERSIONED_SAVE_DIALOG_H
-#define LMMS_GUI_VERSIONED_SAVE_DIALOG_H
+#ifndef NoeMixerr_GUI_VERSIONED_SAVE_DIALOG_H
+#define NoeMixerr_GUI_VERSIONED_SAVE_DIALOG_H
 
 #include "FileDialog.h"
 #include "Song.h"
 
 class QLineEdit;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class LedCheckBox;
@@ -66,6 +66,6 @@ public slots:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_VERSIONED_SAVE_DIALOG_H
+#endif // NoeMixerr_GUI_VERSIONED_SAVE_DIALOG_H

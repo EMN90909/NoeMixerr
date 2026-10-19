@@ -23,20 +23,20 @@
  *
  */
 
-#ifndef LMMS_BANDLIMITEDWAVE_H
-#define LMMS_BANDLIMITEDWAVE_H
+#ifndef NoeMixerr_BANDLIMITEDWAVE_H
+#define NoeMixerr_BANDLIMITEDWAVE_H
 
 class QDataStream;
 class QString;
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include "interpolation.h"
-#include "LmmsTypes.h"
-#include "lmms_math.h"
+#include "NoeMixerrTypes.h"
+#include "noemixerr_math.h"
 #include "Engine.h"
 #include "AudioEngine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr int MAXLEN = 11;
@@ -86,7 +86,7 @@ QDataStream& operator>> ( QDataStream &in, WaveMipMap &waveMipMap );
 
 
 
-class LMMS_EXPORT BandLimitedWave
+class NoeMixerr_EXPORT BandLimitedWave
 {
 public:
 	enum class Waveform
@@ -174,6 +174,6 @@ public:
 	static QString s_wavetableDir;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_BANDLIMITEDWAVE_H
+#endif // NoeMixerr_BANDLIMITEDWAVE_H

@@ -31,7 +31,7 @@
 #include "DualFilterControls.h"
 #include "BasicFilters.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -70,6 +70,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

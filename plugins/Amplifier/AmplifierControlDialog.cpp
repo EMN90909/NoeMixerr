@@ -31,7 +31,7 @@
 #include <QGridLayout>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 AmplifierControlDialog::AmplifierControlDialog(AmplifierControls* controls) :
@@ -61,4 +61,4 @@ AmplifierControlDialog::AmplifierControlDialog(AmplifierControls* controls) :
 	gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

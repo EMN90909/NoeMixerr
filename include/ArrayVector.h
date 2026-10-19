@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_ARRAY_VECTOR_H
-#define LMMS_ARRAY_VECTOR_H
+#ifndef NoeMixerr_ARRAY_VECTOR_H
+#define NoeMixerr_ARRAY_VECTOR_H
 
 #include <algorithm>
 #include <cassert>
@@ -35,7 +35,7 @@
 #include <utility>
 #include <type_traits>
 
-namespace lmms {
+namespace noemixerr {
 
 /**
  * A container that stores up to a maximum of `N` elements of type `T` directly
@@ -367,6 +367,6 @@ private:
 	size_type m_size = 0;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_ARRAY_VECTOR_H
+#endif // NoeMixerr_ARRAY_VECTOR_H

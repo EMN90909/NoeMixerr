@@ -27,7 +27,7 @@
 #include "BassBoosterControls.h"
 #include "BassBooster.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -67,4 +67,4 @@ void BassBoosterControls::saveSettings( QDomDocument& doc, QDomElement& _this )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_LV2_OPTIONS_H
-#define LMMS_LV2_OPTIONS_H
+#ifndef NoeMixerr_LV2_OPTIONS_H
+#define NoeMixerr_LV2_OPTIONS_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <cstdint>
 #include <lv2/options/options.h>
@@ -41,7 +41,7 @@
 #include "Lv2Manager.h"
 #include "Lv2UridCache.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 /**
@@ -61,7 +61,7 @@ namespace lmms
 class Lv2Options
 {
 public:
-	//! Return if an option is supported by LMMS
+	//! Return if an option is supported by NoeMixerr
 	static bool isOptionSupported(LV2_URID key);
 	//! Mark option as supported
 	static void supportOption(LV2_URID key);
@@ -105,8 +105,8 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_OPTIONS_H
+#endif // NoeMixerr_LV2_OPTIONS_H

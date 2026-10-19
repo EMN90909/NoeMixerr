@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_GUI_LCD_WIDGET_H
-#define LMMS_GUI_LCD_WIDGET_H
+#ifndef NoeMixerr_GUI_LCD_WIDGET_H
+#define NoeMixerr_GUI_LCD_WIDGET_H
 
 #include <QMap>
 #include <QWidget>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT LcdWidget : public QWidget
+class NoeMixerr_EXPORT LcdWidget : public QWidget
 {
 	Q_OBJECT
 	
@@ -113,6 +113,6 @@ private:
 
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_LCD_WIDGET_H
+#endif // NoeMixerr_GUI_LCD_WIDGET_H

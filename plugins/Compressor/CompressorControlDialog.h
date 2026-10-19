@@ -33,7 +33,7 @@
 
 class QLabel;
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr float COMP_NOISE_FLOOR = 0.000001f;// -120 dbFs
@@ -229,6 +229,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

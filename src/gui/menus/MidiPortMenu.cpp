@@ -25,7 +25,7 @@
 
 #include "MidiPortMenu.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -93,6 +93,6 @@ void MidiPortMenu::updateMenu()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 

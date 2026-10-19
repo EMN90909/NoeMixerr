@@ -1,5 +1,5 @@
-SET(LMMS_SRCS
-	${LMMS_SRCS}
+SET(NoeMixerr_SRCS
+	${NoeMixerr_SRCS}
 	gui/ActionGroup.cpp
 	gui/AudioAlsaSetupWidget.cpp
 	gui/AudioDeviceSetupWidget.cpp
@@ -20,8 +20,8 @@ SET(LMMS_SRCS
 	gui/LadspaControlView.cpp
 	gui/LfoControllerDialog.cpp
 	gui/LinkedModelGroupViews.cpp
-	gui/LmmsPalette.cpp
-	gui/LmmsStyle.cpp
+	gui/NoeMixerrPalette.cpp
+	gui/NoeMixerrStyle.cpp
 	gui/Lv2ViewBase.cpp
 	gui/MainApplication.cpp
 	gui/MainWindow.cpp

@@ -40,7 +40,7 @@
 #include "MainWindow.h"
 #include "SubWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -169,4 +169,4 @@ void ControllerView::contextMenuEvent( QContextMenuEvent * )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

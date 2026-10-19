@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_OSCILLATORCONSTANTS_H
-#define LMMS_OSCILLATORCONSTANTS_H
+#ifndef NoeMixerr_OSCILLATORCONSTANTS_H
+#define NoeMixerr_OSCILLATORCONSTANTS_H
 
 #include <array>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms::OscillatorConstants
+namespace noemixerr::OscillatorConstants
 {
 
 	// Limit wavetables to the audible audio spectrum
@@ -53,6 +53,6 @@ namespace lmms::OscillatorConstants
 	using wavetable_t = std::array<sample_t, WAVETABLE_LENGTH>;
 	using waveform_t = std::array<wavetable_t, WAVE_TABLES_PER_WAVEFORM_COUNT>;
 
-} // namespace lmms::OscillatorConstants
+} // namespace noemixerr::OscillatorConstants
 
-#endif // LMMS_OSCILLATORCONSTANTS_H
+#endif // NoeMixerr_OSCILLATORCONSTANTS_H

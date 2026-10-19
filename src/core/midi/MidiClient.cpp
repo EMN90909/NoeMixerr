@@ -29,7 +29,7 @@
 
 #include "MidiPort.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 MidiClient::~MidiClient()
@@ -311,4 +311,4 @@ int MidiClientRaw::eventLength( const unsigned char event )
 	return 1;
 }
 
-} // namespace lmms
+} // namespace noemixerr

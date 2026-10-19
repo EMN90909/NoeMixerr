@@ -29,7 +29,7 @@
 #include <cmath>
 #include <numbers>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -219,4 +219,4 @@ int compressbands(const float *absspec_buffer, float *compressedband, int num_ol
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

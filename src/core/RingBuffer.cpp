@@ -1,5 +1,5 @@
 /*
- * RingBuffer.cpp - an effective and flexible implementation of a ringbuffer for LMMS
+ * RingBuffer.cpp - an effective and flexible implementation of a ringbuffer for NoeMixerr
  *
  * Copyright (c) 2014 Vesa Kivimäki
  * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -28,7 +28,7 @@
 #include "Engine.h"
 #include "MixHelpers.h"
 
-namespace lmms
+namespace noemixerr
 {
 
  
@@ -315,4 +315,4 @@ void RingBuffer::updateSamplerate()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

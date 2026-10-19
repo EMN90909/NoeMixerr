@@ -24,12 +24,12 @@
 
 #include "Lv2Options.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <QtGlobal>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -104,6 +104,6 @@ void Lv2Options::clear()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2

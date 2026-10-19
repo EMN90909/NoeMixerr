@@ -26,11 +26,11 @@
 
 #include <cassert>
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -220,6 +220,6 @@ void Lv2Worker::emitResponses()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2

@@ -41,7 +41,7 @@
 // so this plugin builds with all versions of Stk.
 namespace stk { } ;
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -288,6 +288,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

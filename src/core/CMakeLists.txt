@@ -1,5 +1,5 @@
-set(LMMS_SRCS
-	${LMMS_SRCS}
+set(NoeMixerr_SRCS
+	${NoeMixerr_SRCS}
 
 	core/AudioBuffer.cpp
 	core/AudioBusHandle.cpp
@@ -34,7 +34,7 @@ set(LMMS_SRCS
 	core/InstrumentSoundShaping.cpp
 	core/JournallingObject.cpp
 	core/Keymap.cpp
-	core/Ladspa2LMMS.cpp
+	core/Ladspa2NoeMixerr.cpp
 	core/LadspaControl.cpp
 	core/LadspaManager.cpp
 	core/LfoController.cpp
@@ -74,7 +74,7 @@ set(LMMS_SRCS
 	core/SamplePlayHandle.cpp
 	core/SampleRecordHandle.cpp
 	core/Scale.cpp
-	core/LmmsSemaphore.cpp
+	core/NoeMixerrSemaphore.cpp
 	core/SerializingObject.cpp
 	core/Song.cpp
 	core/TempoSyncKnobModel.cpp

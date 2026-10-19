@@ -30,7 +30,7 @@
 #endif
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -191,4 +191,4 @@ RemotePluginBase::message RemotePluginBase::waitForMessage(
 	return message();
 }
 
-} // namespace lmms
+} // namespace noemixerr

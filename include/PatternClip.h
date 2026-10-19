@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_PATTERN_CLIP_H
-#define LMMS_PATTERN_CLIP_H
+#ifndef NoeMixerr_PATTERN_CLIP_H
+#define NoeMixerr_PATTERN_CLIP_H
 
 #include "Clip.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 /*! \brief Dummy clip for PatternTracks
@@ -61,6 +61,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PATTERN_CLIP_H
+#endif // NoeMixerr_PATTERN_CLIP_H

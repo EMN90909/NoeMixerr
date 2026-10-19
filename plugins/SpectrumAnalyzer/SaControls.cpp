@@ -29,7 +29,7 @@
 #include "fft_helpers.h"
 #include "SaControlsDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -179,4 +179,4 @@ void SaControls::saveSettings(QDomDocument &doc, QDomElement &parent)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

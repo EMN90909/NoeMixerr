@@ -24,23 +24,23 @@
  *
  */
 
-#ifndef LMMS_LV2_SUBPLUGIN_FEATURES_H
-#define LMMS_LV2_SUBPLUGIN_FEATURES_H
+#ifndef NoeMixerr_LV2_SUBPLUGIN_FEATURES_H
+#define NoeMixerr_LV2_SUBPLUGIN_FEATURES_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lilv/lilv.h>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include "Plugin.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
-class LMMS_EXPORT Lv2SubPluginFeatures : public Plugin::Descriptor::SubPluginFeatures
+class NoeMixerr_EXPORT Lv2SubPluginFeatures : public Plugin::Descriptor::SubPluginFeatures
 {
 private:
 	static const LilvPlugin *getPlugin(const Key &k);
@@ -62,8 +62,8 @@ public:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_SUBPLUGIN_FEATURES_H
+#endif // NoeMixerr_LV2_SUBPLUGIN_FEATURES_H

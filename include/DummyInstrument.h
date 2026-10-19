@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_DUMMY_INSTRUMENT_H
-#define LMMS_DUMMY_INSTRUMENT_H
+#ifndef NoeMixerr_DUMMY_INSTRUMENT_H
+#define NoeMixerr_DUMMY_INSTRUMENT_H
 
 #include "Instrument.h"
 #include "InstrumentView.h"
@@ -35,7 +35,7 @@
 #include "AudioEngine.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -74,6 +74,6 @@ public:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DUMMY_INSTRUMENT_H
+#endif // NoeMixerr_DUMMY_INSTRUMENT_H

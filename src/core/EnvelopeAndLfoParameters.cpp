@@ -33,7 +33,7 @@
 #include "PathUtil.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 // how long should be each envelope-segment maximal (e.g. attack)?
@@ -543,4 +543,4 @@ void EnvelopeAndLfoParameters::updateSampleVars()
 
 
 
-} // namespace lmms
+} // namespace noemixerr

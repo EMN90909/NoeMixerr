@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_EFFECT_CONTROLS_H
-#define LMMS_EFFECT_CONTROLS_H
+#ifndef NoeMixerr_EFFECT_CONTROLS_H
+#define NoeMixerr_EFFECT_CONTROLS_H
 
 #include "Model.h"
 #include "JournallingObject.h"
 #include "Effect.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -80,6 +80,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_EFFECT_CONTROLS_H
+#endif // NoeMixerr_EFFECT_CONTROLS_H

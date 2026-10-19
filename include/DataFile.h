@@ -1,5 +1,5 @@
 /*
- * DataFile.h - class for reading and writing LMMS data files
+ * DataFile.h - class for reading and writing NoeMixerr data files
  *
  * Copyright (c) 2004-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  * Copyright (c) 2012-2013 Paul Giblock <p/at/pgiblock.net>
@@ -23,24 +23,24 @@
  *
  */
 
-#ifndef LMMS_DATA_FILE_H
-#define LMMS_DATA_FILE_H
+#ifndef NoeMixerr_DATA_FILE_H
+#define NoeMixerr_DATA_FILE_H
 
 #include <map>
 #include <QDomDocument>
 #include <vector>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 class QTextStream;
 
-namespace lmms
+namespace noemixerr
 {
 
 class ProjectVersion;
 
 
-class LMMS_EXPORT DataFile : public QDomDocument
+class NoeMixerr_EXPORT DataFile : public QDomDocument
 {
 
 	using UpgradeMethod = void(DataFile::*)();
@@ -150,7 +150,7 @@ private:
 	void upgrade_bbTcoRename();
 	void upgrade_sampleAndHold();
 
-	//! Update MIDI CC indexes, so that they are counted from 0. Older releases of LMMS count the CCs from 1.
+	//! Update MIDI CC indexes, so that they are counted from 0. Older releases of NoeMixerr count the CCs from 1.
 	void upgrade_midiCCIndexing();
 
 	void upgrade_loopsRename();
@@ -181,6 +181,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DATA_FILE_H
+#endif // NoeMixerr_DATA_FILE_H

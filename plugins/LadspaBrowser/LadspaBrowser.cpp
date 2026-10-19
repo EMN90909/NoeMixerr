@@ -40,7 +40,7 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -49,7 +49,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT ladspabrowser_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"LADSPA Plugin Browser",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 				"List installed LADSPA plugins" ),
@@ -63,7 +63,7 @@ Plugin::Descriptor PLUGIN_EXPORT ladspabrowser_plugin_descriptor =
 
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model * _parent, void * _data )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model * _parent, void * _data )
 {
 	return new LadspaBrowser;
 }
@@ -172,8 +172,8 @@ QWidget * LadspaBrowserView::createTab( QWidget * _parent, const QString & _txt,
 	layout->addSpacing( 10 );
 
 	auto description = new LadspaDescription(tab, _type);
-	connect( description, SIGNAL( doubleClicked( const ::lmms::ladspa_key_t & ) ),
-				SLOT( showPorts( const ::lmms::ladspa_key_t & ) ) );
+	connect( description, SIGNAL( doubleClicked( const ::noemixerr::ladspa_key_t & ) ),
+				SLOT( showPorts( const ::noemixerr::ladspa_key_t & ) ) );
 	layout->addWidget( description, 1 );
 
 	return tab;
@@ -182,7 +182,7 @@ QWidget * LadspaBrowserView::createTab( QWidget * _parent, const QString & _txt,
 
 
 
-void LadspaBrowserView::showPorts( const ::lmms::ladspa_key_t & _key )
+void LadspaBrowserView::showPorts( const ::noemixerr::ladspa_key_t & _key )
 {
 	LadspaPortDialog ports( _key );
 	ports.exec();
@@ -191,4 +191,4 @@ void LadspaBrowserView::showPorts( const ::lmms::ladspa_key_t & _key )
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

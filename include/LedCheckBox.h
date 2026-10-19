@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_GUI_LED_CHECKBOX_H
-#define LMMS_GUI_LED_CHECKBOX_H
+#ifndef NoeMixerr_GUI_LED_CHECKBOX_H
+#define NoeMixerr_GUI_LED_CHECKBOX_H
 
 #include "AutomatableButton.h"
 
 
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT LedCheckBox : public AutomatableButton
+class NoeMixerr_EXPORT LedCheckBox : public AutomatableButton
 {
 	Q_OBJECT
 public:
@@ -83,6 +83,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_LED_CHECKBOX_H
+#endif // NoeMixerr_GUI_LED_CHECKBOX_H

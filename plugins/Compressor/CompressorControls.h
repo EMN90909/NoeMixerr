@@ -29,7 +29,7 @@
 
 #include "EffectControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class CompressorEffect;
@@ -101,6 +101,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

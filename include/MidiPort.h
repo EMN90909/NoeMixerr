@@ -1,5 +1,5 @@
 /*
- * MidiPort.h - abstraction of MIDI ports which are part of LMMS' MIDI
+ * MidiPort.h - abstraction of MIDI ports which are part of NoeMixerr' MIDI
  *              sequencing system
  *
  * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_MIDI_PORT_H
-#define LMMS_MIDI_PORT_H
+#ifndef NoeMixerr_MIDI_PORT_H
+#define NoeMixerr_MIDI_PORT_H
 
 #include <QString>
 #include <QList>
@@ -34,7 +34,7 @@
 #include "TimePos.h"
 #include "AutomatableModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiClient;
@@ -187,6 +187,6 @@ signals:
 
 using MidiPortList = QList<MidiPort*>;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_PORT_H
+#endif // NoeMixerr_MIDI_PORT_H

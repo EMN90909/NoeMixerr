@@ -32,7 +32,7 @@ class ProjectVersionTest : public QObject
 private slots:
 	void ProjectVersionComparisonTests()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		QVERIFY(ProjectVersion("1.1.0", ProjectVersion::CompareType::Minor) > "1.0.3");
 		QVERIFY(ProjectVersion("1.1.0", ProjectVersion::CompareType::Major) < "2.1.0");

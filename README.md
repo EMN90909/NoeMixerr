@@ -1,6 +1,6 @@
 <div align="center">
 	<h1>
-	<img src="https://raw.githubusercontent.com/LMMS/artwork/master/Icon%20%26%20Mimetypes/lmms-64x64.svg" alt="LMMS Logo"><br>LMMS
+	<img src="https://raw.githubusercontent.com/NoeMixerr/artwork/master/Icon%20%26%20Mimetypes/noemixerr-64x64.svg" alt="NoeMixerr Logo"><br>NoeMixerr
 	</h1>
 	<p>Cross-platform music production software</p>
 	<p>
@@ -16,21 +16,21 @@
 		⦁︎
 		<a href="https://github.com/LMMS/lmms/wiki">Developer wiki</a>
 		⦁︎
-		<a href="https://lmms.github.io/lmms">Internal documentation</a>
+		<a href="https://noemixerr.github.io/noemixerr">Internal documentation</a>
 	</p>
 	<p>
 		<a href="https://github.com/LMMS/lmms/actions/workflows/build.yml"><img src="https://github.com/LMMS/lmms/actions/workflows/build.yml/badge.svg" alt="Build status"></a>
 		<a href="https://lmms.io/download"><img src="https://img.shields.io/github/release/LMMS/lmms.svg?maxAge=3600" 	alt="Latest stable release"></a>
 		<a href="https://github.com/LMMS/lmms/releases"><img src="https://img.shields.io/github/downloads/LMMS/lmms/total.svg?maxAge=3600" alt="Overall downloads on Github"></a>
 		<a href="https://discord.gg/3sc5su7"><img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Join the chat at Discord"></a>
-		<a href="https://www.transifex.com/lmms/lmms/"><img src="https://img.shields.io/badge/localise-on_transifex-green.svg"></a>
+		<a href="https://www.transifex.com/noemixerr/noemixerr/"><img src="https://img.shields.io/badge/localise-on_transifex-green.svg"></a>
 	</p>
 </div>
 
-What is LMMS?
+What is NoeMixerr?
 --------------
 
-LMMS is an open-source cross-platform digital audio workstation designed for music production. It includes an advanced Piano Roll, Beat Sequencer, Song Editor, and Mixer for composing, arranging, and mixing music. It comes with 15+ synthesizer plugins by default, along with VST2 and SoundFont2 support.
+NoeMixerr is an open-source cross-platform digital audio workstation designed for music production. It includes an advanced Piano Roll, Beat Sequencer, Song Editor, and Mixer for composing, arranging, and mixing music. It comes with 15+ synthesizer plugins by default, along with VST2 and SoundFont2 support.
 
 Features
 ---------
@@ -49,10 +49,10 @@ Building
 
 See [Compiling LMMS](https://github.com/LMMS/lmms/wiki/Compiling)
 
-Join LMMS-development
+Join NoeMixerr-development
 ----------------------
 
-If you are interested in LMMS, its programming, artwork, testing, writing demo songs, (and improving this README...) or something like that, you're welcome to participate in the development of LMMS!
+If you are interested in NoeMixerr, its programming, artwork, testing, writing demo songs, (and improving this README...) or something like that, you're welcome to participate in the development of NoeMixerr!
 
 Information about what you can do and how can be found in the [wiki](https://github.com/LMMS/lmms/wiki).
 

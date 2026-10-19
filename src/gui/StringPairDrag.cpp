@@ -1,7 +1,7 @@
 /*
  * StringPairDrag.cpp - class StringPairDrag which provides general support
  *                        for drag'n'drop of string-pairs and which is the base
- *                        for all drag'n'drop-actions within LMMS
+ *                        for all drag'n'drop-actions within NoeMixerr
  *
  * Copyright (c) 2005-2008 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -35,7 +35,7 @@
 #include "Clipboard.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -117,4 +117,4 @@ QString StringPairDrag::decodeValue( QDropEvent * _de )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

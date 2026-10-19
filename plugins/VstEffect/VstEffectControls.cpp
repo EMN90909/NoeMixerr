@@ -41,7 +41,7 @@
 #include "VstEffect.h"
 #include "VstPlugin.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -535,4 +535,4 @@ ManageVSTEffectView::~ManageVSTEffectView()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

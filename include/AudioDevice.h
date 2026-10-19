@@ -1,5 +1,5 @@
 /*
- * AudioDevice.h - base-class for audio-devices, used by LMMS audio engine
+ * AudioDevice.h - base-class for audio-devices, used by NoeMixerr audio engine
  *
  * Copyright (c) 2004-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_AUDIO_DEVICE_H
-#define LMMS_AUDIO_DEVICE_H
+#ifndef NoeMixerr_AUDIO_DEVICE_H
+#define NoeMixerr_AUDIO_DEVICE_H
 
 #include <QMutex>
 #include <samplerate.h>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
 class QThread;
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioEngine;
@@ -100,6 +100,6 @@ private:
 	std::atomic_flag m_running = ATOMIC_FLAG_INIT;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_DEVICE_H
+#endif // NoeMixerr_AUDIO_DEVICE_H

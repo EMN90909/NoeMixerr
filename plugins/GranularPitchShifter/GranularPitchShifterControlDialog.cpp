@@ -33,7 +33,7 @@
 #include "PixmapButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 GranularPitchShifterControlDialog::GranularPitchShifterControlDialog(GranularPitchShifterControls* controls) :
@@ -152,4 +152,4 @@ GranularPitchShifterHelpView::GranularPitchShifterHelpView():QTextEdit(s_helpTex
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

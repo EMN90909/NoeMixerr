@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_GRAPH_H
-#define LMMS_GUI_GRAPH_H
+#ifndef NoeMixerr_GUI_GRAPH_H
+#define NoeMixerr_GUI_GRAPH_H
 
 #include <QWidget>
 #include <QPixmap>
@@ -32,9 +32,9 @@
 
 #include "Model.h"
 #include "ModelView.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -44,7 +44,7 @@ namespace gui
 {
 
 
-class LMMS_EXPORT Graph : public QWidget, public ModelView
+class NoeMixerr_EXPORT Graph : public QWidget, public ModelView
 {
 	Q_OBJECT
 public:
@@ -131,7 +131,7 @@ private:
 	Function plot graph with discrete x scale and continous y scale
 	This makes it possible to display "#x" samples
 */
-class LMMS_EXPORT graphModel : public Model
+class NoeMixerr_EXPORT graphModel : public Model
 {
 	Q_OBJECT
 public:
@@ -224,6 +224,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_GRAPH_H
+#endif // NoeMixerr_GUI_GRAPH_H

@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_LV2_URID_MAP_H
-#define LMMS_LV2_URID_MAP_H
+#ifndef NoeMixerr_LV2_URID_MAP_H
+#define NoeMixerr_LV2_URID_MAP_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lv2/urid/urid.h>
 #include <mutex> // TODO: use semaphore, even though this is not realtime critical
@@ -36,7 +36,7 @@
 #include <vector>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -70,8 +70,8 @@ public:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_URID_MAP_H
+#endif // NoeMixerr_LV2_URID_MAP_H

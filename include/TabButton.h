@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_GUI_TAB_BUTTON_H
-#define LMMS_GUI_TAB_BUTTON_H
+#ifndef NoeMixerr_GUI_TAB_BUTTON_H
+#define NoeMixerr_GUI_TAB_BUTTON_H
 
 #include <QPushButton>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -64,6 +64,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TAB_BUTTON_H
+#endif // NoeMixerr_GUI_TAB_BUTTON_H

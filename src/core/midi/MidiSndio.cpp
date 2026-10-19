@@ -25,7 +25,7 @@
 
 #include "MidiSndio.h"
 
-#ifdef LMMS_HAVE_SNDIO
+#ifdef NoeMixerr_HAVE_SNDIO
 
 #include <cstdlib>
 #include <sndio.h>
@@ -34,7 +34,7 @@
 #include "ConfigManager.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -113,6 +113,6 @@ void MidiSndio::run()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif	// LMMS_HAVE_SNDIO
+#endif	// NoeMixerr_HAVE_SNDIO

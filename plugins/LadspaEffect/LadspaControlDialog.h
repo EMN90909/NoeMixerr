@@ -32,7 +32,7 @@
 
 class QHBoxLayout;
 
-namespace lmms
+namespace noemixerr
 {
 
 class LadspaControls;
@@ -54,7 +54,7 @@ public:
 
 
 private slots:
-	void updateEffectView( lmms::LadspaControls * _ctl );
+	void updateEffectView( noemixerr::LadspaControls * _ctl );
 
 
 private:
@@ -66,6 +66,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

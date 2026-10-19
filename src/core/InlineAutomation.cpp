@@ -27,7 +27,7 @@
 #include "InlineAutomation.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 void InlineAutomation::saveSettings( QDomDocument & _doc,
@@ -62,4 +62,4 @@ void InlineAutomation::loadSettings( const QDomElement & _this )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

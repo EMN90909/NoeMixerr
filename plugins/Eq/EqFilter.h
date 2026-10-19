@@ -28,9 +28,9 @@
 #include <numbers>
 
 #include "BasicFilters.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 ///
@@ -450,7 +450,7 @@ protected:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 
 #endif // EQFILTER_H

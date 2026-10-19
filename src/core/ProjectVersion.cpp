@@ -28,7 +28,7 @@
 #include "ProjectVersion.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -138,4 +138,4 @@ int ProjectVersion::compare(ProjectVersion v1, ProjectVersion v2)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

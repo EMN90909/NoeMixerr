@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_SONG_H
-#define LMMS_SONG_H
+#ifndef NoeMixerr_SONG_H
+#define NoeMixerr_SONG_H
 
 #include <array>
 #include <memory>
@@ -34,7 +34,7 @@
 #include "AudioEngine.h"
 #include "Controller.h"
 #include "Metronome.h"
-#include "lmms_constants.h"
+#include "noemixerr_constants.h"
 #include "MeterModel.h"
 #include "Timeline.h"
 #include "TrackContainer.h"
@@ -42,7 +42,7 @@
 
 #include <filesystem> // QTBUG-73263
 
-namespace lmms
+namespace noemixerr
 {
 
 class AutomationTrack;
@@ -63,7 +63,7 @@ const bpm_t MaxTempo = 999;
 const tick_t MaxSongLength = 9999 * DefaultTicksPerBar;
 
 
-class LMMS_EXPORT Song : public TrackContainer
+class NoeMixerr_EXPORT Song : public TrackContainer
 {
 	Q_OBJECT
 	mapPropertyFromModel( int,getTempo,setTempo,m_tempoModel );
@@ -333,7 +333,7 @@ public slots:
 	void record();
 	void playAndRecord();
 	void playPattern();
-	void playMidiClip( const lmms::MidiClip * midiClipToPlay, bool loop = true );
+	void playMidiClip( const noemixerr::MidiClip * midiClipToPlay, bool loop = true );
 	void togglePause();
 	void stop();
 
@@ -470,10 +470,10 @@ signals:
 	void playbackStateChanged();
 	void playbackPositionJumped();
 	void lengthChanged( int bars );
-	void tempoChanged( lmms::bpm_t newBPM );
+	void tempoChanged( noemixerr::bpm_t newBPM );
 	void timeSignatureChanged( int oldTicksPerBar, int ticksPerBar );
-	void controllerAdded( lmms::Controller * );
-	void controllerRemoved( lmms::Controller * );
+	void controllerAdded( noemixerr::Controller * );
+	void controllerRemoved( noemixerr::Controller * );
 	void stopped();
 	void modified();
 	void projectFileNameChanged();
@@ -482,6 +482,6 @@ signals:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SONG_H
+#endif // NoeMixerr_SONG_H

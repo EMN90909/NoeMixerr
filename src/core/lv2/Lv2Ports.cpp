@@ -25,7 +25,7 @@
 
 #include "Lv2Ports.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lv2/atom/atom.h>
 #include <lv2/port-props/port-props.h>
@@ -37,7 +37,7 @@
 #include "SampleFrame.h"
 
 
-namespace lmms::Lv2Ports
+namespace noemixerr::Lv2Ports
 {
 
 
@@ -312,36 +312,36 @@ Audio::Audio(std::size_t bufferSize, bool isSidechain)
 
 
 
-void Audio::copyBuffersFromCore(const SampleFrame* lmmsBuf,
+void Audio::copyBuffersFromCore(const SampleFrame* noemixerrBuf,
 	unsigned channel, f_cnt_t frames)
 {
 	for (std::size_t f = 0; f < static_cast<unsigned>(frames); ++f)
 	{
-		m_buffer[f] = lmmsBuf[f][channel];
+		m_buffer[f] = noemixerrBuf[f][channel];
 	}
 }
 
 
 
 
-void Audio::averageWithBuffersFromCore(const SampleFrame* lmmsBuf,
+void Audio::averageWithBuffersFromCore(const SampleFrame* noemixerrBuf,
 	unsigned channel, f_cnt_t frames)
 {
 	for (std::size_t f = 0; f < static_cast<unsigned>(frames); ++f)
 	{
-		m_buffer[f] = (m_buffer[f] + lmmsBuf[f][channel]) / 2.0f;
+		m_buffer[f] = (m_buffer[f] + noemixerrBuf[f][channel]) / 2.0f;
 	}
 }
 
 
 
 
-void Audio::copyBuffersToCore(SampleFrame* lmmsBuf,
+void Audio::copyBuffersToCore(SampleFrame* noemixerrBuf,
 	unsigned channel, f_cnt_t frames) const
 {
 	for (std::size_t f = 0; f < static_cast<unsigned>(frames); ++f)
 	{
-		lmmsBuf[f][channel] = m_buffer[f];
+		noemixerrBuf[f][channel] = m_buffer[f];
 	}
 }
 
@@ -353,7 +353,7 @@ void AtomSeq::Lv2EvbufDeleter::operator()(LV2_Evbuf *n) { lv2_evbuf_free(n); }
 
 
 
-} // namespace lmms::Lv2Ports
+} // namespace noemixerr::Lv2Ports
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 

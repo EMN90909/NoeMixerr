@@ -31,7 +31,7 @@
 #include "CaptionMenu.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -168,5 +168,5 @@ void AutomatableSlider::updateSlider()
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 

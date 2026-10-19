@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_PIANO_VIEW_H
-#define LMMS_GUI_PIANO_VIEW_H
+#ifndef NoeMixerr_GUI_PIANO_VIEW_H
+#define NoeMixerr_GUI_PIANO_VIEW_H
 
 #include <QPixmap>
 #include <QScrollBar>
@@ -32,7 +32,7 @@
 #include "ModelView.h"
 #include "embed.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Piano;
@@ -192,6 +192,6 @@ signals:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_PIANO_VIEW_H
+#endif // NoeMixerr_GUI_PIANO_VIEW_H

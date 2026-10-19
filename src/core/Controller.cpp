@@ -35,7 +35,7 @@
 #include "MidiController.h"
 #include "PeakController.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -314,7 +314,7 @@ int Controller::connectionCount() const{
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 
 

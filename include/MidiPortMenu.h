@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_MIDI_PORT_MENU_H
-#define LMMS_GUI_MIDI_PORT_MENU_H
+#ifndef NoeMixerr_GUI_MIDI_PORT_MENU_H
+#define NoeMixerr_GUI_MIDI_PORT_MENU_H
 
 #include <QMenu>
 
@@ -33,7 +33,7 @@
 
 class QAction;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class MidiPortMenu : public QMenu, public ModelView
@@ -59,6 +59,6 @@ private:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_MIDI_PORT_MENU_H
+#endif // NoeMixerr_GUI_MIDI_PORT_MENU_H

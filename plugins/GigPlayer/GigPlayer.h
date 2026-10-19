@@ -46,7 +46,7 @@
 class QLabel;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -367,6 +367,6 @@ protected slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

@@ -21,8 +21,8 @@
  *
  */
 
-#ifndef LMMS_GUI_COLOR_CHOOSER_H
-#define LMMS_GUI_COLOR_CHOOSER_H
+#ifndef NoeMixerr_GUI_COLOR_CHOOSER_H
+#define NoeMixerr_GUI_COLOR_CHOOSER_H
 
 #include <QApplication>
 #include <QColor>
@@ -30,7 +30,7 @@
 #include <QKeyEvent>
 #include <QVector>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -65,6 +65,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_COLOR_CHOOSER_H
+#endif // NoeMixerr_GUI_COLOR_CHOOSER_H

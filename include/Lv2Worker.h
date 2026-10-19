@@ -25,18 +25,18 @@
 #ifndef LV2WORKER_H
 #define LV2WORKER_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lv2/worker/worker.h>
 #include <thread>
 #include <vector>
 
 #include "LocklessRingBuffer.h"
-#include "LmmsSemaphore.h"
+#include "NoeMixerrSemaphore.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 /**
@@ -85,9 +85,9 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
 #endif // LV2WORKER_H
 

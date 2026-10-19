@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_METRONOME_H
-#define LMMS_METRONOME_H
+#ifndef NoeMixerr_METRONOME_H
+#define NoeMixerr_METRONOME_H
 
 #include <cstddef>
 
-namespace lmms {
+namespace noemixerr {
 class Metronome
 {
 public:
@@ -38,6 +38,6 @@ public:
 private:
 	bool m_active = false;
 };
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_METRONOME_H
+#endif // NoeMixerr_METRONOME_H

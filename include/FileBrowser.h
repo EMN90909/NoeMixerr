@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_FILE_BROWSER_H
-#define LMMS_GUI_FILE_BROWSER_H
+#ifndef NoeMixerr_GUI_FILE_BROWSER_H
+#define NoeMixerr_GUI_FILE_BROWSER_H
 
 #include <QDir>
 #include <QMutex>
@@ -34,13 +34,13 @@
 #include <QTreeWidget>
 
 #include "SideBarWidget.h"
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
 class QCheckBox;
 class QLineEdit;
 class QProgressBar;
 
-namespace lmms
+namespace noemixerr
 {
 
 class InstrumentTrack;
@@ -310,6 +310,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_FILE_BROWSER_H
+#endif // NoeMixerr_GUI_FILE_BROWSER_H

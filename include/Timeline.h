@@ -21,8 +21,8 @@
  * Boston, MA 02110-1301 USA.
  */
 
-#ifndef LMMS_TIMELINE_H
-#define LMMS_TIMELINE_H
+#ifndef NoeMixerr_TIMELINE_H
+#define NoeMixerr_TIMELINE_H
 
 #include <QObject>
 
@@ -31,7 +31,7 @@
 #include "JournallingObject.h"
 #include "TimePos.h"
 
-namespace lmms {
+namespace noemixerr {
 
 class Timeline : public QObject, public JournallingObject
 {
@@ -92,7 +92,7 @@ public:
 
 signals:
 	void loopEnabledChanged(bool enabled);
-	void stopBehaviourChanged(lmms::Timeline::StopBehaviour behaviour);
+	void stopBehaviourChanged(noemixerr::Timeline::StopBehaviour behaviour);
 	void positionChanged();
 	void positionJumped();
 
@@ -114,6 +114,6 @@ private:
 	TimePos m_playStartPosition = TimePos{-1};
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TIMELINE_H
+#endif // NoeMixerr_TIMELINE_H

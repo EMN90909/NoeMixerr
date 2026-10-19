@@ -27,7 +27,7 @@
 
 #include "EffectControls.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 EffectControlDialog::EffectControlDialog(EffectControls* controls)
@@ -39,4 +39,4 @@ EffectControlDialog::EffectControlDialog(EffectControls* controls)
 	setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

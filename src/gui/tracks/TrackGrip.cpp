@@ -36,7 +36,7 @@
 #include <QMouseEvent>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 QPixmap* TrackGrip::s_grabbedPixmap = nullptr;
@@ -124,4 +124,4 @@ void TrackGrip::paintEvent(QPaintEvent*)
 	p.drawTiledPixmap(r, m_isGrabbed ? *s_grabbedPixmap : *s_releasedPixmap);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

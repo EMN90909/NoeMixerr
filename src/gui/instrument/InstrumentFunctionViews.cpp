@@ -35,7 +35,7 @@
 #include "TempoSyncKnob.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 InstrumentFunctionNoteStackingView::InstrumentFunctionNoteStackingView( InstrumentFunctionNoteStacking* cc, QWidget* parent ) :
@@ -183,4 +183,4 @@ void InstrumentFunctionArpeggioView::modelChanged()
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

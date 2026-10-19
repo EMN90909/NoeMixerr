@@ -23,18 +23,18 @@
  *
  */
 
-#ifndef LMMS_AUDIO_FILE_OGG_H
-#define LMMS_AUDIO_FILE_OGG_H
+#ifndef NoeMixerr_AUDIO_FILE_OGG_H
+#define NoeMixerr_AUDIO_FILE_OGG_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_OGGVORBIS
+#ifdef NoeMixerr_HAVE_OGGVORBIS
 
 #include <vorbis/codec.h>
 
 #include "AudioFileDevice.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioFileOgg : public AudioFileDevice
@@ -67,8 +67,8 @@ private:
 	ogg_page m_page;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_OGGVORBIS
+#endif // NoeMixerr_HAVE_OGGVORBIS
 
-#endif // LMMS_AUDIO_FILE_OGG_H
+#endif // NoeMixerr_AUDIO_FILE_OGG_H

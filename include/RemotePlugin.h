@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_REMOTE_PLUGIN_H
-#define LMMS_REMOTE_PLUGIN_H
+#ifndef NoeMixerr_REMOTE_PLUGIN_H
+#define NoeMixerr_REMOTE_PLUGIN_H
 
 #include <QThread>
 #include <QProcess>
@@ -31,9 +31,9 @@
 
 #include "RemotePluginBase.h"
 #include "SharedMemory.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiEvent;
@@ -67,7 +67,7 @@ private:
 } ;
 
 
-class LMMS_EXPORT RemotePlugin : public QObject, public RemotePluginBase
+class NoeMixerr_EXPORT RemotePlugin : public QObject, public RemotePluginBase
 {
 	Q_OBJECT
 public:
@@ -191,6 +191,6 @@ inline std::string QSTR_TO_STDSTR(QString const& qstr)
 	return qstr.toStdString();
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_REMOTE_PLUGIN_H
+#endif // NoeMixerr_REMOTE_PLUGIN_H

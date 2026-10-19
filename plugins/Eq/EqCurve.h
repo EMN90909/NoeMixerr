@@ -28,7 +28,7 @@
 #include <QGraphicsObject>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -139,6 +139,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif // EQCURVE_H

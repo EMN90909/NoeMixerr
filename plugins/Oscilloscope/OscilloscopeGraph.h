@@ -21,14 +21,14 @@
 * Boston, MA 02110-1301 USA.
 */
 
-#ifndef LMMS_GUI_OSCILLOSCOPE_GRAPH_H
-#define LMMS_GUI_OSCILLOSCOPE_GRAPH_H
+#ifndef NoeMixerr_GUI_OSCILLOSCOPE_GRAPH_H
+#define NoeMixerr_GUI_OSCILLOSCOPE_GRAPH_H
 
 #include "OscilloscopeControls.h"
 #include "LocklessRingBuffer.h"
 #include <QWidget>
 
-namespace lmms
+namespace noemixerr
 {
 
 class OscilloscopeControls;
@@ -84,6 +84,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_OSCILLOSCOPE_GRAPH_H
+#endif // NoeMixerr_GUI_OSCILLOSCOPE_GRAPH_H

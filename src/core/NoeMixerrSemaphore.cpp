@@ -27,9 +27,9 @@
  * File src/zix/sem.h
  */
 
-#include "LmmsSemaphore.h"
+#include "NoeMixerrSemaphore.h"
 
-#if defined(LMMS_BUILD_WIN32)
+#if defined(NoeMixerr_BUILD_WIN32)
 #    include <limits.h>
 #else
 #    include <errno.h>
@@ -37,9 +37,9 @@
 
 #include <system_error>
 
-namespace lmms {
+namespace noemixerr {
 
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 Semaphore::Semaphore(unsigned val)
 {
 	kern_return_t rval = semaphore_create(mach_task_self(), &m_sem, SYNC_POLICY_FIFO, val);
@@ -72,7 +72,7 @@ bool Semaphore::tryWait()
 	return semaphore_timedwait(m_sem, zero) == KERN_SUCCESS;
 }
 
-#elif defined(LMMS_BUILD_WIN32)
+#elif defined(NoeMixerr_BUILD_WIN32)
 
 Semaphore::Semaphore(unsigned initial)
 {
@@ -103,7 +103,7 @@ bool Semaphore::tryWait()
 	return WaitForSingleObject(m_sem, 0) == WAIT_OBJECT_0;
 }
 
-#else  /* !defined(LMMS_BUILD_APPLE) && !defined(LMMS_BUILD_WIN32) */
+#else  /* !defined(NoeMixerr_BUILD_APPLE) && !defined(NoeMixerr_BUILD_WIN32) */
 
 Semaphore::Semaphore(unsigned initial)
 {
@@ -139,5 +139,5 @@ bool Semaphore::tryWait()
 
 #endif
 
-} // namespace lmms
+} // namespace noemixerr
 

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_DUMMY_EFFECT_H
-#define LMMS_DUMMY_EFFECT_H
+#ifndef NoeMixerr_DUMMY_EFFECT_H
+#define NoeMixerr_DUMMY_EFFECT_H
 
 #include <QDomElement>
 
@@ -31,7 +31,7 @@
 #include "EffectControls.h"
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -148,6 +148,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DUMMY_EFFECT_H
+#endif // NoeMixerr_DUMMY_EFFECT_H

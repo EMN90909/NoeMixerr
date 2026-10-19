@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "EqSpectrumView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -139,6 +139,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // EQCONTROLS_H

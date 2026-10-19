@@ -38,7 +38,7 @@
 #include "fft_helpers.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -828,4 +828,4 @@ inline sample_t Oscillator::getSample<Oscillator::WaveShape::UserDefined>(
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -29,7 +29,7 @@
 #include "Effect.h"
 #include "FlangerControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class MonoDelay;
@@ -59,6 +59,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // FLANGEREFFECT_H

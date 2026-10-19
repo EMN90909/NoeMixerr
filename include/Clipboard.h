@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_CLIPBOARD_H
-#define LMMS_CLIPBOARD_H
+#ifndef NoeMixerr_CLIPBOARD_H
+#define NoeMixerr_CLIPBOARD_H
 
 #include <QDomElement>
 #include <QMap>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 class QMimeData;
 
-namespace lmms::Clipboard
+namespace noemixerr::Clipboard
 {
 
 	enum class MimeType
@@ -46,7 +46,7 @@ namespace lmms::Clipboard
 	bool hasFormat( MimeType mT );
 
 	// Helper methods for String data
-	void LMMS_EXPORT copyString(const QString& str, MimeType mT);
+	void NoeMixerr_EXPORT copyString(const QString& str, MimeType mT);
 	QString getString( MimeType mT );
 
 	// Helper methods for String Pair data
@@ -59,15 +59,15 @@ namespace lmms::Clipboard
 		switch( type )
 		{
 			case MimeType::StringPair:
-				return "application/x-lmms-stringpair";
+				return "application/x-noemixerr-stringpair";
 			break;
 			case MimeType::Default:
 			default:
-				return "application/x-lmms-clipboard";
+				return "application/x-noemixerr-clipboard";
 				break;
 		}
 	}
 
-} // namespace lmms::Clipboard
+} // namespace noemixerr::Clipboard
 
-#endif // LMMS_CLIPBOARD_H
+#endif // NoeMixerr_CLIPBOARD_H

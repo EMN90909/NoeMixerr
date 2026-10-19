@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GUI_SEND_BUTTON_INDICATOR_H
-#define LMMS_GUI_SEND_BUTTON_INDICATOR_H
+#ifndef NoeMixerr_GUI_SEND_BUTTON_INDICATOR_H
+#define NoeMixerr_GUI_SEND_BUTTON_INDICATOR_H
 
 #include <QLabel>
 #include "embed.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class FloatModel;
@@ -61,6 +61,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_SEND_BUTTON_INDICATOR_H
+#endif // NoeMixerr_GUI_SEND_BUTTON_INDICATOR_H

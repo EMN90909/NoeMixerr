@@ -26,7 +26,7 @@
 
 #include <cstdint>
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioEngineProfiler::AudioEngineProfiler() :
@@ -74,4 +74,4 @@ void AudioEngineProfiler::setOutputFile( const QString& outputFile )
 	m_outputFile.open( QFile::WriteOnly | QFile::Truncate );
 }
 
-} // namespace lmms
+} // namespace noemixerr

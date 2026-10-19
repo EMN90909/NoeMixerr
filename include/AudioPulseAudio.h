@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_AUDIO_PULSEAUDIO_H
-#define LMMS_AUDIO_PULSEAUDIO_H
+#ifndef NoeMixerr_AUDIO_PULSEAUDIO_H
+#define NoeMixerr_AUDIO_PULSEAUDIO_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_PULSEAUDIO
+#ifdef NoeMixerr_HAVE_PULSEAUDIO
 
 #include <pulse/pulseaudio.h>
 #include <QSemaphore>
@@ -38,7 +38,7 @@
 
 class QLineEdit;
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -94,8 +94,8 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_PULSEAUDIO
+#endif // NoeMixerr_HAVE_PULSEAUDIO
 
-#endif // LMMS_AUDIO_PULSEAUDIO_H
+#endif // NoeMixerr_AUDIO_PULSEAUDIO_H

@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_GUI_PATTERN_EDITOR_H
-#define LMMS_GUI_PATTERN_EDITOR_H
+#ifndef NoeMixerr_GUI_PATTERN_EDITOR_H
+#define NoeMixerr_GUI_PATTERN_EDITOR_H
 
 #include "Editor.h"
 #include "TrackContainerView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class PatternStore;
@@ -102,6 +102,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_PATTERN_EDITOR_H
+#endif // NoeMixerr_GUI_PATTERN_EDITOR_H

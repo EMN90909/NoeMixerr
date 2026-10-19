@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_KNOB_H
-#define LMMS_GUI_KNOB_H
+#ifndef NoeMixerr_GUI_KNOB_H
+#define NoeMixerr_GUI_KNOB_H
 
 #include <memory>
 
@@ -31,7 +31,7 @@
 
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -43,7 +43,7 @@ enum class KnobType
 
 void convertPixmapToGrayScale(QPixmap &pixMap);
 
-class LMMS_EXPORT Knob : public FloatModelEditorBase
+class NoeMixerr_EXPORT Knob : public FloatModelEditorBase
 {
 	Q_OBJECT
 	Q_ENUMS( KnobType )
@@ -248,7 +248,7 @@ private:
  *   the same effect as its corresponding positive value, but with inverted phase.
  *   See Flanger's feedback knob for an example.
  */
-class LMMS_EXPORT VolumeKnob : public Knob
+class NoeMixerr_EXPORT VolumeKnob : public Knob
 {
 	Q_OBJECT
 
@@ -273,6 +273,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_KNOB_H
+#endif // NoeMixerr_GUI_KNOB_H

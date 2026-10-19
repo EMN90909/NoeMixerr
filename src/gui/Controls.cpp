@@ -34,7 +34,7 @@
 #include "Knob.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -128,4 +128,4 @@ LcdControl::LcdControl(int numDigits, QWidget *parent) :
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

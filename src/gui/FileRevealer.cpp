@@ -33,18 +33,18 @@
 #include <QUrl>
 #include <optional>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 bool FileRevealer::s_canSelect = false;
 
 const QString& FileRevealer::getDefaultFileManager()
 {
 	static std::optional<QString> fileManagerCache;
 	if (fileManagerCache.has_value()) { return fileManagerCache.value(); }
-#if defined(LMMS_BUILD_WIN32)
+#if defined(NoeMixerr_BUILD_WIN32)
 	fileManagerCache = "explorer";
-#elif defined(LMMS_BUILD_APPLE)
+#elif defined(NoeMixerr_BUILD_APPLE)
 	fileManagerCache = "open";
 #else
 
@@ -180,4 +180,4 @@ bool FileRevealer::supportsArg(const QString& command, const QString& arg)
 	return output.contains(arg);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

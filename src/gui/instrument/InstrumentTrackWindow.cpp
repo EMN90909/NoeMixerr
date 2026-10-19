@@ -69,7 +69,7 @@
 #include "TrackLabelButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -777,7 +777,7 @@ void InstrumentTrackWindow::updateSubWindow()
 
 		subWindow->setWindowFlag(Qt::WindowMaximizeButtonHint, instrumentViewResizable);
 
-		// TODO This is only needed if the sub window is implemented with LMMS' own SubWindow class.
+		// TODO This is only needed if the sub window is implemented with NoeMixerr' own SubWindow class.
 		// If an QMdiSubWindow is used everything works automatically. It seems that SubWindow is
 		// missing some implementation details that QMdiSubWindow has.
 		auto subWin = dynamic_cast<SubWindow*>(subWindow);
@@ -788,4 +788,4 @@ void InstrumentTrackWindow::updateSubWindow()
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "Lv2ControlBase.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -70,6 +70,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

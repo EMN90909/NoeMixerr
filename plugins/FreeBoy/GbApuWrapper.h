@@ -21,13 +21,13 @@
  *
  */
 
-#ifndef LMMS_GB_APU_WRAPPER_H
-#define LMMS_GB_APU_WRAPPER_H
+#ifndef NoeMixerr_GB_APU_WRAPPER_H
+#define NoeMixerr_GB_APU_WRAPPER_H
 
 #include <Gb_Apu.h>
 #include <Multi_Buffer.h>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -54,6 +54,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GB_APU_WRAPPER_H
+#endif // NoeMixerr_GB_APU_WRAPPER_H

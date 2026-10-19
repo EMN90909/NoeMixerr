@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_AUDIO_PORTAUDIO_H
-#define LMMS_AUDIO_PORTAUDIO_H
+#ifndef NoeMixerr_AUDIO_PORTAUDIO_H
+#define NoeMixerr_AUDIO_PORTAUDIO_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_PORTAUDIO
+#ifdef NoeMixerr_HAVE_PORTAUDIO
 
 #include <QComboBox>
 #include <QFormLayout>
@@ -38,7 +38,7 @@
 #include "AudioDevice.h"
 #include "AudioDeviceSetupWidget.h"
 
-namespace lmms {
+namespace noemixerr {
 
 namespace detail {
 class PortAudioInitializationGuard
@@ -88,9 +88,9 @@ private:
 	detail::PortAudioInitializationGuard m_initGuard;
 	PaStream* m_paStream = nullptr;
 };
-} // namespace lmms
+} // namespace noemixerr
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 class AudioPortAudioSetupWidget : public AudioDeviceSetupWidget
 {
 public:
@@ -105,8 +105,8 @@ private:
 	DeviceSelectorWidget* m_inputDevice = nullptr;
 	DeviceSelectorWidget* m_outputDevice = nullptr;
 };
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_HAVE_PORTAUDIO
+#endif // NoeMixerr_HAVE_PORTAUDIO
 
-#endif // LMMS_AUDIO_PORTAUDIO_H
+#endif // NoeMixerr_AUDIO_PORTAUDIO_H

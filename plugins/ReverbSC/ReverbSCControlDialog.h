@@ -28,7 +28,7 @@
 #include "EffectControlDialog.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class ReverbSCControls;
@@ -49,6 +49,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

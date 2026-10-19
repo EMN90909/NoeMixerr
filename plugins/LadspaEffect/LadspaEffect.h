@@ -33,7 +33,7 @@
 #include "LadspaControls.h"
 #include "LadspaManager.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 struct port_desc_t;
@@ -93,6 +93,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

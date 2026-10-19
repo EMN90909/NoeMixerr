@@ -22,16 +22,16 @@
  *
  */
 
-#ifndef LMMS_GUI_MODEL_VIEW_H
-#define LMMS_GUI_MODEL_VIEW_H
+#ifndef NoeMixerr_GUI_MODEL_VIEW_H
+#define NoeMixerr_GUI_MODEL_VIEW_H
 
 #include <QPointer>
 #include "Model.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT ModelView
+class NoeMixerr_EXPORT ModelView
 {
 public:
 	ModelView( Model* model, QWidget* widget );
@@ -83,6 +83,6 @@ private:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_MODEL_VIEW_H
+#endif // NoeMixerr_GUI_MODEL_VIEW_H

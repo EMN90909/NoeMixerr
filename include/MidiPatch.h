@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_MIDI_PATCH_H
-#define LMMS_MIDI_PATCH_H
+#ifndef NoeMixerr_MIDI_PATCH_H
+#define NoeMixerr_MIDI_PATCH_H
 
 #include <cstdint>
 
-namespace lmms
+namespace noemixerr
 {
 
 struct MidiPatch
@@ -52,6 +52,6 @@ struct MidiPatch
 	}
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_PATCH_H
+#endif // NoeMixerr_MIDI_PATCH_H

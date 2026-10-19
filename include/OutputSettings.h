@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_OUTPUT_SETTINGS_H
-#define LMMS_OUTPUT_SETTINGS_H
+#ifndef NoeMixerr_OUTPUT_SETTINGS_H
+#define NoeMixerr_OUTPUT_SETTINGS_H
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -94,6 +94,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_OUTPUT_SETTINGS_H
+#endif // NoeMixerr_OUTPUT_SETTINGS_H

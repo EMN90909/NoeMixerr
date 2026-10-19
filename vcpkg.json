@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
-	"name": "lmms",
+	"name": "noemixerr",
 	"dependencies": [
 		{
 			"name": "fftw3",

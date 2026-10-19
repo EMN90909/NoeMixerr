@@ -35,7 +35,7 @@
 #include "Song.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -94,8 +94,8 @@ void Oscilloscope::setActive( bool _active )
 					SIGNAL(periodicUpdate()),
 					this, SLOT(update()));
 		connect( Engine::audioEngine(),
-			SIGNAL(nextAudioBuffer(const lmms::SampleFrame*)),
-			this, SLOT(updateAudioBuffer(const lmms::SampleFrame*)));
+			SIGNAL(nextAudioBuffer(const noemixerr::SampleFrame*)),
+			this, SLOT(updateAudioBuffer(const noemixerr::SampleFrame*)));
 	}
 	else
 	{
@@ -103,8 +103,8 @@ void Oscilloscope::setActive( bool _active )
 					SIGNAL(periodicUpdate()),
 					this, SLOT(update()));
 		disconnect( Engine::audioEngine(),
-			SIGNAL(nextAudioBuffer(const lmms::SampleFrame*)),
-			this, SLOT(updateAudioBuffer(const lmms::SampleFrame*)));
+			SIGNAL(nextAudioBuffer(const noemixerr::SampleFrame*)),
+			this, SLOT(updateAudioBuffer(const noemixerr::SampleFrame*)));
 		// we have to update (remove last waves),
 		// because timer doesn't do that anymore
 		update();
@@ -223,4 +223,4 @@ bool Oscilloscope::clips(float level) const
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

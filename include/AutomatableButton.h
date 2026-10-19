@@ -22,20 +22,20 @@
  *
  */
 
-#ifndef LMMS_GUI_AUTOMATABLE_BUTTON_H
-#define LMMS_GUI_AUTOMATABLE_BUTTON_H
+#ifndef NoeMixerr_GUI_AUTOMATABLE_BUTTON_H
+#define NoeMixerr_GUI_AUTOMATABLE_BUTTON_H
 
 #include <QPushButton>
 
 #include "AutomatableModelView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class AutomatableButtonGroup;
 
 
-class LMMS_EXPORT AutomatableButton : public QPushButton, public BoolModelView
+class NoeMixerr_EXPORT AutomatableButton : public QPushButton, public BoolModelView
 {
 	Q_OBJECT
 public:
@@ -80,7 +80,7 @@ private:
 
 
 
-class LMMS_EXPORT AutomatableButtonGroup : public QWidget, public IntModelView
+class NoeMixerr_EXPORT AutomatableButtonGroup : public QWidget, public IntModelView
 {
 	Q_OBJECT
 public:
@@ -106,6 +106,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_AUTOMATABLE_BUTTON_H
+#endif // NoeMixerr_GUI_AUTOMATABLE_BUTTON_H

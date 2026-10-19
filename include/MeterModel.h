@@ -22,16 +22,16 @@
  *
  */
 
-#ifndef LMMS_METER_MODEL_H
-#define LMMS_METER_MODEL_H
+#ifndef NoeMixerr_METER_MODEL_H
+#define NoeMixerr_METER_MODEL_H
 
 #include "AutomatableModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
-class LMMS_EXPORT MeterModel : public Model
+class NoeMixerr_EXPORT MeterModel : public Model
 {
 	Q_OBJECT
 	mapPropertyFromModel(int,getNumerator,setNumerator,m_numeratorModel);
@@ -66,6 +66,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_METER_MODEL_H
+#endif // NoeMixerr_METER_MODEL_H

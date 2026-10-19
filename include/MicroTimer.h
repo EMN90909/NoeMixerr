@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_MICRO_TIMER_H
-#define LMMS_MICRO_TIMER_H
+#ifndef NoeMixerr_MICRO_TIMER_H
+#define NoeMixerr_MICRO_TIMER_H
 
 #include <chrono>
 
-namespace lmms
+namespace noemixerr
 {
 
 class MicroTimer
@@ -46,6 +46,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MICRO_TIMER_H
+#endif // NoeMixerr_MICRO_TIMER_H

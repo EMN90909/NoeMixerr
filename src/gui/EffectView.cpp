@@ -42,7 +42,7 @@
 #include "TempoSyncKnob.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 EffectView::EffectView( Effect * _model, QWidget * _parent ) :
@@ -260,4 +260,4 @@ void EffectView::corruptStateUpdate()
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

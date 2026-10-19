@@ -33,7 +33,7 @@
 #include "Scale.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -171,4 +171,4 @@ void Microtuner::loadSettings(const QDomElement &element)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -40,7 +40,7 @@
 #include "PixmapButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -115,4 +115,4 @@ InstrumentTuningView::InstrumentTuningView(InstrumentTrack *it, QWidget *parent)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

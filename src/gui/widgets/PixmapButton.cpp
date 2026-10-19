@@ -30,7 +30,7 @@
 #include "PixmapButton.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -134,4 +134,4 @@ bool PixmapButton::isActive() const
 	return (model() != nullptr && model()->value()) || m_pressed;
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

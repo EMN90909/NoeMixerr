@@ -23,23 +23,23 @@
  *
  */
 
-#ifndef LMMS_GUI_STRING_PAIR_DRAG_H
-#define LMMS_GUI_STRING_PAIR_DRAG_H
+#ifndef NoeMixerr_GUI_STRING_PAIR_DRAG_H
+#define NoeMixerr_GUI_STRING_PAIR_DRAG_H
 
 #include <QDrag>
 #include <QDragEnterEvent>
 #include <QDropEvent>
 #include <QMimeData>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 class QPixmap;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LMMS_EXPORT StringPairDrag : public QDrag
+class NoeMixerr_EXPORT StringPairDrag : public QDrag
 {
 public:
 	StringPairDrag( const QString & _key, const QString & _value,
@@ -53,6 +53,6 @@ public:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_STRING_PAIR_DRAG_H
+#endif // NoeMixerr_GUI_STRING_PAIR_DRAG_H

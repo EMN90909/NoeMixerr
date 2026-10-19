@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_EFFECT_SELECT_DIALOG_H
-#define LMMS_GUI_EFFECT_SELECT_DIALOG_H
+#ifndef NoeMixerr_GUI_EFFECT_SELECT_DIALOG_H
+#define NoeMixerr_GUI_EFFECT_SELECT_DIALOG_H
 
 #include "Effect.h"
 
@@ -37,7 +37,7 @@ class QScrollArea;
 class QTableView;
 class QLineEdit;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class DualColumnFilterProxyModel : public QSortFilterProxyModel
@@ -105,6 +105,6 @@ private:
 	QLineEdit* m_filterEdit;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif

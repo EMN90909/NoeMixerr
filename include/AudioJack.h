@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_AUDIO_JACK_H
-#define LMMS_AUDIO_JACK_H
+#ifndef NoeMixerr_AUDIO_JACK_H
+#define NoeMixerr_AUDIO_JACK_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_JACK
-#ifndef LMMS_HAVE_WEAKJACK
+#ifdef NoeMixerr_HAVE_JACK
+#ifndef NoeMixerr_HAVE_WEAKJACK
 #include <jack/jack.h>
 #else
 #include <weak_libjack.h>
@@ -50,7 +50,7 @@ class QLineEdit;
 class QMenu;
 class QToolButton;
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiJack;
@@ -85,7 +85,7 @@ public:
 		std::vector<std::string> getAudioPortNames(JackPortFlags portFlags) const;
 		std::vector<std::string> getAudioInputNames() const;
 		std::vector<std::string> getAudioOutputNames() const;
-		static QMenu* buildMenu(QToolButton* toolButton, const std::vector<std::string>& names, const QString& filteredLMMSClientName);
+		static QMenu* buildMenu(QToolButton* toolButton, const std::vector<std::string>& names, const QString& filteredNoeMixerrClientName);
 
 	private:
 		QLineEdit* m_clientName;
@@ -106,7 +106,7 @@ private:
 	void startProcessingImpl() override;
 	void stopProcessingImpl() override;
 
-	void attemptToConnect(size_t index, const char *lmms_port_type, const char *source_port, const char *destination_port);
+	void attemptToConnect(size_t index, const char *noemixerr_port_type, const char *source_port, const char *destination_port);
 	void attemptToReconnectOutput(size_t outputIndex, const QString& targetPort);
 	void attemptToReconnectInput(size_t inputIndex, const QString& sourcePort);
 
@@ -143,8 +143,8 @@ signals:
 	void zombified();
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_JACK
+#endif // NoeMixerr_HAVE_JACK
 
-#endif // LMMS_AUDIO_JACK_H
+#endif // NoeMixerr_AUDIO_JACK_H

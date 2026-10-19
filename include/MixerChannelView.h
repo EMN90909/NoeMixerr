@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_MIXER_CHANNEL_VIEW_H
-#define LMMS_GUI_MIXER_CHANNEL_VIEW_H
+#ifndef NoeMixerr_GUI_MIXER_CHANNEL_VIEW_H
+#define NoeMixerr_GUI_MIXER_CHANNEL_VIEW_H
 
 #include <QWidget>
 
@@ -32,11 +32,11 @@ class QLabel;
 class QLineEdit;
 class QStackedWidget;
 
-namespace lmms {
+namespace noemixerr {
 class MixerChannel;
 }
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 class AutomatableButton;
 class EffectRackView;
 class Fader;
@@ -133,6 +133,6 @@ private:
 
 	friend class MixerView;
 };
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_MIXER_CHANNEL_VIEW_H
+#endif // NoeMixerr_GUI_MIXER_CHANNEL_VIEW_H

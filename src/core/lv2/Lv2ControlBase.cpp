@@ -24,19 +24,19 @@
 
 #include "Lv2ControlBase.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <algorithm>
 #include <QDebug>
 #include <QtGlobal>
 
 #include "Engine.h"
-#include "lmms_constants.h"
+#include "noemixerr_constants.h"
 #include "Lv2Manager.h"
 #include "Lv2Proc.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -74,7 +74,7 @@ Lv2ControlBase::~Lv2ControlBase() = default;
 
 void Lv2ControlBase::init(Model* meAsModel)
 {
-	int channelsLeft = DEFAULT_CHANNELS; // LMMS plugins are stereo
+	int channelsLeft = DEFAULT_CHANNELS; // NoeMixerr plugins are stereo
 	while (channelsLeft > 0)
 	{
 		std::unique_ptr<Lv2Proc> newOne = std::make_unique<Lv2Proc>(m_plugin, meAsModel);
@@ -123,14 +123,14 @@ const LinkedModelGroup *Lv2ControlBase::getGroup(std::size_t idx) const
 
 
 
-void Lv2ControlBase::copyModelsFromLmms() {
+void Lv2ControlBase::copyModelsFromNoeMixerr() {
 	for (const auto& c : m_procs) { c->copyModelsFromCore(); }
 }
 
 
 
 
-void Lv2ControlBase::copyModelsToLmms() const
+void Lv2ControlBase::copyModelsToNoeMixerr() const
 {
 	for (const auto& c : m_procs) { c->copyModelsToCore(); }
 }
@@ -138,7 +138,7 @@ void Lv2ControlBase::copyModelsToLmms() const
 
 
 
-void Lv2ControlBase::copyBuffersFromLmms(const SampleFrame* buf, f_cnt_t frames) {
+void Lv2ControlBase::copyBuffersFromNoeMixerr(const SampleFrame* buf, f_cnt_t frames) {
 	unsigned firstChan = 0; // tell the procs which channels they shall read from
 	for (const auto& c : m_procs) 
 	{
@@ -150,7 +150,7 @@ void Lv2ControlBase::copyBuffersFromLmms(const SampleFrame* buf, f_cnt_t frames)
 
 
 
-void Lv2ControlBase::copyBuffersToLmms(SampleFrame* buf, f_cnt_t frames) const {
+void Lv2ControlBase::copyBuffersToNoeMixerr(SampleFrame* buf, f_cnt_t frames) const {
 	unsigned firstChan = 0; // tell the procs which channels they shall write to
 	for (const auto& c : m_procs) {
 		c->copyBuffersToCore(buf, firstChan, m_channelsPerProc, frames);
@@ -221,7 +221,7 @@ void Lv2ControlBase::handleMidiInputEvent(const MidiEvent &event,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2

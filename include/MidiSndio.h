@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_MIDI_SNDIO_H
-#define LMMS_MIDI_SNDIO_H
+#ifndef NoeMixerr_MIDI_SNDIO_H
+#define NoeMixerr_MIDI_SNDIO_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_SNDIO
+#ifdef NoeMixerr_HAVE_SNDIO
 
 #include <QThread>
 
@@ -37,7 +37,7 @@
 
 struct mio_hdl;
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -71,8 +71,8 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_SNDIO
+#endif // NoeMixerr_HAVE_SNDIO
 
-#endif // LMMS_MIDI_SNDIO_H
+#endif // NoeMixerr_MIDI_SNDIO_H

@@ -36,7 +36,7 @@
 //----------------------------------------------------------------------------
 // qsynthPresetForm -- UI wrapper form.
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -93,6 +93,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 #endif

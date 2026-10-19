@@ -41,7 +41,7 @@
 #include "TrackContainerView.h"
 #include "PluginFactory.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -170,9 +170,9 @@ void PluginBrowser::addPlugins()
 		}
 	);
 
-	// Add a root node to the tree for native LMMS plugins
-	const auto lmmsRoot = addRoot("LMMS");
-	lmmsRoot->setExpanded(true);
+	// Add a root node to the tree for native NoeMixerr plugins
+	const auto noemixerrRoot = addRoot("NoeMixerr");
+	noemixerrRoot->setExpanded(true);
 
 	// Add all of the descriptors to the tree
 	for (const auto desc : descs)
@@ -195,7 +195,7 @@ void PluginBrowser::addPlugins()
 		}
 		else
 		{
-			addPlugin(Plugin::Descriptor::SubPluginFeatures::Key(desc, desc->name), lmmsRoot);
+			addPlugin(Plugin::Descriptor::SubPluginFeatures::Key(desc, desc->name), noemixerrRoot);
 		}
 	}
 }
@@ -314,4 +314,4 @@ void PluginDescWidget::openInNewInstrumentTrack(QString value)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

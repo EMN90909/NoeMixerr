@@ -22,16 +22,16 @@
  *
  */
 
-#ifndef LMMS_GUI_LCD_SPINBOX_H
-#define LMMS_GUI_LCD_SPINBOX_H
+#ifndef NoeMixerr_GUI_LCD_SPINBOX_H
+#define NoeMixerr_GUI_LCD_SPINBOX_H
 
 #include "LcdWidget.h"
 #include "AutomatableModelView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT LcdSpinBox : public LcdWidget, public IntModelView
+class NoeMixerr_EXPORT LcdSpinBox : public LcdWidget, public IntModelView
 {
 	Q_OBJECT
 public:
@@ -87,6 +87,6 @@ signals:
 
 using LcdSpinBoxModel = IntModel;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_LCD_SPINBOX_H
+#endif // NoeMixerr_GUI_LCD_SPINBOX_H

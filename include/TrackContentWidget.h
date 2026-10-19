@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_TRACK_CONTENT_WIDGET_H
-#define LMMS_GUI_TRACK_CONTENT_WIDGET_H
+#ifndef NoeMixerr_GUI_TRACK_CONTENT_WIDGET_H
+#define NoeMixerr_GUI_TRACK_CONTENT_WIDGET_H
 
 #include <QWidget>
 
@@ -33,7 +33,7 @@
 class QMimeData;  // IWYU pragma: keep
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class Track;
@@ -151,7 +151,7 @@ public slots:
 	//! Responsible for moving track-content-widgets to appropriate position after change of visible viewport
 	//!
 	//! @param newPos The MIDI time to move to.
-	void changePosition( const lmms::TimePos & newPos = TimePos( -1 ) );
+	void changePosition( const noemixerr::TimePos & newPos = TimePos( -1 ) );
 
 	//! @brief Updates the background tile pixmap.
 	void updateBackground();
@@ -238,6 +238,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_TRACK_CONTENT_WIDGET_H
+#endif // NoeMixerr_GUI_TRACK_CONTENT_WIDGET_H

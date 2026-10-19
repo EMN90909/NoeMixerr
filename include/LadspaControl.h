@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_LADSPA_CONTROL_H
-#define LMMS_LADSPA_CONTROL_H
+#ifndef NoeMixerr_LADSPA_CONTROL_H
+#define NoeMixerr_LADSPA_CONTROL_H
 
 #include <ladspa.h>
 
@@ -32,7 +32,7 @@
 #include "TempoSyncKnobModel.h"
 #include "ValueBuffer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 struct port_desc_t;
@@ -46,7 +46,7 @@ class LadspaMatrixControlDialog;
 } // namespace gui
 
 
-class LMMS_EXPORT LadspaControl : public Model, public JournallingObject
+class NoeMixerr_EXPORT LadspaControl : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -131,6 +131,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LADSPA_CONTROL_H
+#endif // NoeMixerr_LADSPA_CONTROL_H

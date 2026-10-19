@@ -33,7 +33,7 @@
 #include "Engine.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -157,4 +157,4 @@ void DynProcControls::subOneClicked()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

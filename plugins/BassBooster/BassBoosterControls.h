@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "BassBoosterControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class BassBoosterEffect;
@@ -73,6 +73,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

@@ -22,22 +22,22 @@
  *
  */
 
-#ifndef LMMS_GUI_LV2_VIEW_BASE_H
-#define LMMS_GUI_LV2_VIEW_BASE_H
+#ifndef NoeMixerr_GUI_LV2_VIEW_BASE_H
+#define NoeMixerr_GUI_LV2_VIEW_BASE_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 
 #include "LinkedModelGroupViews.h"
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include "Lv2Basics.h"
 
 
 class QPushButton;
 class QMdiSubWindow;
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -78,7 +78,7 @@ public:
 
 
 //! Base class for view for one Lv2 plugin
-class LMMS_EXPORT Lv2ViewBase : public LinkedModelGroupsView
+class NoeMixerr_EXPORT Lv2ViewBase : public LinkedModelGroupsView
 {
 	friend class HelpWindowEventFilter;
 protected:
@@ -122,8 +122,8 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_GUI_LV2_VIEW_BASE_H
+#endif // NoeMixerr_GUI_LV2_VIEW_BASE_H

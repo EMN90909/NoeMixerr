@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_INSTRUMENT_FUNCTIONS_H
-#define LMMS_INSTRUMENT_FUNCTIONS_H
+#ifndef NoeMixerr_INSTRUMENT_FUNCTIONS_H
+#define NoeMixerr_INSTRUMENT_FUNCTIONS_H
 
 #include <array>
 
@@ -32,7 +32,7 @@
 #include "JournallingObject.h"
 #include "TempoSyncKnobModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class InstrumentTrack;  // IWYU pragma: keep
@@ -228,6 +228,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INSTRUMENT_FUNCTIONS_H
+#endif // NoeMixerr_INSTRUMENT_FUNCTIONS_H

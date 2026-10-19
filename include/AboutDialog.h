@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GUI_ABOUT_DIALOG_H
-#define LMMS_GUI_ABOUT_DIALOG_H
+#ifndef NoeMixerr_GUI_ABOUT_DIALOG_H
+#define NoeMixerr_GUI_ABOUT_DIALOG_H
 
 #include <QDialog>
 
 #include "ui_about_dialog.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class AboutDialog : public QDialog, public Ui::AboutDialog
@@ -39,6 +39,6 @@ public:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_ABOUT_DIALOG_H
+#endif // NoeMixerr_GUI_ABOUT_DIALOG_H

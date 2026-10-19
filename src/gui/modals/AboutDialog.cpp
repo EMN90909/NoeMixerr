@@ -23,13 +23,13 @@
  */
 
 
-#include "lmmsversion.h"
+#include "noemixerrversion.h"
 #include "AboutDialog.h"
 #include "embed.h"
 #include "versioninfo.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 AboutDialog::AboutDialog(QWidget* parent) :
@@ -42,11 +42,11 @@ AboutDialog::AboutDialog(QWidget* parent) :
 	iconLabel->setPixmap( embed::getIconPixmap( "icon", 64, 64 ) );
 
 	versionLabel->setText( versionLabel->text().
-					arg( LMMS_VERSION ).
-					arg( LMMS_BUILDCONF_PLATFORM ).
-					arg( LMMS_BUILDCONF_MACHINE ).
+					arg( NoeMixerr_VERSION ).
+					arg( NoeMixerr_BUILDCONF_PLATFORM ).
+					arg( NoeMixerr_BUILDCONF_MACHINE ).
 					arg( QT_VERSION_STR ).
-					arg( LMMS_BUILDCONF_COMPILER_VERSION ) );
+					arg( NoeMixerr_BUILDCONF_COMPILER_VERSION ) );
 	versionLabel->setTextInteractionFlags(
 					versionLabel->textInteractionFlags() |
 					Qt::TextSelectableByMouse );
@@ -61,4 +61,4 @@ AboutDialog::AboutDialog(QWidget* parent) :
 	involvedLabel->setPlainText( embed::getText( "CONTRIBUTORS" ) );
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

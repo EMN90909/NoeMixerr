@@ -54,7 +54,7 @@
 #include "TrackLabelButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -440,4 +440,4 @@ void InstrumentTrackView::corruptStateUpdate()
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

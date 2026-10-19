@@ -42,7 +42,7 @@
 #include "TextFloat.h"
 #include "Track.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -280,4 +280,4 @@ void EnvelopeAndLfoView::lfoUserWaveChanged()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

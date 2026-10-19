@@ -1,7 +1,7 @@
-IF(LMMS_BUILD_WIN64)
+IF(NoeMixerr_BUILD_WIN64)
 	ADD_SUBDIRECTORY(RemoteVstPlugin)
-ELSEIF(LMMS_BUILD_LINUX)
-	if(LMMS_HOST_X86_64)
+ELSEIF(NoeMixerr_BUILD_LINUX)
+	if(NoeMixerr_HOST_X86_64)
 		set(CXX_FLAGS -m64)
 	endif()
 	ExternalProject_Add(RemoteVstPlugin64

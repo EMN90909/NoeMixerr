@@ -30,7 +30,7 @@
 #include "EffectControls.h"
 #include "CrossoverEQControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class CrossoverEQEffect;
@@ -87,6 +87,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

@@ -33,7 +33,7 @@
 #include "Instrument.h"
 #include "InstrumentTrack.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -384,4 +384,4 @@ QString InstrumentSoundShaping::getResonanceNodeName() const
 	return getResonanceParameters().nodeName() + "res";
 }
 
-} // namespace lmms
+} // namespace noemixerr

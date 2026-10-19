@@ -32,7 +32,7 @@
 
 #include "PeakController.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -84,4 +84,4 @@ void PeakControllerDialog::modelChanged()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

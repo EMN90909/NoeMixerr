@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_INSTRUMENT_TRACK_H
-#define LMMS_INSTRUMENT_TRACK_H
+#ifndef NoeMixerr_INSTRUMENT_TRACK_H
+#define NoeMixerr_INSTRUMENT_TRACK_H
 
 
 #include "AudioBusHandle.h"
@@ -40,7 +40,7 @@
 #include "Track.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -58,7 +58,7 @@ class MidiCCRackView;
 } // namespace gui
 
 
-class LMMS_EXPORT InstrumentTrack : public Track, public MidiEventProcessor
+class NoeMixerr_EXPORT InstrumentTrack : public Track, public MidiEventProcessor
 {
 	Q_OBJECT
 	mapPropertyFromModel(int,getVolume,setVolume,m_volumeModel);
@@ -260,8 +260,8 @@ public:
 
 signals:
 	void instrumentChanged();
-	void midiNoteOn( const lmms::Note& );
-	void midiNoteOff( const lmms::Note& );
+	void midiNoteOn( const noemixerr::Note& );
+	void midiNoteOff( const noemixerr::Note& );
 	void newNote();
 	void endNote();
 
@@ -340,6 +340,6 @@ private:
 
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INSTRUMENT_TRACK_H
+#endif // NoeMixerr_INSTRUMENT_TRACK_H

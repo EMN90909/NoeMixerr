@@ -28,7 +28,7 @@
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class PeakControllerEffectControls;
@@ -63,6 +63,6 @@ protected:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

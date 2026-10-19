@@ -1,5 +1,5 @@
 /*
- * ComboBox.cpp - implementation of LMMS combobox
+ * ComboBox.cpp - implementation of NoeMixerr combobox
  *
  * Copyright (c) 2006-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  * Copyright (c) 2008-2009 Paul Giblock <pgib/at/users.sourceforge.net>
@@ -35,7 +35,7 @@
 #include "FontHelper.h"
 #include "DeprecationHelper.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 const int CB_ARROW_BTN_WIDTH = 18;
 
@@ -231,6 +231,6 @@ void ComboBox::setItem( QAction* item )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 

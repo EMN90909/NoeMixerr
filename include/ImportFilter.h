@@ -23,21 +23,21 @@
  *
  */
 
-#ifndef LMMS_IMPORT_FILTER_H
-#define LMMS_IMPORT_FILTER_H
+#ifndef NoeMixerr_IMPORT_FILTER_H
+#define NoeMixerr_IMPORT_FILTER_H
 
 #include <QFile>
 
 #include "Plugin.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
 class TrackContainer;
 
 
-class LMMS_EXPORT ImportFilter : public Plugin
+class NoeMixerr_EXPORT ImportFilter : public Plugin
 {
 public:
 	ImportFilter( const QString & _file_name,
@@ -112,6 +112,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_IMPORT_FILTER_H
+#endif // NoeMixerr_IMPORT_FILTER_H

@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_KICKER_H
-#define LMMS_KICKER_H
+#ifndef NoeMixerr_KICKER_H
+#define NoeMixerr_KICKER_H
 
 #include "AutomatableModel.h"
 #include "Instrument.h"
@@ -32,7 +32,7 @@
 #include "TempoSyncKnobModel.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 #define KICKER_PRESET_VERSION 1
@@ -127,6 +127,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_KICKER_H
+#endif // NoeMixerr_KICKER_H

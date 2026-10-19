@@ -23,18 +23,18 @@
  *
  */
 
-#ifndef LMMS_BUFFER_MANAGER_H
-#define LMMS_BUFFER_MANAGER_H
+#ifndef NoeMixerr_BUFFER_MANAGER_H
+#define NoeMixerr_BUFFER_MANAGER_H
 
-#include "lmms_export.h"
-#include "LmmsTypes.h"
+#include "noemixerr_export.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame;
 
-class LMMS_EXPORT BufferManager
+class NoeMixerr_EXPORT BufferManager
 {
 public:
 	static void init( f_cnt_t fpp );
@@ -46,6 +46,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_BUFFER_MANAGER_H
+#endif // NoeMixerr_BUFFER_MANAGER_H

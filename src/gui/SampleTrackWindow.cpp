@@ -43,7 +43,7 @@
 #include "SubWindow.h"
 #include "TrackLabelButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -265,4 +265,4 @@ void SampleTrackWindow::loadSettings(const QDomElement& element)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_NSTATE_BUTTON_H
-#define LMMS_GUI_NSTATE_BUTTON_H
+#ifndef NoeMixerr_GUI_NSTATE_BUTTON_H
+#define NoeMixerr_GUI_NSTATE_BUTTON_H
 
 #include <QPixmap>
 #include <QVector>
@@ -31,7 +31,7 @@
 
 #include "ToolButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -70,6 +70,6 @@ private:
 	int m_curState;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_NSTATE_BUTTON_H
+#endif // NoeMixerr_GUI_NSTATE_BUTTON_H

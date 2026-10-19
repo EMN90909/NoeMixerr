@@ -38,7 +38,7 @@
 #include "SubWindow.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 TempoSyncBarModelEditor::TempoSyncBarModelEditor(QString text, FloatModel * floatModel, QWidget * parent) :
@@ -302,4 +302,4 @@ void TempoSyncBarModelEditor::updateIcon()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_GUI_LADSPA_WIDGET_FACTORY_H
-#define LMMS_GUI_LADSPA_WIDGET_FACTORY_H
+#ifndef NoeMixerr_GUI_LADSPA_WIDGET_FACTORY_H
+#define NoeMixerr_GUI_LADSPA_WIDGET_FACTORY_H
 
 
 class QWidget;
 
-namespace lmms
+namespace noemixerr
 {
 
 class LadspaControl;
@@ -44,6 +44,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_LADSPA_WIDGET_FACTORY_H
+#endif // NoeMixerr_GUI_LADSPA_WIDGET_FACTORY_H

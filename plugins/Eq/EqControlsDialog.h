@@ -28,7 +28,7 @@
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class BoolModel;
@@ -65,6 +65,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // EQCONTROLSDIALOG_H

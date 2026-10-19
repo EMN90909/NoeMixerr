@@ -33,7 +33,7 @@
 #include "Song.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -173,4 +173,4 @@ void DropToolBar::dropEvent(QDropEvent* event)
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_AUTOMATABLE_MODEL_H
-#define LMMS_AUTOMATABLE_MODEL_H
+#ifndef NoeMixerr_AUTOMATABLE_MODEL_H
+#define NoeMixerr_AUTOMATABLE_MODEL_H
 
 #include <cmath>
 #include <QMap>
@@ -36,7 +36,7 @@
 #include "ModelVisitor.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 // simple way to map a property of a view to a model
@@ -73,7 +73,7 @@ namespace lmms
 
 class ControllerConnection;
 
-class LMMS_EXPORT AutomatableModel : public Model, public JournallingObject
+class NoeMixerr_EXPORT AutomatableModel : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -433,14 +433,14 @@ private:
 
 signals:
 	void initValueChanged( float val );
-	void destroyed( lmms::jo_id_t id );
+	void destroyed( noemixerr::jo_id_t id );
 
 } ;
 
 
 
 
-template <typename T> class LMMS_EXPORT TypedAutomatableModel : public AutomatableModel
+template <typename T> class NoeMixerr_EXPORT TypedAutomatableModel : public AutomatableModel
 {
 public:
 	using AutomatableModel::AutomatableModel;
@@ -468,7 +468,7 @@ public:
 
 // some typed AutomatableModel-definitions
 
-class LMMS_EXPORT FloatModel : public TypedAutomatableModel<float>
+class NoeMixerr_EXPORT FloatModel : public TypedAutomatableModel<float>
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE
@@ -486,7 +486,7 @@ public:
 } ;
 
 
-class LMMS_EXPORT IntModel : public TypedAutomatableModel<int>
+class NoeMixerr_EXPORT IntModel : public TypedAutomatableModel<int>
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE
@@ -502,7 +502,7 @@ public:
 } ;
 
 
-class LMMS_EXPORT BoolModel : public TypedAutomatableModel<bool>
+class NoeMixerr_EXPORT BoolModel : public TypedAutomatableModel<bool>
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE
@@ -519,6 +519,6 @@ public:
 
 using AutomatedValueMap = QMap<AutomatableModel*, float>;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUTOMATABLE_MODEL_H
+#endif // NoeMixerr_AUTOMATABLE_MODEL_H

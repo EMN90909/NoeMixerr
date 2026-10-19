@@ -27,7 +27,7 @@
 #include "AutomationClip.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 // Dummy constructor for the QMap
@@ -103,4 +103,4 @@ void AutomationNode::resetOutValue()
 	setOutValue(m_inValue);
 }
 
-} // namespace lmms
+} // namespace noemixerr

@@ -34,7 +34,7 @@
 #include "TempoSyncKnob.h"
 #include "LcdSpinBox.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -102,4 +102,4 @@ MultitapEchoControlDialog::MultitapEchoControlDialog( MultitapEchoControls * con
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

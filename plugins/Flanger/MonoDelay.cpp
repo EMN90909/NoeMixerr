@@ -25,7 +25,7 @@
 #include "MonoDelay.h"
 #include "string.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -80,4 +80,4 @@ void MonoDelay::setSampleRate( int sampleRate )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

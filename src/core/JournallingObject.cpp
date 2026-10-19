@@ -29,7 +29,7 @@
 #include "ProjectJournal.h"
 #include "Engine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -142,4 +142,4 @@ void JournallingObject::changeID( jo_id_t _id )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

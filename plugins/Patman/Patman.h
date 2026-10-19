@@ -31,7 +31,7 @@
 #include "Sample.h"
 #include "AutomatableModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -158,6 +158,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // PATMAN_H

@@ -25,7 +25,7 @@
 
 #include "MidiApple.h"
 
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 
 #include <QtAlgorithms>
 #include <algorithm>
@@ -37,7 +37,7 @@
 #include <CoreMIDI/CoreMIDI.h>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -630,6 +630,6 @@ char * MidiApple::getFullName(MIDIEndpointRef &endpoint_ref)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_BUILD_APPLE
+#endif // NoeMixerr_BUILD_APPLE

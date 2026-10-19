@@ -33,7 +33,7 @@
 #include "LcdSpinBox.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -76,4 +76,4 @@ DispersionControlDialog::DispersionControlDialog(DispersionControls* controls) :
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -29,7 +29,7 @@
 #include "endian_handling.h"
 #include "AudioEngine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioFileFlac::AudioFileFlac(OutputSettings const& outputSettings, ch_cnt_t const channels, bool& successful, QString const& file, AudioEngine* audioEngine):
@@ -65,13 +65,13 @@ bool AudioFileFlac::startEncoding()
 			m_sfinfo.format |= SF_FORMAT_PCM_16;
 	}
 
-#ifdef LMMS_HAVE_SF_COMPLEVEL
+#ifdef NoeMixerr_HAVE_SF_COMPLEVEL
 	double compression = getOutputSettings().getCompressionLevel();
 	sf_command(m_sf, SFC_SET_COMPRESSION_LEVEL, &compression, sizeof(double));
 #endif
 
 	m_sf = sf_open(
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 		outputFile().toLocal8Bit().constData(),
 #else
 		outputFile().toUtf8().constData(),
@@ -82,7 +82,7 @@ bool AudioFileFlac::startEncoding()
 
 	sf_command(m_sf, SFC_SET_CLIPPING, nullptr, SF_TRUE);
 
-	sf_set_string(m_sf, SF_STR_SOFTWARE, "LMMS");
+	sf_set_string(m_sf, SF_STR_SOFTWARE, "NoeMixerr");
 
 	return true;
 }
@@ -126,4 +126,4 @@ void AudioFileFlac::finishEncoding()
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr

@@ -26,7 +26,7 @@
 
 #include <cassert>
 
-namespace lmms
+namespace noemixerr
 {
 
 void ComboBoxModel::addItem(QString item, std::unique_ptr<PixmapLoader> loader)
@@ -69,6 +69,6 @@ int ComboBoxModel::findText( const QString& txt ) const
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 

@@ -26,7 +26,7 @@
 
 #include "PluginIssue.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -105,7 +105,7 @@ QDebug operator<<(QDebug stream, const PluginIssue &iss)
 	return stream;
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
 
 

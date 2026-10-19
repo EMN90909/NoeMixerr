@@ -24,15 +24,15 @@
  *
  */
 
-#ifndef LMMS_AUTOMATION_TRACK_H
-#define LMMS_AUTOMATION_TRACK_H
+#ifndef NoeMixerr_AUTOMATION_TRACK_H
+#define NoeMixerr_AUTOMATION_TRACK_H
 
 #include "Track.h"
 
-namespace lmms
+namespace noemixerr
 {
 
-class LMMS_EXPORT AutomationTrack : public Track
+class NoeMixerr_EXPORT AutomationTrack : public Track
 {
 	Q_OBJECT
 public:
@@ -59,6 +59,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUTOMATION_TRACK_H
+#endif // NoeMixerr_AUTOMATION_TRACK_H

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_TRACK_H
-#define LMMS_TRACK_H
+#ifndef NoeMixerr_TRACK_H
+#define NoeMixerr_TRACK_H
 
 #include <vector>
 
@@ -31,11 +31,11 @@
 
 #include "AutomatableModel.h"
 #include "JournallingObject.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include <optional>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class TimePos;
@@ -63,7 +63,7 @@ char const *const FILENAME_FILTER = "[\\0000-\x1f\"*/:<>?\\\\|\x7f]";
 
 
 //! Base-class for all tracks
-class LMMS_EXPORT Track : public Model, public JournallingObject
+class NoeMixerr_EXPORT Track : public Model, public JournallingObject
 {
 	Q_OBJECT
 	mapPropertyFromModel(bool,isMuted,setMuted,m_mutedModel);
@@ -328,11 +328,11 @@ private:
 signals:
 	void destroyedTrack();
 	void nameChanged();
-	void clipAdded( lmms::Clip * );
+	void clipAdded( noemixerr::Clip * );
 	void colorChanged();
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TRACK_H
+#endif // NoeMixerr_TRACK_H

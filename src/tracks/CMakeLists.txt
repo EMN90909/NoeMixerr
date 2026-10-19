@@ -1,5 +1,5 @@
-set(LMMS_SRCS
-	${LMMS_SRCS}
+set(NoeMixerr_SRCS
+	${NoeMixerr_SRCS}
 	tracks/AutomationTrack.cpp
 	tracks/InstrumentTrack.cpp
 	tracks/MidiClip.cpp

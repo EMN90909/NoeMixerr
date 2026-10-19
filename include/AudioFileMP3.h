@@ -23,18 +23,18 @@
  *
  */
 
-#ifndef LMMS_AUDIO_FILE_MP3_H
-#define LMMS_AUDIO_FILE_MP3_H
+#ifndef NoeMixerr_AUDIO_FILE_MP3_H
+#define NoeMixerr_AUDIO_FILE_MP3_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_MP3LAME
+#ifdef NoeMixerr_HAVE_MP3LAME
 
 #include "AudioFileDevice.h"
 
 #include "lame/lame.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioFileMP3 : public AudioFileDevice
@@ -69,8 +69,8 @@ private:
 	lame_t m_lame;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_MP3LAME
+#endif // NoeMixerr_HAVE_MP3LAME
 
-#endif // LMMS_AUDIO_FILE_MP3_H
+#endif // NoeMixerr_AUDIO_FILE_MP3_H

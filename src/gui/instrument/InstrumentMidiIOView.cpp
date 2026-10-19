@@ -35,7 +35,7 @@
 #include "LcdSpinBox.h"
 #include "MidiClient.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -189,4 +189,4 @@ void InstrumentMidiIOView::modelChanged()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

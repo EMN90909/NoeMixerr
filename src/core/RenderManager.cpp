@@ -31,7 +31,7 @@
 #include "Song.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 RenderManager::RenderManager(
@@ -194,4 +194,4 @@ void RenderManager::updateConsoleProgress()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

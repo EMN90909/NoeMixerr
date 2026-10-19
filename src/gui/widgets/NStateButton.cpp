@@ -28,7 +28,7 @@
 #include "NStateButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -90,4 +90,4 @@ void NStateButton::mousePressEvent(QMouseEvent* me)
 	ToolButton::mousePressEvent(me);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

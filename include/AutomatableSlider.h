@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_GUI_AUTOMATABLE_SLIDER_H
-#define LMMS_GUI_AUTOMATABLE_SLIDER_H
+#ifndef NoeMixerr_GUI_AUTOMATABLE_SLIDER_H
+#define NoeMixerr_GUI_AUTOMATABLE_SLIDER_H
 
 #include <QSlider>
 
 #include "AutomatableModelView.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class AutomatableSlider : public QSlider, public IntModelView
@@ -76,6 +76,6 @@ private slots:
 
 using sliderModel = IntModel;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_AUTOMATABLE_SLIDER_H
+#endif // NoeMixerr_GUI_AUTOMATABLE_SLIDER_H

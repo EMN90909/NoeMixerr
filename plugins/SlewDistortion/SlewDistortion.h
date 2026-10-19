@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_SLEW_DISTORTION_H
-#define LMMS_SLEW_DISTORTION_H
+#ifndef NoeMixerr_SLEW_DISTORTION_H
+#define NoeMixerr_SLEW_DISTORTION_H
 
 #include "Effect.h"
 #include "SlewDistortionControls.h"
 
 #include "BasicFilters.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "OversamplingHelpers.h"
 
-namespace lmms
+namespace noemixerr
 {
 constexpr inline float SLEW_DISTORTION_MIN_FLOOR = 0.0012589f;// -72 dBFS
 constexpr inline float SLEW_DISTORTION_DC_FREQ = 7.f;
@@ -86,6 +86,6 @@ private:
 	friend class gui::SlewDistortionControlDialog;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SLEW_DISTORTION_H
+#endif // NoeMixerr_SLEW_DISTORTION_H

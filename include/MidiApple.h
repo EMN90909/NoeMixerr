@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_MIDI_APPLE_H
-#define LMMS_MIDI_APPLE_H
+#ifndef NoeMixerr_MIDI_APPLE_H
+#define NoeMixerr_MIDI_APPLE_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 
 #include "MidiClient.h"
 #include "MidiPort.h"
@@ -38,7 +38,7 @@
 class QLineEdit;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -151,8 +151,8 @@ signals:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_BUILD_APPLE
+#endif // NoeMixerr_BUILD_APPLE
 
-#endif // LMMS_MIDI_APPLE_H
+#endif // NoeMixerr_MIDI_APPLE_H

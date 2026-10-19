@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_INTERPOLATION_H
-#define LMMS_INTERPOLATION_H
+#ifndef NoeMixerr_INTERPOLATION_H
+#define NoeMixerr_INTERPOLATION_H
 
 #include <cmath>
 #include <numbers>
 
-namespace lmms
+namespace noemixerr
 {
 
 inline float hermiteInterpolate( float x0, float x1, float x2, float x3,
@@ -126,6 +126,6 @@ inline float lagrangeInterpolate( float v0, float v1, float v2, float v3, float 
 
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INTERPOLATION_H
+#endif // NoeMixerr_INTERPOLATION_H

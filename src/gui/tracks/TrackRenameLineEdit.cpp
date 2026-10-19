@@ -30,7 +30,7 @@
 
 #include <QKeyEvent>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -63,4 +63,4 @@ void TrackRenameLineEdit::keyPressEvent( QKeyEvent * ke )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

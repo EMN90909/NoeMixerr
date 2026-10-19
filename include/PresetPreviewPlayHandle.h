@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_PRESET_PREVIEW_PLAY_HANDLE_H
-#define LMMS_PRESET_PREVIEW_PLAY_HANDLE_H
+#ifndef NoeMixerr_PRESET_PREVIEW_PLAY_HANDLE_H
+#define NoeMixerr_PRESET_PREVIEW_PLAY_HANDLE_H
 
 #include "NotePlayHandle.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -36,7 +36,7 @@ class DataFile;
 class InstrumentTrack;
 class PreviewTrackContainer;
 
-class LMMS_EXPORT PresetPreviewPlayHandle : public PlayHandle
+class NoeMixerr_EXPORT PresetPreviewPlayHandle : public PlayHandle
 {
 public:
 	PresetPreviewPlayHandle( const QString& presetFile, bool loadByPlugin = false, DataFile *dataFile = 0 );
@@ -67,6 +67,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PRESET_PREVIEW_PLAY_HANDLE_H
+#endif // NoeMixerr_PRESET_PREVIEW_PLAY_HANDLE_H

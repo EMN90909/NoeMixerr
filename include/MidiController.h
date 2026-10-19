@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_MIDI_CONTROLLER_H
-#define LMMS_MIDI_CONTROLLER_H
+#ifndef NoeMixerr_MIDI_CONTROLLER_H
+#define NoeMixerr_MIDI_CONTROLLER_H
 
 #include <QWidget>
 
@@ -33,7 +33,7 @@
 #include "MidiPort.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiPort;
@@ -91,6 +91,6 @@ protected:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_CONTROLLER_H
+#endif // NoeMixerr_MIDI_CONTROLLER_H

@@ -38,7 +38,7 @@
 #include "MainWindow.h"
 #include "SubWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -132,4 +132,4 @@ void MidiCCRackView::loadSettings(const QDomElement &)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

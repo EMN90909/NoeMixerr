@@ -35,7 +35,7 @@
 
 
 
-namespace lmms
+namespace noemixerr
 {
 
 template<class T>
@@ -165,7 +165,7 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // SAPROCESSOR_H
 

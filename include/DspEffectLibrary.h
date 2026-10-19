@@ -22,16 +22,16 @@
  *
  */
 
-#ifndef LMMS_DSPEFFECTLIBRARY_H
-#define LMMS_DSPEFFECTLIBRARY_H
+#ifndef NoeMixerr_DSPEFFECTLIBRARY_H
+#define NoeMixerr_DSPEFFECTLIBRARY_H
 
 #include <numbers>
 
-#include "lmms_math.h"
-#include "LmmsTypes.h"
+#include "noemixerr_math.h"
+#include "NoeMixerrTypes.h"
 #include "SampleFrame.h"
 
-namespace lmms::DspEffectLibrary
+namespace noemixerr::DspEffectLibrary
 {
 
 	template<typename T>
@@ -340,6 +340,6 @@ namespace lmms::DspEffectLibrary
 
 	} ;
 
-} // namespace lmms::DspEffectLibrary
+} // namespace noemixerr::DspEffectLibrary
 
-#endif // LMMS_DSPEFFECTLIBRARY_H
+#endif // NoeMixerr_DSPEFFECTLIBRARY_H

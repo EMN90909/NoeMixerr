@@ -38,7 +38,7 @@
 #include "TrackView.h"
 #include "Track.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 TrackLabelButton::TrackLabelButton( TrackView * _tv, QWidget * _parent ) :
@@ -247,4 +247,4 @@ bool TrackLabelButton::isInCompactMode() const
 	return ConfigManager::inst()->value("ui", "compacttrackbuttons").toInt();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

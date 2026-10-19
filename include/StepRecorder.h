@@ -18,8 +18,8 @@
  *
  */
 
-#ifndef LMMS_STEP_RECORDER_H
-#define LMMS_STEP_RECORDER_H
+#ifndef NoeMixerr_STEP_RECORDER_H
+#define NoeMixerr_STEP_RECORDER_H
 
 #include <QElapsedTimer>
 #include <QTimer>
@@ -30,7 +30,7 @@
 class QKeyEvent;
 class QMouseEvent;
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiClip;
@@ -144,6 +144,6 @@ class StepRecorder : public QObject
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_STEP_RECORDER_H
+#endif // NoeMixerr_STEP_RECORDER_H

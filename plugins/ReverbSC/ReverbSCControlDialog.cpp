@@ -31,7 +31,7 @@
 
 #include <QHBoxLayout>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -69,4 +69,4 @@ ReverbSCControlDialog::ReverbSCControlDialog( ReverbSCControls* controls ) :
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -28,24 +28,24 @@
 #include <system_error>
 #include <utility>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 #include "RaiiHelpers.h"
 
-#ifdef LMMS_HAVE_UNISTD_H
+#ifdef NoeMixerr_HAVE_UNISTD_H
 #	include <unistd.h>
 #endif
 
-#if _POSIX_SHARED_MEMORY_OBJECTS > 0 || defined(LMMS_BUILD_APPLE)
+#if _POSIX_SHARED_MEMORY_OBJECTS > 0 || defined(NoeMixerr_BUILD_APPLE)
 #	include <sys/mman.h>
 #	include <sys/stat.h>
 #	include <fcntl.h>
-#elif defined(LMMS_BUILD_WIN32)
+#elif defined(NoeMixerr_BUILD_WIN32)
 #	include <windows.h>
 #else
 #	error "No shared memory implementation available"
 #endif
 
-namespace lmms::detail {
+namespace noemixerr::detail {
 
 namespace {
 
@@ -59,7 +59,7 @@ struct Header
 
 } // namespace
 
-#if _POSIX_SHARED_MEMORY_OBJECTS > 0 || defined(LMMS_BUILD_APPLE)
+#if _POSIX_SHARED_MEMORY_OBJECTS > 0 || defined(NoeMixerr_BUILD_APPLE)
 
 namespace {
 
@@ -169,7 +169,7 @@ private:
 	ShmObject m_object;
 };
 
-#elif defined(LMMS_BUILD_WIN32)
+#elif defined(NoeMixerr_BUILD_WIN32)
 
 namespace {
 
@@ -311,4 +311,4 @@ auto SharedMemoryData::arraySize() const noexcept -> std::size_t
 	return m_impl ? m_impl->arraySize() : 0;
 }
 
-} // namespace lmms::detail
+} // namespace noemixerr::detail

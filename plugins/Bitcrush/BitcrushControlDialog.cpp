@@ -33,7 +33,7 @@
 #include "LedCheckBox.h"
 #include "Knob.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -114,4 +114,4 @@ BitcrushControlDialog::BitcrushControlDialog( BitcrushControls * controls ) :
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_GUI_ROW_TABLE_VIEW_H
-#define LMMS_GUI_ROW_TABLE_VIEW_H
+#ifndef NoeMixerr_GUI_ROW_TABLE_VIEW_H
+#define NoeMixerr_GUI_ROW_TABLE_VIEW_H
 
 #include <QTableView>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -54,6 +54,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_ROW_TABLE_VIEW_H
+#endif // NoeMixerr_GUI_ROW_TABLE_VIEW_H

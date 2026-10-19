@@ -22,11 +22,11 @@
  *
  */
 
-#ifndef LMMS_MIDI_H
-#define LMMS_MIDI_H
+#ifndef NoeMixerr_MIDI_H
+#define NoeMixerr_MIDI_H
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -139,6 +139,6 @@ const int MidiMinPitchBend = 0;
 const int MidiMaxPitchBend = 16383;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_H
+#endif // NoeMixerr_MIDI_H

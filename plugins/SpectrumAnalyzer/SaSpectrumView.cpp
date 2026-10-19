@@ -39,13 +39,13 @@
 #include "MainWindow.h"
 #include "SaControls.h"
 #include "SaProcessor.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 #ifdef SA_DEBUG
 	#include <chrono>
 #endif
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -810,7 +810,7 @@ std::vector<std::pair<float, std::string>> SaSpectrumView::makeLinearAmpTics(int
 }
 
 
-// Periodic update is called by LMMS.
+// Periodic update is called by NoeMixerr.
 void SaSpectrumView::periodicUpdate()
 {
 	// check if the widget is visible; if it is not, processing can be paused
@@ -842,4 +842,4 @@ void SaSpectrumView::resizeEvent(QResizeEvent *event)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

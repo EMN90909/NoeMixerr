@@ -24,20 +24,20 @@
  *
  */
 
-#ifndef LMMS_GUI_SUBWINDOW_H
-#define LMMS_GUI_SUBWINDOW_H
+#ifndef NoeMixerr_GUI_SUBWINDOW_H
+#define NoeMixerr_GUI_SUBWINDOW_H
 
 #include <QMdiSubWindow>
 #include <QString>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 class QGraphicsDropShadowEffect;
 class QLabel;
 class QPushButton;
 class QWidget;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -45,8 +45,8 @@ namespace lmms::gui
 //! @brief The SubWindow class
 //! 
 //! Because of a bug in the QMdiSubWindow class to save the right position and size of a subwindow in a project and
-//! because of the inability for customizing the title bar appearance, lmms implements its own subwindow class.
-class LMMS_EXPORT SubWindow : public QMdiSubWindow
+//! because of the inability for customizing the title bar appearance, noemixerr implements its own subwindow class.
+class NoeMixerr_EXPORT SubWindow : public QMdiSubWindow
 {
 	Q_OBJECT
 	Q_PROPERTY( QBrush activeColor READ activeColor WRITE setActiveColor )
@@ -159,6 +159,6 @@ private slots:
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_SUBWINDOW_H
+#endif // NoeMixerr_GUI_SUBWINDOW_H

@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_AUDIO_BUFFER_VIEW_H
-#define LMMS_AUDIO_BUFFER_VIEW_H
+#ifndef NoeMixerr_AUDIO_BUFFER_VIEW_H
+#define NoeMixerr_AUDIO_BUFFER_VIEW_H
 
 #include <cassert>
 #include <concepts>
@@ -32,10 +32,10 @@
 #include <span>
 #include <type_traits>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "SampleFrame.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 //! Use when the number of channels is not known at compile time
@@ -621,6 +621,6 @@ constexpr void toPlanar(InterleavedBufferView<T, inputs> src,
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_BUFFER_VIEW_H
+#endif // NoeMixerr_AUDIO_BUFFER_VIEW_H

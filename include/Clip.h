@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_CLIP_H
-#define LMMS_CLIP_H
+#ifndef NoeMixerr_CLIP_H
+#define NoeMixerr_CLIP_H
 
 #include <optional>
 
@@ -32,7 +32,7 @@
 #include "AutomatableModel.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class Track;
@@ -46,7 +46,7 @@ class TrackView;
 } // namespace gui
 
 
-class LMMS_EXPORT Clip : public Model, public JournallingObject
+class NoeMixerr_EXPORT Clip : public Model, public JournallingObject
 {
 	Q_OBJECT
 	mapPropertyFromModel(bool,isMuted,setMuted,m_mutedModel);
@@ -190,6 +190,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_CLIP_H
+#endif // NoeMixerr_CLIP_H

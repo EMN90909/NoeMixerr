@@ -35,7 +35,7 @@
 
 #include <atomic>
 
-namespace lmms
+namespace noemixerr
 {
 
 // invisible track-container which is needed as parent for preview-channels
@@ -275,4 +275,4 @@ bool PresetPreviewPlayHandle::isPreviewing()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -27,7 +27,7 @@
 #include "CrossoverEQControls.h"
 #include "CrossoverEQ.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -121,4 +121,4 @@ void CrossoverEQControls::sampleRateChanged()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

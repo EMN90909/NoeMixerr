@@ -31,7 +31,7 @@
 #include "Song.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 TimeDisplayWidget::TimeDisplayWidget() :
@@ -131,4 +131,4 @@ void TimeDisplayWidget::mousePressEvent( QMouseEvent* mouseEvent )
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

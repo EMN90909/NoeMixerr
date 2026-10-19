@@ -22,22 +22,22 @@
  *
  */
 
-#ifndef LMMS_GUI_OSCILLOSCOPE_H
-#define LMMS_GUI_OSCILLOSCOPE_H
+#ifndef NoeMixerr_GUI_OSCILLOSCOPE_H
+#define NoeMixerr_GUI_OSCILLOSCOPE_H
 
 #include <QWidget>
 #include <QPixmap>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame;
 
 }
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -74,7 +74,7 @@ protected:
 
 
 protected slots:
-	void updateAudioBuffer(const lmms::SampleFrame* buffer);
+	void updateAudioBuffer(const noemixerr::SampleFrame* buffer);
 
 private:
 	bool clips(float level) const;
@@ -93,6 +93,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_OSCILLOSCOPE_H
+#endif // NoeMixerr_GUI_OSCILLOSCOPE_H

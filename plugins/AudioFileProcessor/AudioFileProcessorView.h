@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_AUDIO_FILE_PROCESSOR_VIEW_H
-#define LMMS_AUDIO_FILE_PROCESSOR_VIEW_H
+#ifndef NoeMixerr_AUDIO_FILE_PROCESSOR_VIEW_H
+#define NoeMixerr_AUDIO_FILE_PROCESSOR_VIEW_H
 
 #include "InstrumentView.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -80,6 +80,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_FILE_PROCESSOR_VIEW_H
+#endif // NoeMixerr_AUDIO_FILE_PROCESSOR_VIEW_H

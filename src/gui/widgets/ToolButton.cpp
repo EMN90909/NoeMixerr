@@ -1,5 +1,5 @@
 /*
- * ToolButton.cpp - implementation of LMMS-tool-button for common (cool) look
+ * ToolButton.cpp - implementation of NoeMixerr-tool-button for common (cool) look
  *
  * Copyright (c) 2005-2006 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  * 
@@ -25,7 +25,7 @@
 
 #include "ToolButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -45,4 +45,4 @@ ToolButton::ToolButton( const QPixmap & _pixmap, const QString & _tooltip,
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -31,7 +31,7 @@
 #include "embed.h"
 #include "FontHelper.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -88,4 +88,4 @@ void SideBarWidget::resizeEvent( QResizeEvent * )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

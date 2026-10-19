@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_LOCKLESS_ALLOCATOR_H
-#define LMMS_LOCKLESS_ALLOCATOR_H
+#ifndef NoeMixerr_LOCKLESS_ALLOCATOR_H
+#define NoeMixerr_LOCKLESS_ALLOCATOR_H
 
 #include <atomic>
 #include <cstddef>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -82,6 +82,6 @@ public:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LOCKLESS_ALLOCATOR_H
+#endif // NoeMixerr_LOCKLESS_ALLOCATOR_H

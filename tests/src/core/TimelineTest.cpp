@@ -48,19 +48,19 @@ private slots:
 
 	void initTestCase()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 		Engine::init(true);
 	}
 
 	void cleanupTestCase()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 		Engine::destroy();
 	}
 
 	void JumpedTests()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		Timeline timeline = Timeline();
 		connect(&timeline, &Timeline::positionChanged, this, &TimelineTest::onPositionChanged);
@@ -83,7 +83,7 @@ private slots:
 
 	void ElapsedTimeTests()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		Timeline timeline = Timeline();
 		connect(&timeline, &Timeline::positionChanged, this, &TimelineTest::onPositionChanged);

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_MIDI_CLIENT_H
-#define LMMS_MIDI_CLIENT_H
+#ifndef NoeMixerr_MIDI_CLIENT_H
+#define NoeMixerr_MIDI_CLIENT_H
 
 #include <QStringList>
 #include <vector>
@@ -34,7 +34,7 @@
 class QObject;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiPort;
@@ -171,6 +171,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_CLIENT_H
+#endif // NoeMixerr_MIDI_CLIENT_H

@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_OSCILLATOR_H
-#define LMMS_OSCILLATOR_H
+#ifndef NoeMixerr_OSCILLATOR_H
+#define NoeMixerr_OSCILLATOR_H
 
 #include <cassert>
 #include <fftw3.h>
@@ -33,19 +33,19 @@
 #include <cmath>
 
 #include "Engine.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "AudioEngine.h"
 #include "OscillatorConstants.h"
 #include "SampleBuffer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
 class IntModel;
 
 
-class LMMS_EXPORT Oscillator
+class NoeMixerr_EXPORT Oscillator
 {
 public:
 	enum class WaveShape
@@ -318,6 +318,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_OSCILLATOR_H
+#endif // NoeMixerr_OSCILLATOR_H

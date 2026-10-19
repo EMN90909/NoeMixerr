@@ -27,25 +27,25 @@
 #include "embed.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 extern "C"
 {
 Plugin::Descriptor PLUGIN_EXPORT oscilloscope_plugin_descriptor =
 {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"Oscilloscope",
 	QT_TRANSLATE_NOOP("PluginBrowser", "Oscilloscope plugin to display the incoming audio waveform"),
 	"Keratin <3",
 	0x0100,
 	Plugin::Type::Effect,
-	new PixmapLoader("lmms-plugin-logo"),
+	new PixmapLoader("noemixerr-plugin-logo"),
 	nullptr,
 	nullptr,
 };
 
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model* parent, void* data)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model* parent, void* data)
 {
 	return new Oscilloscope(parent, static_cast<const Plugin::Descriptor::SubPluginFeatures::Key*>(data));
 }
@@ -72,4 +72,4 @@ Effect::ProcessStatus Oscilloscope::processImpl(SampleFrame* buffer, const f_cnt
 
 
 
-} // namespace lmms
+} // namespace noemixerr

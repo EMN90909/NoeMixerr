@@ -31,7 +31,7 @@
 #include "GuiApplication.h"
 #include "MainWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -89,4 +89,4 @@ void SimpleTextFloat::hide()
 	QWidget::hide();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

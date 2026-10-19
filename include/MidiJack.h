@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_MIDI_JACK_H
-#define LMMS_MIDI_JACK_H
+#ifndef NoeMixerr_MIDI_JACK_H
+#define NoeMixerr_MIDI_JACK_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_JACK
-#ifndef LMMS_HAVE_WEAKJACK
+#ifdef NoeMixerr_HAVE_JACK
+#ifndef NoeMixerr_HAVE_WEAKJACK
 #include <jack/jack.h>
 #include <jack/midiport.h>
 #else
@@ -40,7 +40,7 @@
 #include "MidiClient.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr size_t JACK_MIDI_BUFFER_MAX = 64; /* events */
@@ -97,8 +97,8 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_JACK
+#endif // NoeMixerr_HAVE_JACK
 
-#endif // LMMS_MIDI_JACK_H
+#endif // NoeMixerr_MIDI_JACK_H

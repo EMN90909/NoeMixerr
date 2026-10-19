@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_COMBOBOX_MODEL_H
-#define LMMS_COMBOBOX_MODEL_H
+#ifndef NoeMixerr_COMBOBOX_MODEL_H
+#define NoeMixerr_COMBOBOX_MODEL_H
 
 #include <memory>
 #include <utility>
@@ -32,10 +32,10 @@
 #include "AutomatableModel.h"
 #include "embed.h"
 
-namespace lmms
+namespace noemixerr
 {
 
-class LMMS_EXPORT ComboBoxModel : public IntModel
+class NoeMixerr_EXPORT ComboBoxModel : public IntModel
 {
 	Q_OBJECT
 	MODEL_IS_VISITABLE
@@ -89,6 +89,6 @@ private:
 
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_COMBOBOX_MODEL_H
+#endif // NoeMixerr_COMBOBOX_MODEL_H

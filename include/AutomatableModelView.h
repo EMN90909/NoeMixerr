@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_AUTOMATABLE_MODEL_VIEW_H
-#define LMMS_GUI_AUTOMATABLE_MODEL_VIEW_H
+#ifndef NoeMixerr_GUI_AUTOMATABLE_MODEL_VIEW_H
+#define NoeMixerr_GUI_AUTOMATABLE_MODEL_VIEW_H
 
 #include "ModelView.h"
 #include "AutomatableModel.h"
@@ -32,10 +32,10 @@
 class QMenu;
 class QMouseEvent;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT AutomatableModelView : public ModelView
+class NoeMixerr_EXPORT AutomatableModelView : public ModelView
 {
 public:
 	AutomatableModelView( Model* model, QWidget* _this );
@@ -111,7 +111,7 @@ protected:
 
 
 
-template <typename ModelType> class LMMS_EXPORT TypedModelView : public AutomatableModelView
+template <typename ModelType> class NoeMixerr_EXPORT TypedModelView : public AutomatableModelView
 {
 public:
 	TypedModelView( Model* model, QWidget* _this) :
@@ -132,6 +132,6 @@ using FloatModelView = TypedModelView<FloatModel>;
 using IntModelView = TypedModelView<IntModel>;
 using BoolModelView = TypedModelView<BoolModel>;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_AUTOMATABLE_MODEL_VIEW_H
+#endif // NoeMixerr_GUI_AUTOMATABLE_MODEL_VIEW_H

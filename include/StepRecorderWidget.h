@@ -20,15 +20,15 @@
  *
  */
 
-#ifndef LMMS_GUI_STEP_RECOREDER_WIDGET_H
-#define LMMS_GUI_STEP_RECOREDER_WIDGET_H
+#ifndef NoeMixerr_GUI_STEP_RECOREDER_WIDGET_H
+#define NoeMixerr_GUI_STEP_RECOREDER_WIDGET_H
 
 #include <QWidget>
 #include <QColor>
 
 #include "TimePos.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class StepRecorderWidget : public QWidget
@@ -90,9 +90,9 @@ private:
 	const int m_marginRight;
 
 signals:
-	void positionChanged(const lmms::TimePos & t);
+	void positionChanged(const noemixerr::TimePos & t);
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_STEP_RECOREDER_WIDGET_H
+#endif // NoeMixerr_GUI_STEP_RECOREDER_WIDGET_H

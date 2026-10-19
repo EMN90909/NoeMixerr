@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_GUI_LEFT_RIGHT_NAV_H
-#define LMMS_GUI_LEFT_RIGHT_NAV_H
+#ifndef NoeMixerr_GUI_LEFT_RIGHT_NAV_H
+#define NoeMixerr_GUI_LEFT_RIGHT_NAV_H
 
 #include <QPushButton>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class LeftRightNav : public QWidget
@@ -47,6 +47,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_LEFT_RIGHT_NAV_H
+#endif // NoeMixerr_GUI_LEFT_RIGHT_NAV_H

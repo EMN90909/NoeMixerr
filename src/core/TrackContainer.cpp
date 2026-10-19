@@ -41,7 +41,7 @@
 #include "MainWindow.h"
 #include "TextFloat.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -342,4 +342,4 @@ AutomatedValueMap TrackContainer::automatedValuesFromTracks(const TrackList &tra
 };
 
 
-} // namespace lmms
+} // namespace noemixerr

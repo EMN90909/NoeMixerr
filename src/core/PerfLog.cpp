@@ -24,9 +24,9 @@
 
 #include "PerfLog.h"
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#if defined(LMMS_HAVE_SYS_TIMES_H) && defined(LMMS_HAVE_UNISTD_H)
+#if defined(NoeMixerr_HAVE_SYS_TIMES_H) && defined(NoeMixerr_HAVE_UNISTD_H)
 #	define USE_POSIX_TIME
 #endif
 
@@ -36,7 +36,7 @@
 #endif
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -136,4 +136,4 @@ void PerfLogTimer::end()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

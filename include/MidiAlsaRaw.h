@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_MIDI_ALSA_RAW_H
-#define LMMS_MIDI_ALSA_RAW_H
+#ifndef NoeMixerr_MIDI_ALSA_RAW_H
+#define NoeMixerr_MIDI_ALSA_RAW_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 
 #include <alsa/asoundlib.h>
 
@@ -39,7 +39,7 @@
 struct pollfd;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiAlsaRaw : public QThread, public MidiClientRaw
@@ -80,8 +80,8 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA
 
-#endif // LMMS_MIDI_ALSA_RAW_H
+#endif // NoeMixerr_MIDI_ALSA_RAW_H

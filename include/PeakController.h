@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_PEAK_CONTROLLER_H
-#define LMMS_PEAK_CONTROLLER_H
+#ifndef NoeMixerr_PEAK_CONTROLLER_H
+#define NoeMixerr_PEAK_CONTROLLER_H
 
 #include "Controller.h"
 #include "ControllerDialog.h"
 
 class QWidget;
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -38,7 +38,7 @@ class PeakControllerEffect;
 
 using PeakControllerEffectVector = std::vector<PeakControllerEffect*>;
 
-class LMMS_EXPORT PeakController : public Controller
+class NoeMixerr_EXPORT PeakController : public Controller
 {
 	Q_OBJECT
 public:
@@ -105,6 +105,6 @@ protected:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PEAK_CONTROLLER_H
+#endif // NoeMixerr_PEAK_CONTROLLER_H

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GUI_TEMPLATES_MENU_H
-#define LMMS_GUI_TEMPLATES_MENU_H
+#ifndef NoeMixerr_GUI_TEMPLATES_MENU_H
+#define NoeMixerr_GUI_TEMPLATES_MENU_H
 
 #include <QDir>
 #include <QMenu>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -48,6 +48,6 @@ private slots:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TEMPLATES_MENU_H
+#endif // NoeMixerr_GUI_TEMPLATES_MENU_H

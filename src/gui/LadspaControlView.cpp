@@ -33,7 +33,7 @@
 #include "TempoSyncKnob.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 LadspaControlView::LadspaControlView( QWidget * _parent,
@@ -119,4 +119,4 @@ LadspaControlView::LadspaControlView( QWidget * _parent,
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

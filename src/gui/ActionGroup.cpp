@@ -24,7 +24,7 @@
 
 #include "ActionGroup.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 ActionGroup::ActionGroup(QObject* parent) : QActionGroup(parent)
@@ -57,4 +57,4 @@ void ActionGroup::actionTriggered_(QAction* action)
 	emit triggered(actions().indexOf(action));
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

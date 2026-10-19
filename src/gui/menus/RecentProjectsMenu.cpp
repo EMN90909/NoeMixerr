@@ -10,7 +10,7 @@
 #include "GuiApplication.h"
 #include "MainWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -53,7 +53,7 @@ void RecentProjectsMenu::fillMenu()
 		}
 
 		addAction(projectFileIcon, fileName.replace("&", "&&") );
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 		actions().last()->setIconVisibleInMenu(false); // QTBUG-44565 workaround
 		actions().last()->setIconVisibleInMenu(true);
 #endif
@@ -82,4 +82,4 @@ void RecentProjectsMenu::openProject(QAction * _action )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

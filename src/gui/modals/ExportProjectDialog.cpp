@@ -40,7 +40,7 @@
 #include "ProjectRenderer.h"
 #include "Song.h"
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
 namespace {
 constexpr auto maxCompressionLevel = 8;
@@ -293,4 +293,4 @@ void ExportProjectDialog::updateTitleBar(int prog)
 	setWindowTitle(tr("Rendering: %1%").arg(prog));
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

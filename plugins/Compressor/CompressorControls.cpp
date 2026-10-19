@@ -28,7 +28,7 @@
 
 
 
-namespace lmms
+namespace noemixerr
 {
 
 CompressorControls::CompressorControls(CompressorEffect* effect) :
@@ -144,4 +144,4 @@ void CompressorControls::loadSettings(const QDomElement& _this)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

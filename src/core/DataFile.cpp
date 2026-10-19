@@ -54,9 +54,9 @@
 #include "PathUtil.h"
 #include "UpgradeExtendedNoteRange.h"
 
-#include "lmmsversion.h"
+#include "noemixerrversion.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -125,7 +125,7 @@ namespace
 
 
 DataFile::DataFile( Type type ) :
-	QDomDocument( "lmms-project" ),
+	QDomDocument( "noemixerr-project" ),
 	m_fileName(""),
 	m_content(),
 	m_head(),
@@ -133,11 +133,11 @@ DataFile::DataFile( Type type ) :
 	m_fileVersion( UPGRADE_METHODS.size() )
 {
 	appendChild( createProcessingInstruction("xml", "version=\"1.0\""));
-	QDomElement root = createElement( "lmms-project" );
+	QDomElement root = createElement( "noemixerr-project" );
 	root.setAttribute( "version", m_fileVersion );
 	root.setAttribute( "type", typeName( type ) );
-	root.setAttribute( "creator", "LMMS" );
-	root.setAttribute( "creatorversion", LMMS_VERSION );
+	root.setAttribute( "creator", "NoeMixerr" );
+	root.setAttribute( "creatorversion", NoeMixerr_VERSION );
 	root.setAttribute("creatorplatform", QSysInfo::kernelType());
 	root.setAttribute("creatorplatformtype", QSysInfo::productType());
 	appendChild( root );
@@ -231,10 +231,10 @@ bool DataFile::validate( QString extension )
 				( extension == "xiz" && ! getPluginFactory()->pluginSupportingExtension(extension).isNull()) ||
 				extension == "sf2" || extension == "sf3" || extension == "pat" || extension == "mid" ||
 				extension == "dll"
-#ifdef LMMS_BUILD_LINUX
+#ifdef NoeMixerr_BUILD_LINUX
 				|| extension == "so"
 #endif
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 				|| extension == "lv2"
 #endif
 				) )
@@ -242,7 +242,7 @@ bool DataFile::validate( QString extension )
 			return true;
 		}
 		if( extension == "wav" || extension == "ogg" || extension == "ds"
-#ifdef LMMS_HAVE_SNDFILE_MP3
+#ifdef NoeMixerr_HAVE_SNDFILE_MP3
 				|| extension == "mp3"
 #endif
 				)
@@ -1139,7 +1139,7 @@ void DataFile::upgrade_1_1_91()
 	for( int i = 0; !list.item( i ).isNull(); ++i )
 	{
 		QDomElement el = list.item( i ).toElement();
-		if( el.attribute( "name" ) == "plugin" && el.attribute( "value" ) == "vocoder-lmms" ) {
+		if( el.attribute( "name" ) == "plugin" && el.attribute( "value" ) == "vocoder-noemixerr" ) {
 			el.setAttribute( "value", "vocoder" );
 		}
 	}
@@ -1636,7 +1636,7 @@ void DataFile::upgrade_1_3_0()
 void DataFile::upgrade_noHiddenAutomationTracks()
 {
 	// convert global automation tracks to non-hidden
-	QDomElement song = firstChildElement("lmms-project")
+	QDomElement song = firstChildElement("noemixerr-project")
 		.firstChildElement("song");
 	QDomElement trackContainer = song.firstChildElement("trackcontainer");
 	QDomElement globalAutomationTrack = song.firstChildElement("track");
@@ -1769,7 +1769,7 @@ void DataFile::upgrade_fixCMTDelays()
 		// We are only interested in LADSPA plugins
 		if (effect.attribute("name") != "ladspaeffect") { continue; }
 
-		// Fetch all attributes (LMMS) beneath the LADSPA effect so that we can check the value of the plugin attribute (XML)
+		// Fetch all attributes (NoeMixerr) beneath the LADSPA effect so that we can check the value of the plugin attribute (XML)
 		auto attributes = effect.elementsByTagName("attribute");
 		for (int j = 0; j < attributes.size(); ++j)
 		{
@@ -2075,8 +2075,8 @@ void DataFile::upgrade()
 	// update document meta data
 	documentElement().setAttribute( "version", m_fileVersion );
 	documentElement().setAttribute( "type", typeName( type() ) );
-	documentElement().setAttribute( "creator", "LMMS" );
-	documentElement().setAttribute( "creatorversion", LMMS_VERSION );
+	documentElement().setAttribute( "creator", "NoeMixerr" );
+	documentElement().setAttribute( "creatorversion", NoeMixerr_VERSION );
 	documentElement().setAttribute("creatorplatform", QSysInfo::kernelType());
 	documentElement().setAttribute("creatorplatformtype", QSysInfo::productType());
 
@@ -2103,13 +2103,13 @@ void DataFile::loadData( const QByteArray & _data, const QString & _sourceFile )
 {
 	QString errorMsg;
 	int line = -1, col = -1;
-	if (!lmms::setContent(*this, _data, &errorMsg, &line, &col))
+	if (!noemixerr::setContent(*this, _data, &errorMsg, &line, &col))
 	{
 		// parsing failed? then try to uncompress data
 		QByteArray uncompressed = qUncompress( _data );
 		if( !uncompressed.isEmpty() )
 		{
-			if (lmms::setContent(*this, uncompressed, &errorMsg, &line, &col))
+			if (noemixerr::setContent(*this, uncompressed, &errorMsg, &line, &col))
 			{
 				line = col = -1;
 			}
@@ -2156,7 +2156,7 @@ void DataFile::loadData( const QByteArray & _data, const QString & _sourceFile )
 
 		// compareType defaults to All, so it doesn't have to be set here
 		ProjectVersion createdWith = root.attribute("creatorversion");
-		ProjectVersion openedWith = LMMS_VERSION;
+		ProjectVersion openedWith = NoeMixerr_VERSION;
 
 		if (createdWith.setCompareType(ProjectVersion::CompareType::Minor)
 		 !=  openedWith.setCompareType(ProjectVersion::CompareType::Minor)
@@ -2167,7 +2167,7 @@ void DataFile::loadData( const QByteArray & _data, const QString & _sourceFile )
 
 			gui::TextFloat::displayMessage(
 				SongEditor::tr("Version difference"),
-				SongEditor::tr("This %1 was created with LMMS %2")
+				SongEditor::tr("This %1 was created with NoeMixerr %2")
 				.arg(projectType).arg(createdWith.getVersion()),
 				embed::getIconPixmap("whatsthis", 24, 24),
 				2500
@@ -2210,4 +2210,4 @@ unsigned int DataFile::legacyFileVersion()
 	return std::distance( UPGRADE_VERSIONS.begin(), firstRequiredUpgrade );
 }
 
-} // namespace lmms
+} // namespace noemixerr

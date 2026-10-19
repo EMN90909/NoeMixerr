@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_AUDIO_BUFFER_H
-#define LMMS_AUDIO_BUFFER_H
+#ifndef NoeMixerr_AUDIO_BUFFER_H
+#define NoeMixerr_AUDIO_BUFFER_H
 
 #include <bitset>
 #include <memory_resource>
@@ -31,11 +31,11 @@
 
 #include "AudioBufferView.h"
 #include "ArrayVector.h"
-#include "LmmsTypes.h"
-#include "lmms_constants.h"
-#include "lmms_export.h"
+#include "NoeMixerrTypes.h"
+#include "noemixerr_constants.h"
+#include "noemixerr_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 /**
@@ -76,7 +76,7 @@ namespace lmms
  * - When this class is used in an audio processor or audio plugin, its channels could be referred to
  *       as "processor channels" or "plugin channels".
  */
-class LMMS_EXPORT AudioBuffer
+class NoeMixerr_EXPORT AudioBuffer
 {
 public:
 	using ChannelFlags = std::bitset<MaxChannelsPerAudioBuffer>;
@@ -423,6 +423,6 @@ private:
 	bool m_silenceTrackingEnabled = false;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_BUFFER_H
+#endif // NoeMixerr_AUDIO_BUFFER_H

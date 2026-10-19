@@ -35,7 +35,7 @@
 #include "LedCheckBox.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -196,4 +196,4 @@ SaveOptionsWidget::SaveOptionsWidget(Song::SaveOptions &saveOptions) {
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

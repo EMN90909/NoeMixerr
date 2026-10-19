@@ -23,18 +23,18 @@
  *
  */
 
-#ifndef LMMS_SAMPLEFRAME_H
-#define LMMS_SAMPLEFRAME_H
+#ifndef NoeMixerr_SAMPLEFRAME_H
+#define NoeMixerr_SAMPLEFRAME_H
 
-#include "LmmsTypes.h"
-#include "lmms_constants.h"
+#include "NoeMixerrTypes.h"
+#include "noemixerr_constants.h"
 
 #include <algorithm>
 #include <array>
 #include <cmath>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame
@@ -227,6 +227,6 @@ inline void copyFromSampleFrames(float* target, const SampleFrame* source, size_
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SAMPLEFRAME_H
+#endif // NoeMixerr_SAMPLEFRAME_H

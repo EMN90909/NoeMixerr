@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_SAMPLE_TRACK_WINDOW_H
-#define LMMS_GUI_SAMPLE_TRACK_WINDOW_H
+#ifndef NoeMixerr_GUI_SAMPLE_TRACK_WINDOW_H
+#define NoeMixerr_GUI_SAMPLE_TRACK_WINDOW_H
 
 #include <QWidget>
 
@@ -33,7 +33,7 @@
 
 class QLineEdit;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class AutomatableButton;
@@ -100,6 +100,6 @@ private:
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_SAMPLE_TRACK_WINDOW_H
+#endif // NoeMixerr_GUI_SAMPLE_TRACK_WINDOW_H

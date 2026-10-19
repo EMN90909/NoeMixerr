@@ -31,7 +31,7 @@
 #include "ConfigManager.h"
 #include "Effect.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -84,7 +84,7 @@ void VstSubPluginFeatures::addPluginsFromDir( QStringList* filenames, QString pa
 	}
 	QStringList dlls = QDir( ConfigManager::inst()->vstDir() + path ).
 				entryList( QStringList() << "*.dll"
-#ifdef LMMS_BUILD_LINUX
+#ifdef NoeMixerr_BUILD_LINUX
 										 << "*.so"
 #endif
 						,
@@ -98,4 +98,4 @@ void VstSubPluginFeatures::addPluginsFromDir( QStringList* filenames, QString pa
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

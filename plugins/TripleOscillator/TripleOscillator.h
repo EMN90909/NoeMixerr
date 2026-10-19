@@ -34,7 +34,7 @@
 #include "OscillatorConstants.h"
 #include "SampleBuffer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -209,6 +209,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

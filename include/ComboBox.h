@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_COMBOBOX_H
-#define LMMS_GUI_COMBOBOX_H
+#ifndef NoeMixerr_GUI_COMBOBOX_H
+#define NoeMixerr_GUI_COMBOBOX_H
 
 #include <QMenu>
 #include <QWidget>
@@ -31,10 +31,10 @@
 #include "ComboBoxModel.h"
 #include "AutomatableModelView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT ComboBox : public QWidget, public IntModelView
+class NoeMixerr_EXPORT ComboBox : public QWidget, public IntModelView
 {
 	Q_OBJECT
 public:
@@ -80,6 +80,6 @@ private slots:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_COMBOBOX_H
+#endif // NoeMixerr_GUI_COMBOBOX_H

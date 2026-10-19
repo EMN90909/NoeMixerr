@@ -28,7 +28,7 @@
 
 #include "RenameDialog.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -78,4 +78,4 @@ void RenameDialog::textChanged( const QString & _new_string )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

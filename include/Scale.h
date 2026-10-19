@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_SCALE_H
-#define LMMS_SCALE_H
+#ifndef NoeMixerr_SCALE_H
+#define NoeMixerr_SCALE_H
 
 #include <cstdint>
 #include <vector>
@@ -32,7 +32,7 @@
 
 #include "SerializingObject.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Interval : public SerializingObject
@@ -87,6 +87,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SCALE_H
+#endif // NoeMixerr_SCALE_H

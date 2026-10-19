@@ -31,7 +31,7 @@
 #include "SampleClip.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -140,4 +140,4 @@ void SampleRecordHandle::writeBuffer( const SampleFrame* _ab, const f_cnt_t _fra
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

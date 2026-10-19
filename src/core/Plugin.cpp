@@ -36,7 +36,7 @@
 #include "Song.h"
 #include "PluginFactory.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -217,7 +217,7 @@ Plugin * Plugin::instantiate(const QString& pluginName, Model * parent,
 	}
 	else
 	{
-		auto instantiationHook = reinterpret_cast<InstantiationHook>(pi.library->resolve("lmms_plugin_main"));
+		auto instantiationHook = reinterpret_cast<InstantiationHook>(pi.library->resolve("noemixerr_plugin_main"));
 		if (instantiationHook)
 		{
 			inst = instantiationHook(parent, data);
@@ -299,4 +299,4 @@ QDomElement Plugin::Descriptor::SubPluginFeatures::Key::saveXML(
 
 
 
-} // namespace lmms
+} // namespace noemixerr

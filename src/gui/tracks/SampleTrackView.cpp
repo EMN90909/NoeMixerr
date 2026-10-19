@@ -49,7 +49,7 @@
 #include "TrackLabelButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -260,4 +260,4 @@ void SampleTrackView::corruptStateUpdate()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -23,18 +23,18 @@
  *
  */
 
-#ifndef LMMS_TIME_POS_H
-#define LMMS_TIME_POS_H
+#ifndef NoeMixerr_TIME_POS_H
+#define NoeMixerr_TIME_POS_H
 
 #include <algorithm>
 #include <cassert>
-#include "lmms_export.h"
-#include "LmmsTypes.h"
+#include "noemixerr_export.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
-// note: a bar was erroneously called "tact" in older versions of LMMS
+// note: a bar was erroneously called "tact" in older versions of NoeMixerr
 const int DefaultTicksPerBar = 192;
 const int DefaultStepsPerBar = 16;
 const int DefaultBeatsPerBar = DefaultTicksPerBar / DefaultStepsPerBar;
@@ -48,7 +48,7 @@ class MeterModel;
 
 	Example: 6/8 means 6 beats in a bar with each beat having a duration of one 8th-note.
 */
-class LMMS_EXPORT TimeSig
+class NoeMixerr_EXPORT TimeSig
 {
 public:
 	TimeSig( int num, int denom );
@@ -64,7 +64,7 @@ private:
 /**
 	Represents a position in time or length of a note or event, in ticks, beats, and bars
 */
-class LMMS_EXPORT TimePos
+class NoeMixerr_EXPORT TimePos
 {
 public:
 	TimePos( const bar_t bar, const tick_t ticks );
@@ -146,6 +146,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_TIME_POS_H
+#endif // NoeMixerr_TIME_POS_H

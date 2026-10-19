@@ -24,7 +24,7 @@
 #include <ColorChooser.h>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -87,4 +87,4 @@ QVector<QColor> ColorChooser::nicePalette (int base)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

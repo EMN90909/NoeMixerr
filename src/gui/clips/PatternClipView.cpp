@@ -39,7 +39,7 @@
 #include "TrackContainerView.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -276,4 +276,4 @@ void PatternClipView::update()
 	ClipView::update();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

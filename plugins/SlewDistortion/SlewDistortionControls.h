@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_SLEW_DISTORTION_CONTROLS_H
-#define LMMS_SLEW_DISTORTION_CONTROLS_H
+#ifndef NoeMixerr_SLEW_DISTORTION_CONTROLS_H
+#define NoeMixerr_SLEW_DISTORTION_CONTROLS_H
 
 #include "EffectControls.h"
 #include "SlewDistortionControlDialog.h"
 #include "ComboBox.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr int SLEWDIST_MAX_OVERSAMPLE_STAGES = 5;
@@ -115,6 +115,6 @@ private:
 	friend class SlewDistortion;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SLEW_DISTORTION_CONTROLS_H
+#endif // NoeMixerr_SLEW_DISTORTION_CONTROLS_H

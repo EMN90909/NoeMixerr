@@ -30,7 +30,7 @@
 #include "FadeButton.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 const float FadeDuration = 300;
@@ -197,4 +197,4 @@ QColor FadeButton::activeColor() const
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

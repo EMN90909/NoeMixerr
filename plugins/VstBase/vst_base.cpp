@@ -1,5 +1,5 @@
 /*
- * vst_base.cpp - VST-base-code to be used by any LMMS plugins dealing with VST-
+ * vst_base.cpp - VST-base-code to be used by any NoeMixerr plugins dealing with VST-
  *                plugins
  *
  * Copyright (c) 2006-2010 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -24,11 +24,11 @@
  */
 
 
-#include "LmmsCommonMacros.h"
+#include "NoeMixerrCommonMacros.h"
 #include "Plugin.h"
 #include "vstbase_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -37,9 +37,9 @@ extern "C"
 
 Plugin::Descriptor VSTBASE_EXPORT vstbase_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"VST Base",
-	"library for all LMMS plugins dealing with VST-plugins",
+	"library for all NoeMixerr plugins dealing with VST-plugins",
 	"Tobias Doerffel <tobydox/at/users/dot/sf/dot/net>",
 	0x0100,
 	Plugin::Type::Library,
@@ -50,4 +50,4 @@ Plugin::Descriptor VSTBASE_EXPORT vstbase_plugin_descriptor =
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

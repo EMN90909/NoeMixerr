@@ -57,7 +57,7 @@
 #include "TimeLineWidget.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 namespace
@@ -1146,6 +1146,6 @@ void SongEditorWindow::adjustUiAfterProjectLoad()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
 

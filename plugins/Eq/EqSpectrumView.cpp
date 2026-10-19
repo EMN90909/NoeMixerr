@@ -33,7 +33,7 @@
 #include "GuiApplication.h"
 #include "MainWindow.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -306,4 +306,4 @@ void EqSpectrumView::periodicalUpdate()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

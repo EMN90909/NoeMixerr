@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_MIX_HELPERS_H
-#define LMMS_MIX_HELPERS_H
+#ifndef NoeMixerr_MIX_HELPERS_H
+#define NoeMixerr_MIX_HELPERS_H
 
 #include "AudioBufferView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class ValueBuffer;
@@ -73,6 +73,6 @@ void multiplyAndAddMultipliedJoined( SampleFrame* dst, const sample_t* srcLeft, 
 } // namespace MixHelpers
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIX_HELPERS_H
+#endif // NoeMixerr_MIX_HELPERS_H

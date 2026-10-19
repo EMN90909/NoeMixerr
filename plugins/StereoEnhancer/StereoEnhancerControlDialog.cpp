@@ -30,7 +30,7 @@
 #include "Knob.h"
 #include "StereoEnhancerControls.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -51,4 +51,4 @@ StereoEnhancerControlDialog::StereoEnhancerControlDialog(
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

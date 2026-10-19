@@ -41,7 +41,7 @@
 #include "SaProcessor.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -343,4 +343,4 @@ void SaWaterfallView::resizeEvent(QResizeEvent *event)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -1,5 +1,5 @@
 /*
- * VstSyncController.h - type declarations needed for VST to lmms host sync
+ * VstSyncController.h - type declarations needed for VST to noemixerr host sync
  *
  * Copyright (c) 2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  * Copyright (c) 2013 Mike Choi <rdavidian71/at/gmail/dot/com>
@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_VST_SYNC_CONTROLLER_H
-#define LMMS_VST_SYNC_CONTROLLER_H
+#ifndef NoeMixerr_VST_SYNC_CONTROLLER_H
+#define NoeMixerr_VST_SYNC_CONTROLLER_H
 
 #include <QObject>
 
 #include "SharedMemory.h"
 #include "VstSyncData.h"  // IWYU pragma: keep
 
-namespace lmms
+namespace noemixerr
 {
 
 class VstSyncController : public QObject
@@ -59,6 +59,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_VST_SYNC_CONTROLLER_H
+#endif // NoeMixerr_VST_SYNC_CONTROLLER_H

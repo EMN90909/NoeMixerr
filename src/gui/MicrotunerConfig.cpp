@@ -42,15 +42,15 @@
 #include "Keymap.h"
 #include "LcdFloatSpinBox.h"
 #include "LcdSpinBox.h"
-#include "lmms_constants.h"
-#include "lmmsversion.h"
+#include "noemixerr_constants.h"
+#include "noemixerrversion.h"
 #include "MainWindow.h"
 #include "Note.h"
 #include "Scale.h"
 #include "Song.h"
 #include "SubWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -493,7 +493,7 @@ bool MicrotunerConfig::loadKeymapFromFile()
 		QString line = stream.readLine();
 		if (line != "" && line[0] == '!')
 		{
-			if (line.length() > 1 && line[1] == '!' && i == -7)		// LMMS extension: double "!" occurring before any
+			if (line.length() > 1 && line[1] == '!' && i == -7)		// NoeMixerr extension: double "!" occurring before any
 			{														// value is loaded marks a description field.
 				m_keymapNameEdit->setText(line.mid(2));
 			}
@@ -533,7 +533,7 @@ bool MicrotunerConfig::saveScaleToFile()
 
 	QTextStream stream(&file);
 	stream << "! " << QFileInfo(fileName).fileName() << "\n";
-	stream << "! Exported from LMMS " LMMS_VERSION "\n";
+	stream << "! Exported from NoeMixerr " NoeMixerr_VERSION "\n";
 	stream << "!\n";
 	stream << "! Scale description:\n";
 	stream << m_scaleNameEdit->text() << "\n";
@@ -565,7 +565,7 @@ bool MicrotunerConfig::saveKeymapToFile()
 
 	QTextStream stream(&file);
 	stream << "! " << QFileInfo(fileName).fileName() << "\n";
-	stream << "! Exported from LMMS " LMMS_VERSION "\n";
+	stream << "! Exported from NoeMixerr " NoeMixerr_VERSION "\n";
 	stream << "!\n";
 	stream << "! Keymap description:\n";
 	stream << "!!" << m_keymapNameEdit->text() << "\n";
@@ -605,4 +605,4 @@ void MicrotunerConfig::loadSettings(const QDomElement &element)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

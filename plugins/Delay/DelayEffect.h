@@ -28,7 +28,7 @@
 #include "Effect.h"
 #include "DelayControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Lfo;
@@ -57,6 +57,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // DELAYEFFECT_H

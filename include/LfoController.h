@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_LFO_CONTROLLER_H
-#define LMMS_LFO_CONTROLLER_H
+#ifndef NoeMixerr_LFO_CONTROLLER_H
+#define NoeMixerr_LFO_CONTROLLER_H
 
 
 #include "AutomatableModel.h"
@@ -32,7 +32,7 @@
 #include "SampleBuffer.h"
 #include "TempoSyncKnobModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -132,6 +132,6 @@ private slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LFO_CONTROLLER_H
+#endif // NoeMixerr_LFO_CONTROLLER_H

@@ -22,21 +22,21 @@
  *
  */
 
-#ifndef LMMS_GUI_INSTRUMENT_VIEW_H
-#define LMMS_GUI_INSTRUMENT_VIEW_H
+#ifndef NoeMixerr_GUI_INSTRUMENT_VIEW_H
+#define NoeMixerr_GUI_INSTRUMENT_VIEW_H
 
 #include "Instrument.h"
 #include "PluginView.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class InstrumentTrackWindow;
 
 
 //! Instrument view with variable size
-class LMMS_EXPORT InstrumentView : public PluginView
+class NoeMixerr_EXPORT InstrumentView : public PluginView
 {
 public:
 	InstrumentView( Instrument * _instrument, QWidget * _parent );
@@ -61,8 +61,8 @@ public:
 
 
 
-//! Instrument view with fixed LMMS-default size
-class LMMS_EXPORT InstrumentViewFixedSize : public InstrumentView
+//! Instrument view with fixed NoeMixerr-default size
+class NoeMixerr_EXPORT InstrumentViewFixedSize : public InstrumentView
 {
 	QSize sizeHint() const override { return QSize(250, 250); }
 	QSize minimumSizeHint() const override { return sizeHint(); }
@@ -73,6 +73,6 @@ public:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_INSTRUMENT_VIEW_H
+#endif // NoeMixerr_GUI_INSTRUMENT_VIEW_H

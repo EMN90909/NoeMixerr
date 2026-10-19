@@ -35,7 +35,7 @@
 #include <QWidget>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -148,7 +148,7 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // SASPECTRUMVIEW_H
 

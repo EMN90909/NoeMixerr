@@ -1,5 +1,5 @@
 /*
- * RemoteVstPlugin.cpp - LMMS VST Support Layer (RemotePlugin client)
+ * RemoteVstPlugin.cpp - NoeMixerr VST Support Layer (RemotePlugin client)
  *
  * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -32,21 +32,21 @@
 
  #include <cmath>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
 #include "RemotePluginClient.h"
 
-#ifdef LMMS_HAVE_FCNTL_H
+#ifdef NoeMixerr_HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
 
-#ifdef LMMS_BUILD_LINUX
+#ifdef NoeMixerr_BUILD_LINUX
 
 #ifndef O_BINARY
 #define O_BINARY 0
 #endif
 
-#ifdef LMMS_HAVE_SCHED_H
+#ifdef NoeMixerr_HAVE_SCHED_H
 #include <sched.h>
 #endif
 
@@ -54,7 +54,7 @@
 #include <wine/exception.h>
 #endif
 
-#endif // LMMS_BUILD_LINUX
+#endif // NoeMixerr_BUILD_LINUX
 
 #ifndef NATIVE_LINUX_VST
 #define USE_WS_PREFIX
@@ -112,7 +112,7 @@ struct ERect
 #endif
 
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "Midi.h"
 #include "communication.h"
 #include "IoHelper.h"
@@ -121,19 +121,19 @@ struct ERect
 
 using namespace std;
 
-static lmms::VstHostLanguage hlang = lmms::VstHostLanguage::English;
+static noemixerr::VstHostLanguage hlang = noemixerr::VstHostLanguage::English;
 
 static bool EMBED = false;
 static bool EMBED_X11 = false;
 static bool EMBED_WIN32 = false;
 static bool HEADLESS = false;
 
-namespace lmms
+namespace noemixerr
 {
 class RemoteVstPlugin;
 }
 
-lmms::RemoteVstPlugin * __plugin = nullptr;
+noemixerr::RemoteVstPlugin * __plugin = nullptr;
 
 #ifndef NATIVE_LINUX_VST
 HWND __MessageHwnd = nullptr;
@@ -142,7 +142,7 @@ DWORD __processingThreadId = 0;
 pthread_t __processingThreadId = 0;
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -847,7 +847,7 @@ void RemoteVstPlugin::initEditor()
 
 	pluginDispatch( effEditTop );
 
-#ifdef LMMS_BUILD_LINUX
+#ifdef NoeMixerr_BUILD_LINUX
 	m_windowID = (intptr_t) GetProp( m_window, "__wine_x11_whole_window" );
 #else
 	// 64-bit versions of Windows use 32-bit handles for interoperability
@@ -1805,8 +1805,8 @@ int RemoteVstPlugin::updateInOutCount()
 /* TODO:
  * - complete audioMasterGetTime-handling (bars etc.)
  * - implement audioMasterProcessEvents
- * - audioMasterGetVendorVersion: return LMMS-version (config.h!)
- * - audioMasterGetDirectory: return either VST-plugin-dir or LMMS-workingdir
+ * - audioMasterGetVendorVersion: return NoeMixerr-version (config.h!)
+ * - audioMasterGetDirectory: return either VST-plugin-dir or NoeMixerr-workingdir
  * - audioMasterOpenFileSelector: show QFileDialog?
  */
 intptr_t RemoteVstPlugin::hostCallback( AEffect * _effect, int32_t _opcode,
@@ -2128,7 +2128,7 @@ intptr_t RemoteVstPlugin::hostCallback( AEffect * _effect, int32_t _opcode,
 			SHOW_CALLBACK( "amc: audioMasterGetProductString\n" );
 			// fills <ptr> with a string with product name
 			// (max 64 char)
-			std::strcpy(p, "LMMS VST Support Layer (LVSL)");
+			std::strcpy(p, "NoeMixerr VST Support Layer (LVSL)");
 			return 1;
 
 		case audioMasterGetVendorVersion:
@@ -2472,12 +2472,12 @@ LRESULT CALLBACK RemoteVstPlugin::wndProc( HWND hwnd, UINT uMsg,
 
 #endif // NATIVE_LINUX_VST
 
-} // namespace lmms
+} // namespace noemixerr
 
 
 int main( int _argc, char * * _argv )
 {
-	using lmms::RemoteVstPlugin;
+	using noemixerr::RemoteVstPlugin;
 
 #ifdef SYNC_WITH_SHM_FIFO
 	if( _argc < 4 )
@@ -2489,8 +2489,8 @@ int main( int _argc, char * * _argv )
 		return -1;
 	}
 
-#ifndef LMMS_BUILD_WIN32
-	const auto pollParentThread = lmms::PollParentThread{};
+#ifndef NoeMixerr_BUILD_WIN32
+	const auto pollParentThread = noemixerr::PollParentThread{};
 #endif
 
 #ifndef NATIVE_LINUX_VST
@@ -2498,17 +2498,17 @@ int main( int _argc, char * * _argv )
 #else
 	XInitThreads();
 #endif
-#ifdef LMMS_BUILD_LINUX
-#ifdef LMMS_HAVE_SCHED_H
+#ifdef NoeMixerr_BUILD_LINUX
+#ifdef NoeMixerr_HAVE_SCHED_H
 	// try to set realtime-priority
 	struct sched_param sparam;
 	sparam.sched_priority = ( sched_get_priority_max( SCHED_FIFO ) +
 				sched_get_priority_min( SCHED_FIFO ) ) / 2;
 	sched_setscheduler( 0, SCHED_FIFO, &sparam );
 #endif
-#endif // LMMS_BUILD_LINUX
+#endif // NoeMixerr_BUILD_LINUX
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 	if( !SetPriorityClass( GetCurrentProcess(), HIGH_PRIORITY_CLASS ) )
 	{
 		printf( "Notice: could not set high priority.\n" );

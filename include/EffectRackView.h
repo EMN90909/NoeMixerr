@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_EFFECT_RACK_VIEW_H
-#define LMMS_GUI_EFFECT_RACK_VIEW_H
+#ifndef NoeMixerr_GUI_EFFECT_RACK_VIEW_H
+#define NoeMixerr_GUI_EFFECT_RACK_VIEW_H
 
 #include <QWidget>
 
@@ -33,7 +33,7 @@
 
 class QScrollArea;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class EffectView;
@@ -85,6 +85,6 @@ private:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_EFFECT_RACK_VIEW_H
+#endif // NoeMixerr_GUI_EFFECT_RACK_VIEW_H

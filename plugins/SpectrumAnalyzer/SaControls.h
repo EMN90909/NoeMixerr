@@ -30,7 +30,7 @@
 
 //#define SA_DEBUG 1	// define SA_DEBUG to enable performance measurements
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -105,6 +105,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // SACONTROLS_H

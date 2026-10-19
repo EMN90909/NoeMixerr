@@ -27,7 +27,7 @@
 #include "PianoRoll.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -378,4 +378,4 @@ StepRecorder::StepNote* StepRecorder::findCurStepNote(const int key)
 	return nullptr;
 }
 
-} // namespace lmms
+} // namespace noemixerr

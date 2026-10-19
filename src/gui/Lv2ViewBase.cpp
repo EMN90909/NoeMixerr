@@ -24,7 +24,7 @@
 
 #include "Lv2ViewBase.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <QGridLayout>
 #include <QPushButton>
@@ -39,7 +39,7 @@
 #include "GuiApplication.h"
 #include "embed.h"
 #include "FontHelper.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "Lv2ControlBase.h"
 #include "Lv2Manager.h"
 #include "Lv2Proc.h"
@@ -48,7 +48,7 @@
 #include "SubWindow.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -284,6 +284,6 @@ bool HelpWindowEventFilter::eventFilter(QObject* , QEvent* event)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2

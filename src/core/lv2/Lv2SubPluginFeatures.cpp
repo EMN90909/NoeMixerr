@@ -26,7 +26,7 @@
 
 #include "Lv2SubPluginFeatures.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <QHBoxLayout>
 #include <QLabel>
@@ -35,7 +35,7 @@
 #include "Lv2Basics.h"
 #include "Lv2Manager.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -268,7 +268,7 @@ void Lv2SubPluginFeatures::listSubPluginKeys(const Plugin::Descriptor* desc,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 

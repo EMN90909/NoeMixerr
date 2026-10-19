@@ -1,5 +1,5 @@
 /*
- * MidiPort.cpp - abstraction of MIDI-ports which are part of LMMS's MIDI-
+ * MidiPort.cpp - abstraction of MIDI-ports which are part of NoeMixerr's MIDI-
  *                sequencing system
  *
  * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -34,7 +34,7 @@
 #include "MidiController.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -281,7 +281,7 @@ void MidiPort::loadSettings( const QDomElement& thisElement )
 
 	if( thisElement.hasAttribute( "basevelocity" ) == false )
 	{
-		// for projects created by LMMS < 0.9.92 there's no value for the base
+		// for projects created by NoeMixerr < 0.9.92 there's no value for the base
 		// velocity and for compat reasons we have to stick with maximum velocity
 		// which did not allow note volumes > 100%
 		m_baseVelocityModel.setValue( MidiMaxVelocity );
@@ -437,4 +437,4 @@ void MidiPort::invalidateCilent()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

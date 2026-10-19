@@ -22,16 +22,16 @@
  *
  */
 
-#ifndef LMMS_MIDIEVENTTOBYTESEQ_H
-#define LMMS_MIDIEVENTTOBYTESEQ_H
+#ifndef NoeMixerr_MIDIEVENTTOBYTESEQ_H
+#define NoeMixerr_MIDIEVENTTOBYTESEQ_H
 
 #include <cstddef>
 #include <cstdint>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 //! @brief Write MIDI event into byte sequence.
@@ -43,8 +43,8 @@ namespace lmms
 //! size.
 //! @param bufsize Available size of the target buffer.
 //! @return Used size of the target buffer, or 0 if the MidiEvent could not be converted.
-std::size_t LMMS_EXPORT writeToByteSeq(const class MidiEvent& ev, uint8_t* data, std::size_t bufsize);
+std::size_t NoeMixerr_EXPORT writeToByteSeq(const class MidiEvent& ev, uint8_t* data, std::size_t bufsize);
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDIEVENTTOBYTESEQ_H
+#endif // NoeMixerr_MIDIEVENTTOBYTESEQ_H

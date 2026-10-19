@@ -26,7 +26,7 @@
 #include "ToolPlugin.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -54,4 +54,4 @@ ToolPlugin * ToolPlugin::instantiate( const QString & _plugin_name, Model * _par
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -26,7 +26,7 @@
 #include "SaProcessor.h"
 
 #include <algorithm>
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include <cmath>
 #ifdef SA_DEBUG
 	#include <chrono>
@@ -36,14 +36,14 @@
 #include <QMutexLocker>
 
 #include "fft_helpers.h"
-#include "lmms_constants.h"
+#include "noemixerr_constants.h"
 #include "LocklessRingBuffer.h"
 #include "SaControls.h"
 
 #include <cassert>
 #include <limits>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -689,4 +689,4 @@ float SaProcessor::yPixelToAmp(float y, unsigned int height) const
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

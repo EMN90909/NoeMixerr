@@ -23,10 +23,10 @@
  *
  */
 
-#ifndef LMMS_AUTOMATION_NODE_H
-#define LMMS_AUTOMATION_NODE_H
+#ifndef NoeMixerr_AUTOMATION_NODE_H
+#define NoeMixerr_AUTOMATION_NODE_H
 
-namespace lmms
+namespace noemixerr
 {
 
 class AutomationClip;
@@ -136,6 +136,6 @@ private:
 	bool m_lockedTangents;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUTOMATION_NODE_H
+#endif // NoeMixerr_AUTOMATION_NODE_H

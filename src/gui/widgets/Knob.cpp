@@ -30,12 +30,12 @@
 #include "DeprecationHelper.h"
 #include "embed.h"
 #include "FontHelper.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 #include <algorithm>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 Knob::Knob( KnobType _knob_num, QWidget * _parent, const QString & _name ) :
@@ -619,4 +619,4 @@ void convertPixmapToGrayScale(QPixmap& pixMap)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

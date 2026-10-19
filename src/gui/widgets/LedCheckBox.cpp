@@ -32,7 +32,7 @@
 #include "embed.h"
 #include "FontHelper.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -138,4 +138,4 @@ void LedCheckBox::paintNonLegacy(QPaintEvent * pe)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

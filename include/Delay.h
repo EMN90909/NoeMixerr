@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_DELAY_H
-#define LMMS_DELAY_H
+#ifndef NoeMixerr_DELAY_H
+#define NoeMixerr_DELAY_H
 
 #include <cmath>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 // brief usage 
@@ -361,6 +361,6 @@ using StereoCombFeedfwd = CombFeedfwd<2>;
 using StereoCombFeedbackDualtap = CombFeedbackDualtap<2>;
 using StereoAllpassDelay = AllpassDelay<2>;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DELAY_H
+#endif // NoeMixerr_DELAY_H

@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_MODEL_H
-#define LMMS_MODEL_H
+#ifndef NoeMixerr_MODEL_H
+#define NoeMixerr_MODEL_H
 
 #include <QString>
 #include <QObject>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
-class LMMS_EXPORT Model : public QObject
+class NoeMixerr_EXPORT Model : public QObject
 {
 	Q_OBJECT
 public:
@@ -71,6 +71,6 @@ signals:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MODEL_H
+#endif // NoeMixerr_MODEL_H

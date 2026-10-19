@@ -28,7 +28,7 @@
 #include "BitcrushControls.h"
 #include "Bitcrush.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -88,4 +88,4 @@ void BitcrushControls::sampleRateChanged()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

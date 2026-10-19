@@ -22,7 +22,7 @@
  *
  */
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
 #include <QDir>
 #include <QDomDocument>
@@ -52,7 +52,7 @@
 #include "FontHelper.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -61,7 +61,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT zynaddsubfx_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"ZynAddSubFX",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 			"Embedded ZynAddSubFX" ),
@@ -442,7 +442,7 @@ void ZynAddSubFxInstrument::initPlugin()
 		m_remotePlugin->waitForInitDone( false );
 
 		m_remotePlugin->sendMessage(
-			RemotePlugin::message( IdZasfLmmsWorkingDirectory ).
+			RemotePlugin::message( IdZasfNoeMixerrWorkingDirectory ).
 				addString(
 					QSTR_TO_STDSTR(
 						QString( ConfigManager::inst()->workingDir() ) ) ) );
@@ -650,7 +650,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main(Model * m, void *)
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main(Model * m, void *)
 {
 	return new ZynAddSubFxInstrument(static_cast<InstrumentTrack *>(m));
 }
@@ -659,4 +659,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main(Model * m, void *)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -30,7 +30,7 @@
 
 #include "DeprecationHelper.h"
 
-namespace lmms::base64
+namespace noemixerr::base64
 {
 
 
@@ -56,4 +56,4 @@ QVariant decode(const QString& b64, QMetaType::Type forceType)
 }
 
 
-} // namespace lmms::base64
+} // namespace noemixerr::base64

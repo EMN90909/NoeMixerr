@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_GUI_FILE_DIALOG_H
-#define LMMS_GUI_FILE_DIALOG_H
+#ifndef NoeMixerr_GUI_FILE_DIALOG_H
+#define NoeMixerr_GUI_FILE_DIALOG_H
 
 #include <QFileDialog>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LMMS_EXPORT FileDialog : public QFileDialog
+class NoeMixerr_EXPORT FileDialog : public QFileDialog
 {
 	Q_OBJECT
 public:
@@ -56,6 +56,6 @@ public:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_FILE_DIALOG_H
+#endif // NoeMixerr_GUI_FILE_DIALOG_H

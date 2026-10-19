@@ -58,7 +58,7 @@
 #include "TimeLineWidget.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 const std::array<float, 7> AutomationEditor::m_zoomXLevels =
 		{ 0.125f, 0.25f, 0.5f, 1.0f, 2.0f, 4.0f, 8.0f };
@@ -1467,7 +1467,7 @@ void AutomationEditor::drawLevelTick(QPainter & p, int tick, float value)
 		QBrush currentColor = m_graphColor;
 		p.fillRect( x, y_start, rect_width, rect_height, currentColor );
 	}
-#ifdef LMMS_DEBUG
+#ifdef NoeMixerr_DEBUG
 	else
 	{
 		printf("not in range\n");
@@ -2313,4 +2313,4 @@ void AutomationEditorWindow::updateEditTanButton()
 	if (!m_editTanAction->isEnabled() && m_editTanAction->isChecked()) { m_drawAction->trigger(); }
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

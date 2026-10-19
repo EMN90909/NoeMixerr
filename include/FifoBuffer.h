@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_FIFO_BUFFER_H
-#define LMMS_FIFO_BUFFER_H
+#ifndef NoeMixerr_FIFO_BUFFER_H
+#define NoeMixerr_FIFO_BUFFER_H
 
 #include <QSemaphore>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -92,6 +92,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_FIFO_BUFFER_H
+#endif // NoeMixerr_FIFO_BUFFER_H

@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_SONG_EDITOR_H
-#define LMMS_GUI_SONG_EDITOR_H
+#ifndef NoeMixerr_GUI_SONG_EDITOR_H
+#define NoeMixerr_GUI_SONG_EDITOR_H
 
 #include "Editor.h"
 #include "TrackContainerView.h"
@@ -32,7 +32,7 @@
 class QLabel;
 class QScrollBar;
 
-namespace lmms
+namespace noemixerr
 {
 
 class IntModel;
@@ -86,7 +86,7 @@ public slots:
 	void stopSelectRegion();
 	void updateRubberband();
 
-	void setEditMode( lmms::gui::SongEditor::EditMode mode );
+	void setEditMode( noemixerr::gui::SongEditor::EditMode mode );
 	void setEditModeDraw();
 	void setEditModeKnife();
 	void setEditModeSelect();
@@ -232,6 +232,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_SONG_EDITOR_H
+#endif // NoeMixerr_GUI_SONG_EDITOR_H

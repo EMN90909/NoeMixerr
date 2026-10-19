@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_PLUGIN_BROWSER_H
-#define LMMS_GUI_PLUGIN_BROWSER_H
+#ifndef NoeMixerr_GUI_PLUGIN_BROWSER_H
+#define NoeMixerr_GUI_PLUGIN_BROWSER_H
 
 #include <QPixmap>
 
@@ -32,7 +32,7 @@
 
 class QTreeWidget;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class PluginBrowser : public SideBarWidget
@@ -85,6 +85,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_PLUGIN_BROWSER_H
+#endif // NoeMixerr_GUI_PLUGIN_BROWSER_H

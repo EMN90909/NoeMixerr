@@ -45,7 +45,7 @@
 #include "Song.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -390,4 +390,4 @@ void ProjectNotes::loadSettings( const QDomElement & _this )
 	m_edit->setHtml( _this.text() );
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

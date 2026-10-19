@@ -22,24 +22,24 @@
  *
  */
 
-#ifndef LMMS_GUI_MAIN_APPLICATION_H
-#define LMMS_GUI_MAIN_APPLICATION_H
+#ifndef NoeMixerr_GUI_MAIN_APPLICATION_H
+#define NoeMixerr_GUI_MAIN_APPLICATION_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
 #include <QApplication>
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 #include <windows.h>
 #include <QAbstractNativeEventFilter>
 #endif
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-#if defined(LMMS_BUILD_WIN32)
+#if defined(NoeMixerr_BUILD_WIN32)
 class MainApplication : public QApplication, public QAbstractNativeEventFilter
 #else
 class MainApplication : public QApplication
@@ -48,7 +48,7 @@ class MainApplication : public QApplication
 public:
 	MainApplication(int& argc, char** argv);
 	bool event(QEvent* event) override;
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
 	using FilterResult = long;
 #else
@@ -56,7 +56,7 @@ public:
 #endif // QT6 check
 	bool win32EventFilter(MSG* msg, FilterResult* result);
 	bool nativeEventFilter(const QByteArray& eventType, void* message, FilterResult* result);
-#endif // LMMS_BUILD_WIN32
+#endif // NoeMixerr_BUILD_WIN32
 	inline QString& queuedFile()
 	{
 	    return m_queuedFile;
@@ -66,6 +66,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_MAIN_APPLICATION_H
+#endif // NoeMixerr_GUI_MAIN_APPLICATION_H

@@ -35,7 +35,7 @@
 #include "FontHelper.h"
 #include "TapTempo.h"
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 TapTempoView::TapTempoView(TapTempo* plugin)
 	: ToolPluginView(plugin)
 	, m_tapButton(new QPushButton())
@@ -159,4 +159,4 @@ void TapTempoView::keyPressEvent(QKeyEvent* event)
 	ToolPluginView::keyPressEvent(event);
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

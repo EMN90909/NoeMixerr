@@ -1,5 +1,5 @@
 /*
- * LmmsPalette.h - dummy class for fetching palette qproperties from CSS
+ * NoeMixerrPalette.h - dummy class for fetching palette qproperties from CSS
  *                
  *
  * Copyright (c) 2007-2014 Vesa Kivimäki <contact/dot/diizy/at/nbl/dot/fi>
@@ -23,17 +23,17 @@
  *
  */
 
-#ifndef LMMS_GUI_LMMS_PALETTE_H
-#define LMMS_GUI_LMMS_PALETTE_H
+#ifndef NoeMixerr_GUI_NoeMixerr_PALETTE_H
+#define NoeMixerr_GUI_NoeMixerr_PALETTE_H
 
 #include <QWidget>
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LMMS_EXPORT LmmsPalette : public QWidget
+class NoeMixerr_EXPORT NoeMixerrPalette : public QWidget
 {
 	Q_OBJECT
 	Q_PROPERTY( QColor background READ background WRITE setBackground )
@@ -48,8 +48,8 @@ class LMMS_EXPORT LmmsPalette : public QWidget
 	Q_PROPERTY( QColor highlightedText READ highlightedText WRITE setHighlightedText )
 
 public:
-	LmmsPalette( QWidget * parent, QStyle * stylearg  ); 
-	~LmmsPalette() override = default;
+	NoeMixerrPalette( QWidget * parent, QStyle * stylearg  ); 
+	~NoeMixerrPalette() override = default;
 
 #define ACCESSMET( read, write ) \
 	QColor read () const; \
@@ -85,6 +85,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_LMMS_PALETTE_H
+#endif // NoeMixerr_GUI_NoeMixerr_PALETTE_H

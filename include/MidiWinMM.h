@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_MIDI_WINMM_H
-#define LMMS_MIDI_WINMM_H
+#ifndef NoeMixerr_MIDI_WINMM_H
+#define NoeMixerr_MIDI_WINMM_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_WINMM
+#ifdef NoeMixerr_HAVE_WINMM
 #include <windows.h>
 #include <mmsystem.h>
 
@@ -38,7 +38,7 @@
 class QLineEdit;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -146,8 +146,8 @@ signals:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_WINMM
+#endif // NoeMixerr_HAVE_WINMM
 
-#endif // LMMS_MIDI_WINMM_H
+#endif // NoeMixerr_MIDI_WINMM_H

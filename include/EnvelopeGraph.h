@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_GUI_ENVELOPE_GRAPH_H
-#define LMMS_GUI_ENVELOPE_GRAPH_H
+#ifndef NoeMixerr_GUI_ENVELOPE_GRAPH_H
+#define NoeMixerr_GUI_ENVELOPE_GRAPH_H
 
 #include <QWidget>
 
 #include "ModelView.h"
 #include "embed.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class EnvelopeAndLfoParameters;
@@ -83,6 +83,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_ENVELOPE_GRAPH_H
+#endif // NoeMixerr_GUI_ENVELOPE_GRAPH_H

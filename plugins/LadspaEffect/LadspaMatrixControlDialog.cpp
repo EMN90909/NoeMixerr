@@ -38,7 +38,7 @@
 #include "LedCheckBox.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 LadspaMatrixControlDialog::LadspaMatrixControlDialog(LadspaControls * ladspaControls) :
@@ -215,4 +215,4 @@ ch_cnt_t LadspaMatrixControlDialog::getChannelCount() const
 	return getLadspaControls()->m_processors;
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

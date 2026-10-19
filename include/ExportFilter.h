@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_EXPORT_FILTER_H
-#define LMMS_EXPORT_FILTER_H
+#ifndef NoeMixerr_EXPORT_FILTER_H
+#define NoeMixerr_EXPORT_FILTER_H
 
 #include <filesystem>
 
@@ -32,11 +32,11 @@
 #include "Plugin.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
-class LMMS_EXPORT ExportFilter : public Plugin
+class NoeMixerr_EXPORT ExportFilter : public Plugin
 {
 public:
 	ExportFilter( const Descriptor * _descriptor ) : Plugin( _descriptor, nullptr ) {}
@@ -74,6 +74,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_EXPORT_FILTER_H
+#endif // NoeMixerr_EXPORT_FILTER_H

@@ -38,7 +38,7 @@
 #include "NStateButton.h"
 #include "TextFloat.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 namespace
@@ -459,4 +459,4 @@ TimeLineWidget::AutoScrollState TimeLineWidget::defaultAutoScrollState()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

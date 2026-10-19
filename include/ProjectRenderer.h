@@ -22,20 +22,20 @@
  *
  */
 
-#ifndef LMMS_PROJECT_RENDERER_H
-#define LMMS_PROJECT_RENDERER_H
+#ifndef NoeMixerr_PROJECT_RENDERER_H
+#define NoeMixerr_PROJECT_RENDERER_H
 
 #include "AudioFileDevice.h"
 #include "AudioEngine.h"
 #include "OutputSettings.h"
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
-class LMMS_EXPORT ProjectRenderer : public QThread
+class NoeMixerr_EXPORT ProjectRenderer : public QThread
 {
 	Q_OBJECT
 public:
@@ -96,6 +96,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PROJECT_RENDERER_H
+#endif // NoeMixerr_PROJECT_RENDERER_H

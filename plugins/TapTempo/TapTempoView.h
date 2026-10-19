@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_TAP_TEMPO_VIEW_H
-#define LMMS_GUI_TAP_TEMPO_VIEW_H
+#ifndef NoeMixerr_GUI_TAP_TEMPO_VIEW_H
+#define NoeMixerr_GUI_TAP_TEMPO_VIEW_H
 
 #include "ToolPluginView.h"
 
@@ -31,11 +31,11 @@ class QCheckBox;
 class QLabel;
 class QPushButton;
 
-namespace lmms {
+namespace noemixerr {
 class TapTempo;
 }
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
 class TapTempoView : public ToolPluginView
 {
@@ -57,6 +57,6 @@ private:
 	QLabel* m_hzLabel;
 	TapTempo* m_plugin;
 };
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TAP_TEMPO_VIEW_H
+#endif // NoeMixerr_GUI_TAP_TEMPO_VIEW_H

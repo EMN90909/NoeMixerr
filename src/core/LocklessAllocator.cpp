@@ -27,13 +27,13 @@
 #include <algorithm>
 #include <cstdio>
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 #include <strings.h>
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 static const size_t SIZEOF_SET = sizeof( int ) * 8;
@@ -84,7 +84,7 @@ LocklessAllocator::~LocklessAllocator()
 
 
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 static int ffs( int i )
 {
 	if( !i )
@@ -166,4 +166,4 @@ invalid:
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

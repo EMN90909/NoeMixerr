@@ -24,12 +24,12 @@
 
 #include "PeakIndicator.h"
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 #include <QMouseEvent>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 PeakIndicator::PeakIndicator(QWidget* parent) :
@@ -80,4 +80,4 @@ void PeakIndicator::updatePeakDisplay()
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

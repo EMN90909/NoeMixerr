@@ -29,7 +29,7 @@
 #include <QStyledItemDelegate>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -139,4 +139,4 @@ void RowTableView::keyPressEvent( QKeyEvent * event )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

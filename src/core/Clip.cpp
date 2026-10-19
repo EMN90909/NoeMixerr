@@ -35,7 +35,7 @@
 #include "TrackContainer.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 Clip::Clip( Track * track ) :
@@ -175,4 +175,4 @@ void Clip::setColor(const std::optional<QColor>& color)
 	emit colorChanged();
 }
 
-} // namespace lmms
+} // namespace noemixerr

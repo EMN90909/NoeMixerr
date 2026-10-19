@@ -27,12 +27,12 @@
 
 #include "SampleFrame.h"
 
-#ifdef LMMS_HAVE_MP3LAME
+#ifdef NoeMixerr_HAVE_MP3LAME
 
 
 #include <cassert>
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioFileMP3::AudioFileMP3(	OutputSettings const & outputSettings,
@@ -121,7 +121,7 @@ bool AudioFileMP3::initEncoder()
 
 	// Add a comment
 	id3tag_init(m_lame);
-	id3tag_set_comment(m_lame, "Created with LMMS");
+	id3tag_set_comment(m_lame, "Created with NoeMixerr");
 
 	return lame_init_params(m_lame) != -1;
 }
@@ -131,6 +131,6 @@ void AudioFileMP3::tearDownEncoder()
 	lame_close(m_lame);
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_MP3LAME
+#endif // NoeMixerr_HAVE_MP3LAME

@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_GUI_ACTION_GROUP_H
-#define LMMS_GUI_ACTION_GROUP_H
+#ifndef NoeMixerr_GUI_ACTION_GROUP_H
+#define NoeMixerr_GUI_ACTION_GROUP_H
 
 #include <QActionGroup>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 /// \brief Convenience subclass of QActionGroup
@@ -56,6 +56,6 @@ private:
 	QList<QAction*> m_actions;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_ACTION_GROUP_H
+#endif // NoeMixerr_GUI_ACTION_GROUP_H

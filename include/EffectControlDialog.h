@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_GUI_EFFECT_CONTROL_DIALOG_H
-#define LMMS_GUI_EFFECT_CONTROL_DIALOG_H
+#ifndef NoeMixerr_GUI_EFFECT_CONTROL_DIALOG_H
+#define NoeMixerr_GUI_EFFECT_CONTROL_DIALOG_H
 
 #include <QWidget>
 
 #include "ModelView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class EffectControls;
@@ -38,7 +38,7 @@ class EffectControls;
 namespace gui
 {
 
-class LMMS_EXPORT EffectControlDialog : public QWidget, public ModelView
+class NoeMixerr_EXPORT EffectControlDialog : public QWidget, public ModelView
 {
 public:
 	EffectControlDialog(EffectControls* controls);
@@ -50,6 +50,6 @@ protected:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_EFFECT_CONTROL_DIALOG_H
+#endif // NoeMixerr_GUI_EFFECT_CONTROL_DIALOG_H

@@ -1,5 +1,5 @@
 /*
- * VstSyncData.h - type declarations needed for VST to lmms host sync
+ * VstSyncData.h - type declarations needed for VST to noemixerr host sync
  *
  * Copyright (c) 2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  * Copyright (c) 2013 Mike Choi <rdavidian71/at/gmail/dot/com>
@@ -23,10 +23,10 @@
  *
  */
 
-#ifndef LMMS_VST_SYNC_DATA_H
-#define LMMS_VST_SYNC_DATA_H
+#ifndef NoeMixerr_VST_SYNC_DATA_H
+#define NoeMixerr_VST_SYNC_DATA_H
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -59,6 +59,6 @@ struct VstSyncData
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_VST_SYNC_DATA_H
+#endif // NoeMixerr_VST_SYNC_DATA_H

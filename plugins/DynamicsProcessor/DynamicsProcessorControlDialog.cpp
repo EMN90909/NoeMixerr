@@ -33,7 +33,7 @@
 #include "Knob.h"
 #include "PixmapButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -150,4 +150,4 @@ DynProcControlDialog::DynProcControlDialog(
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

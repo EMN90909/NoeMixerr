@@ -23,13 +23,13 @@
  *
  */
 
-#ifndef LMMS_SAMPLE_PLAY_HANDLE_H
-#define LMMS_SAMPLE_PLAY_HANDLE_H
+#ifndef NoeMixerr_SAMPLE_PLAY_HANDLE_H
+#define NoeMixerr_SAMPLE_PLAY_HANDLE_H
 
 #include "Sample.h"
 #include "PlayHandle.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -38,7 +38,7 @@ class SampleClip;
 class Track;
 
 
-class LMMS_EXPORT SamplePlayHandle : public PlayHandle
+class NoeMixerr_EXPORT SamplePlayHandle : public PlayHandle
 {
 public:
 	SamplePlayHandle(Sample* sample, bool ownAudioBusHandle = true);
@@ -83,6 +83,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SAMPLE_PLAY_HANDLE_H
+#endif // NoeMixerr_SAMPLE_PLAY_HANDLE_H

@@ -24,10 +24,10 @@
 
 #include "GuiApplication.h"
 
-#include "lmmsversion.h"
+#include "noemixerrversion.h"
 
-#include "LmmsStyle.h"
-#include "LmmsPalette.h"
+#include "NoeMixerrStyle.h"
+#include "NoeMixerrPalette.h"
 
 #include "AutomationEditor.h"
 #include "ConfigManager.h"
@@ -50,7 +50,7 @@
 #include <QSplashScreen>
 #include <QSocketNotifier>
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 #include <io.h>
 #include <stdio.h>
 #include <windows.h>
@@ -59,7 +59,7 @@
 #include <unistd.h>
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -91,11 +91,11 @@ GuiApplication::GuiApplication()
 	// Immediately register our SIGINT handler
 	createSocketNotifier();
 
-	// prompt the user to create the LMMS working directory (e.g. ~/Documents/lmms) if it doesn't exist
+	// prompt the user to create the NoeMixerr working directory (e.g. ~/Documents/noemixerr) if it doesn't exist
 	if ( !ConfigManager::inst()->hasWorkingDir() &&
 		QMessageBox::question( nullptr,
 				tr( "Working directory" ),
-				tr( "The LMMS working directory %1 does not "
+				tr( "The NoeMixerr working directory %1 does not "
 				"exist. Create it now? You can change the directory "
 				"later via Edit -> Settings." ).arg( ConfigManager::inst()->workingDir() ),
 					QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes ) == QMessageBox::Yes)
@@ -107,16 +107,16 @@ GuiApplication::GuiApplication()
 	QDir::addSearchPath("artwork", ConfigManager::inst()->defaultThemeDir());
 	QDir::addSearchPath("artwork", ":/artwork");
 
-	auto lmmsstyle = new LmmsStyle();
-	QApplication::setStyle(lmmsstyle);
+	auto noemixerrstyle = new NoeMixerrStyle();
+	QApplication::setStyle(noemixerrstyle);
 
-	auto lmmspal = new LmmsPalette(nullptr, lmmsstyle);
-	auto lpal = new QPalette(lmmspal->palette());
+	auto noemixerrpal = new NoeMixerrPalette(nullptr, noemixerrstyle);
+	auto lpal = new QPalette(noemixerrpal->palette());
 
 	QApplication::setPalette( *lpal );
-	LmmsStyle::s_palette = lpal;
+	NoeMixerrStyle::s_palette = lpal;
 
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 	QApplication::setAttribute(Qt::AA_DontShowIconsInMenus, true);
 #endif
 
@@ -133,7 +133,7 @@ GuiApplication::GuiApplication()
 	// & a right-aligned label for version info
 	QLabel loadingProgressLabel;
 	m_loadingProgressLabel = &loadingProgressLabel;
-	QLabel versionLabel(MainWindow::tr( "Version %1" ).arg( LMMS_VERSION ));
+	QLabel versionLabel(MainWindow::tr( "Version %1" ).arg( NoeMixerr_VERSION ));
 
 	loadingProgressLabel.setAlignment(Qt::AlignLeft);
 	versionLabel.setAlignment(Qt::AlignRight);
@@ -148,7 +148,7 @@ GuiApplication::GuiApplication()
 	connect(Engine::inst(), SIGNAL(initProgress(const QString&)), 
 		this, SLOT(displayInitProgress(const QString&)));
 
-	// Init central engine which handles all components of LMMS
+	// Init central engine which handles all components of NoeMixerr
 	Engine::init(false);
 
 	s_instance = this;
@@ -258,7 +258,7 @@ void GuiApplication::childDestroyed(QObject *obj)
 
 void GuiApplication::sigintHandler(int)
 {
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 	char message[] = "Sorry, SIGINT is unhandled on this platform\n";
 	std::ignore = _write(_fileno(stderr), message, sizeof(message));
 #else
@@ -270,7 +270,7 @@ void GuiApplication::sigintHandler(int)
 // Create our unix signal notifiers
 void GuiApplication::createSocketNotifier()
 {
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 	// no-op
 #else
 	if (::socketpair(AF_UNIX, SOCK_STREAM, 0, s_sigintFd))
@@ -295,7 +295,7 @@ void GuiApplication::sigintOccurred()
 	m_sigintNotifier->setEnabled(true);
 }
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 QFont GuiApplication::getWin32SystemFont()
 {
 	auto metrics = NONCLIENTMETRICSW{ .cbSize = sizeof(NONCLIENTMETRICSW) };
@@ -316,4 +316,4 @@ QFont GuiApplication::getWin32SystemFont()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

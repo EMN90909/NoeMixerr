@@ -32,7 +32,7 @@
 #include "GuiApplication.h"
 #include "MainWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -130,4 +130,4 @@ void TextFloat::mousePressEvent(QMouseEvent *)
 	close();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

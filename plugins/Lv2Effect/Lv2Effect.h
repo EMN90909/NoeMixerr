@@ -28,7 +28,7 @@
 #include "Effect.h"
 #include "Lv2FxControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -55,6 +55,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

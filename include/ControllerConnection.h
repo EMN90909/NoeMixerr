@@ -26,8 +26,8 @@
  *
  */
 
-#ifndef LMMS_CONTROLLER_CONNECTION_H
-#define LMMS_CONTROLLER_CONNECTION_H
+#ifndef NoeMixerr_CONTROLLER_CONNECTION_H
+#define NoeMixerr_CONTROLLER_CONNECTION_H
 
 #include <QObject>
 
@@ -37,7 +37,7 @@
 
 #include <vector>
 
-namespace lmms
+namespace noemixerr
 {
 
 class ControllerConnection;
@@ -49,7 +49,7 @@ class ControllerConnectionDialog;
 
 using ControllerConnectionVector = std::vector<ControllerConnection*>;
 
-class LMMS_EXPORT ControllerConnection : public QObject, public JournallingObject
+class NoeMixerr_EXPORT ControllerConnection : public QObject, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -126,6 +126,6 @@ signals:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_CONTROLLER_CONNECTION_H
+#endif // NoeMixerr_CONTROLLER_CONNECTION_H

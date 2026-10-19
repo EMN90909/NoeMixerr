@@ -27,7 +27,7 @@
 #include "StereoMatrixControls.h"
 #include "StereoMatrix.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -85,4 +85,4 @@ void StereoMatrixControls::saveSettings( QDomDocument & _doc,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

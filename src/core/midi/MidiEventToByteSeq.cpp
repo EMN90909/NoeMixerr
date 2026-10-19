@@ -29,7 +29,7 @@
 #include "MidiEvent.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -110,4 +110,4 @@ std::size_t writeToByteSeq(
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

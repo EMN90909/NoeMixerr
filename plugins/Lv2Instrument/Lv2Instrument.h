@@ -38,7 +38,7 @@
 // currently only MIDI works
 #define LV2_INSTRUMENT_USE_MIDI
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -125,6 +125,6 @@ private:
 } // namespace gui
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // LV2_INSTRUMENT_H

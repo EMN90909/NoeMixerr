@@ -26,7 +26,7 @@
 
 #include <QDomElement>
 
-namespace lmms
+namespace noemixerr
 {
 
 FrequencyShifterControls::FrequencyShifterControls(FrequencyShifterEffect* e) :
@@ -108,5 +108,5 @@ void FrequencyShifterControls::saveSettings(QDomDocument& doc, QDomElement& e)
 	m_phase.saveSettings(doc, e, "phase");
 }
 
-} // namespace lmms
+} // namespace noemixerr
 

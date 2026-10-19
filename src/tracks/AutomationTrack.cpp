@@ -29,7 +29,7 @@
 #include "AutomationTrackView.h"
 #include "AutomationClip.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -83,4 +83,4 @@ void AutomationTrack::loadTrackSpecificSettings( const QDomElement & _this )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

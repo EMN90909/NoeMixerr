@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_AUDIO_SDL_H
-#define LMMS_AUDIO_SDL_H
+#ifndef NoeMixerr_AUDIO_SDL_H
+#define NoeMixerr_AUDIO_SDL_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_SDL
+#ifdef NoeMixerr_HAVE_SDL
 
 #include <SDL2/SDL_audio.h>
 
@@ -36,7 +36,7 @@
 
 class QComboBox;
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioSdl : public AudioDevice
@@ -90,8 +90,8 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_SDL
+#endif // NoeMixerr_HAVE_SDL
 
-#endif // LMMS_AUDIO_SDL_H
+#endif // NoeMixerr_AUDIO_SDL_H

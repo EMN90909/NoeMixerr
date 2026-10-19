@@ -24,7 +24,7 @@
 
 #include "Lv2Proc.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <cmath>
 #include <lv2/midi/midi.h>
@@ -48,7 +48,7 @@
 #include "NoCopyNoMove.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -265,7 +265,7 @@ void Lv2Proc::copyModelsFromCore()
 		}
 	} copy;
 
-	// feed each input port with the respective data from the LMMS core
+	// feed each input port with the respective data from the NoeMixerr core
 	for (const std::unique_ptr<Lv2Ports::PortBase>& port : m_ports)
 	{
 		if (port->m_flow == Lv2Ports::Flow::Input)
@@ -311,7 +311,7 @@ void Lv2Proc::copyModelsToCore()
 		}
 	} copy;
 
-	// fetch data from each output port and bring it to the LMMS core
+	// fetch data from each output port and bring it to the NoeMixerr core
 	for (const std::unique_ptr<Lv2Ports::PortBase>& port : m_ports)
 	{
 		if (port->m_flow == Lv2Ports::Flow::Output)
@@ -511,7 +511,7 @@ void Lv2Proc::initMOptions()
 {
 	/*
 		sampleRate:
-		LMMS can in theory inform plugins of a new sample rate.
+		NoeMixerr can in theory inform plugins of a new sample rate.
 		However, Lv2 plugins seem to not allow sample rate changes
 		(not even through LV2_Options_Interface) - it's assumed to be
 		fixed after being passed via LV2_Descriptor::instantiate.
@@ -926,6 +926,6 @@ AutoLilvNode Lv2Proc::uri(const char *uriStr)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2

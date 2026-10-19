@@ -32,7 +32,7 @@
 #include "GuiApplication.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -93,4 +93,4 @@ void MixerChannelLcdSpinBox::enterValue()
 	if (ok) { model()->setValue(newVal); }
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

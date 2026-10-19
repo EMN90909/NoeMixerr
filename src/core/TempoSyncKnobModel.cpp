@@ -31,7 +31,7 @@
 #include "Song.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -45,8 +45,8 @@ TempoSyncKnobModel::TempoSyncKnobModel( const float _val, const float _min,
 	m_scale( _scale ),
 	m_custom( _parent )
 {
-	connect( Engine::getSong(), SIGNAL(tempoChanged(lmms::bpm_t)),
-			this, SLOT(calculateTempoSyncTime(lmms::bpm_t)),
+	connect( Engine::getSong(), SIGNAL(tempoChanged(noemixerr::bpm_t)),
+			this, SLOT(calculateTempoSyncTime(noemixerr::bpm_t)),
 			Qt::DirectConnection );
 }
 
@@ -182,4 +182,4 @@ void TempoSyncKnobModel::updateCustom()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

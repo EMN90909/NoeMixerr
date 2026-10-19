@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_JOURNALLING_OBJECT_H
-#define LMMS_JOURNALLING_OBJECT_H
+#ifndef NoeMixerr_JOURNALLING_OBJECT_H
+#define NoeMixerr_JOURNALLING_OBJECT_H
 
 #include <QStack>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "SerializingObject.h"
 
-namespace lmms
+namespace noemixerr
 {
 
-class LMMS_EXPORT JournallingObject : public SerializingObject
+class NoeMixerr_EXPORT JournallingObject : public SerializingObject
 {
 public:
 	JournallingObject();
@@ -101,6 +101,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_JOURNALLING_OBJECT_H
+#endif // NoeMixerr_JOURNALLING_OBJECT_H

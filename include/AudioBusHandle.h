@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_AUDIO_BUS_HANDLE_H
-#define LMMS_AUDIO_BUS_HANDLE_H
+#ifndef NoeMixerr_AUDIO_BUS_HANDLE_H
+#define NoeMixerr_AUDIO_BUS_HANDLE_H
 
 #include <memory>
 #include <QString>
@@ -33,7 +33,7 @@
 #include "AudioBuffer.h"
 #include "PlayHandle.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class EffectChain;
@@ -109,6 +109,6 @@ private:
 	friend class AudioEngineWorkerThread;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_BUS_HANDLE_H
+#endif // NoeMixerr_AUDIO_BUS_HANDLE_H

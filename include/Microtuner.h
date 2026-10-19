@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_MICROTUNER_H
-#define LMMS_MICROTUNER_H
+#ifndef NoeMixerr_MICROTUNER_H
+#define NoeMixerr_MICROTUNER_H
 
 #include "AutomatableModel.h"
 #include "ComboBoxModel.h"
 #include "JournallingObject.h"
 
-namespace lmms
+namespace noemixerr
 {
 
-class LMMS_EXPORT Microtuner : public Model, public JournallingObject
+class NoeMixerr_EXPORT Microtuner : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -82,6 +82,6 @@ private:
 
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MICROTUNER_H
+#endif // NoeMixerr_MICROTUNER_H

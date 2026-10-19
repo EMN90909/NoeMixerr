@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_GUI_TRACK_OPERATIONS_WIDGET_H
-#define LMMS_GUI_TRACK_OPERATIONS_WIDGET_H
+#ifndef NoeMixerr_GUI_TRACK_OPERATIONS_WIDGET_H
+#define NoeMixerr_GUI_TRACK_OPERATIONS_WIDGET_H
 
 #include <QWidget>
 
 class QPushButton;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class AutomatableButton;
@@ -92,10 +92,10 @@ private:
 	friend class TrackView;
 
 signals:
-	void trackRemovalScheduled( lmms::gui::TrackView * t );
+	void trackRemovalScheduled( noemixerr::gui::TrackView * t );
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TRACK_OPERATIONS_WIDGET_H
+#endif // NoeMixerr_GUI_TRACK_OPERATIONS_WIDGET_H

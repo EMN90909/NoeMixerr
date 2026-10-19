@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_QUADRATURE_LFO_H
-#define LMMS_QUADRATURE_LFO_H
+#ifndef NoeMixerr_QUADRATURE_LFO_H
+#define NoeMixerr_QUADRATURE_LFO_H
 
 #include <numbers>
 #include <cmath>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -95,6 +95,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_QUADRATURE_LFO_H
+#endif // NoeMixerr_QUADRATURE_LFO_H

@@ -29,7 +29,7 @@
 #include "EffectControls.h"
 #include "PeakControllerEffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -78,6 +78,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_RAII_HELPERS_H
-#define LMMS_RAII_HELPERS_H
+#ifndef NoeMixerr_RAII_HELPERS_H
+#define NoeMixerr_RAII_HELPERS_H
 
 #include <cstddef>
 #include <memory>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 template<typename T, T Null>
@@ -62,6 +62,6 @@ struct NullableResourceDeleter
 template<typename T, T Null, auto Deleter>
 using UniqueNullableResource = std::unique_ptr<T, NullableResourceDeleter<T, Null, Deleter>>;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_RAII_HELPERS_H
+#endif // NoeMixerr_RAII_HELPERS_H

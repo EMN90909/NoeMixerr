@@ -28,7 +28,7 @@
 #include "VecControlsDialog.h"
 #include "Vectorscope.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -64,4 +64,4 @@ void VecControls::saveSettings(QDomDocument &document, QDomElement &element)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

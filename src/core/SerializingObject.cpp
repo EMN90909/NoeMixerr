@@ -26,7 +26,7 @@
 
 #include "SerializingObject.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 SerializingObject::SerializingObject() :
@@ -111,4 +111,4 @@ void SerializingObject::loadSettings( const QDomElement& element )
 	Q_UNUSED(element)
 }
 
-} // namespace lmms
+} // namespace noemixerr

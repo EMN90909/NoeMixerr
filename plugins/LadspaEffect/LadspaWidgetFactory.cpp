@@ -38,7 +38,7 @@
 #include <QLabel>
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 QWidget * LadspaWidgetFactory::createWidget(LadspaControl * ladspaControl, QWidget * parent)
@@ -80,4 +80,4 @@ QWidget * LadspaWidgetFactory::createWidget(LadspaControl * ladspaControl, QWidg
 	return nullptr;
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

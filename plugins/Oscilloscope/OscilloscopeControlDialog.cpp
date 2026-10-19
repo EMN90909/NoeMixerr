@@ -32,7 +32,7 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 OscilloscopeControlDialog::OscilloscopeControlDialog(OscilloscopeControls* controls) :
@@ -81,4 +81,4 @@ OscilloscopeControlDialog::OscilloscopeControlDialog(OscilloscopeControls* contr
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

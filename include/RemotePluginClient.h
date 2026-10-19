@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_REMOTE_PLUGIN_CLIENT_H
-#define LMMS_REMOTE_PLUGIN_CLIENT_H
+#ifndef NoeMixerr_REMOTE_PLUGIN_CLIENT_H
+#define NoeMixerr_REMOTE_PLUGIN_CLIENT_H
 
 #include "RemotePluginBase.h"
 
 #include <stdexcept>
 
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 #	include <condition_variable>
 #	include <mutex>
 #	include <thread>
@@ -38,12 +38,12 @@
 #	include <unistd.h>
 #endif
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "MidiEvent.h"
 #include "SharedMemory.h"
 #include "VstSyncData.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame;
@@ -138,7 +138,7 @@ private:
 	f_cnt_t m_bufferSize;
 } ;
 
-#ifndef LMMS_BUILD_WIN32
+#ifndef NoeMixerr_BUILD_WIN32
 class PollParentThread
 {
 public:
@@ -177,7 +177,7 @@ private:
 	std::condition_variable m_cv;
 	std::thread m_thread;
 };
-#endif // LMMS_BUILD_WIN32
+#endif // NoeMixerr_BUILD_WIN32
 
 #ifdef SYNC_WITH_SHM_FIFO
 RemotePluginClient::RemotePluginClient( const std::string& _shm_in, const std::string& _shm_out ) :
@@ -275,7 +275,7 @@ bool RemotePluginClient::processMessage( const message & _m )
 			break;
 
 		case IdBufferSizeInformation:
-			// Should LMMS gain the ability to change buffer size
+			// Should NoeMixerr gain the ability to change buffer size
 			// without a restart, it must wait for this message to
 			// complete processing or else risk VST crashes
 			m_bufferSize = _m.getInt();
@@ -357,6 +357,6 @@ void RemotePluginClient::doProcessing()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_REMOTE_PLUGIN_CLIENT_H
+#endif // NoeMixerr_REMOTE_PLUGIN_CLIENT_H

@@ -28,7 +28,7 @@
 
 #include "Lv2Evbuf.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <cassert>
 #include <cstdlib>
@@ -36,7 +36,7 @@
 
 #include <lv2/atom/atom.h>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -191,6 +191,6 @@ lv2_evbuf_write(LV2_Evbuf_Iterator* iter,
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2

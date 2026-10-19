@@ -27,7 +27,7 @@
 #include <samplerate.h>
 #include <stdexcept>
 
-namespace lmms {
+namespace noemixerr {
 
 namespace {
 
@@ -99,4 +99,4 @@ void AudioResampler::StateDeleter::operator()(void* state)
 	src_delete(static_cast<SRC_STATE*>(state));
 }
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_THREAD_POOL_H
-#define LMMS_THREAD_POOL_H
+#ifndef NoeMixerr_THREAD_POOL_H
+#define NoeMixerr_THREAD_POOL_H
 
 #include <atomic>
 #include <condition_variable>
@@ -36,7 +36,7 @@
 #include <type_traits>
 #include <vector>
 
-namespace lmms {
+namespace noemixerr {
 //! A thread pool that can be used for asynchronous processing.
 class ThreadPool
 {
@@ -88,6 +88,6 @@ private:
 	std::mutex m_runMutex;
 	inline static size_t s_numWorkers = std::thread::hardware_concurrency();
 };
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_THREAD_POOL_H
+#endif // NoeMixerr_THREAD_POOL_H

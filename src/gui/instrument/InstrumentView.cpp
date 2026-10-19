@@ -28,7 +28,7 @@
 #include "embed.h"
 #include "InstrumentTrackWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 InstrumentView::InstrumentView( Instrument * _Instrument, QWidget * _parent ) :
@@ -76,4 +76,4 @@ InstrumentTrackWindow * InstrumentView::instrumentTrackWindow()
 
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

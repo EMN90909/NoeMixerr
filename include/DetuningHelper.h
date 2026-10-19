@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_DETUNING_HELPER_H
-#define LMMS_DETUNING_HELPER_H
+#ifndef NoeMixerr_DETUNING_HELPER_H
+#define NoeMixerr_DETUNING_HELPER_H
 
 #include "InlineAutomation.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class DetuningHelper : public InlineAutomation
@@ -64,6 +64,6 @@ public:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DETUNING_HELPER_H
+#endif // NoeMixerr_DETUNING_HELPER_H

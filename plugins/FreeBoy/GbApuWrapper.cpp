@@ -23,7 +23,7 @@
 
 #include "GbApuWrapper.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -61,4 +61,4 @@ void GbApuWrapper::endFrame(blip_time_t endTime)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

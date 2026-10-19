@@ -31,7 +31,7 @@
 #include "MainWindow.h"
 #include "Song.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -39,7 +39,7 @@ MainApplication::MainApplication(int& argc, char** argv) :
 	QApplication(argc, argv),
 	m_queuedFile()
 {
-#if !defined(LMMS_BUILD_WIN32) && !defined(LMMS_BUILD_APPLE) && !defined(LMMS_BUILD_HAIKU)
+#if !defined(NoeMixerr_BUILD_WIN32) && !defined(NoeMixerr_BUILD_APPLE) && !defined(NoeMixerr_BUILD_HAIKU)
 	// Work around a bug of KXmlGui < 5.55
 	// which breaks the recent files menu
 	// https://bugs.kde.org/show_bug.cgi?id=337491
@@ -52,7 +52,7 @@ MainApplication::MainApplication(int& argc, char** argv) :
 	}
 #endif
 
-#if defined(LMMS_BUILD_WIN32)
+#if defined(NoeMixerr_BUILD_WIN32)
 	installNativeEventFilter(this);
 #endif
 }
@@ -85,7 +85,7 @@ bool MainApplication::event(QEvent* event)
 	}
 }
 
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 // Helper function for nativeEventFilter
 bool MainApplication::win32EventFilter(MSG* msg, FilterResult* result)
 {
@@ -118,7 +118,7 @@ bool MainApplication::nativeEventFilter(const QByteArray& eventType,
 	}
 	return false;
 }
-#endif // LMMS_BUILD_WIN32
+#endif // NoeMixerr_BUILD_WIN32
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -7,7 +7,7 @@
 #include <QLocale>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -227,4 +227,4 @@ QDomDocument LocalFileMng::openXmlDocument( const QString& filename )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

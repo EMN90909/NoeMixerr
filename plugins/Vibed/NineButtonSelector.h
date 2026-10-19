@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_GUI_NINE_BUTTON_SELECTOR_H
-#define LMMS_GUI_NINE_BUTTON_SELECTOR_H
+#ifndef NoeMixerr_GUI_NINE_BUTTON_SELECTOR_H
+#define NoeMixerr_GUI_NINE_BUTTON_SELECTOR_H
 
 #include <array>
 #include <QWidget>
 
 #include "AutomatableModelView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -72,6 +72,6 @@ private:
 using NineButtonSelectorModel = IntModel;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_NINE_BUTTON_SELECTOR_H
+#endif // NoeMixerr_GUI_NINE_BUTTON_SELECTOR_H

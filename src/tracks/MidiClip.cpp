@@ -36,7 +36,7 @@
 
 
 
-namespace lmms
+namespace noemixerr
 {
 
 MidiClip::MidiClip( InstrumentTrack * _instrument_track ) :
@@ -676,4 +676,4 @@ void MidiClip::changeTimeSignature()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

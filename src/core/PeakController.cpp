@@ -33,7 +33,7 @@
 #include "EffectChain.h"
 #include "plugins/PeakControllerEffect/PeakControllerEffect.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -211,7 +211,7 @@ PeakController * PeakController::getControllerBySetting(const QDomElement & _thi
 			QMessageBox msgBox;
 			msgBox.setIcon( QMessageBox::Information );
 			msgBox.setWindowTitle( tr("Peak Controller Bug") );
-			msgBox.setText( tr("Due to a bug in older version of LMMS, the peak "
+			msgBox.setText( tr("Due to a bug in older version of NoeMixerr, the peak "
 							   "controllers may not be connect properly. "
 							   "Please ensure that peak controllers are connected "
 							   "properly and re-save this file. "
@@ -253,4 +253,4 @@ gui::ControllerDialog * PeakController::createDialog( QWidget * _parent )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

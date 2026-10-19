@@ -25,7 +25,7 @@
 
 #include "AudioSndio.h"
 
-#ifdef LMMS_HAVE_SNDIO
+#ifdef NoeMixerr_HAVE_SNDIO
 
 #include <cstdlib>
 #include <QFormLayout>
@@ -38,7 +38,7 @@
 #include "ConfigManager.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioSndio::AudioSndio(bool& _success_ful, AudioEngine* _audioEngine)
@@ -184,6 +184,6 @@ void AudioSndio::setupWidget::saveSettings()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif	// LMMS_HAVE_SNDIO
+#endif	// NoeMixerr_HAVE_SNDIO

@@ -45,7 +45,7 @@
 #include "TrackContainerView.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 constexpr int BeatStepButtonOffset = 4;
@@ -935,4 +935,4 @@ bool MidiClipView::destructiveSplitClip(const TimePos pos)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

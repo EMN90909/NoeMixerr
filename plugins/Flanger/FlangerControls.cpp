@@ -28,7 +28,7 @@
 #include "Engine.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -94,4 +94,4 @@ void FlangerControls::changedPlaybackState()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

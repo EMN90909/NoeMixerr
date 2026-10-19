@@ -23,9 +23,9 @@
  */
 
 #include "AudioSdl.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-#ifdef LMMS_HAVE_SDL
+#ifdef NoeMixerr_HAVE_SDL
 
 #include <QFormLayout>
 #include <QComboBox>
@@ -34,7 +34,7 @@
 #include "AudioEngine.h"
 #include "ConfigManager.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr auto SectionSDL = "audiosdl";
@@ -278,7 +278,7 @@ void AudioSdl::setupWidget::populateInputDeviceComboBox()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_SDL
+#endif // NoeMixerr_HAVE_SDL
 

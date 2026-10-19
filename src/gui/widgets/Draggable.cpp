@@ -30,7 +30,7 @@
 #include <QMouseEvent>
 #include <QPainter>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 Draggable::Draggable(DirectionOfManipulation directionOfManipulation, 
@@ -126,4 +126,4 @@ void Draggable::handleMovement()
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

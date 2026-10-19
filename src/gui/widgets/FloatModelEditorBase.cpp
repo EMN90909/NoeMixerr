@@ -31,7 +31,7 @@
 #include <QPainter>
 #include <QTimerEvent>
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "DeprecationHelper.h"
 #include "CaptionMenu.h"
 #include "ControllerConnection.h"
@@ -44,7 +44,7 @@
 #include "StringPairDrag.h"
 
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
 namespace {
 
@@ -570,4 +570,4 @@ void FloatModelEditorBase::doConnections()
 	}
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

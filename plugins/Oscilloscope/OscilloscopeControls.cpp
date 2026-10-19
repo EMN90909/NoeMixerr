@@ -28,7 +28,7 @@
 #include "OscilloscopeControlDialog.h"
 #include "OscilloscopeGraph.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 OscilloscopeControls::OscilloscopeControls(Oscilloscope* effect) :
@@ -68,4 +68,4 @@ gui::EffectControlDialog* OscilloscopeControls::createView()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

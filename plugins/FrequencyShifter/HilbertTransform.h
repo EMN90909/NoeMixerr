@@ -30,15 +30,15 @@
  * -------------------------------------------------------------------------
  */
 
-#ifndef LMMS_HILBERT_TRANSFORM_H
-#define LMMS_HILBERT_TRANSFORM_H
+#ifndef NoeMixerr_HILBERT_TRANSFORM_H
+#define NoeMixerr_HILBERT_TRANSFORM_H
 #include <cmath>
 
 #ifdef __SSE2__
 	#include <emmintrin.h>
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 template<int Channels>
@@ -220,6 +220,6 @@ struct HilbertIIRFloat
 	}
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HILBERT_TRANSFORM_H
+#endif // NoeMixerr_HILBERT_TRANSFORM_H

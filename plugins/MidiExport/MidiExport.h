@@ -25,8 +25,8 @@
  *
  */
 
-#ifndef LMMS_MIDI_EXPORT_H
-#define LMMS_MIDI_EXPORT_H
+#ifndef NoeMixerr_MIDI_EXPORT_H
+#define NoeMixerr_MIDI_EXPORT_H
 
 #include "MidiFile.h"
 #include "DataFile.h"
@@ -35,7 +35,7 @@
 
 class QDomNode;
 
-namespace lmms
+namespace noemixerr
 {
 
 //! MIDI exporting base class
@@ -45,7 +45,7 @@ private:
 	//! A single MIDI note
 	struct Note
 	{
-		using Type = ::lmms::Note::Type;
+		using Type = ::noemixerr::Note::Type;
 
 		//! The pitch (tone), which can be lower or higher
 		std::uint8_t pitch = 0;
@@ -138,10 +138,10 @@ private:
 	//! Process a given pattern track
 	void processPatternTrack(Track& track);
 
-	//! Necessary for lmms_plugin_main()
+	//! Necessary for noemixerr_plugin_main()
 	gui::PluginView* instantiateView(QWidget*) override { return nullptr; }
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_EXPORT_H
+#endif // NoeMixerr_MIDI_EXPORT_H

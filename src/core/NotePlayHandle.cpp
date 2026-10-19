@@ -31,9 +31,9 @@
 #include "InstrumentTrack.h"
 #include "Instrument.h"
 #include "Song.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 NotePlayHandle::BaseDetuning::BaseDetuning( DetuningHelper *detuning ) :
@@ -674,4 +674,4 @@ void NotePlayHandleManager::free()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -31,10 +31,10 @@
 #include "embed.h"
 #include "Engine.h"
 #include "FontHelper.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -798,4 +798,4 @@ void EqCurve::setModelChanged( bool mc )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

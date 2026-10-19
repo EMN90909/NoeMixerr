@@ -22,19 +22,19 @@
  *
  */
 
-#ifndef LMMS_LV2BASICS_H
-#define LMMS_LV2BASICS_H
+#ifndef NoeMixerr_LV2BASICS_H
+#define NoeMixerr_LV2BASICS_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lilv/lilv.h>
 #include <memory>
 #include <QString>
 #include <string>
 
-namespace lmms
+namespace noemixerr
 {
 
 template<class T>
@@ -78,8 +78,8 @@ QString qStringFromPortName(const LilvPlugin* plug, const LilvPort* port);
 //! Return port name as std::string, everything will be freed automatically
 std::string stdStringFromPortName(const LilvPlugin* plug, const LilvPort* port);
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2BASICS_H
+#endif // NoeMixerr_LV2BASICS_H

@@ -34,7 +34,7 @@
 #include "TempoSyncKnob.h"
 #include <samplerate.h>
 
-namespace lmms
+namespace noemixerr
 {
 
 #define A1ROW 26
@@ -383,6 +383,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

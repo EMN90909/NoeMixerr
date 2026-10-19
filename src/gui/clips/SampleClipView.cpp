@@ -40,7 +40,7 @@
 #include "TrackContainerView.h"
 #include "TrackView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -372,4 +372,4 @@ void SampleClipView::setAutomationGhost()
 	aEditor->setFocus();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

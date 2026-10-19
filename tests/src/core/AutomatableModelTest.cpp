@@ -45,19 +45,19 @@ private slots: // tests
 
 	void initTestCase()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 		Engine::init(true);
 	}
 
 	void cleanupTestCase()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 		Engine::destroy();
 	}
 
 	void CastTests()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		ComboBoxModel comboModel;
 		AutomatableModel* amPtr = &comboModel;
@@ -76,7 +76,7 @@ private slots: // tests
 
 	void LinkTests()
 	{
-		using namespace lmms;
+		using namespace noemixerr;
 
 		BoolModel m1(true), m2(false);
 

@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_GUI_TRACK_RENAME_LINE_EDIT_H
-#define LMMS_GUI_TRACK_RENAME_LINE_EDIT_H
+#ifndef NoeMixerr_GUI_TRACK_RENAME_LINE_EDIT_H
+#define NoeMixerr_GUI_TRACK_RENAME_LINE_EDIT_H
 
 #include <QLineEdit>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class TrackRenameLineEdit : public QLineEdit
@@ -45,6 +45,6 @@ private:
 	QString m_oldName;
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TRACK_RENAME_LINE_EDIT_H
+#endif // NoeMixerr_GUI_TRACK_RENAME_LINE_EDIT_H

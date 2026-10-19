@@ -29,7 +29,7 @@
 #include "EqEffect.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -206,4 +206,4 @@ void EqControls::saveSettings( QDomDocument &doc, QDomElement &parent )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -26,11 +26,11 @@
 #include "interpolation.h"
 #include "AudioEngine.h"
 #include "Engine.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
 #include <algorithm>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -108,4 +108,4 @@ void VibratingString::resample(const float* src, f_cnt_t srcFrames, f_cnt_t dstF
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_LOMM_CONTROL_DIALOG_H
-#define LMMS_GUI_LOMM_CONTROL_DIALOG_H
+#ifndef NoeMixerr_GUI_LOMM_CONTROL_DIALOG_H
+#define NoeMixerr_GUI_LOMM_CONTROL_DIALOG_H
 
 #include "EffectControlDialog.h"
 
@@ -33,7 +33,7 @@
 #include "LcdFloatSpinBox.h"
 #include "PixmapButton.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 inline constexpr float LOMM_DISPLAY_MIN = -72;
@@ -119,6 +119,6 @@ private slots:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_LOMM_CONTROL_DIALOG_H
+#endif // NoeMixerr_GUI_LOMM_CONTROL_DIALOG_H

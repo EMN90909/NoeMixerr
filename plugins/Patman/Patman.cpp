@@ -46,7 +46,7 @@
 
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -55,7 +55,7 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT patman_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"PatMan",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
 				"GUS-compatible patch instrument" ),
@@ -69,7 +69,7 @@ Plugin::Descriptor PLUGIN_EXPORT patman_plugin_descriptor =
 
 
 // necessary for getting instance out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model *m, void * )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model *m, void * )
 {
 	return new PatmanInstrument( static_cast<InstrumentTrack *>( m ) );
 }
@@ -636,4 +636,4 @@ void PatmanView::modelChanged()
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

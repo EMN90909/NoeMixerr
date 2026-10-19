@@ -21,13 +21,13 @@
  *
  */
 
-#ifndef LMMS_GUI_COLOR_HELPER_H
-#define LMMS_GUI_COLOR_HELPER_H
+#ifndef NoeMixerr_GUI_COLOR_HELPER_H
+#define NoeMixerr_GUI_COLOR_HELPER_H
 
 #include <cmath>
 #include <QColor>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class ColorHelper
@@ -57,6 +57,6 @@ public:
 	}
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_COLOR_HELPER_H
+#endif // NoeMixerr_GUI_COLOR_HELPER_H

@@ -31,9 +31,9 @@
 #include "DspEffectLibrary.h"
 #include "Oscillator.h"
 
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -107,6 +107,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

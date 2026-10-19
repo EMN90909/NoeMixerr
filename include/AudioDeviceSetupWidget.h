@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_GUI_AUDIO_DEVICE_SETUP_WIDGET_H
-#define LMMS_GUI_AUDIO_DEVICE_SETUP_WIDGET_H
+#ifndef NoeMixerr_GUI_AUDIO_DEVICE_SETUP_WIDGET_H
+#define NoeMixerr_GUI_AUDIO_DEVICE_SETUP_WIDGET_H
 
 #include <QGroupBox>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class AudioDeviceSetupWidget : public QGroupBox
@@ -44,6 +44,6 @@ public:
 	virtual void show();
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_AUDIO_DEVICE_SETUP_WIDGET_H
+#endif // NoeMixerr_GUI_AUDIO_DEVICE_SETUP_WIDGET_H

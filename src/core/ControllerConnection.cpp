@@ -31,7 +31,7 @@
 #include "Song.h"
 #include "ControllerConnection.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -240,4 +240,4 @@ void ControllerConnection::deleteConnection()
 
 
 
-} // namespace lmms
+} // namespace noemixerr

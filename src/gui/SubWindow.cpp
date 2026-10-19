@@ -46,7 +46,7 @@
 #include "ConfigManager.h"
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -594,4 +594,4 @@ bool SubWindow::eventFilter(QObject* obj, QEvent* event)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

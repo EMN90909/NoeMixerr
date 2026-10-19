@@ -22,10 +22,10 @@
  *
  */
 
-#ifndef LMMS_MODEL_VISITOR_H
-#define LMMS_MODEL_VISITOR_H
+#ifndef NoeMixerr_MODEL_VISITOR_H
+#define NoeMixerr_MODEL_VISITOR_H
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -66,6 +66,6 @@ public:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MODEL_VISITOR_H
+#endif // NoeMixerr_MODEL_VISITOR_H

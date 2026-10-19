@@ -1,5 +1,5 @@
 /*
- * lmms_constants.h - defines system constants
+ * noemixerr_constants.h - defines system constants
  *
  * Copyright (c) 2006 Danny McRae <khjklujn/at/users.sourceforge.net>
  * 
@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_CONSTANTS_H
-#define LMMS_CONSTANTS_H
+#ifndef NoeMixerr_CONSTANTS_H
+#define NoeMixerr_CONSTANTS_H
 
-#include "lmmsconfig.h"
-#include "LmmsTypes.h"
+#include "noemixerrconfig.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
-// Prefer using `approximatelyEqual()` from lmms_math.h rather than
+// Prefer using `approximatelyEqual()` from noemixerr_math.h rather than
 // using this directly
 inline constexpr float F_EPSILON = 1.0e-10f; // 10^-10
 
@@ -91,12 +91,12 @@ inline constexpr auto ARANGE_SILENT_END     = -10;
 
 // This macro is used to handle path separation properly in windows
 constexpr char LADSPA_PATH_SEPERATOR =
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 ';';
 #else
 ':';
 #endif
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_CONSTANTS_H
+#endif // NoeMixerr_CONSTANTS_H

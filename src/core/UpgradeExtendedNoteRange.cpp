@@ -30,7 +30,7 @@
 #include <cassert>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 /**
@@ -431,4 +431,4 @@ void UpgradeExtendedNoteRange::upgrade()
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr

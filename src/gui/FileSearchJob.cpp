@@ -29,7 +29,7 @@
 
 #include "ThreadPool.h"
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 FileSearchJob::FileSearchJob(QObject* parent)
 	: QObject(parent)
 {
@@ -100,4 +100,4 @@ void FileSearchJob::runSearch(Task task)
 	emit finished();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

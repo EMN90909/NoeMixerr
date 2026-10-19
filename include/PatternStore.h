@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_PATTERN_STORE_H
-#define LMMS_PATTERN_STORE_H
+#ifndef NoeMixerr_PATTERN_STORE_H
+#define NoeMixerr_PATTERN_STORE_H
 
 #include "TrackContainer.h"
 #include "ComboBoxModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -61,7 +61,7 @@ namespace gui
  * - PatternTracks are used in the Song Editor. Each one reference a "pattern" in the PatternStore.
  * - PatternClips are stored inside PatternTracks. They are just empty placeholders.
  */
-class LMMS_EXPORT PatternStore : public TrackContainer
+class NoeMixerr_EXPORT PatternStore : public TrackContainer
 {
 	Q_OBJECT
 	mapPropertyFromModel(int, currentPattern, setCurrentPattern, m_patternComboBoxModel);
@@ -112,6 +112,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PATTERN_STORE_H
+#endif // NoeMixerr_PATTERN_STORE_H

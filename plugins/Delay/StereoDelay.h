@@ -27,7 +27,7 @@
 
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame;
@@ -63,6 +63,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // STEREODELAY_H

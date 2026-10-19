@@ -32,7 +32,7 @@
 #include "MeterModel.h"
 #include "LcdSpinBox.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -109,4 +109,4 @@ void MeterDialog::modelChanged()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

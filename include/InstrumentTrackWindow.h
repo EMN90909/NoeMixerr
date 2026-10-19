@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_INSTRUMENT_TRACK_WINDOW_H
-#define LMMS_GUI_INSTRUMENT_TRACK_WINDOW_H
+#ifndef NoeMixerr_GUI_INSTRUMENT_TRACK_WINDOW_H
+#define NoeMixerr_GUI_INSTRUMENT_TRACK_WINDOW_H
 
 #include <QWidget>
 
@@ -35,7 +35,7 @@ class QLabel;
 class QLineEdit;
 class QMdiSubWindow;
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -175,6 +175,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_INSTRUMENT_TRACK_WINDOW_H
+#endif // NoeMixerr_GUI_INSTRUMENT_TRACK_WINDOW_H

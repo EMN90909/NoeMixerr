@@ -41,7 +41,7 @@
 #include "InstrumentTrack.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -114,4 +114,4 @@ bool Piano::isWhiteKey(int key)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

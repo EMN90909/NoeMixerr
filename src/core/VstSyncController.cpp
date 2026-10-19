@@ -1,5 +1,5 @@
 /*
- * VstSyncController.cpp - manage synchronization between LMMS and VST plugins
+ * VstSyncController.cpp - manage synchronization between NoeMixerr and VST plugins
  *
  * Copyright (c) 2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  * Copyright (c) 2013 Mike Choi <rdavidian71/at/gmail/dot/com>
@@ -33,7 +33,7 @@
 #include "Engine.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -160,4 +160,4 @@ void VstSyncController::updateSampleRate()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

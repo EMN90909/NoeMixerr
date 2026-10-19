@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_GUI_AUTOMATION_EDITOR_H
-#define LMMS_GUI_AUTOMATION_EDITOR_H
+#ifndef NoeMixerr_GUI_AUTOMATION_EDITOR_H
+#define NoeMixerr_GUI_AUTOMATION_EDITOR_H
 
 #include <QWidget>
 #include <array>
@@ -36,13 +36,13 @@
 #include "MidiClip.h"
 #include "SampleClip.h"
 #include "TimePos.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "SampleThumbnail.h"
 
 class QPushButton;
 class QScrollBar;
 
-namespace lmms
+namespace noemixerr
 {
 namespace gui
 {
@@ -383,6 +383,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_AUTOMATION_EDITOR_H
+#endif // NoeMixerr_GUI_AUTOMATION_EDITOR_H

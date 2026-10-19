@@ -27,20 +27,20 @@
  * Original version: 6f22ee0 from https://github.com/drobilla/jalv.git
  * Minor changes have been done, but no functional changes.
  * Considering this as an "external library", the identifiers do not need to
- * match the LMMS coding conventions.
+ * match the NoeMixerr coding conventions.
  */
 
-#ifndef LMMS_LV2_EVBUF_H
-#define LMMS_LV2_EVBUF_H
+#ifndef NoeMixerr_LV2_EVBUF_H
+#define NoeMixerr_LV2_EVBUF_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <cstdint>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -151,8 +151,8 @@ lv2_evbuf_write(	LV2_Evbuf_Iterator* iter,
 					const uint8_t* data);
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_EVBUF_H
+#endif // NoeMixerr_LV2_EVBUF_H

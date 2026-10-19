@@ -33,7 +33,7 @@
 #include "SampleTrack.h"
 #include "Song.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 SampleClip::SampleClip(Track* _track, Sample sample, bool isPlaying):
@@ -364,4 +364,4 @@ gui::ClipView * SampleClip::createView( gui::TrackView * _tv )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

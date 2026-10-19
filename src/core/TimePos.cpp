@@ -27,7 +27,7 @@
 
 #include "MeterModel.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 TimeSig::TimeSig( int num, int denom ) :
@@ -71,4 +71,4 @@ TimePos TimePos::quantize(float bars, bool forceRoundDown) const
 	return (lowPos + snapUp) * interval;
 }
 
-} // namespace lmms
+} // namespace noemixerr

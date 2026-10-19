@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_FREEBOY_H
-#define LMMS_FREEBOY_H
+#ifndef NoeMixerr_FREEBOY_H
+#define NoeMixerr_FREEBOY_H
 
 
 #include "AutomatableModel.h"
@@ -32,7 +32,7 @@
 #include "InstrumentView.h"
 #include "Graph.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class NotePlayHandle;  // IWYU pragma: keep
@@ -171,6 +171,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_FREEBOY_H
+#endif // NoeMixerr_FREEBOY_H

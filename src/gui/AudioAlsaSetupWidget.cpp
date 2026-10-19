@@ -27,13 +27,13 @@
 
 #include "AudioAlsaSetupWidget.h"
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 
 #include "ConfigManager.h"
 #include "LcdSpinBox.h"
-#include "lmms_constants.h"
+#include "noemixerr_constants.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 AudioAlsaSetupWidget::AudioAlsaSetupWidget( QWidget * _parent ) :
@@ -116,6 +116,6 @@ void AudioAlsaSetupWidget::onCurrentIndexChanged(int index)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA

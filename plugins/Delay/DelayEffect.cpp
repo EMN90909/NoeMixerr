@@ -26,11 +26,11 @@
 #include "Engine.h"
 #include "embed.h"
 #include "Lfo.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 #include "plugin_export.h"
 #include "StereoDelay.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -39,13 +39,13 @@ extern "C"
 
 Plugin::Descriptor PLUGIN_EXPORT delay_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"Delay",
 	QT_TRANSLATE_NOOP( "PluginBrowser", "A native delay plugin" ),
 	"Dave French <contact/dot/dave/dot/french3/at/googlemail/dot/com>",
 	0x0100,
 	Plugin::Type::Effect,
-	new PixmapLoader("lmms-plugin-logo"),
+	new PixmapLoader("noemixerr-plugin-logo"),
 	nullptr,
 	nullptr,
 } ;
@@ -156,7 +156,7 @@ extern "C"
 {
 
 //needed for getting plugin out of shared lib
-PLUGIN_EXPORT Plugin * lmms_plugin_main( Model* parent, void* data )
+PLUGIN_EXPORT Plugin * noemixerr_plugin_main( Model* parent, void* data )
 {
 	return new DelayEffect( parent , static_cast<const Plugin::Descriptor::SubPluginFeatures::Key *>( data ) );
 }
@@ -164,4 +164,4 @@ PLUGIN_EXPORT Plugin * lmms_plugin_main( Model* parent, void* data )
 }}
 
 
-} // namespace lmms
+} // namespace noemixerr

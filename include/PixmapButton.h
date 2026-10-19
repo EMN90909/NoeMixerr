@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_GUI_PIXMAP_BUTTON_H
-#define LMMS_GUI_PIXMAP_BUTTON_H
+#ifndef NoeMixerr_GUI_PIXMAP_BUTTON_H
+#define NoeMixerr_GUI_PIXMAP_BUTTON_H
 
 #include <QPixmap>
 
 #include "AutomatableButton.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
-class LMMS_EXPORT PixmapButton : public AutomatableButton
+class NoeMixerr_EXPORT PixmapButton : public AutomatableButton
 {
 	Q_OBJECT
 public:
@@ -68,6 +68,6 @@ private:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_PIXMAP_BUTTON_H
+#endif // NoeMixerr_GUI_PIXMAP_BUTTON_H

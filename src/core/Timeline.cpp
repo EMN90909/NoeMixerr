@@ -28,7 +28,7 @@
 
 #include <QDomElement>
 
-namespace lmms {
+namespace noemixerr {
 
 void Timeline::setLoopBegin(TimePos begin)
 {
@@ -79,4 +79,4 @@ void Timeline::loadSettings(const QDomElement& element)
 	setStopBehaviour(static_cast<StopBehaviour>(element.attribute("stopbehaviour", "1").toInt()));
 }
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_THREADABLE_JOB_H
-#define LMMS_THREADABLE_JOB_H
+#ifndef NoeMixerr_THREADABLE_JOB_H
+#define NoeMixerr_THREADABLE_JOB_H
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
 #include <atomic>
 
-namespace lmms
+namespace noemixerr
 {
 
 class ThreadableJob
@@ -88,6 +88,6 @@ protected:
 	std::atomic<ProcessingState> m_state;
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_THREADABLE_JOB_H
+#endif // NoeMixerr_THREADABLE_JOB_H

@@ -1,5 +1,5 @@
 /*
- * TabWidget.cpp - tabwidget for LMMS
+ * TabWidget.cpp - tabwidget for NoeMixerr
  *
  * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -35,7 +35,7 @@
 #include "embed.h"
 #include "FontHelper.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 TabWidget::TabWidget(const QString& caption, QWidget* parent, bool usePixmap,
@@ -434,4 +434,4 @@ void TabWidget::setTabBorder(const QColor& c)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

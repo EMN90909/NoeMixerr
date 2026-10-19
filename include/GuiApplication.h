@@ -22,18 +22,18 @@
  *
  */
 
-#ifndef LMMS_GUI_GUI_APPLICATION_H
-#define LMMS_GUI_GUI_APPLICATION_H
+#ifndef NoeMixerr_GUI_GUI_APPLICATION_H
+#define NoeMixerr_GUI_GUI_APPLICATION_H
 
 #include <QObject>
 
-#include "lmms_export.h"
-#include "lmmsconfig.h"
+#include "noemixerr_export.h"
+#include "noemixerrconfig.h"
 
 class QLabel;
 class QSocketNotifier;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class AutomationEditorWindow;
@@ -46,7 +46,7 @@ class PianoRollWindow;
 class ProjectNotes;
 class SongEditorWindow;
 
-class LMMS_EXPORT GuiApplication : public QObject
+class NoeMixerr_EXPORT GuiApplication : public QObject
 {
 	Q_OBJECT;
 public:
@@ -64,7 +64,7 @@ public:
 	static void sigintHandler(int);
 
 	static bool isWayland();
-#ifdef LMMS_BUILD_WIN32
+#ifdef NoeMixerr_BUILD_WIN32
 	//! @brief Returns the Windows System font.
 	static QFont getWin32SystemFont();
 #endif
@@ -108,8 +108,8 @@ private:
 };
 
 // Short-hand function
-LMMS_EXPORT GuiApplication* getGUI();
+NoeMixerr_EXPORT GuiApplication* getGUI();
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_GUI_APPLICATION_H
+#endif // NoeMixerr_GUI_GUI_APPLICATION_H

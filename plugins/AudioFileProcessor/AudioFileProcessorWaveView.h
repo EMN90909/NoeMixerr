@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_AUDIO_FILE_PROCESSOR_WAVE_VIEW_H
-#define LMMS_AUDIO_FILE_PROCESSOR_WAVE_VIEW_H
+#ifndef NoeMixerr_AUDIO_FILE_PROCESSOR_WAVE_VIEW_H
+#define NoeMixerr_AUDIO_FILE_PROCESSOR_WAVE_VIEW_H
 
 
 #include "Knob.h"
 #include "SampleThumbnail.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 class Sample;
@@ -107,7 +107,7 @@ public slots:
 		QWidget::update();
 	}
 
-	void isPlaying(lmms::f_cnt_t current_frame);
+	void isPlaying(noemixerr::f_cnt_t current_frame);
 
 
 private:
@@ -183,6 +183,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_FILE_PROCESSOR_WAVE_VIEW_H
+#endif // NoeMixerr_AUDIO_FILE_PROCESSOR_WAVE_VIEW_H

@@ -27,9 +27,9 @@
 #include <QWidget>
 
 #include "fft_helpers.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class SampleFrame;
@@ -103,6 +103,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // EQSPECTRUMVIEW_H

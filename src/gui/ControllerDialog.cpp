@@ -27,7 +27,7 @@
 
 #include "Controller.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 ControllerDialog::ControllerDialog(Controller* controller, QWidget* parent)
@@ -36,4 +36,4 @@ ControllerDialog::ControllerDialog(Controller* controller, QWidget* parent)
 {
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

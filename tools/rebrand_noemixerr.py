@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rename first-party LMMS names and paths to NoeMixerr in this LMMS-derived tree.
+"""Rename first-party NoeMixerr names and paths to NoeMixerr in this NoeMixerr-derived tree.
 
 Intentionally retains historic author/legal notices, upstream links, and original
 license wording. Does not rewrite binary data or git internals.
@@ -11,10 +11,10 @@ import subprocess
 
 root = Path(__file__).resolve().parent.parent
 names = [
-    ("Ladspa2LMMS", "Ladspa2NoeMixerr"),
-    ("LMMS", "NoeMixerr"),
-    ("Lmms", "NoeMixerr"),
-    ("lmms", "noemixerr"),
+    ("Ladspa2NoeMixerr", "Ladspa2NoeMixerr"),
+    ("NoeMixerr", "NoeMixerr"),
+    ("NoeMixerr", "NoeMixerr"),
+    ("noemixerr", "noemixerr"),
 ]
 # Lines that document provenance must remain legally accurate.
 preserve = re.compile(
@@ -50,7 +50,7 @@ for file in root.rglob("*"):
         continue
     transformed = []
     for line in body.splitlines(keepends=True):
-        # Legal acknowledgments and links to official LMMS remain.
+        # Legal acknowledgments and links to official NoeMixerr remain.
         if preserve.search(line):
             transformed.append(line)
             continue
@@ -83,5 +83,5 @@ remaining = subprocess.run(
     ["git", "grep", "-Il", "-i", "lmms", "--", ":!LICENSE.txt"],
     cwd=root, capture_output=True, text=True
 )
-print("Provenance / remaining LMMS text mentions in index:",
+print("Provenance / remaining NoeMixerr text mentions in index:",
       len(remaining.stdout.splitlines()))

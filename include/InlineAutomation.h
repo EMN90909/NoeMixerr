@@ -22,13 +22,13 @@
  *
  */
 
-#ifndef LMMS_INLINE_AUTOMATION_H
-#define LMMS_INLINE_AUTOMATION_H
+#ifndef NoeMixerr_INLINE_AUTOMATION_H
+#define NoeMixerr_INLINE_AUTOMATION_H
 
 #include "AutomationNode.h"
 #include "AutomationClip.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class InlineAutomation : public FloatModel
@@ -98,6 +98,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INLINE_AUTOMATION_H
+#endif // NoeMixerr_INLINE_AUTOMATION_H

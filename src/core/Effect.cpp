@@ -34,7 +34,7 @@
 #include "EffectView.h"
 #include "SampleFrame.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -205,4 +205,4 @@ gui::PluginView * Effect::instantiateView( QWidget * _parent )
 	return new gui::EffectView( this, _parent );
 }
 
-} // namespace lmms
+} // namespace noemixerr

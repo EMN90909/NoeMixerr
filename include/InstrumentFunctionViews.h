@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_INSTRUMENT_FUNCTION_VIEWS_H
-#define LMMS_INSTRUMENT_FUNCTION_VIEWS_H
+#ifndef NoeMixerr_INSTRUMENT_FUNCTION_VIEWS_H
+#define NoeMixerr_INSTRUMENT_FUNCTION_VIEWS_H
 
 #include "ModelView.h"
 
@@ -31,7 +31,7 @@
 
 class QLabel;
 
-namespace lmms
+namespace noemixerr
 {
 
 class InstrumentFunctionArpeggio;
@@ -97,6 +97,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_INSTRUMENT_FUNCTION_VIEWS_H
+#endif // NoeMixerr_INSTRUMENT_FUNCTION_VIEWS_H

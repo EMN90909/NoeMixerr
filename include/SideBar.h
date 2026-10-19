@@ -1,5 +1,5 @@
 /*
- * SideBar.h - side-bar in LMMS' MainWindow
+ * SideBar.h - side-bar in NoeMixerr' MainWindow
  *
  * Copyright (c) 2004-2009 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_SIDE_BAR_H
-#define LMMS_GUI_SIDE_BAR_H
+#ifndef NoeMixerr_GUI_SIDE_BAR_H
+#define NoeMixerr_GUI_SIDE_BAR_H
 
 #include <QMap>
 #include <QButtonGroup>
@@ -31,7 +31,7 @@
 
 class QToolButton;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class SideBarWidget;
@@ -58,6 +58,6 @@ private:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_SIDE_BAR_H
+#endif // NoeMixerr_GUI_SIDE_BAR_H

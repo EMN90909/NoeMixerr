@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_AUDIO_ENGINE_WORKER_THREAD_H
-#define LMMS_AUDIO_ENGINE_WORKER_THREAD_H
+#ifndef NoeMixerr_AUDIO_ENGINE_WORKER_THREAD_H
+#define NoeMixerr_AUDIO_ENGINE_WORKER_THREAD_H
 
 #include <QThread>
 
@@ -31,7 +31,7 @@
 
 class QWaitCondition;
 
-namespace lmms
+namespace noemixerr
 {
 
 class AudioEngine;
@@ -119,6 +119,6 @@ private:
 	volatile bool m_quit;
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_AUDIO_ENGINE_WORKER_THREAD_H
+#endif // NoeMixerr_AUDIO_ENGINE_WORKER_THREAD_H

@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_GUI_POSITION_LINE_H
-#define LMMS_GUI_POSITION_LINE_H
+#ifndef NoeMixerr_GUI_POSITION_LINE_H
+#define NoeMixerr_GUI_POSITION_LINE_H
 
 #include <QWidget>
 
 #include "Song.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class PositionLine : public QWidget
@@ -60,6 +60,6 @@ private:
 	QColor m_recordingColor;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_POSITION_LINE_H
+#endif // NoeMixerr_GUI_POSITION_LINE_H

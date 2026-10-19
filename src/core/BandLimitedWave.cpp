@@ -27,7 +27,7 @@
 
 #include <QDataStream>
 
-namespace lmms
+namespace noemixerr
 {
 
 std::array<WaveMipMap, BandLimitedWave::NumWaveforms> BandLimitedWave::s_waveforms = {  };
@@ -235,7 +235,7 @@ void BandLimitedWave::generateWaves()
 
 // generate files, serialize mipmaps as QDataStreams and save them on disk
 //
-// normally these are now provided with LMMS as pre-generated so we don't have to do this,
+// normally these are now provided with NoeMixerr as pre-generated so we don't have to do this,
 // but I'm leaving the code here in case it's needed in the future
 // (maybe we add more waveforms or change the generation code or mipmap format, etc.)
 
@@ -274,4 +274,4 @@ moogfile.close();
 
 }
 
-} // namespace lmms
+} // namespace noemixerr

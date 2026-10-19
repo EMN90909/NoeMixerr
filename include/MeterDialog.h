@@ -23,14 +23,14 @@
  *
  */
 
-#ifndef LMMS_GUI_METER_DIALOG_H
-#define LMMS_GUI_METER_DIALOG_H
+#ifndef NoeMixerr_GUI_METER_DIALOG_H
+#define NoeMixerr_GUI_METER_DIALOG_H
 
 #include <QWidget>
 
 #include "ModelView.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class LcdSpinBox;
@@ -52,6 +52,6 @@ private:
 
 } ;
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_METER_DIALOG_H
+#endif // NoeMixerr_GUI_METER_DIALOG_H

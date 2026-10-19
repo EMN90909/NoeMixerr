@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "FlangerControlsDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -75,6 +75,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif // FLANGERCONTROLS_H

@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_MIDI_EVENT_H
-#define LMMS_MIDI_EVENT_H
+#ifndef NoeMixerr_MIDI_EVENT_H
+#define NoeMixerr_MIDI_EVENT_H
 
 #include <cstdlib>
 #include "Midi.h"
 #include "panning.h"
 #include "volume.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class MidiEvent
@@ -221,6 +221,6 @@ private:
 	Source m_source;
 } ;
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_MIDI_EVENT_H
+#endif // NoeMixerr_MIDI_EVENT_H

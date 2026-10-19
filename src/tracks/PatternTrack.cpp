@@ -33,7 +33,7 @@
 #include "PlayHandle.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -248,4 +248,4 @@ void PatternTrack::swapPatternTracks(Track* track1, Track* track2)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

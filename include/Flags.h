@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_FLAGS_H
-#define LMMS_FLAGS_H
+#ifndef NoeMixerr_FLAGS_H
+#define NoeMixerr_FLAGS_H
 
 #include <type_traits>
 
-namespace lmms {
+namespace noemixerr {
 
 template<typename T>
 class Flags
 {
-	static_assert(std::is_enum_v<T>, "lmms::Flags can only be used with enum types");
+	static_assert(std::is_enum_v<T>, "noemixerr::Flags can only be used with enum types");
 
 public:
 	using EnumType = T;
@@ -74,9 +74,9 @@ private:
 	UnderlyingType m_value = 0;
 };
 
-#define LMMS_DECLARE_OPERATORS_FOR_FLAGS(type) \
-constexpr inline auto operator|(type l, type r) -> ::lmms::Flags<type> { return ::lmms::Flags{l} | ::lmms::Flags{r}; }
+#define NoeMixerr_DECLARE_OPERATORS_FOR_FLAGS(type) \
+constexpr inline auto operator|(type l, type r) -> ::noemixerr::Flags<type> { return ::noemixerr::Flags{l} | ::noemixerr::Flags{r}; }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_FLAGS_H
+#endif // NoeMixerr_FLAGS_H

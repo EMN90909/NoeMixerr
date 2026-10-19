@@ -34,7 +34,7 @@
 #include "SampleDecoder.h"
 #include "FileDialog.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -45,7 +45,7 @@ FileDialog::FileDialog( QWidget *parent, const QString &caption,
 	setOption( QFileDialog::DontUseCustomDirectoryIcons );
 	setOption( QFileDialog::DontUseNativeDialog );
 
-#ifdef LMMS_BUILD_LINUX
+#ifdef NoeMixerr_BUILD_LINUX
 	QList<QUrl> urls;
 #else
 	QList<QUrl> urls = sidebarUrls();
@@ -79,13 +79,13 @@ FileDialog::FileDialog( QWidget *parent, const QString &caption,
 	
 	// Add `/Volumes` directory on OS X systems, this allows the user to browse
 	// external disk drives.
-#ifdef LMMS_BUILD_APPLE
+#ifdef NoeMixerr_BUILD_APPLE
 	QDir volumesDir( QDir("/Volumes") );
 	if ( volumesDir.exists() )
 		urls << QUrl::fromLocalFile( volumesDir.absolutePath() );
 #endif
 
-#ifdef LMMS_BUILD_LINUX
+#ifdef NoeMixerr_BUILD_LINUX
 
 	// FileSystem types : https://www.javatpoint.com/linux-file-system
 	QStringList usableFileSystems = {"ext", "ext2", "ext3", "ext4", "jfs", "reiserfs", "ntfs3", "fuse.sshfs", "fuseblk"};
@@ -197,4 +197,4 @@ QString FileDialog::openWaveformFile(const QString& previousFile)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

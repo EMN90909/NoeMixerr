@@ -23,17 +23,17 @@
  *
  */
 
-#ifndef LMMS_DRUM_SYNTH_H
-#define LMMS_DRUM_SYNTH_H
+#ifndef NoeMixerr_DRUM_SYNTH_H
+#define NoeMixerr_DRUM_SYNTH_H
 
 #include <cstddef>
 #include <cstdint>
 
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
 class QString;
 
-namespace lmms {
+namespace noemixerr {
 
 class DrumSynth
 {
@@ -56,6 +56,6 @@ private:
 	float GetPrivateProfileFloat(const char* sec, const char* key, float def, QString file);
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_DRUM_SYNTH_H
+#endif // NoeMixerr_DRUM_SYNTH_H

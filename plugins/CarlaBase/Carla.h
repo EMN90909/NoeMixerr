@@ -1,5 +1,5 @@
 /*
- * carla.h - Carla for LMMS
+ * carla.h - Carla for NoeMixerr
  *
  * Copyright (C) 2014-2018 Filipe Coelho <falktx@falktx.com>
  *
@@ -53,7 +53,7 @@
     const NativePluginDescriptor* carla_get_native_rack_plugin();
 #endif
 
-// lmms/include/
+// noemixerr/include/
 #include "AutomatableModel.h"
 #include "Instrument.h"
 #include "InstrumentView.h"
@@ -69,7 +69,7 @@ class QStringListModel;  // IWYU pragma: keep
 class QScrollArea;
 
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -191,7 +191,7 @@ public:
     void handleUiClosed();
     intptr_t handleDispatcher(const NativeHostDispatcherOpcode opcode, const int32_t index, const intptr_t value, void* const ptr, const float opt);
 
-    // LMMS functions
+    // NoeMixerr functions
     QString nodeName() const override;
     void saveSettings(QDomDocument& doc, QDomElement& parent) override;
     void loadSettings(const QDomElement& elem) override;
@@ -381,6 +381,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

@@ -28,14 +28,14 @@
 
 #include "AudioFileOgg.h"
 
-#ifdef LMMS_HAVE_OGGVORBIS
+#ifdef NoeMixerr_HAVE_OGGVORBIS
 
 #include <vorbis/vorbisenc.h>
 
 #include "SampleFrame.h"
-#include "lmms_constants.h"
+#include "noemixerr_constants.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 AudioFileOgg::AudioFileOgg(OutputSettings const& outputSettings, const ch_cnt_t channels, bool& successful,
@@ -55,7 +55,7 @@ AudioFileOgg::AudioFileOgg(OutputSettings const& outputSettings, const ch_cnt_t 
 
 	vorbis_analysis_init(&m_vds, &m_vi);
 	vorbis_comment_init(&m_vc);
-	vorbis_comment_add_tag(&m_vc, "Cool", "This song has been made using LMMS");
+	vorbis_comment_add_tag(&m_vc, "Cool", "This song has been made using NoeMixerr");
 
 	auto headerPackets = std::array<ogg_packet, 3>{};
 	vorbis_analysis_headerout(&m_vds, &m_vc, &headerPackets[0], &headerPackets[1], &headerPackets[2]);
@@ -135,8 +135,8 @@ void AudioFileOgg::writeBuffer(const SampleFrame* _ab, const f_cnt_t _frames)
 	}
 }
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_OGGVORBIS
+#endif // NoeMixerr_HAVE_OGGVORBIS
 
 

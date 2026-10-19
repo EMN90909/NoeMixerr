@@ -31,7 +31,7 @@
 #include "LedCheckBox.h"
 #include "TempoSyncKnob.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -88,4 +88,4 @@ FlangerControlsDialog::FlangerControlsDialog( FlangerControls *controls ) :
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

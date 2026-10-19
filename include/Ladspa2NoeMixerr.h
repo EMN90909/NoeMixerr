@@ -1,6 +1,6 @@
 /*
- * Ladspa2LMMS.h - class that identifies and instantiates LADSPA effects
- *                   for use with LMMS
+ * Ladspa2NoeMixerr.h - class that identifies and instantiates LADSPA effects
+ *                   for use with NoeMixerr
  *
  * Copyright (c) 2005-2008 Danny McRae <khjklujn@netscape.net>
  *
@@ -23,17 +23,17 @@
  *
  */
 
-#ifndef LMMS_LADSPA_2_LMMS_H
-#define LMMS_LADSPA_2_LMMS_H
+#ifndef NoeMixerr_LADSPA_2_NoeMixerr_H
+#define NoeMixerr_LADSPA_2_NoeMixerr_H
 
 #include "LadspaManager.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 //! Class responsible for sorting found plugins (by LadspaManager)
 //! into categories
-class LMMS_EXPORT Ladspa2LMMS : public LadspaManager
+class NoeMixerr_EXPORT Ladspa2NoeMixerr : public LadspaManager
 {
 public:
 	
@@ -65,8 +65,8 @@ public:
 	QString getShortName( const ladspa_key_t & _key );
 
 private:
-	Ladspa2LMMS();
-	~Ladspa2LMMS() override = default;
+	Ladspa2NoeMixerr();
+	~Ladspa2NoeMixerr() override = default;
 
 	l_sortable_plugin_t m_instruments;
 	l_sortable_plugin_t m_validEffects;
@@ -79,6 +79,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LADSPA_2_LMMS_H
+#endif // NoeMixerr_LADSPA_2_NoeMixerr_H

@@ -25,7 +25,7 @@
 
 #include <cassert>
 
-namespace lmms {
+namespace noemixerr {
 ThreadPool::ThreadPool(size_t numWorkers)
 {
 	assert(numWorkers > 0);
@@ -80,4 +80,4 @@ auto ThreadPool::instance() -> ThreadPool&
 	return s_pool;
 }
 
-} // namespace lmms
+} // namespace noemixerr

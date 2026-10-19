@@ -22,20 +22,20 @@
  *
  */
 
-#ifndef LMMS_GUI_CAPTION_MENU_H
-#define LMMS_GUI_CAPTION_MENU_H
+#ifndef NoeMixerr_GUI_CAPTION_MENU_H
+#define NoeMixerr_GUI_CAPTION_MENU_H
 
 #include <QMenu>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 ///
 /// \brief A context menu with a caption
 ///
-class LMMS_EXPORT CaptionMenu : public QMenu
+class NoeMixerr_EXPORT CaptionMenu : public QMenu
 {
 	Q_OBJECT
 public:
@@ -44,6 +44,6 @@ public:
 } ;
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_CAPTION_MENU_H
+#endif // NoeMixerr_GUI_CAPTION_MENU_H

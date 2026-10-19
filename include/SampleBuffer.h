@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_SAMPLE_BUFFER_H
-#define LMMS_SAMPLE_BUFFER_H
+#ifndef NoeMixerr_SAMPLE_BUFFER_H
+#define NoeMixerr_SAMPLE_BUFFER_H
 
 #include <QString>
 #include <memory>
@@ -31,11 +31,11 @@
 
 #include "AudioEngine.h"
 #include "Engine.h"
-#include "LmmsTypes.h"
-#include "lmms_export.h"
+#include "NoeMixerrTypes.h"
+#include "noemixerr_export.h"
 
-namespace lmms {
-class LMMS_EXPORT SampleBuffer
+namespace noemixerr {
+class NoeMixerr_EXPORT SampleBuffer
 {
 public:
 	using value_type = SampleFrame;
@@ -93,6 +93,6 @@ private:
 	sample_rate_t m_sampleRate = Engine::audioEngine()->outputSampleRate();
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SAMPLE_BUFFER_H
+#endif // NoeMixerr_SAMPLE_BUFFER_H

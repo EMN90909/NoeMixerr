@@ -23,15 +23,15 @@
  */
 
 
-#ifndef LMMS_LOMM_H
-#define LMMS_LOMM_H
+#ifndef NoeMixerr_LOMM_H
+#define NoeMixerr_LOMM_H
 
 #include "LOMMControls.h"
 #include "Effect.h"
 
 #include "BasicFilters.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 constexpr inline float LOMM_MIN_FLOOR = 0.00012589f;// -72 dBFS
@@ -101,6 +101,6 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LOMM_H
+#endif // NoeMixerr_LOMM_H

@@ -24,8 +24,8 @@
  *
  */
 
-#ifndef LMMS_GUI_PIANO_ROLL_H
-#define LMMS_GUI_PIANO_ROLL_H
+#ifndef NoeMixerr_GUI_PIANO_ROLL_H
+#define NoeMixerr_GUI_PIANO_ROLL_H
 
 #include <QWidget>
 
@@ -35,7 +35,7 @@
 #include "ComboBoxModel.h"
 #include "SerializingObject.h"
 #include "Note.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 #include "Song.h"
 #include "StepRecorder.h"
 #include "StepRecorderWidget.h"
@@ -45,7 +45,7 @@ class QScrollBar;
 class QMenu;
 class QToolButton;
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -208,8 +208,8 @@ protected slots:
 	bool toggleStepRecording();
 	void stop();
 
-	void startRecordNote( const lmms::Note & n );
-	void finishRecordNote( const lmms::Note & n );
+	void startRecordNote( const noemixerr::Note & n );
+	void finishRecordNote( const noemixerr::Note & n );
 
 	void horScrolled( int new_pos );
 	void verScrolled( int new_pos );
@@ -223,7 +223,7 @@ protected slots:
 
 	void updatePosition();
 	void updatePositionAccompany();
-	void updatePositionStepRecording(const lmms::TimePos & t );
+	void updatePositionStepRecording(const noemixerr::TimePos & t );
 
 	void zoomingChanged();
 	void zoomingYChanged();
@@ -237,7 +237,7 @@ protected slots:
 	void changeNoteEditMode( int i );
 	void markSemiTone(SemiToneMarkerAction i, bool fromMenu = true);
 
-	void hideMidiClip( lmms::MidiClip* clip );
+	void hideMidiClip( noemixerr::MidiClip* clip );
 
 	void selectRegionFromPixels( int xStart, int xEnd );
 
@@ -632,6 +632,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_PIANO_ROLL_H
+#endif // NoeMixerr_GUI_PIANO_ROLL_H

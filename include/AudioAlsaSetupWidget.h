@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_GUI_AUDIO_ALSA_SETUP_WIDGET_H
-#define LMMS_GUI_AUDIO_ALSA_SETUP_WIDGET_H
+#ifndef NoeMixerr_GUI_AUDIO_ALSA_SETUP_WIDGET_H
+#define NoeMixerr_GUI_AUDIO_ALSA_SETUP_WIDGET_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_ALSA
+#ifdef NoeMixerr_HAVE_ALSA
 
 #include "AudioDeviceSetupWidget.h"
 
@@ -36,7 +36,7 @@
 
 class QComboBox;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class LcdSpinBox;
@@ -62,8 +62,8 @@ private:
 	AudioAlsa::DeviceInfoCollection m_deviceInfos;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_HAVE_ALSA
+#endif // NoeMixerr_HAVE_ALSA
 
-#endif // LMMS_GUI_AUDIO_ALSA_SETUP_WIDGET_H
+#endif // NoeMixerr_GUI_AUDIO_ALSA_SETUP_WIDGET_H

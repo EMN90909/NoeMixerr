@@ -44,9 +44,9 @@
 #include "FontHelper.h"
 #include "KeyboardShortcuts.h"
 #include "MainWindow.h"
-#include "lmms_math.h"
+#include "noemixerr_math.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -259,4 +259,4 @@ void LcdFloatSpinBox::paintEvent(QPaintEvent*)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

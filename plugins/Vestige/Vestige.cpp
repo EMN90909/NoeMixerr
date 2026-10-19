@@ -55,7 +55,7 @@
 #include "TextFloat.h"
 #include "VstPlugin.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -64,18 +64,18 @@ extern "C"
 
 Plugin::Descriptor Q_DECL_EXPORT  vestige_plugin_descriptor =
 {
-	LMMS_STRINGIFY( PLUGIN_NAME ),
+	NoeMixerr_STRINGIFY( PLUGIN_NAME ),
 	"VeSTige",
 	QT_TRANSLATE_NOOP( "PluginBrowser",
-			"VST-host for using VST(i)-plugins within LMMS" ),
+			"VST-host for using VST(i)-plugins within NoeMixerr" ),
 	"Tobias Doerffel <tobydox/at/users.sf.net>",
 	0x0100,
 	Plugin::Type::Instrument,
 	new PluginPixmapLoader( "logo" ),
-#if defined(LMMS_BUILD_WIN32) || defined(LMMS_BUILD_CYGWIN)
+#if defined(NoeMixerr_BUILD_WIN32) || defined(NoeMixerr_BUILD_CYGWIN)
 	"dll",
-#elif defined(LMMS_BUILD_LINUX)
-#	if defined(LMMS_HAVE_VST_32) || defined(LMMS_HAVE_VST_64)
+#elif defined(NoeMixerr_BUILD_LINUX)
+#	if defined(NoeMixerr_HAVE_VST_32) || defined(NoeMixerr_HAVE_VST_64)
 		"dll,so",
 #	else
 		"so",
@@ -510,7 +510,7 @@ VestigeInstrumentView::VestigeInstrumentView( Instrument * _instrument,
 							"controls" ) );
 	connect( m_managePluginButton, SIGNAL( clicked() ), this,
 						SLOT( managePlugin() ) );
-	m_managePluginButton->setToolTip(tr("Control VST plugin from LMMS host"));
+	m_managePluginButton->setToolTip(tr("Control VST plugin from NoeMixerr host"));
 
 
 	m_openPresetButton = new PixmapButton( this, "" );
@@ -658,10 +658,10 @@ void VestigeInstrumentView::openPlugin()
 
 	// set filters
 	QStringList types;
-#if defined(LMMS_BUILD_WIN32)
+#if defined(NoeMixerr_BUILD_WIN32)
 	types << tr("VST2 files (*.dll)");
-#elif defined(LMMS_BUILD_LINUX)
-#	if defined(LMMS_HAVE_VST_32) || defined(LMMS_HAVE_VST_64)
+#elif defined(NoeMixerr_BUILD_LINUX)
+#	if defined(NoeMixerr_HAVE_VST_32) || defined(NoeMixerr_HAVE_VST_64)
 		types << tr("All VST files (*.dll *.so)")
 			<< tr("Windows VST2 files (*.dll)");
 #	endif
@@ -1182,7 +1182,7 @@ extern "C"
 {
 
 // necessary for getting instance out of shared lib
-Q_DECL_EXPORT Plugin * lmms_plugin_main( Model *m, void * )
+Q_DECL_EXPORT Plugin * noemixerr_plugin_main( Model *m, void * )
 {
 	return new VestigeInstrument( static_cast<InstrumentTrack *>( m ) );
 }
@@ -1191,4 +1191,4 @@ Q_DECL_EXPORT Plugin * lmms_plugin_main( Model *m, void * )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_LINKED_MODEL_GROUPS_H
-#define LMMS_LINKED_MODEL_GROUPS_H
+#ifndef NoeMixerr_LINKED_MODEL_GROUPS_H
+#define NoeMixerr_LINKED_MODEL_GROUPS_H
 
 #include <cstddef>
 
@@ -32,7 +32,7 @@
 class QDomDocument;
 class QDomElement;
 
-namespace lmms
+namespace noemixerr
 {
 
 /**
@@ -111,8 +111,8 @@ signals:
 	// (who would know if the client is Qt, i.e. it may not have slots at all)
 	// In this case you'd e.g. send the UI something like
 	// "/added <model meta info>"
-	void modelAdded(lmms::AutomatableModel* added);
-	void modelRemoved(lmms::AutomatableModel* removed);
+	void modelAdded(noemixerr::AutomatableModel* added);
+	void modelRemoved(noemixerr::AutomatableModel* removed);
 
 public:
 	AutomatableModel* getModel(const std::string& s)
@@ -176,6 +176,6 @@ public:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_LINKED_MODEL_GROUPS_H
+#endif // NoeMixerr_LINKED_MODEL_GROUPS_H

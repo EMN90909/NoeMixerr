@@ -27,7 +27,7 @@
 #include "AudioEngine.h"
 #include "MidiController.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -147,4 +147,4 @@ gui::ControllerDialog* MidiController::createDialog( QWidget * _parent )
 
 
 
-} // namespace lmms
+} // namespace noemixerr

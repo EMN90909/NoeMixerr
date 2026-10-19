@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_SLICERT_H
-#define LMMS_SLICERT_H
+#ifndef NoeMixerr_SLICERT_H
+#define NoeMixerr_SLICERT_H
 
 #include "AutomatableModel.h"
 #include "ComboBoxModel.h"
@@ -32,7 +32,7 @@
 #include "Sample.h"
 #include "SlicerTView.h"
 
-namespace lmms {
+namespace noemixerr {
 
 class SlicerT : public Instrument
 {
@@ -81,5 +81,5 @@ private:
 	friend class gui::SlicerTView;
 	friend class gui::SlicerTWaveform;
 };
-} // namespace lmms
-#endif // LMMS_SLICERT_H
+} // namespace noemixerr
+#endif // NoeMixerr_SLICERT_H

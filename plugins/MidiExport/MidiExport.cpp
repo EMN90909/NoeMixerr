@@ -37,7 +37,7 @@
 #include "PatternTrack.h"
 #include "plugin_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 extern "C"
@@ -46,10 +46,10 @@ extern "C"
 //! Standardized plugin descriptor for MIDI exporter
 Plugin::Descriptor PLUGIN_EXPORT midiexport_plugin_descriptor =
 {
-	LMMS_STRINGIFY(PLUGIN_NAME),
+	NoeMixerr_STRINGIFY(PLUGIN_NAME),
 	"MIDI Export",
 	QT_TRANSLATE_NOOP("PluginBrowser",
-		"Filter for exporting MIDI files from LMMS"),
+		"Filter for exporting MIDI files from NoeMixerr"),
 	"Mohamed Abdel Maksoud <mohamed at amaksoud.com> and "
 		"Hyunjin Song <tteu.ingog/at/gmail.com>",
 	0x0100,
@@ -59,7 +59,7 @@ Plugin::Descriptor PLUGIN_EXPORT midiexport_plugin_descriptor =
 	nullptr,
 };
 
-PLUGIN_EXPORT Plugin* lmms_plugin_main(Model*, void*)
+PLUGIN_EXPORT Plugin* noemixerr_plugin_main(Model*, void*)
 {
 	return new MidiExport{};
 }
@@ -345,4 +345,4 @@ void MidiExport::processPatternTrack(Track& track)
 	m_plists.emplace_back(std::move(plist));
 }
 
-} // namespace lmms
+} // namespace noemixerr

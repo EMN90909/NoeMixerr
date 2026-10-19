@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_GUI_PLUGIN_VIEW_H
-#define LMMS_GUI_PLUGIN_VIEW_H
+#ifndef NoeMixerr_GUI_PLUGIN_VIEW_H
+#define NoeMixerr_GUI_PLUGIN_VIEW_H
 
 #include <QWidget>
 
 #include "ModelView.h"
 #include "Plugin.h"
 
-namespace lmms::gui {
+namespace noemixerr::gui {
 
-class LMMS_EXPORT PluginView : public QWidget, public ModelView
+class NoeMixerr_EXPORT PluginView : public QWidget, public ModelView
 {
 public:
 	PluginView(Plugin* _plugin, QWidget* _parent)
@@ -44,6 +44,6 @@ public:
 	virtual bool isResizable() const { return false; }
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_PLUGIN_VIEW_H
+#endif // NoeMixerr_GUI_PLUGIN_VIEW_H

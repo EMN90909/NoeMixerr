@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_OVERSAMPLING_HELPERS_H
-#define LMMS_OVERSAMPLING_HELPERS_H
+#ifndef NoeMixerr_OVERSAMPLING_HELPERS_H
+#define NoeMixerr_OVERSAMPLING_HELPERS_H
 
 #include <algorithm>
 #include <array>
@@ -42,7 +42,7 @@
 inline constexpr float HIIR_DEFAULT_PASSBAND = 19600;
 inline constexpr int HIIR_DEFAULT_MAX_COEFS = 8;
 
-namespace lmms
+namespace noemixerr
 {
 
 template<int MaxStages, int MaxCoefs = 8>
@@ -243,7 +243,7 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_OVERSAMPLING_HELPERS_H
+#endif // NoeMixerr_OVERSAMPLING_HELPERS_H
 

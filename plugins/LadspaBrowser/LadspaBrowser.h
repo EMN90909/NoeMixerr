@@ -31,7 +31,7 @@
 #include "ToolPlugin.h"
 #include "ToolPluginView.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -50,7 +50,7 @@ public:
 
 
 public slots:
-	void showPorts( const ::lmms::ladspa_key_t & _key );
+	void showPorts( const ::noemixerr::ladspa_key_t & _key );
 
 
 private:
@@ -93,6 +93,6 @@ public:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

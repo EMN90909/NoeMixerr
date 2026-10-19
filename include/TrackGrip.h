@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_GUI_TRACK_GRIP_H
-#define LMMS_GUI_TRACK_GRIP_H
+#ifndef NoeMixerr_GUI_TRACK_GRIP_H
+#define NoeMixerr_GUI_TRACK_GRIP_H
 
 #include <QWidget>
 
 
 class QPixmap;
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -63,6 +63,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_TRACK_GRIP_H
+#endif // NoeMixerr_GUI_TRACK_GRIP_H

@@ -40,7 +40,7 @@
 #include "volume.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -255,4 +255,4 @@ void SampleTrack::updateMixerChannel()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

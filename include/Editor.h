@@ -22,15 +22,15 @@
  *
  */
 
-#ifndef LMMS_GUI_EDITOR_H
-#define LMMS_GUI_EDITOR_H
+#ifndef NoeMixerr_GUI_EDITOR_H
+#define NoeMixerr_GUI_EDITOR_H
 
 #include <QMainWindow>
 #include <QToolBar>
 
 class QAction;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 static const int Quantizations[] = {
@@ -115,6 +115,6 @@ protected:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_EDITOR_H
+#endif // NoeMixerr_GUI_EDITOR_H

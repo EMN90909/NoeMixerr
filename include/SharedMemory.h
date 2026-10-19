@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_SHARED_MEMORY_H
-#define LMMS_SHARED_MEMORY_H
+#ifndef NoeMixerr_SHARED_MEMORY_H
+#define NoeMixerr_SHARED_MEMORY_H
 
 #include <memory>
 #include <memory_resource>
@@ -33,7 +33,7 @@
 #include <type_traits>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace detail
@@ -244,6 +244,6 @@ private:
 	SharedMemoryResource m_resource;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_SHARED_MEMORY_H
+#endif // NoeMixerr_SHARED_MEMORY_H

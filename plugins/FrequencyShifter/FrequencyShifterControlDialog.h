@@ -21,14 +21,14 @@
  * Boston, MA 02110-1301 USA.
  */
 
-#ifndef LMMS_FREQUENCY_SHIFTER_CONTROL_DIALOG_H
-#define LMMS_FREQUENCY_SHIFTER_CONTROL_DIALOG_H
+#ifndef NoeMixerr_FREQUENCY_SHIFTER_CONTROL_DIALOG_H
+#define NoeMixerr_FREQUENCY_SHIFTER_CONTROL_DIALOG_H
 
 #include "EffectControlDialog.h"
 
 #include <QTextEdit>
 
-namespace lmms
+namespace noemixerr
 {
 
 class FrequencyShifterControls;
@@ -65,6 +65,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_FREQUENCY_SHIFTER_CONTROL_DIALOG_H
+#endif // NoeMixerr_FREQUENCY_SHIFTER_CONTROL_DIALOG_H

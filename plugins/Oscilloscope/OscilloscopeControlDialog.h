@@ -21,12 +21,12 @@
  * Boston, MA 02110-1301 USA.
  */
 
-#ifndef LMMS_GUI_OSCILLOSCOPE_CONTROL_DIALOG_H
-#define LMMS_GUI_OSCILLOSCOPE_CONTROL_DIALOG_H
+#ifndef NoeMixerr_GUI_OSCILLOSCOPE_CONTROL_DIALOG_H
+#define NoeMixerr_GUI_OSCILLOSCOPE_CONTROL_DIALOG_H
 
 #include "EffectControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class OscilloscopeControls;
@@ -47,6 +47,6 @@ public:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_GUI_OSCILLOSCOPE_CONTROL_DIALOG_H
+#endif // NoeMixerr_GUI_OSCILLOSCOPE_CONTROL_DIALOG_H

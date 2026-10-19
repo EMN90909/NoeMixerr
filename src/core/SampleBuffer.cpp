@@ -32,7 +32,7 @@
 #include "PathUtil.h"
 #include "SampleDecoder.h"
 
-namespace lmms {
+namespace noemixerr {
 
 SampleBuffer::SampleBuffer(const SampleFrame* data, size_t numFrames, int sampleRate)
 	: m_data(data, data + numFrames)
@@ -130,4 +130,4 @@ std::shared_ptr<const SampleBuffer> SampleBuffer::fromBase64(const QString& str,
 	return std::make_shared<SampleBuffer>(std::move(data), sampleRate);
 }
 
-} // namespace lmms
+} // namespace noemixerr

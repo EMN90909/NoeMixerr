@@ -1,4 +1,4 @@
-/* Nes.h - A NES instrument plugin for LMMS
+/* Nes.h - A NES instrument plugin for NoeMixerr
  *                        
  * Copyright (c) 2014 Vesa Kivimäki
  * Copyright (c) 2004-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
@@ -55,7 +55,7 @@
 	name->setToolTip(ttip);
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -367,6 +367,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

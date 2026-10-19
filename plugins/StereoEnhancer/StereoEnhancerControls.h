@@ -28,7 +28,7 @@
 #include "EffectControls.h"
 #include "StereoEnhancerControlDialog.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -72,6 +72,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif /*_STEREO_ENHANCER_CONTROLS_H*/

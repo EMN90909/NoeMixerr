@@ -22,21 +22,21 @@
  *
  */
 
-#ifndef LMMS_LV2_CONTROL_BASE_H
-#define LMMS_LV2_CONTROL_BASE_H
+#ifndef NoeMixerr_LV2_CONTROL_BASE_H
+#define NoeMixerr_LV2_CONTROL_BASE_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <lilv/lilv.h>
 #include <memory>
 
 #include "LinkedModelGroups.h"
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include "Plugin.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -71,7 +71,7 @@ class SampleFrame;
 	* this class can not override virtuals of Instrument or EffectControls, so
 	  it will offer functions that must be called by virtuals in its child class
 */
-class LMMS_EXPORT Lv2ControlBase : public LinkedModelGroups
+class NoeMixerr_EXPORT Lv2ControlBase : public LinkedModelGroups
 {
 public:
 	static Plugin::Type check(const LilvPlugin* m_plugin,
@@ -111,16 +111,16 @@ protected:
 	/*
 		utils for the run thread
 	*/
-	//! Copy values from the LMMS core (connected models, MIDI events, ...) into
+	//! Copy values from the NoeMixerr core (connected models, MIDI events, ...) into
 	//! the respective ports
-	void copyModelsFromLmms();
-	//! Bring values from all ports to the LMMS core
-	void copyModelsToLmms() const;
+	void copyModelsFromNoeMixerr();
+	//! Bring values from all ports to the NoeMixerr core
+	void copyModelsToNoeMixerr() const;
 
-	//! Copy buffer passed by LMMS into our ports
-	void copyBuffersFromLmms(const SampleFrame* buf, f_cnt_t frames);
-	//! Copy our ports into buffers passed by LMMS
-	void copyBuffersToLmms(SampleFrame* buf, f_cnt_t frames) const;
+	//! Copy buffer passed by NoeMixerr into our ports
+	void copyBuffersFromNoeMixerr(const SampleFrame* buf, f_cnt_t frames);
+	//! Copy our ports into buffers passed by NoeMixerr
+	void copyBuffersToNoeMixerr(SampleFrame* buf, f_cnt_t frames) const;
 	//! Run the Lv2 plugin instance for @param frames frames
 	void run(f_cnt_t frames);
 
@@ -143,7 +143,7 @@ protected:
 private:
 	//! Independent processors
 	//! If this is a mono effect, the vector will have size 2 in order to
-	//! fulfill LMMS' requirement of having stereo input and output
+	//! fulfill NoeMixerr' requirement of having stereo input and output
 	std::vector<std::unique_ptr<Lv2Proc>> m_procs;
 
 	bool m_hasGUI = false;
@@ -153,8 +153,8 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_CONTROL_BASE_H
+#endif // NoeMixerr_LV2_CONTROL_BASE_H

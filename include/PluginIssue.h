@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_PLUGIN_ISSUE_H
-#define LMMS_PLUGIN_ISSUE_H
+#ifndef NoeMixerr_PLUGIN_ISSUE_H
+#define NoeMixerr_PLUGIN_ISSUE_H
 
 #include <QDebug>
 #include <string>
 
-namespace lmms
+namespace noemixerr
 {
 
-//! Types of issues that can cause LMMS to not load a plugin
-//! LMMS Plugins should use this to indicate errors
+//! Types of issues that can cause NoeMixerr to not load a plugin
+//! NoeMixerr Plugins should use this to indicate errors
 enum class PluginIssueType
 {
 	// port flow & type
@@ -54,7 +54,7 @@ enum class PluginIssueType
 	LogScaleMaxMissing,
 	LogScaleMinMaxDifferentSigns,
 	// features
-	FeatureNotSupported, //!< plugin requires functionality LMMS can't offer
+	FeatureNotSupported, //!< plugin requires functionality NoeMixerr can't offer
 	// misc
 	BadPortType, //!< port type not supported
 	Blocked,
@@ -82,6 +82,6 @@ public:
 
 QDebug operator<<(QDebug stream, const PluginIssue& iss);
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PLUGIN_ISSUE_H
+#endif // NoeMixerr_PLUGIN_ISSUE_H

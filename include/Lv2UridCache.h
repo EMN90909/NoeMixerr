@@ -22,17 +22,17 @@
  *
  */
 
-#ifndef LMMS_LV2_URID_CACHE_H
-#define LMMS_LV2_URID_CACHE_H
+#ifndef NoeMixerr_LV2_URID_CACHE_H
+#define NoeMixerr_LV2_URID_CACHE_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <cstdint>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -71,8 +71,8 @@ template<> struct Lv2UridCache::IdForType<float> { static constexpr auto value =
 template<> struct Lv2UridCache::IdForType<std::int32_t> { static constexpr auto value = Id::atom_Int; };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_URID_CACHE_H
+#endif // NoeMixerr_LV2_URID_CACHE_H

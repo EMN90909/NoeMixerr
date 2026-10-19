@@ -32,7 +32,7 @@
 #include <QMouseEvent>
 #include <QPainter>
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -151,4 +151,4 @@ void XyPad::mouseMoveEvent(QMouseEvent *event)
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

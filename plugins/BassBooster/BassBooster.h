@@ -30,7 +30,7 @@
 #include "DspEffectLibrary.h"
 #include "BassBoosterControls.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class BassBoosterEffect : public Effect
@@ -64,6 +64,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

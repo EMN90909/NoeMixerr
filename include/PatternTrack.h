@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_PATTERN_TRACK_H
-#define LMMS_PATTERN_TRACK_H
+#ifndef NoeMixerr_PATTERN_TRACK_H
+#define NoeMixerr_PATTERN_TRACK_H
 
 #include <QMap>
 
 #include "Track.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class TrackContainer;
@@ -43,7 +43,7 @@ class PatternTrackView;
 
 
 /*! Track type used in the Song (Editor) to reference a pattern in the PatternStore */
-class LMMS_EXPORT PatternTrack : public Track
+class NoeMixerr_EXPORT PatternTrack : public Track
 {
 	Q_OBJECT
 public:
@@ -98,6 +98,6 @@ private:
 
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PATTERN_TRACK_H
+#endif // NoeMixerr_PATTERN_TRACK_H

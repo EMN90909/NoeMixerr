@@ -1,5 +1,5 @@
 /*
- * SetupDialog.h - dialog for setting up LMMS
+ * SetupDialog.h - dialog for setting up NoeMixerr
  *
  * Copyright (c) 2005-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef LMMS_GUI_SETUP_DIALOG_H
-#define LMMS_GUI_SETUP_DIALOG_H
+#ifndef NoeMixerr_GUI_SETUP_DIALOG_H
+#define NoeMixerr_GUI_SETUP_DIALOG_H
 
 #include <QDialog>
 #include <QMap>
@@ -41,7 +41,7 @@ class QLineEdit;
 class QSlider;
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -204,7 +204,7 @@ private:
 	QString m_ladspaDir;
 	QString m_gigDir;
 	QString m_sf2Dir;
-#ifdef LMMS_HAVE_FLUIDSYNTH
+#ifdef NoeMixerr_HAVE_FLUIDSYNTH
 	QString m_sf2File;
 #endif
 	QString m_themeDir;
@@ -216,7 +216,7 @@ private:
 	QLineEdit * m_ladspaDirLineEdit;
 	QLineEdit * m_gigDirLineEdit;
 	QLineEdit * m_sf2DirLineEdit;
-#ifdef LMMS_HAVE_FLUIDSYNTH
+#ifdef NoeMixerr_HAVE_FLUIDSYNTH
 	QLineEdit * m_sf2FileLineEdit;
 #endif
 	QLineEdit * m_backgroundPicFileLineEdit;
@@ -225,6 +225,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_SETUP_DIALOG_H
+#endif // NoeMixerr_GUI_SETUP_DIALOG_H

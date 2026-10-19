@@ -22,12 +22,12 @@
  *
  */
 
-#ifndef LMMS_LV2_FEATURES_H
-#define LMMS_LV2_FEATURES_H
+#ifndef NoeMixerr_LV2_FEATURES_H
+#define NoeMixerr_LV2_FEATURES_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_LV2
+#ifdef NoeMixerr_HAVE_LV2
 
 #include <map>
 #include <string_view>
@@ -35,7 +35,7 @@
 
 #include <lv2/core/lv2.h>
 
-namespace lmms
+namespace noemixerr
 {
 
 /**
@@ -54,7 +54,7 @@ namespace lmms
 class Lv2Features
 {
 public:
-	//! Return if a feature is supported by LMMS
+	//! Return if a feature is supported by NoeMixerr
 	static bool isFeatureSupported(const char *featName);
 
 	Lv2Features();
@@ -83,8 +83,8 @@ private:
 };
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_LV2
+#endif // NoeMixerr_HAVE_LV2
 
-#endif // LMMS_LV2_FEATURES_H
+#endif // NoeMixerr_LV2_FEATURES_H

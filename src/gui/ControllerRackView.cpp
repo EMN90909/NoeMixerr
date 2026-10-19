@@ -41,7 +41,7 @@
 #include "Song.h"
 #include "SubWindow.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -229,4 +229,4 @@ void ControllerRackView::addController()
 	setFocus();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

@@ -30,7 +30,7 @@
 #include "SampleClip.h"
 #include "SampleTrack.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 SamplePlayHandle::SamplePlayHandle(Sample* sample, bool ownAudioBusHandle)
@@ -141,4 +141,4 @@ f_cnt_t SamplePlayHandle::totalFrames() const
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

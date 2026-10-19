@@ -31,7 +31,7 @@
 #include "LedCheckBox.h"
 #include "ComboBox.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 DualFilterControlDialog::DualFilterControlDialog( DualFilterControls* controls ) :
@@ -82,4 +82,4 @@ DualFilterControlDialog::DualFilterControlDialog( DualFilterControls* controls )
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

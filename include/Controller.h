@@ -23,16 +23,16 @@
  *
  */
 
-#ifndef LMMS_CONTROLLER_H
-#define LMMS_CONTROLLER_H
+#ifndef NoeMixerr_CONTROLLER_H
+#define NoeMixerr_CONTROLLER_H
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 #include "Engine.h"
 #include "Model.h"
 #include "JournallingObject.h"
 #include "ValueBuffer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Controller;
@@ -47,7 +47,7 @@ class ControllerDialog;
 
 using ControllerVector = std::vector<Controller*>;
 
-class LMMS_EXPORT Controller : public Model, public JournallingObject
+class NoeMixerr_EXPORT Controller : public Model, public JournallingObject
 {
 	Q_OBJECT
 public:
@@ -180,6 +180,6 @@ signals:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_CONTROLLER_H
+#endif // NoeMixerr_CONTROLLER_H

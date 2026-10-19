@@ -23,12 +23,12 @@
  *
  */
 
-#ifndef LMMS_AUDIO_SNDIO_H
-#define LMMS_AUDIO_SNDIO_H
+#ifndef NoeMixerr_AUDIO_SNDIO_H
+#define NoeMixerr_AUDIO_SNDIO_H
 
-#include "lmmsconfig.h"
+#include "noemixerrconfig.h"
 
-#ifdef LMMS_HAVE_SNDIO
+#ifdef NoeMixerr_HAVE_SNDIO
 
 #include <QThread>
 #include <sndio.h>
@@ -38,7 +38,7 @@
 
 class QLineEdit;
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -81,8 +81,8 @@ private:
 	struct sio_par m_par;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_HAVE_SNDIO
+#endif // NoeMixerr_HAVE_SNDIO
 
-#endif // LMMS_AUDIO_SNDIO_H
+#endif // NoeMixerr_AUDIO_SNDIO_H

@@ -23,15 +23,15 @@
  *
  */
 
-#ifndef LMMS_PROJECT_VERSION_H
-#define LMMS_PROJECT_VERSION_H
+#ifndef NoeMixerr_PROJECT_VERSION_H
+#define NoeMixerr_PROJECT_VERSION_H
 
 #include <QString>
 #include <QStringList>
 
 #include <limits>
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -83,6 +83,6 @@ inline bool operator==(const ProjectVersion & v1, const ProjectVersion & v2) { r
 inline bool operator!=(const ProjectVersion & v1, const ProjectVersion & v2) { return ProjectVersion::compare(v1, v2) != 0; }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PROJECT_VERSION_H
+#endif // NoeMixerr_PROJECT_VERSION_H

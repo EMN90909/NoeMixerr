@@ -22,20 +22,20 @@
  *
 */
 
-#ifndef LMMS_GUI_SIMPLE_TEXT_FLOAT_H
-#define LMMS_GUI_SIMPLE_TEXT_FLOAT_H
+#ifndef NoeMixerr_GUI_SIMPLE_TEXT_FLOAT_H
+#define NoeMixerr_GUI_SIMPLE_TEXT_FLOAT_H
 
 #include <QWidget>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 class QLabel;
 class QTimer;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT SimpleTextFloat : public QWidget
+class NoeMixerr_EXPORT SimpleTextFloat : public QWidget
 {
 	Q_OBJECT
 public:
@@ -74,6 +74,6 @@ private:
 	const QObject* m_source = nullptr;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_SIMPLE_TEXT_FLOAT_H
+#endif // NoeMixerr_GUI_SIMPLE_TEXT_FLOAT_H

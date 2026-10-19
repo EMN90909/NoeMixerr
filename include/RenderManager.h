@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef LMMS_RENDER_MANAGER_H
-#define LMMS_RENDER_MANAGER_H
+#ifndef NoeMixerr_RENDER_MANAGER_H
+#define NoeMixerr_RENDER_MANAGER_H
 
 #include <memory>
 
@@ -32,7 +32,7 @@
 #include "OutputSettings.h"
 
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -77,6 +77,6 @@ private:
 } ;
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_RENDER_MANAGER_H
+#endif // NoeMixerr_RENDER_MANAGER_H

@@ -1,5 +1,5 @@
-if(LMMS_MSVC_YEAR)
-	set(WIN_PLATFORM "msvc${LMMS_MSVC_YEAR}")
+if(NoeMixerr_MSVC_YEAR)
+	set(WIN_PLATFORM "msvc${NoeMixerr_MSVC_YEAR}")
 elseif(DEFINED ENV{MSYSTEM})
     string(TOLOWER "$ENV{MSYSTEM}" WIN_PLATFORM)
 else()
@@ -66,9 +66,9 @@ if(CPACK_DEBUG)
 endif()
 
 # Windows resource compilers
-CONFIGURE_FILE("lmms.rc.in"             "${CMAKE_BINARY_DIR}/lmms.rc")
+CONFIGURE_FILE("noemixerr.rc.in"             "${CMAKE_BINARY_DIR}/noemixerr.rc")
 CONFIGURE_FILE("zynaddsubfx.rc.in"      "${CMAKE_BINARY_DIR}/plugins/ZynAddSubFx/zynaddsubfx.rc")
 
-INSTALL(FILES "lmms.exe.manifest" DESTINATION .)
-INSTALL(FILES "lmms.VisualElementsManifest.xml" DESTINATION .)
+INSTALL(FILES "noemixerr.exe.manifest" DESTINATION .)
+INSTALL(FILES "noemixerr.VisualElementsManifest.xml" DESTINATION .)
 INSTALL(DIRECTORY "assets" DESTINATION .)

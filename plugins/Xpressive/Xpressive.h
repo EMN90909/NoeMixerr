@@ -38,7 +38,7 @@
 
 class QPlainTextEdit;
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -229,6 +229,6 @@ private:
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

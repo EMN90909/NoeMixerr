@@ -1,0 +1,53 @@
+#cmakedefine NoeMixerr_BUILD_LINUX
+#cmakedefine NoeMixerr_BUILD_WIN32
+#cmakedefine NoeMixerr_BUILD_WIN64
+#cmakedefine NoeMixerr_BUILD_APPLE
+#cmakedefine NoeMixerr_BUILD_OPENBSD
+#cmakedefine NoeMixerr_BUILD_FREEBSD
+#cmakedefine NoeMixerr_BUILD_HAIKU
+#cmakedefine NoeMixerr_BUILD_CYGWIN
+
+#cmakedefine NoeMixerr_HOST_X86
+#cmakedefine NoeMixerr_HOST_X86_64
+#cmakedefine NoeMixerr_HOST_ARM32
+#cmakedefine NoeMixerr_HOST_ARM64
+#cmakedefine NoeMixerr_HOST_RISCV32
+#cmakedefine NoeMixerr_HOST_RISCV64
+#cmakedefine NoeMixerr_HOST_PPC32
+#cmakedefine NoeMixerr_HOST_PPC64
+
+#cmakedefine NoeMixerr_HAVE_ALSA
+#cmakedefine NoeMixerr_HAVE_FLUIDSYNTH
+#cmakedefine NoeMixerr_HAVE_JACK
+#cmakedefine NoeMixerr_HAVE_JACK_PRENAME
+#cmakedefine NoeMixerr_HAVE_WEAKJACK
+#cmakedefine NoeMixerr_HAVE_LV2
+#cmakedefine NoeMixerr_HAVE_SUIL
+#cmakedefine NoeMixerr_HAVE_MP3LAME
+#cmakedefine NoeMixerr_HAVE_SNDFILE_MP3
+#cmakedefine NoeMixerr_HAVE_OGGVORBIS
+#cmakedefine NoeMixerr_HAVE_SNDIO
+#cmakedefine NoeMixerr_HAVE_PORTAUDIO
+#cmakedefine NoeMixerr_HAVE_PULSEAUDIO
+#cmakedefine NoeMixerr_HAVE_SDL
+#cmakedefine NoeMixerr_HAVE_STK
+#cmakedefine NoeMixerr_HAVE_VST
+#cmakedefine NoeMixerr_HAVE_VST_32
+#cmakedefine NoeMixerr_HAVE_VST_64
+#cmakedefine NoeMixerr_HAVE_SF_COMPLEVEL
+#cmakedefine NoeMixerr_HAVE_WINMM
+
+#cmakedefine NoeMixerr_DEBUG_FPE
+
+#cmakedefine NoeMixerr_HAVE_PTHREAD_H
+#cmakedefine NoeMixerr_HAVE_UNISTD_H
+#cmakedefine NoeMixerr_HAVE_SYS_IPC_H
+#cmakedefine NoeMixerr_HAVE_SEMAPHORE_H
+#cmakedefine NoeMixerr_HAVE_SYS_TIMES_H
+#cmakedefine NoeMixerr_HAVE_SYS_PRCTL_H
+#cmakedefine NoeMixerr_HAVE_SCHED_H
+#cmakedefine NoeMixerr_HAVE_SYS_SOUNDCARD_H
+#cmakedefine NoeMixerr_HAVE_SOUNDCARD_H
+#cmakedefine NoeMixerr_HAVE_FCNTL_H
+#cmakedefine NoeMixerr_HAVE_SYS_IOCTL_H
+#cmakedefine NoeMixerr_HAVE_PROCESS_H

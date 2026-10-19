@@ -24,8 +24,8 @@
  *
  */
 
-#ifndef LMMS_GUI_TEMPO_SYNC_BAR_MODEL_EDITOR_H
-#define LMMS_GUI_TEMPO_SYNC_BAR_MODEL_EDITOR_H
+#ifndef NoeMixerr_GUI_TEMPO_SYNC_BAR_MODEL_EDITOR_H
+#define NoeMixerr_GUI_TEMPO_SYNC_BAR_MODEL_EDITOR_H
 
 #include <QPixmap>
 #include <QPointer>
@@ -33,12 +33,12 @@
 #include "BarModelEditor.h"
 #include "TempoSyncKnobModel.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 class MeterDialog;
 
-class LMMS_EXPORT TempoSyncBarModelEditor : public BarModelEditor
+class NoeMixerr_EXPORT TempoSyncBarModelEditor : public BarModelEditor
 {
 	Q_OBJECT
 public:
@@ -85,6 +85,6 @@ private:
 	QPointer<MeterDialog> m_custom;
 };
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TEMPO_SYNC_BAR_MODEL_EDITOR_H
+#endif // NoeMixerr_GUI_TEMPO_SYNC_BAR_MODEL_EDITOR_H

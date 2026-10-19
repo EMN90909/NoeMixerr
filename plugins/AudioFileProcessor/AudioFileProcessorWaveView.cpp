@@ -36,7 +36,7 @@
 
 #include <algorithm>
 
-namespace lmms
+namespace noemixerr
 {
 
 namespace gui
@@ -569,4 +569,4 @@ bool AudioFileProcessorWaveView::knob::checkBound(double v) const
 
 } // namespace gui
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,14 +22,14 @@
  *
  */
 
-#ifndef LMMS_OSCILLOSCOPE_H
-#define LMMS_OSCILLOSCOPE_H
+#ifndef NoeMixerr_OSCILLOSCOPE_H
+#define NoeMixerr_OSCILLOSCOPE_H
 
 #include "Effect.h"
 #include "OscilloscopeControls.h"
 #include "LocklessRingBuffer.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 class Oscilloscope : public Effect
@@ -55,6 +55,6 @@ private:
 	friend class OscilloscopeControls;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_OSCILLOSCOPE_H
+#endif // NoeMixerr_OSCILLOSCOPE_H

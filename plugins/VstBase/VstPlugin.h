@@ -37,7 +37,7 @@
 
 #include "vstbase_export.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -125,7 +125,7 @@ public:
 	QString embedMethod() const;
 
 public slots:
-	void setTempo( lmms::bpm_t _bpm );
+	void setTempo( noemixerr::bpm_t _bpm );
 	void updateSampleRate();
 	void openPreset();
 	void setProgram( int index );
@@ -200,6 +200,6 @@ private:
 };
 
 } // namespace gui
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

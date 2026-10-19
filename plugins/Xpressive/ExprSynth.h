@@ -30,7 +30,7 @@
 #include <limits>
 #include "Graph.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -144,6 +144,6 @@ inline void clearArray(T* arr,unsigned int size)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
 #endif

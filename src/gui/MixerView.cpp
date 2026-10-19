@@ -1,5 +1,5 @@
 /*
- * MixerView.cpp - effect-mixer-view for LMMS
+ * MixerView.cpp - effect-mixer-view for NoeMixerr
  *
  * Copyright (c) 2008-2014 Tobias Doerffel <tobydox/at/users.sourceforge.net>
  *
@@ -51,7 +51,7 @@
 #include "TrackContainer.h" // For TrackContainer::TrackList typedef
 #include "embed.h"
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 
@@ -589,4 +589,4 @@ void MixerView::updateFaders()
 }
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

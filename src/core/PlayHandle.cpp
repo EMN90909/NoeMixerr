@@ -30,7 +30,7 @@
 #include <QThread>
 
 
-namespace lmms
+namespace noemixerr
 {
 
 PlayHandle::PlayHandle(const Type type, f_cnt_t offset) :
@@ -75,4 +75,4 @@ SampleFrame* PlayHandle::buffer()
 	return m_bufferReleased ? nullptr : m_playHandleBuffer;
 };
 
-} // namespace lmms
+} // namespace noemixerr

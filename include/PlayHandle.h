@@ -22,28 +22,28 @@
  *
  */
 
-#ifndef LMMS_PLAY_HANDLE_H
-#define LMMS_PLAY_HANDLE_H
+#ifndef NoeMixerr_PLAY_HANDLE_H
+#define NoeMixerr_PLAY_HANDLE_H
 
 #include <QList>
 #include <QMutex>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 #include "Flags.h"
 #include "ThreadableJob.h"
-#include "LmmsTypes.h"
+#include "NoeMixerrTypes.h"
 
 class QThread;
 
-namespace lmms
+namespace noemixerr
 {
 
 class Track;
 class AudioBusHandle;
 class SampleFrame;
 
-class LMMS_EXPORT PlayHandle : public ThreadableJob
+class NoeMixerr_EXPORT PlayHandle : public ThreadableJob
 {
 public:
 	enum class Type
@@ -162,8 +162,8 @@ private:
 using PlayHandleList = QList<PlayHandle*>;
 using ConstPlayHandleList = QList<const PlayHandle*>;
 
-LMMS_DECLARE_OPERATORS_FOR_FLAGS(PlayHandle::Type)
+NoeMixerr_DECLARE_OPERATORS_FOR_FLAGS(PlayHandle::Type)
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_PLAY_HANDLE_H
+#endif // NoeMixerr_PLAY_HANDLE_H

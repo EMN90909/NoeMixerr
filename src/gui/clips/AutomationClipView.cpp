@@ -43,7 +43,7 @@
 #include "Engine.h"
 
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
 AutomationClipView::AutomationClipView( AutomationClip * _clip,
@@ -494,4 +494,4 @@ void AutomationClipView::scaleTimemapToFit( float oldMin, float oldMax )
 	m_clip->generateTangents();
 }
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui

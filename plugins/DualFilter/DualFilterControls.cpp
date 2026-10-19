@@ -31,7 +31,7 @@
 #include "embed.h"
 #include "Engine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -159,4 +159,4 @@ void DualFilterControls::saveSettings( QDomDocument& _doc, QDomElement& _this )
 }
 
 
-} // namespace lmms
+} // namespace noemixerr

@@ -22,19 +22,19 @@
  *
  */
 
-#ifndef LMMS_GUI_TEXT_FLOAT_H
-#define LMMS_GUI_TEXT_FLOAT_H
+#ifndef NoeMixerr_GUI_TEXT_FLOAT_H
+#define NoeMixerr_GUI_TEXT_FLOAT_H
 
 #include <QWidget>
 
-#include "lmms_export.h"
+#include "noemixerr_export.h"
 
 class QLabel;
 
-namespace lmms::gui
+namespace noemixerr::gui
 {
 
-class LMMS_EXPORT TextFloat : public QWidget
+class NoeMixerr_EXPORT TextFloat : public QWidget
 {
 	Q_OBJECT
 public:
@@ -73,6 +73,6 @@ private:
 };
 
 
-} // namespace lmms::gui
+} // namespace noemixerr::gui
 
-#endif // LMMS_GUI_TEXT_FLOAT_H
+#endif // NoeMixerr_GUI_TEXT_FLOAT_H

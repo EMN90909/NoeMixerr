@@ -22,13 +22,13 @@
 
 #pragma once
 
-#ifndef LMMS_UPGRADEEXTENDEDNOTERANGE_H
-#define LMMS_UPGRADEEXTENDEDNOTERANGE_H
+#ifndef NoeMixerr_UPGRADEEXTENDEDNOTERANGE_H
+#define NoeMixerr_UPGRADEEXTENDEDNOTERANGE_H
 
 
 class QDomElement;
 
-namespace lmms
+namespace noemixerr
 {
 
 class UpgradeExtendedNoteRange
@@ -42,6 +42,6 @@ private:
 	QDomElement & m_domElement;
 };
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_UPGRADEEXTENDEDNOTERANGE_H
+#endif // NoeMixerr_UPGRADEEXTENDEDNOTERANGE_H

@@ -10,7 +10,7 @@ find_package(ZLIB REQUIRED)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # definitions for ZynAddSubFX
-IF(LMMS_BUILD_LINUX OR LMMS_BUILD_APPLE OR LMMS_BUILD_OPENBSD OR LMMS_BUILD_FREEBSD OR LMMS_BUILD_CYGWIN)
+IF(NoeMixerr_BUILD_LINUX OR NoeMixerr_BUILD_APPLE OR NoeMixerr_BUILD_OPENBSD OR NoeMixerr_BUILD_FREEBSD OR NoeMixerr_BUILD_CYGWIN)
 	FIND_PACKAGE(X11)
 	include_directories(SYSTEM ${X11_INCLUDE_DIR})
 	ADD_DEFINITIONS(-DOS_LINUX)
@@ -19,7 +19,7 @@ ELSE()
 ENDIF()
 
 # use asm optimizations when on x86 or x86_64
-if(NOT MSVC AND (LMMS_HOST_X86 OR LMMS_HOST_X86_64))
+if(NOT MSVC AND (NoeMixerr_HOST_X86 OR NoeMixerr_HOST_X86_64))
 	ADD_DEFINITIONS(-DASM_F2I_YES)
 endif()
 
@@ -138,7 +138,7 @@ target_link_libraries(ZynAddSubFxCore INTERFACE
 )
 
 LINK_DIRECTORIES("${CMAKE_CURRENT_BINARY_DIR}/..")
-IF(LMMS_BUILD_LINUX)
+IF(NoeMixerr_BUILD_LINUX)
 	LINK_LIBRARIES(-Wl,--enable-new-dtags)
 	SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 	SET(CMAKE_INSTALL_RPATH "$ORIGIN")
@@ -163,11 +163,11 @@ endif()
 # Use libraries in non-standard directories (e.g., another version of Qt)
 SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
-ADD_SUBDIRECTORY("${LMMS_SOURCE_DIR}/src/common" common)
+ADD_SUBDIRECTORY("${NoeMixerr_SOURCE_DIR}/src/common" common)
 
 add_executable(RemoteZynAddSubFx
 	RemoteZynAddSubFx.cpp
-	${LMMS_COMMON_SRCS}
+	${NoeMixerr_COMMON_SRCS}
 	"${WINRC}"
 )
 target_static_libraries(RemoteZynAddSubFx ZynAddSubFxCore zynaddsubfx_gui)
@@ -177,7 +177,7 @@ SET_PROPERTY(GLOBAL APPEND PROPERTY PLUGINS_BUILT "RemoteZynAddSubFx")
 
 TARGET_COMPILE_DEFINITIONS(RemoteZynAddSubFx PRIVATE BUILD_REMOTE_PLUGIN_CLIENT)
 
-IF(LMMS_BUILD_WIN32)
+IF(NoeMixerr_BUILD_WIN32)
 	target_link_options(RemoteZynAddSubFx PRIVATE "-mwindows")
 ENDIF()
 
@@ -185,7 +185,7 @@ ENDIF()
 # in older environments
 SET(FLTK_FILTERED_LDFLAGS ${FLTK_LIBRARIES})
 FIND_PROGRAM(FLTK_CONFIG fltk-config)
-IF(FLTK_CONFIG AND NOT (LMMS_BUILD_APPLE OR LMMS_BUILD_WIN32))
+IF(FLTK_CONFIG AND NOT (NoeMixerr_BUILD_APPLE OR NoeMixerr_BUILD_WIN32))
 	EXECUTE_PROCESS(COMMAND ${FLTK_CONFIG} --ldflags OUTPUT_VARIABLE FLTK_FILTERED_LDFLAGS OUTPUT_STRIP_TRAILING_WHITESPACE)
 	STRING(REPLACE " " ";" FLTK_FILTERED_LDFLAGS ${FLTK_FILTERED_LDFLAGS})
 	LIST(REMOVE_ITEM FLTK_FILTERED_LDFLAGS -lX11)
@@ -193,7 +193,7 @@ ENDIF()
 target_link_libraries(RemoteZynAddSubFx ${FLTK_FILTERED_LDFLAGS})
 
 # Ensure zynaddsubfx_gui has the include directories it needs (#8535)
-if(FLTK_CONFIG AND NOT LMMS_BUILD_WIN32)
+if(FLTK_CONFIG AND NOT NoeMixerr_BUILD_WIN32)
 	execute_process(COMMAND ${FLTK_CONFIG} --cxxflags OUTPUT_VARIABLE _fltk_include_dirs OUTPUT_STRIP_TRAILING_WHITESPACE)
 	string(REPLACE " " ";" _fltk_include_dirs ${_fltk_include_dirs})
 	list(REMOVE_DUPLICATES _fltk_include_dirs)
@@ -202,7 +202,7 @@ if(FLTK_CONFIG AND NOT LMMS_BUILD_WIN32)
 	target_include_directories(zynaddsubfx_gui SYSTEM PUBLIC ${_fltk_include_dirs})
 endif()
 
-if(LMMS_HAVE_LIBRT)
+if(NoeMixerr_HAVE_LIBRT)
 	target_link_libraries(RemoteZynAddSubFx rt)
 endif()
 
@@ -210,12 +210,12 @@ endif()
 TARGET_LINK_LIBRARIES(RemoteZynAddSubFx Qt${QT_VERSION_MAJOR}::Core)
 
 # link Qt libraries when on win32
-IF(LMMS_BUILD_WIN32)
+IF(NoeMixerr_BUILD_WIN32)
 	TARGET_LINK_LIBRARIES(RemoteZynAddSubFx ${QT_LIBRARIES})
-ENDIF(LMMS_BUILD_WIN32)
+ENDIF(NoeMixerr_BUILD_WIN32)
 
 
-IF(LMMS_BUILD_WIN32)
+IF(NoeMixerr_BUILD_WIN32)
 	add_custom_command(
 		TARGET RemoteZynAddSubFx
 		POST_BUILD
@@ -223,4 +223,4 @@ IF(LMMS_BUILD_WIN32)
 		VERBATIM
 		COMMAND_EXPAND_LISTS
 	)
-ENDIF(LMMS_BUILD_WIN32)
+ENDIF(NoeMixerr_BUILD_WIN32)

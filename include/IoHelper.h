@@ -22,11 +22,11 @@
  *
  */
 
-// NOTE: The LMMS/zynaddsubfx repo contains a copy of this header.
+// NOTE: The NoeMixerr/zynaddsubfx repo contains a copy of this header.
 //       If you modify this file, consider modifying it there as well.
 
-#ifndef LMMS_IO_HELPER_H
-#define LMMS_IO_HELPER_H
+#ifndef NoeMixerr_IO_HELPER_H
+#define NoeMixerr_IO_HELPER_H
 
 #include <cstdio>
 #include <limits>
@@ -48,7 +48,7 @@
 #	include <unistd.h>
 #endif
 
-namespace lmms
+namespace noemixerr
 {
 
 
@@ -119,6 +119,6 @@ inline int fileToDescriptor(std::FILE* file, bool closeFile = true)
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
 
-#endif // LMMS_IO_HELPER_H
+#endif // NoeMixerr_IO_HELPER_H

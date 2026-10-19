@@ -27,7 +27,7 @@
 #include "DelayEffect.h"
 #include "Engine.h"
 
-namespace lmms
+namespace noemixerr
 {
 
 DelayControls::DelayControls( DelayEffect* effect ):
@@ -76,4 +76,4 @@ void DelayControls::changeSampleRate()
 }
 
 
-} // namespace lmms
+} // namespace noemixerr
