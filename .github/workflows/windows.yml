@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: noemixerr-windows-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   mingw:
     runs-on: windows-latest
