@@ -67,6 +67,40 @@ def interactive_test(binary, root, enabled):
         assert detail(ask("tools/call",{"name":"apply_edit","arguments":{"plan_id":plan,"confirm":True}}))["applied"]
         notes = ET.parse(root/"test.mmp").getroot().findall(".//note")
         assert len(notes)==2 and notes[-1].get("key")=="66"
+
+        def edit(operation, **kwargs):
+            params = {"path": "test.mmp", "operation": operation, **kwargs}
+            proposal = detail(ask("tools/call", {"name": "propose_edit", "arguments": params}))
+            assert proposal["preview_only"]
+            accepted = detail(ask("tools/call", {"name": "apply_edit", "arguments": {
+                "plan_id": proposal["plan_id"], "confirm": True
+            }}))
+            assert accepted["applied"]
+
+        # Duplicate a working instrument configuration, with empty notes.
+        edit("create_instrument_track", track_index=0, name="NoeAI Lead")
+        info = detail(ask("tools/call", {"name": "inspect_project", "arguments": {"path": "test.mmp"}}))
+        assert len(info["tracks"]) == 2, info
+        assert info["tracks"][1]["name"] == "NoeAI Lead"
+        assert info["tracks"][1]["notes"] == 0
+
+        edit("create_pattern", track_index=1, name="Break", position=192)
+        edit("add_note", pattern_index=2, key=72, position=0, length=24)
+        edit("set_track_mix", track_index=1, volume=70, pan=-20, mute=True)
+        xmlroot = ET.parse(root/"test.mmp").getroot()
+        tracks = xmlroot.findall("./song/trackcontainer/track")
+        assert len(tracks) == 2
+        assert tracks[1].get("muted") == "1"
+        assert tracks[1].find("instrumenttrack").get("vol") == "70"
+        assert tracks[1].find("instrumenttrack").get("pan") == "-20"
+        assert len(tracks[1].findall("pattern")) == 2
+        assert tracks[1].findall("pattern")[1].find("note").get("key") == "72"
+
+        invalid = ask("tools/call", {"name": "propose_edit", "arguments": {
+            "path": "test.mmp", "operation": "set_track_mix",
+            "track_index": 99, "volume": 80, "pan": 0, "mute": False
+        }})
+        assert invalid["result"]["isError"]
     finally:
         proc.stdin.close()
         assert proc.wait(timeout=5)==0,proc.stderr.read()
@@ -77,7 +111,7 @@ def main():
     with tempfile.TemporaryDirectory() as temp:
         root = Path(temp)
         project = root/"test.mmp"
-        xml = '<lmms-project type="song" version="1.0"><head bpm="120"/><song><trackcontainer><track><pattern><note key="60" pos="0" len="48"/></pattern></track></trackcontainer></song></lmms-project>'
+        xml = '<lmms-project type="song" version="1.0"><head bpm="120"/><song><trackcontainer><track type="0" name="Base"><instrumenttrack vol="100" pan="0"><instrument name="tripleoscillator"/></instrumenttrack><pattern><note key="60" pos="0" len="48"/></pattern></track></trackcontainer></song></lmms-project>'
         project.write_text(xml,encoding="utf-8")
         interactive_test(binary,root,False)
         interactive_test(binary,root,True)
