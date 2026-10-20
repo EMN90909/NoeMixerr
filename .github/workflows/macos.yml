@@ -22,6 +22,8 @@ jobs:
           cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON -DWANT_SWH=OFF -DCMAKE_PREFIX_PATH="$(brew --prefix qt@5)"
       - name: Compile
         run: cmake --build build --parallel 2
+      - name: Verify version metadata and executable
+        run: python3 tools/check_version.py build/noemixerr
       - name: Unit tests
         run: ctest --test-dir build --output-on-failure
       - name: Legacy LMMS project reopen smoke test

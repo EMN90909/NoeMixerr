@@ -18,7 +18,7 @@
 
 NoeMixerr is a rebranded and modified derivative of **LMMS**, with the inherited C++ audio engine, song editor, pattern editor, piano roll, mixer, instruments and automation system. Some features depend on platform-specific dependencies. NoeMixerr is **not** currently a verified production release; the mechanical rename requires compatibility testing.
 
-**Versioning:** NoeMixerr starts at **0.1.0-dev**. Pre-1.0 versions do not promise stable APIs or file formats. The inherited LMMS version and copyright history remain credited separately, not passed off as a new Noethric implementation.
+**Current development version:** **v0.4.0**. This is a development milestone, not a stable or production-certified release. Pre-1.0 versions do not promise stable APIs or file formats. See [v0.4.0 milestone notes](RELEASE_NOTES_v0.4.0.md). The inherited LMMS version and copyright history remain credited separately, not passed off as a new Noethric implementation.
 
 ## Build and test
 
