@@ -19,7 +19,7 @@ def cmake_version() -> str:
     parts = []
     for component in ("MAJOR", "MINOR", "RELEASE"):
         match = re.search(
-            rf"\\bSET\\(VERSION_{component}\\s+[\"']?(\\d+)[\"']?\\s*\\)",
+            rf"\bSET\(VERSION_{component}\s+[\"']?(\d+)[\"']?\s*\)",
             cmake, flags=re.IGNORECASE,
         )
         if not match:
@@ -35,10 +35,10 @@ def check_files(version: str) -> None:
     )
     notes = ROOT / f"RELEASE_NOTES_v{version}.md"
     assert notes.is_file(), f"Missing release notes: {notes.name}"
-    assert notes.read_text(encoding="utf-8").startswith(f"# NoeMixerr v{version}\\n")
+    assert notes.read_text(encoding="utf-8").startswith(f"# NoeMixerr v{version}\n")
     recorder = (ROOT / "tools/recorder/CMakeLists.txt").read_text(encoding="utf-8")
     assert re.search(
-        rf"project\\(NoeMixerrRecorder\\s+VERSION\\s+{re.escape(version)}\\b",
+        rf"project\(NoeMixerrRecorder\s+VERSION\s+{re.escape(version)}\b",
         recorder, re.IGNORECASE
     ), "Recorder CMake version does not match"
     mcp = (ROOT / "tools/noeai/main.cpp").read_text(encoding="utf-8")
@@ -56,7 +56,7 @@ def check_binary(name: str, version: str) -> None:
         [str(executable), "--version"],
         capture_output=True, text=True, timeout=30, check=True
     )
-    expected = re.compile(rf"^NoeMixerr\\s+{re.escape(version)}(?=[-+\\s]|$)")
+    expected = re.compile(rf"^NoeMixerr\s+{re.escape(version)}(?=[-+\s]|$)")
     assert expected.search(result.stdout), (
         f"Wrong CLI version (expected {version}): {result.stdout[:500]!r}"
     )
