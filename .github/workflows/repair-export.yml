@@ -1,27 +1,16 @@
-name: Repair generated export macros
+name: Verify generated export macros
 on:
-  push:
-    paths:
-      - 'tools/repair_export_macros.py'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  repair:
-    runs-on: ubuntu-latest
+  verify-exports:
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
-      - name: Fix generated export macro references
-        run: python3 tools/repair_export_macros.py
-      - name: Commit source corrections
+          persist-credentials: false
+      - name: Ensure no stale generated export macros remain
         run: |
-          git config user.name "Noethric Build Bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -A
-          git restore --staged .github/workflows || true
-          if ! git diff --cached --quiet; then
-            git commit -m "fix: match CMake generated NOEMIXERR_EXPORT macros"
-            git push origin HEAD:main
-          fi
+          python3 tools/repair_export_macros.py
+          git diff --exit-code
