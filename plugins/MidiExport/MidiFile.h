@@ -69,6 +69,7 @@ private:
 	class Section
 	{
 	public:
+		virtual ~Section() = default;
 		//! Constant-capacity buffer vector to be written to stream
 		std::vector<std::uint8_t> m_buffer;
 
